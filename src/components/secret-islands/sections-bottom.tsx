@@ -24,7 +24,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BRAND, FAQ, LONGTAIL_CROWD_IMG, REVIEWS, ROMANCE_IMGS, TOURS, UI, altFor } from "./content";
 import { keepLang } from "./lang-context";
-import { FooterGuideLinks, FooterTourLinks } from "../krabi-guide/footer-links";
+import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "../krabi-guide/footer-links";
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink } from "./store";
@@ -719,6 +719,7 @@ export function Footer() {
       </Assemble>
       <FooterTourLinks className="mx-auto mt-12 max-w-6xl px-4" />
       <FooterGuideLinks className="mx-auto mt-10 max-w-6xl px-4" />
+      <FooterInfoLink className="mx-auto mt-6 max-w-6xl px-4" />
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 px-4 pt-6 text-xs leading-relaxed text-slate-500">
         <p>{t(UI.legalNote)}</p>

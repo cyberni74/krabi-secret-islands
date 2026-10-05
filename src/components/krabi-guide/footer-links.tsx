@@ -133,3 +133,15 @@ export function GuideTeaser() {
     </section>
   );
 }
+
+/** Footer link to the guest-info page (/info). */
+export function FooterInfoLink({ className }: { className?: string }) {
+  const { lang } = useTx();
+  return (
+    <p className={className}>
+      <Link to="/info" search={keepLang} className="inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
+        {lang === "de" ? "Gäste-Info: Treffpunkt, Preise, privat vs. Gruppe" : "Guest info: meeting point, what's included, private vs group"} →
+      </Link>
+    </p>
+  );
+}

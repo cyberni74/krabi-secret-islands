@@ -3,6 +3,7 @@
  * Rules as in seo.ts: only mark up what is visible on the page, no AggregateRating/Review (REVIEWS_VERIFIED = false),
  * prices only from TOURS (price per boat, max. 5 guests).
  */
+import { INFO_META, infoFaq } from "../krabi-guide/info-content";
 import { BRAND, TOURS, altFor, type Tour } from "./content";
 import { BRAND_HEAD_LINKS, BUSINESS_ID, LANDING_PATH, ROBOTS_LARGE_IMAGES, absUrl, businessNode, langLinks, pageUrl, socialMeta } from "./seo";
 import {
@@ -195,5 +196,52 @@ export function toursHubHead(lang: TourLang) {
       { "script:ld+json": toursHubJsonLd(lang, { title: TOURS_HUB_META.title[lang], description }) },
     ],
     links: [...langLinks(TOURS_PATH, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
+  };
+}
+
+/** Guest-info page (/info, DE + EN). */
+export const INFO_PATH = "/info";
+
+export function infoJsonLd(lang: TourLang): Json {
+  const url = pageUrl(INFO_PATH, lang);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      businessNode(lang),
+      {
+        "@type": "WebPage",
+        "@id": url,
+        url,
+        name: INFO_META.title[lang],
+        description: INFO_META.description[lang],
+        inLanguage: lang,
+        isPartOf: { "@id": BUSINESS_ID },
+        breadcrumb: { "@id": `${url}#breadcrumb` },
+      },
+      breadcrumbNode(url, [
+        { name: HOME[lang], url: pageUrl(LANDING_PATH, lang) },
+        { name: lang === "de" ? "Gäste-Info" : "Guest info", url },
+      ]),
+      faqNode(url, infoFaq(lang)),
+    ],
+  };
+}
+
+export function infoHead(lang: TourLang) {
+  const title = seoTitle(INFO_META.title[lang]);
+  const description = INFO_META.description[lang];
+  const image = TOURS[0].image;
+  return {
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { name: "theme-color", content: "#0a192f" },
+      ROBOTS_LARGE_IMAGES,
+      ...socialMeta({ title, description, url: pageUrl(INFO_PATH, lang), image, type: "website", lang }),
+      { property: "og:image:alt", content: altFor(image)[lang] },
+      { name: "twitter:image:alt", content: altFor(image)[lang] },
+      { "script:ld+json": infoJsonLd(lang) },
+    ],
+    links: [...langLinks(INFO_PATH, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
   };
 }

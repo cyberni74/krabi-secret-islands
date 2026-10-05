@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AnfragenRouteImport } from './routes/anfragen'
+import { Route as InfoRouteImport } from './routes/info'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BilderFileRouteImport } from './routes/bilder.$file'
@@ -28,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
 const AnfragenRoute = AnfragenRouteImport.update({
   id: '/anfragen',
   path: '/anfragen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfoRoute = InfoRouteImport.update({
+  id: '/info',
+  path: '/info',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -74,6 +80,7 @@ const TourenSlugRoute = TourenSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/anfragen': typeof AnfragenRoute
+  '/info': typeof InfoRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/anfragen': typeof AnfragenRoute
+  '/info': typeof InfoRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
@@ -99,6 +107,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/anfragen': typeof AnfragenRoute
+  '/info': typeof InfoRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
@@ -113,6 +122,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/anfragen'
+    | '/info'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/anfragen'
+    | '/info'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
@@ -137,6 +148,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/anfragen'
+    | '/info'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AnfragenRoute: typeof AnfragenRoute
+  InfoRoute: typeof InfoRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BilderFileRoute: typeof BilderFileRoute
@@ -174,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/anfragen'
       fullPath: '/anfragen'
       preLoaderRoute: typeof AnfragenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/info': {
+      id: '/info'
+      path: '/info'
+      fullPath: '/info'
+      preLoaderRoute: typeof InfoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -238,6 +258,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AnfragenRoute: AnfragenRoute,
+  InfoRoute: InfoRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BilderFileRoute: BilderFileRoute,

@@ -12,7 +12,7 @@ import { BottomBar, Header } from "../secret-islands/sections-top";
 import { BRAND, altFor, type Lang, type Tour } from "../secret-islands/content";
 import { AuroraBackground, GlassCard, ScrollProgress, btn } from "../secret-islands/fx";
 import { BrandMark, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
-import { FooterGuideLinks, FooterTourLinks } from "./footer-links";
+import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "./footer-links";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
 import { formatTHB, useSI, useTx, waLink } from "../secret-islands/store";
@@ -279,6 +279,7 @@ function GuideFooter() {
           <FooterGuideLinks showHeading={false} />
         </div>
         <FooterTourLinks className="mt-10 border-t border-white/10 pt-8" />
+        <FooterInfoLink className="mt-6" />
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
           <p>
             © 2026 {BRAND.name} · {t(BRAND.location)}

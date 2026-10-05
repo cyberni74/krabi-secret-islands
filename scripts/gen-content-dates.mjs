@@ -33,6 +33,7 @@ for (const f of dataFiles) {
 const si = "src/components/secret-islands";
 const landing = max(["content.ts", "longtail-faq.ts", "booking-data.ts", "sections-top.tsx", "sections-mid.tsx", "sections-bottom.tsx", "page.tsx"].map((f) => dateOf(`${si}/${f}`)));
 const tours = max(["content.ts", "tour-pages.ts", "tour-pages-a.ts", "tour-pages-b.ts", "tour-seo.ts"].map((f) => dateOf(`${si}/${f}`)).concat(dateOf("src/components/krabi-guide/tour-page.tsx")));
+const info = max(["info-content.ts", "info-page.tsx"].map((f) => dateOf(`${guideDir}/${f}`)));
 const hub = max(Object.values(slugs));
-writeFileSync(join(root, "src/generated/content-dates.json"), JSON.stringify({ landing, hub, tours, slugs }, null, 2) + "\n");
+writeFileSync(join(root, "src/generated/content-dates.json"), JSON.stringify({ landing, hub, tours, info, slugs }, null, 2) + "\n");
 console.log("content-dates.json written:", { landing, hub, tours, articles: Object.keys(slugs).length });
