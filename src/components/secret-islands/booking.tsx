@@ -22,6 +22,7 @@ import {
 import { ContactStep, DateStep, ExtrasStep, GuestsStep, TourStep } from "./booking-steps";
 import { AnimatedPrice, IncludedStrip } from "./booking-ui";
 import { QuickAddChips, QuickAddPanel } from "./booking-quick";
+import { ParkFeeNotice, SeasonNotice } from "./park-fee-notice";
 import { btn } from "./fx";
 import { SmartImage, WhatsAppIcon, useLockBody } from "./ui";
 import { useSI, useTx, waLink } from "./store";
@@ -214,7 +215,7 @@ function Wizard({
         <div className="relative z-10 flex min-h-0 flex-1 overflow-clip">
           <div ref={scrollRef} className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-4 py-5 sm:px-6 lg:py-6">
             {sent ? (
-              <Success onClose={onClose} waHref={waHref} mailtoHref={mailtoHref} bookingRef={ref} saved={session.saved} />
+              <Success draft={draft} onClose={onClose} waHref={waHref} mailtoHref={mailtoHref} bookingRef={ref} saved={session.saved} />
             ) : (
               <AnimatePresence mode="wait" custom={dir} initial={false}>
                 <motion.div
@@ -470,6 +471,7 @@ function SummaryPanel({ draft }: { draft: Draft }) {
           </li>
         ))}
       </ul>
+      <ParkFeeNotice draft={draft} className="mt-4" />
       <p className="mt-4 text-[11px] leading-relaxed text-slate-500">
         {t({ de: "Preis pro Boot für bis zu 5 Gäste. Wasser, Softdrinks & Obst inklusive.", en: "Price per boat for up to 5 guests. Water, soft drinks & fruit included." })}
       </p>
@@ -489,12 +491,14 @@ function Info({ icon: Icon, text, muted }: { icon: typeof Clock; text: string; m
 }
 
 function Success({
+  draft,
   onClose,
   waHref,
   mailtoHref,
   bookingRef,
   saved,
 }: {
+  draft: Draft;
   onClose: () => void;
   waHref: string;
   mailtoHref: string;
@@ -548,6 +552,8 @@ function Success({
                 : t({ de: "Wird übermittelt …", en: "Submitting …" })}
           </p>
         </motion.div>
+        <ParkFeeNotice draft={draft} className="mt-4 text-left" />
+        <SeasonNotice draft={draft} className="mt-3 text-left" />
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="mt-8 grid gap-2.5">
           <button type="button" onClick={onClose} className={cn(btn.primary, "w-full")}>
             <Check className="size-5" />

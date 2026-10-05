@@ -125,13 +125,13 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Für Maya Bay wird eine Gebühr für den Nationalpark erhoben. Zuletzt wurden für ausländische Erwachsene rund 400 Baht genannt, für Kinder weniger. Das deckt sich mit den Angaben in unserem Film-Drehorte-Guide. Gebühren legt die Nationalparkbehörde fest, und Quellen weichen teils voneinander ab – bitte prüfen Sie den aktuellen Betrag.",
-            "Bei unseren Touren sind die Nationalpark-Gebühren im Preis enthalten, bei der Phi Phi Early Bird Tour also ebenfalls. Das heißt: Sie müssen am Steg nichts separat organisieren, und Sie zahlen keine Überraschungsgebühr.",
+            "Für Maya Bay wird eine Gebühr für den Nationalpark erhoben. Gebühren und Regeln legt die Nationalparkbehörde fest, und sie können sich ändern.",
+            "Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "Zu den Öffnungszeiten: Maya Bay ist tagsüber zugänglich, genannt werden in Quellen meist Zeiten zwischen dem frühen Morgen und dem späten Nachmittag, teils 07:00 bis 18:00 Uhr. Eine verbindliche Uhrzeit können wir nicht zusagen, da sie sich ändern kann. Für Sie ist vor allem relevant: Je früher Sie ankommen, desto leerer ist es, und desto eher fällt der Besuch in eine ruhige Zeit.",
           ],
           en: [
-            "A national park fee is charged for Maya Bay. Most recently, about 400 baht was mentioned for foreign adults, less for children. This matches the figures in our film-locations guide. Fees are set by the national park authority, and sources partly differ – please check the current amount.",
-            "On our tours the national park fees are included in the price, which also applies to the Phi Phi Early Bird tour. That means you do not have to organise anything separately at the jetty, and there is no surprise fee.",
+            "A national park fee is charged for Maya Bay. Fees and rules are set by the national park authority and can change.",
+            "Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "On opening hours: Maya Bay is accessible during the day, and sources mostly mention times between early morning and late afternoon, partly 7 am to 6 pm. We cannot promise a binding time because it can change. What matters most for you: the earlier you arrive, the emptier it is, and the more likely your visit falls into a calm time.",
           ],
         },
@@ -156,12 +156,10 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         list: {
           de: [
             "Phi Phi Early Bird: ab 07:00 Uhr, rund 8 Stunden, 28.500 THB pro Boot (max. 5 Gäste)",
-            "Inklusive: privates Speedboat und Kapitän, Nationalpark-Gebühren, Schnorchelausrüstung (bei der Buchung ankreuzen), Getränke, Hotel-Transfer Ao Nang/Krabi",
             "Optional: Catering an Bord für 500 THB pro Person",
           ],
           en: [
             "Phi Phi Early Bird: from 7 am, about 8 hours, 28,500 THB per boat (max. 5 guests)",
-            "Included: private speedboat and captain, national park fees, snorkel gear (tick it when booking), drinks, hotel transfer Ao Nang/Krabi",
             "Optional: catering on board for 500 THB per person",
           ],
         },
@@ -266,8 +264,8 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
       {
         q: { de: "Wie viel kostet der Eintritt in Maya Bay?", en: "How much is the Maya Bay entrance fee?" },
         a: {
-          de: "Zuletzt wurden für ausländische Erwachsene rund 400 Baht genannt. Die Gebühr legt die Nationalparkbehörde fest, Quellen weichen ab. Bei unseren Touren sind die Nationalpark-Gebühren im Preis enthalten.",
-          en: "Most recently about 400 baht was mentioned for foreign adults. The fee is set by the national park authority, and sources differ. On our tours the national park fees are included in the price.",
+          de: "Die Gebühr legt die Nationalparkbehörde fest und kann sich ändern. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
+          en: "The fee is set by the national park authority and can change. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
         },
       },
       {
@@ -391,24 +389,24 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
           de: [
             "In der Regenzeit sind einige Ziele ganz oder teilweise nicht zugänglich. Das hat nichts mit unserer Tour zu tun, sondern mit dem Schutzkonzept der Nationalparks. Wichtig sind zwei Fälle, die Sie vor der Buchung kennen sollten.",
             "Maya Bay auf Phi Phi Leh war in den letzten Jahren jeweils vom 1. August bis 30. September geschlossen und öffnete am 1. Oktober wieder. Details finden Sie in unserem Guide Ist Maya Bay offen? Die Termine legt die Nationalparkbehörde fest.",
-            "Koh Rok und Koh Haa im Mu-Ko-Lanta-Nationalpark sind nach Angaben mehrerer Quellen in der Monsunzeit zeitweise gesperrt, etwa von Mitte Mai bis Ende Oktober. Die Zeiträume können sich ändern, und eine primäre, aktuelle Mitteilung haben wir hier nicht eingebaut. Deshalb ist unsere Tour Koh Rok & Koh Haa Schnorchel-Safari saisonal: Sie ist vor allem in der Trockenzeit sinnvoll, und wir klären den Stand für Ihr Datum bei der Anfrage.",
+            "Koh Rok und Koh Haa im Mu-Ko-Lanta-Nationalpark sind nach Angaben mehrerer Quellen in der Monsunzeit zeitweise gesperrt, offiziell vom 16. Mai bis 15. November (manche Quellen nennen Ende Oktober). Die Hauptsaison liegt etwa zwischen Mitte November und Mitte Mai. Die Zeiträume können sich ändern. Deshalb ist unsere Tour Koh Rok & Koh Haa Schnorchel-Safari saisonal: Sie ist vor allem in der Trockenzeit sinnvoll, und wir klären den Stand für Ihr Datum bei der Anfrage.",
           ],
           en: [
             "In the rainy season some destinations are fully or partly inaccessible. This has nothing to do with our tours but with the protection concept of the national parks. Two cases are important to know before you book.",
             "Maya Bay on Phi Phi Leh was closed from 1 August to 30 September in recent years and reopened on 1 October. You can find details in our guide Is Maya Bay open? The dates are set by the national park authority.",
-            "According to several sources, Koh Rok and Koh Haa in Mu Ko Lanta National Park are temporarily closed during the monsoon, roughly from mid-May to the end of October. The periods can change, and we have not built a primary, current notice into this article. That is why our Koh Rok & Koh Haa Snorkel Safari is seasonal: it makes most sense in the dry season, and we clarify the status for your date when you enquire.",
+            "According to several sources, Koh Rok and Koh Haa in Mu Ko Lanta National Park are temporarily closed during the monsoon, officially from 16 May to 15 November (some sources say until the end of October). The open season runs roughly from mid-November to mid-May. The periods can change. That is why our Koh Rok & Koh Haa Snorkel Safari is seasonal: it makes most sense in the dry season, and we clarify the status for your date when you enquire.",
           ],
         },
         list: {
           de: [
             "Maya Bay: zuletzt 1. August bis 30. September geschlossen, Wiedereröffnung 1. Oktober",
-            "Koh Rok und Koh Haa: laut Sekundärquellen etwa Mitte Mai bis Ende Oktober gesperrt (je nach Jahr, bitte prüfen)",
+            "Koh Rok und Koh Haa: offiziell 16. Mai bis 15. November gesperrt (manche Quellen: bis Ende Oktober); geöffnet etwa Mitte November bis Mitte Mai",
             "Die Tour Koh Rok & Koh Haa Schnorchel-Safari (32.000 THB pro Boot) ist saisonal",
             "Alle Termine gelten als Orientierung, die Nationalparkbehörde kann sie ändern",
           ],
           en: [
             "Maya Bay: most recently closed 1 August to 30 September, reopening 1 October",
-            "Koh Rok and Koh Haa: according to secondary sources closed from about mid-May to the end of October (varies by year, please check)",
+            "Koh Rok and Koh Haa: officially closed 16 May to 15 November (some sources: until the end of October); open roughly mid-November to mid-May",
             "The Koh Rok & Koh Haa Snorkel Safari tour (32,000 THB per boat) is seasonal",
             "All dates are orientation only, the national park authority can change them",
           ],
@@ -566,8 +564,8 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
       {
         q: { de: "Welche Inseln sind in der Regenzeit gesperrt?", en: "Which islands are closed in the rainy season?" },
         a: {
-          de: "Maya Bay war zuletzt vom 1. August bis 30. September geschlossen. Koh Rok und Koh Haa sind laut Sekundärquellen etwa von Mitte Mai bis Ende Oktober gesperrt. Termine ändern sich, bitte vor der Buchung aktuell prüfen.",
-          en: "Maya Bay was most recently closed from 1 August to 30 September. According to secondary sources Koh Rok and Koh Haa are closed from about mid-May to the end of October. Dates change, so please check the current ones before booking.",
+          de: "Maya Bay war zuletzt vom 1. August bis 30. September geschlossen. Koh Rok und Koh Haa sind offiziell vom 16. Mai bis 15. November gesperrt (geöffnet etwa Mitte November bis Mitte Mai). Termine ändern sich, bitte vor der Buchung aktuell prüfen.",
+          en: "Maya Bay was most recently closed from 1 August to 30 September. Koh Rok and Koh Haa are officially closed from 16 May to 15 November (open roughly mid-November to mid-May). Dates change, so please check the current ones before booking.",
         },
       },
       {
@@ -738,10 +736,10 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Diese Übersicht ordnet unsere Touren den Plänen zu. Preise gelten pro Boot für bis zu 5 Gäste; Nationalpark-Gebühren sind bei Touren mit Parkbesuch im Preis enthalten, je nach Tour steht das in der Beschreibung. Catering an Bord ist für 500 THB pro Person buchbar, das 4K-Drohnenpaket kostet extra.",
+            "Diese Übersicht ordnet unsere Touren den Plänen zu. Preise gelten pro Boot für bis zu 5 Gäste; Catering an Bord ist für 500 THB pro Person buchbar, das 4K-Drohnenpaket kostet extra.",
           ],
           en: [
-            "This overview assigns our tours to the plans. Prices are per boat for up to 5 guests; national park fees are included in tours with a park visit, as stated in each tour description. Catering on board can be booked for 500 THB per person, the 4K drone package costs extra.",
+            "This overview assigns our tours to the plans. Prices are per boat for up to 5 guests; Catering on board can be booked for 500 THB per person, the 4K drone package costs extra.",
           ],
         },
         list: {
@@ -793,12 +791,12 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         body: {
           de: [
             "Der beste Plan hängt von der Jahreszeit ab. In der Trockenzeit, grob November bis April, ist das Meer meist ruhig, und alle Ziele sind erreichbar. In der Regenzeit, grob Mai bis Oktober, empfehlen wir mehr Reserve und geschützte Routen, vor allem in der Phang Nga Bucht und an den Inseln vor Ao Nang.",
-            "Beachten Sie die Sperrungen: Maya Bay war zuletzt vom 1. August bis 30. September geschlossen, Koh Rok und Koh Haa sind laut Sekundärquellen etwa von Mitte Mai bis Ende Oktober gesperrt. Das sind Orientierungswerte, die sich ändern können. Mehr dazu in unseren Guides zur Regenzeit und zu Maya Bay.",
+            "Beachten Sie die Sperrungen: Maya Bay war zuletzt vom 1. August bis 30. September geschlossen, Koh Rok und Koh Haa sind offiziell vom 16. Mai bis 15. November gesperrt (geöffnet etwa Mitte November bis Mitte Mai). Das sind Orientierungswerte, die sich ändern können. Mehr dazu in unseren Guides zur Regenzeit und zu Maya Bay.",
             "In der Regenzeit planen Sie am besten zwei Puffertage statt einem und setzen offene Ziele wie Phi Phi an den Anfang. Und halten Sie Abendtouren als flexible Option: Wenn der Himmel aufklart, nutzen Sie ihn.",
           ],
           en: [
             "The best plan depends on the season. In the dry season, roughly November to April, the sea is usually calm and all destinations are accessible. In the rainy season, roughly May to October, we recommend more reserve and sheltered routes, especially in Phang Nga Bay and at the islands off Ao Nang.",
-            "Note the closures: Maya Bay was most recently closed from 1 August to 30 September, and according to secondary sources Koh Rok and Koh Haa are closed from about mid-May to the end of October. These are orientation values that can change. More in our guides on the rainy season and on Maya Bay.",
+            "Note the closures: Maya Bay was most recently closed from 1 August to 30 September, and Koh Rok and Koh Haa are officially closed from 16 May to 15 November (open roughly mid-November to mid-May). These are orientation values that can change. More in our guides on the rainy season and on Maya Bay.",
             "In the rainy season it is best to plan two buffer days instead of one and to put open-sea destinations like Phi Phi at the beginning. And keep evening tours as a flexible option: when the sky clears, use it.",
           ],
         },

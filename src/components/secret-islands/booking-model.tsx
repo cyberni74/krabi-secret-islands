@@ -18,6 +18,7 @@ import {
   type AddOn,
   type DurationId,
 } from "./booking-data";
+import { ENTRANCE_FEE_NOTE, seasonHintFor, tourClosedOn } from "./park-fees";
 import { formatTHB } from "./store";
 
 export type Mode = "preset" | "custom";
@@ -159,6 +160,10 @@ export function contactErrors(d: Draft): ContactErrors {
   return e;
 }
 
+function tourIdOf(d: Draft) {
+  return d.mode === "preset" ? d.tourId : null;
+}
+
 /** Why the user can't leave step `i` yet (null = fine). */
 export function stepBlocker(d: Draft, i: number, todayISO: string): L | null {
   if (i === 0) {
@@ -167,7 +172,9 @@ export function stepBlocker(d: Draft, i: number, todayISO: string): L | null {
   }
   if (i === 1) {
     if (!d.date) return { de: "Bitte wählen Sie ein Datum.", en: "Please choose a date." };
-    if (!d.slot || !currentSlots(d).includes(d.slot) || slotStatus(d.date, d.slot, todayISO) === "booked")
+    if (tourClosedOn(tourIdOf(d), d.date))
+      return { de: "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.", en: "This tour cannot be booked on this date (seasonal closure)." };
+    if (!d.slot || !currentSlots(d).includes(d.slot) || slotStatus(d.date, d.slot, todayISO, tourIdOf(d)) === "booked")
       return { de: "Bitte wählen Sie eine Abfahrtszeit.", en: "Please choose a departure time." };
   }
   if (i === 4) {
@@ -255,6 +262,8 @@ export function buildMessage(d: Draft, lang: Lang, tOp: (l: L) => string) {
 
   lines.push("");
   lines.push(`*${tOp({ de: "Richtpreis gesamt", en: "Estimated total" })}: ${formatTHB(price.total)}*`);
+  lines.push("");
+  lines.push(tOp(ENTRANCE_FEE_NOTE));
   lines.push("");
   lines.push(`*${tOp({ de: "Kontakt", en: "Contact" })}:*`);
   lines.push(`${tOp({ de: "Name", en: "Name" })}: ${d.name.trim()}`);

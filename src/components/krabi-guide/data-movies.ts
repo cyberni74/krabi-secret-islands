@@ -107,14 +107,14 @@ export const MOVIE_ARTICLES: GuideArticleInput[] = [
             "Anreise: per Boot; ein Tagesausflug mit dem Speedboat ab Ao Nang ist gut machbar",
             "Beste Zeit: früh am Morgen oder später Nachmittag – mittags ist es am vollsten",
             "Regel: Koh Tapu nicht anfahren, Abstand halten",
-            "Eintritt: Nationalparkgebühr, in der Regel pro Person; bei mehreren unserer Touren laut Leistungsliste enthalten, sonst bei der Anfrage klären",
+            "Eintritt: Nationalparkgebühr, in der Regel pro Person; Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
           ],
           en: [
             "Location: Phang Nga Bay, Ao Phang Nga National Park",
             "Getting there: by boat; a day trip by speedboat from Ao Nang is quite doable",
             "Best time: early in the morning or late afternoon – midday is busiest",
             "Rule: do not approach Koh Tapu, keep your distance",
-            "Entry: national park fee, usually per person; included on several of our tours according to the inclusions list, otherwise confirmed on request",
+            "Entry: national park fee, usually per person; Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
           ],
         },
         tip: {
@@ -325,11 +325,11 @@ export const MOVIE_ARTICLES: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Die berühmten Drehorte liegen in geschützten Gebieten: James Bond Island im Ao Phang Nga Nationalpark, Maya Bay im Phi-Phi-Gebiet mit eigenen Regeln. Die Gebühren und Regeln legt die Nationalparkbehörde fest und sie ändern sich gelegentlich. Zuletzt wurden für ausländische Erwachsene in Phang Nga rund 300 Baht und für Maya Bay rund 400 Baht genannt – bitte aktuell prüfen. Bei unseren Touren sind die Nationalpark-Gebühren im Preis enthalten.",
+            "Die berühmten Drehorte liegen in geschützten Gebieten: James Bond Island im Ao Phang Nga Nationalpark, Maya Bay im Phi-Phi-Gebiet mit eigenen Regeln. Die Gebühren und Regeln legt die Nationalparkbehörde fest und sie ändern sich gelegentlich. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "Aus Sicht des Naturschutzes ist die Lehre aus Maya Bay einfach: Sensible Orte brauchen Pausen. Wenn eine Bucht geschlossen ist oder Baden verboten ist, hat das einen Grund. Halten Sie sich daran, auch wenn Sie dann „nur“ vom Boot aus schauen.",
           ],
           en: [
-            "The famous locations lie in protected areas: James Bond Island in Ao Phang Nga National Park, Maya Bay in the Phi Phi area with its own rules. Fees and rules are set by the national park authority and change from time to time. Most recently about 300 baht for foreign adults in Phang Nga and about 400 baht for Maya Bay were reported – please check the current figures. On our tours, national park fees are included in the price.",
+            "The famous locations lie in protected areas: James Bond Island in Ao Phang Nga National Park, Maya Bay in the Phi Phi area with its own rules. Fees and rules are set by the national park authority and change from time to time. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "From a conservation point of view, the lesson of Maya Bay is simple: sensitive places need breaks. If a bay is closed or swimming is prohibited, there is a reason. Stick to it, even if that means you “only” look from the boat.",
           ],
         },

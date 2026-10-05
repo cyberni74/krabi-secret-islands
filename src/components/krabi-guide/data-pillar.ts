@@ -133,11 +133,11 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
         h2: { de: "Nationalparks, Gebühren und Respekt vor der Natur", en: "National parks, fees and respect for nature" },
         body: {
           de: [
-            "Viele Krabi Inseln liegen in Meeresnationalparks, etwa Hat Noppharat Thara–Mu Ko Phi Phi, Than Bok Khorani oder Ao Phang Nga. Dort wird in der Regel eine Eintrittsgebühr pro Person erhoben, deren Höhe sich ändern kann – fragen Sie Ihren Anbieter, ob sie im Preis enthalten ist.",
+            "Viele Krabi Inseln liegen in Meeresnationalparks, etwa Hat Noppharat Thara–Mu Ko Phi Phi, Than Bok Khorani oder Ao Phang Nga. Dort wird in der Regel eine Eintrittsgebühr pro Person erhoben, deren Höhe sich ändern kann – Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "In den Parks gilt: keine Korallen berühren, keine Fische füttern, keinen Müll hinterlassen. In thailändischen Meeresnationalparks sind zudem Sonnencremes mit bestimmten Inhaltsstoffen wie Oxybenzon verboten. Riffschonende Sonnencreme ist also nicht nur gut für die Natur, sondern auch Pflicht.",
           ],
           en: [
-            "Many Krabi islands lie within marine national parks such as Hat Noppharat Thara–Mu Ko Phi Phi, Than Bok Khorani or Ao Phang Nga. A per-person entrance fee is usually charged, and the amount can change – ask your operator whether it is included.",
+            "Many Krabi islands lie within marine national parks such as Hat Noppharat Thara–Mu Ko Phi Phi, Than Bok Khorani or Ao Phang Nga. A per-person entrance fee is usually charged, and the amount can change – Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "The rules in the parks are simple: don’t touch coral, don’t feed fish, leave no rubbish. Thai marine national parks also ban sunscreens containing certain ingredients such as oxybenzone. Reef-safe sunscreen is therefore not just kind to nature but required.",
           ],
         },
@@ -465,11 +465,11 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
         h2: { de: "Was eine gute Bootstour ausmacht", en: "What makes a good boat trip" },
         body: {
           de: [
-            "Achten Sie bei der Wahl des Anbieters auf Sicherheit und Transparenz: Schwimmwesten in passenden Größen, ein erfahrener Kapitän, klare Angaben zu Nationalparkgebühren und was im Preis enthalten ist. Ein gutes Boot hat Schatten, Süßwasser zum Abspülen und ausreichend Trinkwasser an Bord.",
+            "Achten Sie bei der Wahl des Anbieters auf Sicherheit und Transparenz: Schwimmwesten in passenden Größen, ein erfahrener Kapitän, klare Angaben zum Ablauf vor Ort und zu den Leistungen. Ein gutes Boot hat Schatten, Süßwasser zum Abspülen und ausreichend Trinkwasser an Bord.",
             "Der größte Unterschied liegt jedoch im Wissen der Crew. Wer die Gezeiten kennt, weiß, wann die Sandbank auftaucht. Wer die Region kennt, weiß, welche Bucht gerade leer ist. Genau dieses lokale Wissen macht aus einer Bootsfahrt ein Erlebnis.",
           ],
           en: [
-            "When choosing an operator, look for safety and transparency: life jackets in the right sizes, an experienced captain, clear information about national park fees and what the price includes. A good boat has shade, fresh water for rinsing off and enough drinking water on board.",
+            "When choosing an operator, look for safety and transparency: life jackets in the right sizes, an experienced captain, clear information about the process on site and the services. A good boat has shade, fresh water for rinsing off and enough drinking water on board.",
             "The biggest difference, though, is the crew’s knowledge. If they know the tides, they know when the sandbar appears. If they know the area, they know which bay is empty right now. That local knowledge is what turns a boat ride into an experience.",
           ],
         },
@@ -490,7 +490,6 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
             "Früh starten – idealerweise vor den großen Tourbooten",
             "Riffschonende Sonnencreme, Hut und leichtes Langarmshirt",
             "Wasserschuhe für Sandbänke und felsige Einstiege",
-            "Bargeld für Nationalparkgebühren, falls nicht inklusive",
             "Wasserdichte Tasche für Handy und Kamera",
           ],
           en: [
@@ -498,7 +497,6 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
             "Start early – ideally before the big tour boats",
             "Reef-safe sunscreen, a hat and a light long-sleeved shirt",
             "Water shoes for sandbars and rocky entries",
-            "Cash for national park fees if not included",
             "A dry bag for your phone and camera",
           ],
         },

@@ -134,7 +134,6 @@ const dict: Record<string, string> = {
   "Smaragdgrüne Lagunen und Buchten, die kein Gruppenboot anfährt.": "단체 보트가 찾지 않는 에메랄드빛 라군과 해변.",
   "7 Std. · ab 08:00": "7시간 · 오전 8시부터",
   "Früh am Morgen gehört die Hong-Lagune Ihnen. Danach geht's zur winzigen Bucht von Koh Lao Lading und zu den Doppelstränden von Koh Pakbia – ideal für ein langes Schwimm- und Schnorchelpicknick.": "이른 아침의 Hong Lagoon은 온전히 당신의 것입니다. 이어서 Koh Lao Lading의 작은 만과 Koh Pakbia의 쌍둥이 해변으로 향합니다. 여유로운 수영과 스노클링 피크닉에 안성맞춤이에요.",
-  "Nationalpark-Gebühren": "국립공원 입장료",
   "Koh Roi, Koh Kudu, Koh Nok – 100 % abseits der Massen.": "Koh Roi, Koh Kudu, Koh Nok – 100% 관광 루트 밖의 섬.",
   "8,5 Std. · ab 08:00": "8.5시간 · 오전 8시부터",
   "100 % Geheimtipp": "100% 숨은 명소",
@@ -635,6 +634,8 @@ const dict: Record<string, string> = {
   "Schnellzugriff": "빠른 메뉴",
   "Krabi Secret Islands: Private Speedboot-Touren ab Ao Nang": "끄라비 시크릿 아일랜드: 아오낭 출발 프라이빗 스피드보트 투어",
   "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.": "아오낭 출발 프라이빗 스피드보트 투어, 최대 5명: Koh Roi, 홍 아일랜드, 선셋 디너, 플랑크톤, 낚시 투어. 보트 1대 기준 요금, 원하시는 날짜를 문의하세요.",
+  "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "계절 폐쇄로 이 날짜에는 이 투어를 예약할 수 없습니다.",
+  "Saisonsperre": "계절 폐쇄",
 };
 
 export default dict;

@@ -402,7 +402,6 @@ const INC_BOAT: L = { de: "Privates Speedboat & Kapitän", en: "Private speedboa
 const INC_DRINKS: L = { de: "Wasser, Softdrinks & Obst", en: "Water, soft drinks & fruit" };
 const INC_TRANSFER: L = { de: "Hotel-Transfer Ao Nang/Krabi", en: "Hotel transfer Ao Nang/Krabi" };
 const INC_SNORKEL: L = { de: "Schnorchel-Equipment gratis (bei Buchung auswählen)", en: "Snorkel gear free (select when booking)" };
-const INC_PARK: L = { de: "Nationalpark-Gebühren", en: "National park fees" };
 const INC_RELAX: L = { de: "Zeit zum Schnorcheln, Schwimmen & Entspannen", en: "Time to snorkel, swim & relax" };
 const INC_SWIM_FISH: L = { de: "Badestopp zum Schwimmen & Abkühlen", en: "Swim stop to cool off" };
 const INC_RODS: L = { de: "Angelruten, Köder & Guide", en: "Rods, bait & fishing guide" };
@@ -506,7 +505,7 @@ export const TOURS: Tour[] = [
       de: "Früh am Morgen gehört die Hong-Lagune Ihnen. Danach geht's zur winzigen Bucht von Koh Lao Lading und zu den Doppelstränden von Koh Pakbia – ideal für ein langes Schwimm- und Schnorchelpicknick.",
       en: "Early in the morning, Hong Lagoon belongs to you. Then on to the tiny cove of Koh Lao Lading and the twin beaches of Koh Pakbia – perfect for a long swim and snorkel picnic.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_PARK, INC_SNORKEL, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_SNORKEL, INC_TRANSFER],
   },
   {
     id: "phang-nga-uncharted",
@@ -528,7 +527,7 @@ export const TOURS: Tour[] = [
       de: "Unsere Expedition in die nördliche Phang-Nga-Bucht: Schwimmen Sie bei Flut durch den Felstunnel in die versteckte Lagune von Koh Roi, entdecken Sie das Kudu-Hong und picknicken Sie allein am Strand von Koh Nok.",
       en: "Our expedition into northern Phang Nga Bay: swim through the rock tunnel into Koh Roi's hidden lagoon at high tide, explore the Kudu hong and picnic alone on Koh Nok's beach.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_DRINKS, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_TRANSFER],
   },
   {
     id: "phi-phi-early-bird",
@@ -551,7 +550,7 @@ export const TOURS: Tour[] = [
       de: "Abfahrt um 07:00 – wir erreichen Maya Bay, bevor die Fähren ankommen. Schwimmen in der türkisen Pileh-Lagune, vorbei an der Viking Cave und Mittagspause am weißen Strand von Bamboo Island.",
       en: "Departing at 7 am, we reach Maya Bay before the ferries arrive. Swim in turquoise Pileh Lagoon, pass Viking Cave and take a lunch break on Bamboo Island's white beach.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_SNORKEL, INC_DRINKS, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_SNORKEL, INC_DRINKS, INC_TRANSFER],
   },
   {
     id: "koh-rok-safari",
@@ -574,7 +573,7 @@ export const TOURS: Tour[] = [
       de: "Die lange Fahrt lohnt sich: Schildkröten, Clownfische und Korallengärten an den Zwillingsinseln Koh Rok, dazu die Kalksteintürme von Koh Haa mit ihrer Unterwasser-Lagune.",
       en: "The long ride pays off: turtles, clownfish and coral gardens at the twin Koh Rok islands, plus the limestone towers of Koh Haa with their underwater lagoon.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_SNORKEL, { de: "Thai-Lunch an Bord", en: "Thai lunch on board" }, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_SNORKEL, { de: "Thai-Lunch an Bord", en: "Thai lunch on board" }, INC_TRANSFER],
   },
   {
     id: "james-bond-bay",
@@ -595,7 +594,7 @@ export const TOURS: Tour[] = [
       de: "Wir fahren entgegen der Gruppenroute: zuerst die Mangrovenküste, dann das schwimmende Dorf Koh Panyee und James Bond Island am Nachmittag, wenn es ruhig wird.",
       en: "We run the route in reverse: first the mangrove coast, then the floating village of Koh Panyee and James Bond Island in the afternoon when it gets quiet.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_DRINKS, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_TRANSFER],
   },
   {
     id: "railay-escape",

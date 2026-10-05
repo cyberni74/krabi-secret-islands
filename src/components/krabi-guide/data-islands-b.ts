@@ -424,7 +424,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Rok & Koh Haa", en: "Koh Rok & Koh Haa" },
     primaryKeyword: "Koh Rok Schnorcheln",
-    keywords: ["Koh Rok Schnorcheln", "Koh Rok snorkeling", "Koh Haa", "Koh Rok Nai", "Koh Rok Nok", "Mu Ko Lanta Nationalpark", "Koh Haa Lagune", "Koh Rok Saison geöffnet", "Koh Rok Sperrzeit Mai Oktober", "Koh Rok Tagestour ab Krabi", "Koh Rok Schildkröten"],
+    keywords: ["Koh Rok Schnorcheln", "Koh Rok snorkeling", "Koh Haa", "Koh Rok Nai", "Koh Rok Nok", "Mu Ko Lanta Nationalpark", "Koh Haa Lagune", "Koh Rok Saison geöffnet", "Koh Rok Sperrzeit Mai November", "Koh Rok Tagestour ab Krabi", "Koh Rok Schildkröten"],
     title: {
       de: "Koh Rok & Koh Haa: Schnorchel-Guide ab Krabi",
       en: "Koh Rok & Koh Haa: Snorkelling Guide from Krabi",
@@ -472,11 +472,11 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
         h2: { de: "Saison: wann Koh Rok geöffnet ist", en: "Season: when Koh Rok is open" },
         body: {
           de: [
-            "Der Mu Ko Lanta Nationalpark schließt die Inseln in der Regel während des Südwestmonsuns, ungefähr von Mitte Mai bis Mitte Oktober. Die genauen Daten legt die Parkverwaltung fest. In der Hauptsaison von November bis April sind die Bedingungen meist ideal: ruhige See und gute Sicht unter Wasser.",
+            "Der Mu Ko Lanta Nationalpark schließt die Inseln in der Regel während des Südwestmonsuns, offiziell vom 16. Mai bis 15. November (manche Quellen nennen Ende Oktober). Die genauen Daten legt die Parkverwaltung fest. In der Hauptsaison von etwa Mitte November bis Mitte Mai sind die Bedingungen meist ideal: ruhige See und gute Sicht unter Wasser.",
             "Weil die Inseln weit draußen liegen, ist das Wetter am Ausflugstag entscheidend. Ein seriöser Anbieter verschiebt die Fahrt lieber, als bei Wellengang hinauszufahren.",
           ],
           en: [
-            "Mu Ko Lanta National Park usually closes the islands during the southwest monsoon, roughly from mid-May to mid-October. The exact dates are set by the park administration. In the high season from November to April, conditions are usually ideal: calm seas and good visibility underwater.",
+            "Mu Ko Lanta National Park usually closes the islands during the southwest monsoon, officially from 16 May to 15 November (some sources say until the end of October). The exact dates are set by the park administration. In the open season from roughly mid-November to mid-May, conditions are usually ideal: calm seas and good visibility underwater.",
             "Because the islands are far out, the weather on the day is decisive. A reputable operator would rather postpone than head out in rough seas.",
           ],
         },
@@ -526,8 +526,8 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
       {
         q: { de: "Wann ist Koh Rok geöffnet?", en: "When is Koh Rok open?" },
         a: {
-          de: "In der Regel von etwa Mitte Oktober bis Mitte Mai. Während des Südwestmonsuns schließt der Nationalpark die Inseln meist.",
-          en: "Usually from around mid-October to mid-May. During the southwest monsoon the national park usually closes the islands.",
+          de: "In der Regel von etwa Mitte November bis Mitte Mai (offizielle Sperrzeit 16. Mai bis 15. November). Während des Südwestmonsuns schließt der Nationalpark die Inseln meist.",
+          en: "Usually from around mid-November to mid-May (official closure 16 May to 15 November). During the southwest monsoon the national park usually closes the islands.",
         },
       },
       {

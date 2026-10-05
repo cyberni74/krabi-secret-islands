@@ -483,12 +483,12 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           de: [
             "Die Phi-Phi-Inseln liegen vor der Küste und sind nur per Boot erreichbar. Ab Ao Nang dauert die Fahrt mit einem Speedboot bei ruhiger See grob eine Stunde, je nach Boot, Route und Seegang kann es kürzer oder länger sein. Fähren und Longtails haben andere Zeiten; Fahrpläne und Preise ändern sich, wir treffen dazu keine Aussagen. Bitte aktuell bei den Anbietern prüfen.",
             "Das Seegebiet zwischen Festland und Phi Phi ist offener als die geschützten Buchten der Küste. Bei rauer See kann die Fahrt unangenehmer oder nicht möglich sein; in der Regenzeit sind Ausflüge deshalb wetterabhängig. Details zu den Jahreszeiten finden Sie in unserem Guide zur besten Reisezeit für Krabi.",
-            "Beachten Sie auch, dass die Phi-Phi-Inseln zu einem Nationalpark gehören. Eine Eintrittsgebühr wird in der Regel erhoben; Höhe und Regeln legt die Nationalparkbehörde fest und kann sie ändern. Bei unseren Phi-Phi-Touren sind die Nationalpark-Gebühren laut Tourdaten im Leistungsumfang enthalten.",
+            "Beachten Sie auch, dass die Phi-Phi-Inseln zu einem Nationalpark gehören. Eine Eintrittsgebühr wird in der Regel erhoben; Höhe und Regeln legt die Nationalparkbehörde fest und kann sie ändern. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
           ],
           en: [
             "The Phi Phi islands lie off the coast and can only be reached by boat. From Ao Nang the ride by speedboat takes roughly an hour in calm seas; depending on boat, route and sea state it can be shorter or longer. Ferries and longtails have different times; schedules and prices change, and we make no statements about them. Please check the current status with the providers.",
             "The stretch of sea between the mainland and Phi Phi is more open than the sheltered bays along the coast. In rough seas the ride can be uncomfortable or not possible; in the rainy season trips are therefore weather-dependent. For details on the seasons see our guide to the best time to visit Krabi.",
-            "Note also that the Phi Phi islands belong to a national park. An entrance fee is usually charged; the amount and rules are set by the national park authority and can change. On our Phi Phi tours, national park fees are included in the service according to the tour data.",
+            "Note also that the Phi Phi islands belong to a national park. An entrance fee is usually charged; the amount and rules are set by the national park authority and can change. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
           ],
         },
         tip: {
@@ -576,14 +576,12 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
             "Phi Phi Early Bird: Start 07:00 Uhr, rund 8 Stunden, private Tour für bis zu 5 Gäste",
             "Stopps: Maya Bay, Pileh-Lagune, Viking Cave, Bamboo Island",
             "Schnorchelausrüstung kostenlos, bei der Buchung ankreuzen",
-            "Nationalpark-Gebühren laut Tourdaten im Leistungsumfang",
             "Optional: 4K-Drohnenpaket (kostenpflichtig), Catering 500 THB pro Person",
           ],
           en: [
             "Phi Phi Early Bird: start 7 am, around 8 hours, private tour for up to 5 guests",
             "Stops: Maya Bay, Pileh Lagoon, Viking Cave, Bamboo Island",
             "Snorkel gear free, tick it when booking",
-            "National park fees included in the service according to the tour data",
             "Optional: 4K drone package (extra charge), catering 500 THB per person",
           ],
         },

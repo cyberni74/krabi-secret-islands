@@ -135,8 +135,8 @@ export const EXTRA_SECTIONS: Record<string, GuideSection[]> = {
     {
       h2: { de: "Welche Tour für welchen Schnorchler?", en: "Which trip for which snorkeller?" },
       body: {
-        de: ["Einsteiger und Familien sind mit der Poda-Gruppe und Hong bestens bedient. Wer bereits Erfahrung hat und das klarste Wasser sucht, plant einen Ganztag nach Koh Rok und Koh Haa – in der Saison von etwa November bis April."],
-        en: ["Beginners and families are well served by the Poda group and Hong. If you are experienced and want the clearest water, plan a full day to Koh Rok and Koh Haa – in the season from roughly November to April."],
+        de: ["Einsteiger und Familien sind mit der Poda-Gruppe und Hong bestens bedient. Wer bereits Erfahrung hat und das klarste Wasser sucht, plant einen Ganztag nach Koh Rok und Koh Haa – in der Saison von etwa Mitte November bis Mitte Mai."],
+        en: ["Beginners and families are well served by the Poda group and Hong. If you are experienced and want the clearest water, plan a full day to Koh Rok and Koh Haa – in the season from roughly mid-November to mid-May."],
       },
     },
   ],

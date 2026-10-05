@@ -343,7 +343,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
             "Wasserschuhe für Sandbänke und felsige Einstiege",
             "Eigene Schnorchelmaske, falls vorhanden",
             "Wasserdichte Tasche oder Handyhülle",
-            "Bargeld in kleinen Scheinen für Nationalparkgebühren und Snacks",
+            "Bargeld in kleinen Scheinen für Snacks und Trinkgeld",
             "Mittel gegen Reiseübelkeit bei Bedarf",
             "Persönliche Medikamente",
           ],
@@ -355,7 +355,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
             "Water shoes for sandbars and rocky entries",
             "Your own snorkel mask if you have one",
             "A dry bag or waterproof phone case",
-            "Cash in small notes for national park fees and snacks",
+            "Cash in small notes for snacks and tips",
             "Motion-sickness remedy if needed",
             "Personal medication",
           ],
@@ -436,8 +436,8 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
       {
         q: { de: "Brauche ich Bargeld auf der Bootstour?", en: "Do I need cash on the boat trip?" },
         a: {
-          de: "Ja, für Nationalparkgebühren (falls nicht inklusive), Snacks oder Trinkgeld. Kleine Scheine sind praktisch.",
-          en: "Yes, for national park fees (if not included), snacks or tips. Small notes are handy.",
+          de: "Ja, für Snacks, Trinkgeld oder eventuelle Gebühren vor Ort. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung. Kleine Scheine sind praktisch.",
+          en: "Yes, for snacks, tips or any fees on site. Whether and how much of an entrance fee applies at your destination, you will learn when booking. Small notes are handy.",
         },
       },
     ],

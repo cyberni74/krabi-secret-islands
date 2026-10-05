@@ -510,10 +510,10 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
         h2: { de: "Was Sie für Koh Hong mitnehmen sollten", en: "What to bring for Koh Hong" },
         body: {
           de: [
-            "Neben den Klassikern wie Sonnencreme und Wasser sind für Hong Island Schnorchelausrüstung, Wasserschuhe für den felsigen Einstieg und gutes Schuhwerk für den Viewpoint hilfreich. Planen Sie Bargeld für die Nationalparkgebühr ein, falls diese nicht im Tourpreis enthalten ist.",
+            "Neben den Klassikern wie Sonnencreme und Wasser sind für Hong Island Schnorchelausrüstung, Wasserschuhe für den felsigen Einstieg und gutes Schuhwerk für den Viewpoint hilfreich. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
           ],
           en: [
-            "Besides the classics like sunscreen and water, snorkel gear, water shoes for rocky entries and decent shoes for the viewpoint are useful on Hong Island. Bring cash for the national park fee in case it is not included in the tour price.",
+            "Besides the classics like sunscreen and water, snorkel gear, water shoes for rocky entries and decent shoes for the viewpoint are useful on Hong Island. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
           ],
         },
       },

@@ -1,4 +1,5 @@
 import { IMG, TOURS, type L, type SlotId, type Tour } from "./content";
+import { tourClosedOn } from "./park-fees";
 
 /* ───────────── Custom tour builder ───────────── */
 
@@ -133,15 +134,16 @@ export type SlotStatus = "free" | "limited" | "booked";
 /**
  * Availability (no backend yet): past dates and today are closed, everything else is requestable.
  */
-export function slotStatus(dateISO: string, slot: SlotId, todayISO: string): SlotStatus {
+export function slotStatus(dateISO: string, slot: SlotId, todayISO: string, tourId?: string | null): SlotStatus {
   // Honest default until a real availability backend exists: every future slot is requestable,
   // the operator confirms. (Random "limited"/"booked" days would be fake scarcity.)
   void slot;
+  if (tourClosedOn(tourId, dateISO)) return "booked";
   return dateISO <= todayISO ? "booked" : "free";
 }
 
-export function dayStatus(dateISO: string, slots: SlotId[], todayISO: string): SlotStatus {
-  const st = slots.map((s) => slotStatus(dateISO, s, todayISO));
+export function dayStatus(dateISO: string, slots: SlotId[], todayISO: string, tourId?: string | null): SlotStatus {
+  const st = slots.map((s) => slotStatus(dateISO, s, todayISO, tourId));
   if (st.every((s) => s === "booked")) return "booked";
   if (st.some((s) => s === "free")) return "free";
   return "limited";

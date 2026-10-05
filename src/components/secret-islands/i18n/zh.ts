@@ -134,7 +134,6 @@ const dict: Record<string, string> = {
   "Smaragdgrüne Lagunen und Buchten, die kein Gruppenboot anfährt.": "翡翠泻湖与团队船从未踏足的海湾。",
   "7 Std. · ab 08:00": "7 小时 · 08:00 起",
   "Früh am Morgen gehört die Hong-Lagune Ihnen. Danach geht's zur winzigen Bucht von Koh Lao Lading und zu den Doppelstränden von Koh Pakbia – ideal für ein langes Schwimm- und Schnorchelpicknick.": "清晨的 Hong 泻湖只属于您。随后前往 Koh Lao Lading 的小海湾和 Koh Pakbia 的双子海滩——尽情畅游，享受浮潜野餐。",
-  "Nationalpark-Gebühren": "国家公园门票",
   "Koh Roi, Koh Kudu, Koh Nok – 100 % abseits der Massen.": "Koh Roi、Koh Kudu、Koh Nok——100% 远离尘嚣。",
   "8,5 Std. · ab 08:00": "8.5 小时 · 08:00 起",
   "100 % Geheimtipp": "100% 秘境",
@@ -635,6 +634,8 @@ const dict: Record<string, string> = {
   "Schnellzugriff": "快捷入口",
   "Krabi Secret Islands: Private Speedboot-Touren ab Ao Nang": "甲米 Secret Islands：奥南出发的私人快艇之旅",
   "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.": "私人快艇之旅 | 从奥南出发，最多 5 位宾客：Koh Roi、洪岛（Hong Island）、日落晚餐、夜光浮游生物与钓鱼之旅。按船计价，欢迎咨询您的日期。",
+  "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "该日期因季节性封闭无法预订此行程。",
+  "Saisonsperre": "季节性封闭",
 };
 
 export default dict;

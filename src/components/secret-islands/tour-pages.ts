@@ -94,11 +94,6 @@ export function priceText(price: number, lang: TourLang): string {
   return lang === "de" ? `${grouped} THB` : `THB ${grouped}`;
 }
 
-/** The tour lists national park fees as included (INC_PARK in content.ts). */
-export function includesParkFee(tour: Tour): boolean {
-  return tour.includes.some((i) => i.de === "Nationalpark-Gebühren");
-}
-
 export const MAX_GUESTS = 5;
 
 /** Tour-specific FAQ + one data-derived question about price and inclusions (answer built only from TOURS). */
@@ -107,12 +102,8 @@ export function tourFaq(tour: Tour, page: TourPageContent, lang: TourLang): { q:
   const included = tour.includes.map((i) => i[lang]).join(lang === "de" ? "; " : "; ");
   const park =
     lang === "de"
-      ? includesParkFee(tour)
-        ? "Die Nationalpark-Gebühren sind im Preis enthalten."
-        : "In der Leistungsliste dieser Tour sind keine Nationalpark-Gebühren aufgeführt; ob für Ihre Route Gebühren anfallen, bestätigen wir Ihnen in der Anfrage."
-      : includesParkFee(tour)
-        ? "The national park fees are included in the price."
-        : "The inclusions list of this tour does not list national park fees; whether fees apply on your route, we confirm in the inquiry.";
+      ? "Details zu eventuellen Nationalparkgebühren erhalten Sie bei der Buchung."
+      : "Details on any national park fees are provided when you book.";
   const q = lang === "de" ? "Was kostet die Tour und was ist enthalten?" : "How much does the tour cost and what is included?";
   const a =
     lang === "de"

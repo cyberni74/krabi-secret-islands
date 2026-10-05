@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import { ParkFeeNotice, SeasonNotice } from "./park-fee-notice";
+import { nextOpenDate, tourClosedOn } from "./park-fees";
 import { BRAND, TOUR_FILTERS, TOURS, altFor, type TourCategory } from "./content";
 import {
   BOOKING_EXTRAS,
@@ -128,6 +130,7 @@ export function TourStep({ draft, patch }: StepProps) {
           transition={{ duration: 0.25 }}
         >
           {draft.mode === "preset" ? <PresetPicker draft={draft} patch={patch} /> : <CustomBuilder draft={draft} patch={patch} />}
+          <ParkFeeNotice draft={draft} className="mt-5" />
         </motion.div>
       </AnimatePresence>
     </div>
@@ -435,9 +438,11 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
   const { t, lang } = useTx();
   const locale = htmlLang(lang);
   const slots = currentSlots(draft);
+  const tourId = draft.mode === "preset" ? draft.tourId : null;
   const today = useMemo(() => new Date(`${todayISO}T12:00:00`), [todayISO]);
   const [view, setView] = useState(() => {
-    const base = draft.date ? new Date(`${draft.date}T12:00:00`) : today;
+    const start = nextOpenDate(tourId, draft.date ?? todayISO);
+    const base = new Date(`${start}T12:00:00`);
     return { y: base.getFullYear(), m: base.getMonth() };
   });
 
@@ -466,7 +471,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
 
   const pickDate = (iso: string) =>
     patch((d) => {
-      const open = currentSlots(d).filter((s) => slotStatus(iso, s, todayISO) !== "booked");
+      const open = currentSlots(d).filter((s) => slotStatus(iso, s, todayISO, d.mode === "preset" ? d.tourId : null) !== "booked");
       const keep = d.slot && open.includes(d.slot) ? d.slot : open.length === 1 ? open[0] : null;
       return { date: iso, slot: keep };
     });
@@ -520,7 +525,8 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
             const iso = toISODate(day);
             const past = iso < todayISO;
             const isToday = iso === todayISO;
-            const status: SlotStatus = past ? "booked" : dayStatus(iso, slots, todayISO);
+            const closed = tourClosedOn(tourId, iso);
+            const status: SlotStatus = past ? "booked" : dayStatus(iso, slots, todayISO, tourId);
             const disabled = status === "booked";
             const on = draft.date === iso;
             const label = new Intl.DateTimeFormat(locale, { dateStyle: "full" }).format(day);
@@ -531,7 +537,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
                 disabled={disabled}
                 onClick={() => pickDate(iso)}
                 aria-pressed={on}
-                aria-label={`${label}${status === "limited" ? ` – ${t({ de: "Wenige Plätze", en: "Few spots" })}` : disabled && !past ? ` – ${t({ de: "Ausgebucht", en: "Booked out" })}` : ""}`}
+                aria-label={`${label}${status === "limited" ? ` – ${t({ de: "Wenige Plätze", en: "Few spots" })}` : closed ? ` – ${t({ de: "Saisonsperre", en: "Seasonal closure" })}` : disabled && !past ? ` – ${t({ de: "Ausgebucht", en: "Booked out" })}` : ""}`}
                 className={cn(
                   "relative flex aspect-square min-h-11 flex-col items-center justify-center rounded-xl text-sm font-bold transition sm:aspect-[1.15]",
                   on
@@ -567,6 +573,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
         <p className="mt-2 text-[11px] text-slate-500">
           {t({ de: "Verfügbarkeit wird nach Anfrage final bestätigt", en: "Availability is confirmed after your request" })}
         </p>
+        <SeasonNotice draft={draft} className="mt-3" />
       </section>
 
       <section>
@@ -578,7 +585,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
           <div className="grid gap-2.5">
             {slots.map((sid, i) => {
               const s = slotInfo(sid, draft);
-              const st = slotStatus(draft.date!, sid, todayISO);
+              const st = slotStatus(draft.date!, sid, todayISO, tourId);
               const on = draft.slot === sid;
               const disabled = st === "booked";
               return (
@@ -1010,6 +1017,7 @@ export function Receipt({ draft }: { draft: Draft }) {
         <span className="text-sm font-semibold text-slate-300">{t({ de: "Gesamt", en: "Total" })}</span>
         <AnimatedPrice value={price.total} className="si-text-gradient text-3xl font-extrabold sm:text-4xl" />
       </div>
+      <ParkFeeNotice draft={draft} className="mt-3" />
       <p className="mt-2 text-[11px] leading-relaxed text-slate-400">
         {t({ de: "Richtpreis · 30 % Anzahlung nach Bestätigung · kostenlose Umbuchung bei Schlechtwetter", en: "Estimate · 30% deposit after confirmation · free rebooking in bad weather" })}
       </p>

@@ -5,8 +5,7 @@ import type { GuideArticleInput } from "./types";
  * New guide articles, batch A: cost pillar, national park fees, longtail vs speedboat.
  * Fact policy:
  *  - Our own prices come only from TOURS / booking-data.ts (always "ab" / per boat, Richtpreis for the tour builder).
- *  - No competitor prices. National park fees are given as ranges with "most recently reported / check current figures",
- *    consistent with data-movies.ts (about 300 THB Phang Nga, about 400 THB Maya Bay).
+ *  - No competitor prices. No national park fee amounts or inclusion claims on public pages.
  *  - No review quotes, no cancellation rates, no wave-height thresholds.
  */
 export const NEW_ARTICLES_A: GuideArticleInput[] = [
@@ -137,11 +136,11 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen sowie der Hotel-Transfer Ao Nang/Krabi. Bei den meisten Inseltouren kommen Wasser, Softdrinks und Obst hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Nationalpark-Gebühren sind laut Leistungsliste bei den Touren enthalten, bei denen sie dort ausdrücklich aufgeführt sind (Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari, James Bond Bay) – prüfen Sie diesen Punkt bei den übrigen Touren bitte in der Anfrage.",
+            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen sowie der Hotel-Transfer Ao Nang/Krabi. Bei den meisten Inseltouren kommen Wasser, Softdrinks und Obst hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "Eine Auswahl, jeweils ab-Preis pro Boot und Dauer laut Tourenliste:",
           ],
           en: [
-            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain, time to snorkel, swim and relax, and the hotel transfer Ao Nang/Krabi. Most island tours add water, soft drinks and fruit; snorkel gear is free and ticked when booking. National park fees are included on the tours where the inclusion list explicitly names them (Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari, James Bond Bay) – please check this point for the other tours in your enquiry.",
+            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain, time to snorkel, swim and relax, and the hotel transfer Ao Nang/Krabi. Most island tours add water, soft drinks and fruit; snorkel gear is free and ticked when booking. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "A selection, each from-price per boat and duration as listed:",
           ],
         },
@@ -310,12 +309,12 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
       },
       {
         q: {
-          de: "Sind Nationalpark-Gebühren im Preis enthalten?",
-          en: "Are national park fees included in a private boat charter?",
+          de: "Fällt bei einer Privatcharter eine Nationalpark-Gebühr an?",
+          en: "Is a national park fee charged on a private boat charter?",
         },
         a: {
-          de: "Das unterscheidet sich je Anbieter und Tour. Bei uns sind sie laut Leistungsliste bei den Touren enthalten, bei denen sie dort aufgeführt sind (Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari, James Bond Bay). Bei anderen Touren bitte in der Anfrage bestätigen lassen. Die Beträge ändern sich, mehr dazu im Artikel zu den Nationalpark-Gebühren.",
-          en: "That differs by operator and tour. With us they are included according to the inclusion list on the tours where they are listed (Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari, James Bond Bay). For other tours please have it confirmed in your enquiry. The amounts change; see the national park fees article for more.",
+          de: "Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung. Mehr dazu im Artikel zu den Nationalpark-Gebühren.",
+          en: "Whether and how much of an entrance fee applies at your destination, you will learn when booking. See the national park fees article for more.",
         },
       },
       {
@@ -362,30 +361,30 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
       "Phi Phi Eintritt Nationalpark",
       "Nationalpark-Gebühr Phang Nga Bucht",
       "Eintritt Inseln Krabi Ausländer",
-      "Nationalparkgebühr Bootstour inklusive",
+      "Nationalparkgebühr Bootstour",
       "Koh Rok Eintritt",
       "Krabi national park fees",
       "Hong Island national park fee",
       "Phi Phi park fee",
       "Phang Nga Bay park fee",
       "4 islands park fee Krabi",
-      "Krabi national park fee included in tour",
+      "Krabi national park fee boat tour",
     ],
     title: {
-      de: "Nationalpark-Gebühren Krabi: Was Inseln kosten",
-      en: "Krabi National Park Fees: Island Entry Prices",
+      de: "Nationalpark-Gebühren Krabi: So funktioniert der Inseleintritt",
+      en: "Krabi National Park Fees: How Island Entry Works",
     },
     metaDescription: {
       de: "Was kosten die Nationalparks rund um Krabi? Gebühren für Hong, Phi Phi, Phang Nga und Co., wer sie zahlt und warum die Beträge abweichen können.",
       en: "What do the national parks around Krabi charge? Fees for Hong, Phi Phi, Phang Nga and more, who pays them and why the amounts can differ a lot.",
     },
     h1: {
-      de: "Nationalpark-Gebühren in Krabi: Was Inselbesuche wirklich kosten",
-      en: "Krabi national park fees: what island visits really cost",
+      de: "Nationalpark-Gebühren in Krabi: Was Sie vor dem Inselbesuch wissen sollten",
+      en: "Krabi national park fees: what to know before an island visit",
     },
     intro: {
-      de: "Wer eine Bootstour bucht, sieht zuerst den Tourpreis – und erfährt oft erst am Pier, dass für die Inseln zusätzlich Nationalpark-Gebühren in Krabi fällig werden. Die Beträge sind pro Person gedacht, je nach Gebiet unterschiedlich und in Quellen nicht einheitlich angegeben. Dieser Guide erklärt, welche Inseln zu welchem Schutzgebiet gehören, welche Spannen zuletzt genannt wurden, warum sich Zahlen widersprechen und worauf Sie vor der Buchung achten sollten. Wichtig vorab: Die Gebühren legt die Nationalparkbehörde fest und ändern sich gelegentlich. Alle Beträge unten sind deshalb Richtwerte, die Sie bitte aktuell prüfen.",
-      en: "When you book a boat tour you first see the tour price – and often only find out at the pier that national park fees in Krabi are due on top for the islands. The amounts are charged per person, differ by area and are not stated consistently across sources. This guide explains which islands belong to which protected area, which ranges were most recently reported, why figures contradict each other and what to check before booking. Important upfront: the fees are set by the national park authority and change from time to time. All amounts below are therefore guide values, which you should check against current figures.",
+      de: "Wer eine Bootstour bucht, sieht zuerst den Tourpreis – und fragt sich oft, ob für die Inseln zusätzlich Nationalpark-Gebühren in Krabi anfallen. Dieser Guide erklärt, welche Inseln zu welchem Schutzgebiet gehören, wie Eintrittsgebühren grundsätzlich funktionieren, wer sie festlegt, wie sie bezahlt werden und worauf Sie vor der Buchung achten sollten. Wichtig vorab: Die Gebühren und Regeln legt die Nationalparkbehörde fest, und sie ändern sich gelegentlich. Konkrete Beträge nennen wir deshalb bewusst nicht.",
+      en: "When you book a boat tour you first see the tour price – and often wonder whether national park fees in Krabi apply to the islands on top. This guide explains which islands belong to which protected area, how entrance fees work in general, who sets them, how they are paid and what to check before booking. Important upfront: the fees and rules are set by the national park authority and change from time to time. We therefore deliberately do not state specific amounts.",
     },
     sections: [
       {
@@ -395,19 +394,19 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Es gibt nicht „die“ Nationalpark-Gebühr für Krabi, sondern mehrere Gebühren je nach Schutzgebiet und Ziel. Wer in einer Tour mehrere Gebiete anläuft, zahlt unter Umständen mehrere Eintritte. Ausländische Erwachsene zahlen dabei in der Regel mehr als Thais, und für Kinder gelten meist niedrigere Sätze.",
-            "Die zuletzt genannten Größenordnungen für ausländische Erwachsene: rund 300 THB für Hong Island, rund 300 THB in der Phang Nga Bucht (James Bond Island), rund 400 THB für Phi Phi und Maya Bay. Für die klassischen 4 Islands (Poda, Chicken, Tup und Umgebung) nennen Quellen unterschiedlich 200 oder 400 THB. Diese Zahlen sind keine festen Preise – prüfen Sie die aktuellen Beträge.",
-            "Weil sich Beträge, Zuordnungen und Regeln ändern können, ist die verlässlichste Antwort immer die aktuelle Information der Nationalparkbehörde oder Ihres Anbieters kurz vor dem Termin.",
+            "Es gibt nicht „die“ Nationalpark-Gebühr für Krabi, sondern mehrere Regelungen je nach Schutzgebiet und Ziel. Wer auf einer Route mehrere Gebiete anläuft, zahlt unter Umständen mehrere Eintritte. Die Gebühr wird in der Regel pro Person erhoben; ausländische Erwachsene zahlen dabei meist mehr als Thais, und für Kinder gelten häufig andere Sätze.",
+            "Festgelegt wird die Gebühr von der Nationalparkbehörde, nicht vom Tourveranstalter. Sie kann sich ändern, und Angaben in Blogs und Foren sind oft veraltet. Die verlässlichste Antwort ist deshalb immer die aktuelle Information der Behörde oder Ihres Anbieters kurz vor dem Termin.",
+            "Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
           ],
           en: [
-            "There is no single national park fee for Krabi, but several fees depending on protected area and destination. If a tour visits several areas, you may pay several entries. Foreign adults generally pay more than Thai nationals, and lower rates usually apply to children.",
-            "The orders of magnitude most recently reported for foreign adults: around 300 THB for Hong Island, around 300 THB in Phang Nga Bay (James Bond Island), around 400 THB for Phi Phi and Maya Bay. For the classic 4 Islands (Poda, Chicken, Tup and surroundings), sources variously state 200 or 400 THB. These figures are not fixed prices – check the current amounts.",
-            "Because amounts, assignments and rules can change, the most reliable answer is always the current information from the national park authority or your operator shortly before your date.",
+            "There is no single national park fee for Krabi, but several arrangements depending on protected area and destination. If a route visits several areas, you may pay several entries. The fee is usually charged per person; foreign adults generally pay more than Thai nationals, and different rates often apply to children.",
+            "The fee is set by the national park authority, not by the tour operator. It can change, and figures in blogs and forums are often out of date. The most reliable answer is therefore always the current information from the authority or your operator shortly before your date.",
+            "Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
           ],
         },
         tip: {
-          de: "Behandeln Sie jede Zahl in Blogs und Foren als Momentaufnahme. Fragen Sie Ihren Anbieter nach dem Betrag für Ihr konkretes Datum und Ihre Route.",
-          en: "Treat every number in blogs and forums as a snapshot. Ask your operator for the amount for your specific date and route.",
+          de: "Behandeln Sie jede Zahl in Blogs und Foren als Momentaufnahme. Fragen Sie Ihren Anbieter nach dem Stand für Ihr konkretes Datum und Ihre Route.",
+          en: "Treat every number in blogs and forums as a snapshot. Ask your operator for the current situation for your specific date and route.",
         },
       },
       {
@@ -417,102 +416,102 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Rund um Krabi liegen mehrere Schutzgebiete, die jeweils eigene Gebühren erheben. Die folgende Zuordnung ist die gängige; bei Randfällen entscheidet die Behörde oder Ihr Anbieter, welcher Eintritt für Ihre Route gilt.",
+            "Rund um Krabi liegen mehrere Schutzgebiete, die jeweils eigene Regeln haben. Die folgende Zuordnung ist die gängige; bei Randfällen entscheidet die Behörde oder Ihr Anbieter, welcher Eintritt für Ihre Route gilt.",
           ],
           en: [
-            "Several protected areas lie around Krabi, each charging its own fees. The following assignment is the common one; for borderline cases the authority or your operator decides which entry applies to your route.",
+            "Several protected areas lie around Krabi, each with its own rules. The following assignment is the common one; for borderline cases the authority or your operator decides which entry applies to your route.",
           ],
         },
         list: {
           de: [
-            "Hong Island, Lao Lading, Pakbia: Gebiet des Hong-Archipels, Gebühr für Hong Island zuletzt rund 300 THB für Erwachsene genannt",
-            "Poda, Chicken Island, Tup Sandbank (4 Islands): gängig dem Nationalpark Hat Noppharat Thara – Mu Ko Phi Phi zugeordnet, Beträge in Quellen 200 oder 400 THB",
-            "Phi Phi Don, Phi Phi Leh mit Maya Bay: Nationalpark Hat Noppharat Thara – Mu Ko Phi Phi, zuletzt rund 400 THB für Erwachsene genannt",
-            "James Bond Island und Phang Nga Bucht: Ao Phang Nga Nationalpark, zuletzt rund 300 THB für Erwachsene genannt",
-            "Koh Rok, Koh Haa: Mu Ko Lanta Nationalpark, saisonal eingeschränkt, Beträge aktuell prüfen",
+            "Hong Island, Lao Lading, Pakbia: Gebiet des Hong-Archipels",
+            "Poda, Chicken Island, Tup Sandbank (4 Islands): gängig dem Nationalpark Hat Noppharat Thara – Mu Ko Phi Phi zugeordnet",
+            "Phi Phi Don, Phi Phi Leh mit Maya Bay: Nationalpark Hat Noppharat Thara – Mu Ko Phi Phi, mit besonderen Zugangsregeln",
+            "James Bond Island und Phang Nga Bucht: Ao Phang Nga Nationalpark",
+            "Koh Rok, Koh Haa: Mu Ko Lanta Nationalpark, saisonal eingeschränkt",
           ],
           en: [
-            "Hong Island, Lao Lading, Pakbia: Hong archipelago area, fee for Hong Island most recently reported at about 300 THB for adults",
-            "Poda, Chicken Island, Tup Sandbank (4 Islands): commonly assigned to Hat Noppharat Thara – Mu Ko Phi Phi National Park, amounts in sources 200 or 400 THB",
-            "Phi Phi Don, Phi Phi Leh with Maya Bay: Hat Noppharat Thara – Mu Ko Phi Phi National Park, most recently reported at about 400 THB for adults",
-            "James Bond Island and Phang Nga Bay: Ao Phang Nga National Park, most recently reported at about 300 THB for adults",
-            "Koh Rok, Koh Haa: Mu Ko Lanta National Park, seasonally restricted, check current amounts",
+            "Hong Island, Lao Lading, Pakbia: Hong archipelago area",
+            "Poda, Chicken Island, Tup Sandbank (4 Islands): commonly assigned to Hat Noppharat Thara – Mu Ko Phi Phi National Park",
+            "Phi Phi Don, Phi Phi Leh with Maya Bay: Hat Noppharat Thara – Mu Ko Phi Phi National Park, with special access rules",
+            "James Bond Island and Phang Nga Bay: Ao Phang Nga National Park",
+            "Koh Rok, Koh Haa: Mu Ko Lanta National Park, seasonally restricted",
           ],
         },
       },
       {
         h2: {
-          de: "Gebührenspannen laut Quellen: Erwachsene und Kinder",
-          en: "Fee ranges according to sources: adults and children",
+          de: "So funktioniert die Gebühr: pro Person, vor Ort, vom Park festgelegt",
+          en: "How the fee works: per person, on site, set by the park",
         },
         body: {
           de: [
-            "Aus Sekundärquellen ergibt sich folgendes Bild für ausländische Besucher: Für Hong Island werden rund 300 THB für Erwachsene genannt, für Kinder oft rund die Hälfte. Für Phi Phi und Maya Bay liegen die genannten Beträge bei rund 400 THB. Für die 4 Islands kursieren 200 und 400 THB. In der Phang Nga Bucht nennen unsere Quellen rund 300 THB, wie auch in unserem Artikel zu den Film-Drehorten.",
-            "Wir wollen hier keine Scheingenauigkeit erzeugen. Die Quellen stammen aus Anbieter- und Reiseseiten, nicht aus einer jederzeit abrufbaren amtlichen Gebührenliste, und sie sind teils älter. Die Primärquelle ist die Nationalparkbehörde (Department of National Parks, Wildlife and Plant Conservation); dort bzw. vor Ort gelten die aktuellen Sätze.",
-            "Für Ihr Budget heißt das: Planen Sie pro Person einen Puffer im niedrigen bis mittleren dreistelligen Baht-Bereich je Schutzgebiet ein, und rechnen Sie bei mehreren Gebieten pro Tag mehrfach. Das ist eine Planungsgröße, kein verbindlicher Preis.",
+            "Nationalpark-Gebühren werden in der Regel pro Person und pro Besuch eines Schutzgebiets erhoben und vor Ort an die Ranger bzw. am Eingang des Parks bezahlt. Für Erwachsene, Kinder und für Ausländer und Thais können unterschiedliche Sätze gelten. Ab welchem Alter oder welcher Körpergröße ein Kinderpreis gilt, kann sich unterscheiden.",
+            "Wir wollen hier keine Scheingenauigkeit erzeugen: Die Primärquelle ist die Nationalparkbehörde (Department of National Parks, Wildlife and Plant Conservation). Anbieter- und Reiseseiten im Netz sind nicht immer aktuell. Die Sätze gelten immer so, wie sie vor Ort ausgehängt sind.",
+            "Für Ihre Planung heißt das: Rechnen Sie damit, dass je Schutzgebiet ein Eintritt pro Person anfallen kann, und fragen Sie bei der Buchung nach, was für Ihre Route gilt.",
           ],
           en: [
-            "Secondary sources give the following picture for foreign visitors: about 300 THB for adults is reported for Hong Island, often about half for children. For Phi Phi and Maya Bay the reported amounts are about 400 THB. For the 4 Islands, both 200 and 400 THB circulate. For Phang Nga Bay our sources report about 300 THB, as in our article on film locations.",
-            "We do not want to create false precision here. The sources come from operator and travel sites, not from an official fee list available at any time, and some are older. The primary source is the national park authority (Department of National Parks, Wildlife and Plant Conservation); the current rates apply there or on site.",
-            "For your budget this means: plan a buffer per person in the low to mid hundreds of baht per protected area, and count several areas per day separately. That is a planning figure, not a binding price.",
+            "National park fees are usually charged per person and per visit to a protected area and are paid on site to the park rangers or at the park entrance. Different rates may apply to adults, children, foreigners and Thai nationals. From which age or height a child rate applies can differ.",
+            "We do not want to create false precision here: the primary source is the national park authority (Department of National Parks, Wildlife and Plant Conservation). Operator and travel sites online are not always up to date. The rates that count are the ones posted on site.",
+            "For your planning this means: expect that one entry per person may apply for each protected area, and ask when booking what applies to your route.",
           ],
         },
       },
       {
         h2: {
-          de: "Warum Zahlen abweichen: Gebiet, Status, Neufestsetzung",
-          en: "Why figures differ: area, status, revision",
+          de: "Warum Angaben abweichen: Gebiet, Status, Neufestsetzung",
+          en: "Why information differs: area, status, revision",
         },
         body: {
           de: [
-            "Es gibt mehrere Gründe, warum zwei Blogs für dieselbe Insel unterschiedliche Beträge nennen. Erstens wird die Zuordnung der Inseln zu Gebieten unterschiedlich beschrieben: Wer „4 Islands“ sagt, meint je nach Anbieter leicht verschiedene Stopps. Zweitens unterscheiden sich Preise für Ausländer, Thais, Erwachsene und Kinder, und viele Texte nennen nur einen davon.",
-            "Drittens werden Gebühren neu festgesetzt, und alte Angaben bleiben jahrelang online. Viertens kommt es vor, dass ein Anbieter einen Betrag abrundet, bündelt oder eine zusätzliche Service-Position einrechnet. Und fünftens hängt manches von Sonderregeln ab, etwa bei Maya Bay, wo Zugang und Regeln gesondert geregelt werden.",
-            "Daraus ergibt sich die einfachste Regel: Verlassen Sie sich nicht auf eine einzelne Zahl, sondern fragen Sie Ihren Anbieter, welche Gebühren er für Ihre Route erwartet und ob sie in seinem Preis enthalten sind.",
+            "Es gibt mehrere Gründe, warum zwei Blogs für dieselbe Insel Unterschiedliches schreiben. Erstens wird die Zuordnung der Inseln zu Gebieten unterschiedlich beschrieben: Wer „4 Islands“ sagt, meint je nach Anbieter leicht verschiedene Stopps. Zweitens unterscheiden sich die Sätze für Ausländer, Thais, Erwachsene und Kinder, und viele Texte nennen nur einen davon.",
+            "Drittens werden Gebühren neu festgesetzt, und alte Angaben bleiben jahrelang online. Und viertens hängt manches von Sonderregeln ab, etwa bei Maya Bay, wo Zugang und Regeln gesondert geregelt werden.",
+            "Daraus ergibt sich die einfachste Regel: Verlassen Sie sich nicht auf eine einzelne Angabe aus dem Netz, sondern fragen Sie Ihren Anbieter, wie die Gebühr für Ihre Route gehandhabt wird.",
           ],
           en: [
-            "There are several reasons why two blogs quote different amounts for the same island. First, the assignment of islands to areas is described differently: whoever says “4 Islands” means slightly different stops depending on the operator. Second, prices differ for foreigners, Thais, adults and children, and many texts mention only one.",
-            "Third, fees get revised and old figures stay online for years. Fourth, an operator may round, bundle or add an extra service item. And fifth, some things depend on special rules, for example at Maya Bay, where access and rules are regulated separately.",
-            "This leads to the simplest rule: do not rely on a single number, ask your operator which fees it expects for your route and whether they are included in its price.",
+            "There are several reasons why two blogs write different things about the same island. First, the assignment of islands to areas is described differently: whoever says “4 Islands” means slightly different stops depending on the operator. Second, rates differ for foreigners, Thais, adults and children, and many texts mention only one.",
+            "Third, fees get revised and old information stays online for years. And fourth, some things depend on special rules, for example at Maya Bay, where access and rules are regulated separately.",
+            "This leads to the simplest rule: do not rely on a single piece of information from the web, ask your operator how the fee is handled for your route.",
           ],
         },
       },
       {
         h2: {
-          de: "Barzahlung, Quittung und wer zahlt",
+          de: "Barzahlung, Beleg und wer zahlt",
           en: "Cash payment, receipts and who pays",
         },
         body: {
           de: [
-            "Üblich ist, dass Nationalpark-Gebühren in bar an einem Ticketschalter oder durch das Personal des Anbieters entrichtet werden. Kartenzahlung ist auf den Inseln nicht verlässlich vorgesehen. Wenn Sie die Gebühr selbst zahlen müssen, haben Sie also am besten ausreichend Bargeld in Baht dabei, in möglichst kleinen Scheinen.",
-            "Wenn der Anbieter die Gebühr bezahlt, sollte das auf der Buchungsbestätigung stehen. Bitten Sie im Zweifel um die Quittung oder das Ticket: Die Gebühr dient dem Schutz der Gebiete, und ein Beleg schafft Klarheit.",
-            "Achten Sie auf zwei Missverständnisse. „Inklusive“ kann sich auf einen Teil der Route beschränken, etwa nur auf einen Nationalpark. Und „zuzüglich Nationalparkgebühren“ ohne Betrag ist eine offene Rechnung: Fragen Sie nach dem erwarteten Gesamtbetrag für Ihre Gruppe.",
+            "Üblich ist, dass Nationalpark-Gebühren in bar an einem Ticketschalter oder bei den Rangern entrichtet werden, meist in Baht. Kartenzahlung ist auf den Inseln nicht verlässlich vorgesehen. Wenn Sie die Gebühr selbst zahlen müssen, haben Sie also am besten ausreichend Bargeld in Baht dabei, in möglichst kleinen Scheinen.",
+            "Bewahren Sie das Ticket oder den Beleg während des Tages auf, denn es kann bei Kontrollen im Park verlangt werden. Die Gebühr dient dem Schutz der Gebiete, und ein Beleg schafft Klarheit.",
+            "Fragen Sie vor der Buchung, wie die Gebühr bei Ihrer Tour gehandhabt wird, und lassen Sie sich Unklarheiten schriftlich bestätigen.",
           ],
           en: [
-            "It is usual for national park fees to be paid in cash at a ticket counter or by the operator’s staff. Card payment is not reliably available on the islands. If you have to pay the fee yourself, bring enough baht in cash, ideally in small notes.",
-            "If the operator pays the fee, this should be stated in the booking confirmation. If in doubt, ask for the receipt or ticket: the fee funds the protection of the areas, and a receipt creates clarity.",
-            "Watch out for two misunderstandings. “Included” may cover only part of the route, for example just one national park. And “plus national park fees” without an amount is an open bill: ask for the expected total for your group.",
+            "It is usual for national park fees to be paid in cash at a ticket counter or to the rangers, mostly in baht. Card payment is not reliably available on the islands. If you have to pay the fee yourself, bring enough baht in cash, ideally in small notes.",
+            "Keep the ticket or receipt for the day, as it may be checked in the park. The fee funds the protection of the areas, and a receipt creates clarity.",
+            "Ask before booking how the fee is handled on your tour, and have any open points confirmed in writing.",
           ],
         },
         tip: {
-          de: "Rechnen Sie mit Ihrer Gruppengröße im Kopf: Bei 5 Gästen und einer Gebühr von rund 400 THB wären das 2.000 THB – ein Posten, der bei Angeboten ohne Gebühr leicht untergeht.",
-          en: "Do the sum for your group size in your head: with 5 guests and a fee of about 400 THB that would be 2,000 THB – an item that is easily lost in offers without the fee.",
+          de: "Nehmen Sie etwas Bargeld in kleinen Scheinen mit – auch für Snacks und Trinkgeld. Auf den Inseln gibt es keine Geldautomaten.",
+          en: "Bring some cash in small notes – also for snacks and tips. There are no ATMs on the islands.",
         },
       },
       {
         h2: {
-          de: "Was bei uns enthalten ist: je nach Tour prüfen",
-          en: "What is included with us: check per tour",
+          de: "Eintritt bei unseren Touren: bei der Buchung klären",
+          en: "Entry on our tours: clarified when booking",
         },
         body: {
           de: [
-            "Wir weisen Nationalpark-Gebühren in der Leistungsliste der jeweiligen Tour aus. Dort sind sie ausdrücklich aufgeführt bei Hong Lagoons (ab 21.500 THB), Phang Nga Uncharted (ab 26.000 THB), Phi Phi Early Bird (ab 28.500 THB), Koh Rok Safari (ab 32.000 THB) und James Bond Bay (ab 24.000 THB). Alle Preise gelten pro Boot für bis zu 5 Gäste.",
-            "Bei den übrigen Touren – etwa Sunset-, Plankton-, Familien- oder Angeltouren – steht der Punkt nicht in der Leistungsliste. Bitte lassen Sie sich in der Anfrage bestätigen, ob für Ihre Route ein Eintritt anfällt und wer ihn trägt. So gibt es am Pier keine Überraschung.",
-            "Praktisch: Weil unser Preis pro Boot gilt, bleibt die Rechnung auch beim Eintritt übersichtlich. Sie vergleichen am Ende den Gesamtpreis Ihrer Gruppe, nicht Einzelposten.",
+            "Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung. Sagen Sie uns in der Anfrage einfach, welche Route Sie interessiert, dann klären wir den Stand für Ihr Datum.",
+            "Alle Tourpreise gelten pro Boot für bis zu 5 Gäste, etwa Hong Lagoons ab 21.500 THB oder Koh Rok Safari ab 32.000 THB.",
+            "Praktisch: Weil unser Preis pro Boot gilt, bleibt die Rechnung übersichtlich. Sie vergleichen am Ende den Gesamtpreis Ihrer Gruppe, nicht Einzelposten.",
           ],
           en: [
-            "We state national park fees in the inclusion list of each tour. They are explicitly listed for Hong Lagoons (from 21,500 THB), Phang Nga Uncharted (from 26,000 THB), Phi Phi Early Bird (from 28,500 THB), Koh Rok Safari (from 32,000 THB) and James Bond Bay (from 24,000 THB). All prices apply per boat for up to 5 guests.",
-            "For the other tours – for example sunset, plankton, family or fishing tours – the item is not in the inclusion list. Please have it confirmed in your enquiry whether an entry fee applies for your route and who bears it. That way there is no surprise at the pier.",
-            "In practice: because our price applies per boat, the calculation stays clear even with entry fees. You compare your group’s total price, not individual items.",
+            "Whether and how much of an entrance fee applies at your destination, you will learn when booking. Simply tell us in your enquiry which route interests you, and we will clarify the situation for your date.",
+            "All tour prices apply per boat for up to 5 guests, for example Hong Lagoons from 21,500 THB or Koh Rok Safari from 32,000 THB.",
+            "In practice: because our price applies per boat, the calculation stays clear. You compare your group’s total price, not individual items.",
           ],
         },
       },
@@ -523,12 +522,12 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Nationalparks sind nicht immer zugänglich. Einzelne Gebiete sind saisonal eingeschränkt oder zeitweise gesperrt, etwa zum Schutz der Natur oder wegen des Wetters. Koh Rok und Koh Haa sind laut Berichten in der Regenzeit in der Regel nicht oder nur eingeschränkt zugänglich; prüfen Sie die aktuellen Termine vor einer Buchung.",
+            "Nationalparks sind nicht immer zugänglich. Einzelne Gebiete sind saisonal eingeschränkt oder zeitweise gesperrt, etwa zum Schutz der Natur oder wegen des Wetters. Koh Rok und Koh Haa sind offiziell vom 16. Mai bis 15. November geschlossen (manche Quellen nennen Ende Oktober); die offene Saison liegt etwa zwischen Mitte November und Mitte Mai. Prüfen Sie die aktuellen Termine vor einer Buchung.",
             "Für Maya Bay gelten besondere Regeln für Besuchsdauer, Zugang und Verhalten. Sie ändern sich gelegentlich, deshalb behandeln wir sie nicht hier, sondern in unserem Beitrag zu Phi Phi und Maya Bay am frühen Morgen. Grundsätzlich gilt in den Parks: nichts mitnehmen, keine Tiere füttern, Korallen nicht berühren, Müll wieder mitbringen.",
             "Diese Regeln dienen dem Schutz der Gebiete, in denen unsere Touren stattfinden. Sie gehören für uns zu einer guten privaten Charter – ruhige Besuche, weniger Gedränge und keine Belastung für das Riff.",
           ],
           en: [
-            "National parks are not always accessible. Some areas are seasonally restricted or temporarily closed, for example for nature protection or because of weather. According to reports, Koh Rok and Koh Haa are usually not or only partly accessible during the rainy season; check the current dates before booking.",
+            "National parks are not always accessible. Some areas are seasonally restricted or temporarily closed, for example for nature protection or because of weather. Koh Rok and Koh Haa are officially closed from 16 May to 15 November (some sources say until the end of October); the open season runs roughly from mid-November to mid-May. Check the current dates before booking.",
             "Maya Bay has special rules on visit length, access and behaviour. They change from time to time, so we do not cover them here but in our article on Phi Phi and Maya Bay in the early morning. In general the rules in the parks are: take nothing, do not feed animals, do not touch corals, take your rubbish back with you.",
             "These rules protect the areas where our tours take place. For us they are part of a good private charter – calm visits, fewer crowds and no burden on the reef.",
           ],
@@ -536,19 +535,17 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
       },
       {
         h2: {
-          de: "Beispielrechnung: Park-Eintritt im Budget einer Fünfergruppe",
-          en: "Worked example: park entry in the budget of a group of five",
+          de: "Kinder, Gruppen und mehrere Gebiete an einem Tag",
+          en: "Children, groups and several areas in one day",
         },
         body: {
           de: [
-            "Zahlen helfen nur, wenn man sie in den eigenen Tag übersetzt. Nehmen wir eine Gruppe von fünf erwachsenen Gästen und eine Tour, die nur ein Schutzgebiet berührt. Bei einer zuletzt genannten Gebühr von rund 300 THB pro Person wären das 1.500 THB, bei rund 400 THB wären es 2.000 THB. Besucht die Route zwei Gebiete, verdoppelt sich der Posten ungefähr. Das sind Rechenbeispiele mit Richtwerten, keine Zusage.",
-            "Der Effekt ist bei Sammeltouren oft unsichtbar, weil dort ein niedriger Einstiegspreis genannt wird und die Gebühr am Pier dazukommt. Bei einer privaten Charter mit Preis pro Boot lässt sich dagegen sauber vergleichen: Gesamtpreis der Gruppe, plus ggf. Eintritt, plus Essen und Getränke. Wer die Zeilen nebeneinanderlegt, sieht, was wirklich enthalten ist.",
-            "Auch Kinder lohnen einen Blick: In Quellen werden für sie häufig reduzierte Sätze genannt, oft ungefähr die Hälfte. Ab welchem Alter oder welcher Körpergröße ein Kinderpreis gilt, kann sich unterscheiden. Fragen Sie das für Ihre Familie nach, bevor Sie Bargeld abheben.",
+            "Besucht eine Route mehrere Schutzgebiete, kann je Gebiet ein Eintritt anfallen. Bei Sammeltouren wird das oft erst am Pier sichtbar, weil zunächst nur ein Einstiegspreis genannt wird. Bei einer privaten Charter mit Preis pro Boot lässt sich dagegen sauber planen: Gesamtpreis der Gruppe, Essen und Getränke, und die Frage nach dem Eintritt, die Sie vorab klären.",
+            "Auch Kinder lohnen einen Blick: Häufig gelten für sie andere Sätze. Ab welchem Alter oder welcher Körpergröße ein Kinderpreis gilt, kann sich unterscheiden. Fragen Sie das für Ihre Familie nach, bevor Sie Bargeld abheben.",
           ],
           en: [
-            "Numbers only help once you translate them into your own day. Take a group of five adult guests and a tour that touches only one protected area. At a most recently reported fee of about 300 THB per person that would be 1,500 THB, at about 400 THB it would be 2,000 THB. If the route visits two areas, the item roughly doubles. These are worked examples with guide values, not a commitment.",
-            "The effect is often invisible on shared tours because a low entry price is quoted and the fee is added at the pier. With a private charter priced per boat you can compare cleanly: the group’s total price, plus entry where applicable, plus food and drinks. Lay the lines side by side and you see what is really included.",
-            "Children are also worth a look: sources often mention reduced rates for them, frequently about half. From which age or height a child rate applies can differ. Ask about this for your family before you withdraw cash.",
+            "If a route visits several protected areas, an entry may apply for each area. On shared tours this often only becomes visible at the pier because only an entry price is quoted at first. With a private charter priced per boat you can plan cleanly: the group’s total price, food and drinks, and the question about entry that you clarify in advance.",
+            "Children are also worth a look: different rates often apply to them. From which age or height a child rate applies can differ. Ask about this for your family before you withdraw cash.",
           ],
         },
       },
@@ -559,12 +556,12 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Nationalpark-Gebühren sind Teil des Schutzes dieser Gebiete: Sie sollen unter anderem Betrieb, Kontrolle und Pflege der Parks mittragen. Wie genau sie eingesetzt werden, entscheidet die Behörde; wir geben dazu keine Zahlen an. Sicher ist: Inseln wie die Hong-Lagune oder die Phang Nga Bucht bleiben nur schön, wenn Besucher sich rücksichtsvoll verhalten.",
+            "Nationalpark-Gebühren sind Teil des Schutzes dieser Gebiete: Sie sollen unter anderem Betrieb, Kontrolle und Pflege der Parks mittragen. Wie genau sie eingesetzt werden, entscheidet die Behörde. Sicher ist: Inseln wie die Hong-Lagune oder die Phang Nga Bucht bleiben nur schön, wenn Besucher sich rücksichtsvoll verhalten.",
             "Dazu gehören ein paar einfache Regeln. Lassen Sie keinen Müll zurück, auch keine kleinen Verpackungen. Berühren oder betreten Sie keine Korallen, benutzen Sie, wenn möglich, riffschonende Sonnencreme und füttern Sie keine Tiere. Halten Sie in Lagunen und Höhlen Abstand zu Felsen und Wasserlebewesen und beachten Sie die Anweisungen von Rangern und Ihrem Kapitän.",
             "Eine private Charter mit kleiner Gruppe macht das einfacher: Bei maximal fünf Gästen ist der Eindruck auf eine Bucht geringer als bei einem Boot mit dutzenden Menschen, und wir können Zeitpunkte wählen, an denen weniger los ist. Weitere Hinweise finden Sie in unserer Packliste und Etikette für den Bootstag.",
           ],
           en: [
-            "National park fees are part of protecting these areas: among other things they are meant to help fund the running, monitoring and upkeep of the parks. How exactly they are used is for the authority to decide; we give no figures on this. What is certain: islands like the Hong lagoon or Phang Nga Bay stay beautiful only if visitors behave considerately.",
+            "National park fees are part of protecting these areas: among other things they are meant to help fund the running, monitoring and upkeep of the parks. How exactly they are used is for the authority to decide. What is certain: islands like the Hong lagoon or Phang Nga Bay stay beautiful only if visitors behave considerately.",
             "A few simple rules apply. Leave no rubbish behind, not even small wrappers. Do not touch or stand on corals, use reef-friendly sunscreen where possible and do not feed animals. In lagoons and caves keep your distance from rocks and marine life and follow the instructions of rangers and your captain.",
             "A private charter with a small group makes this easier: with a maximum of five guests the impact on a bay is lower than with a boat carrying dozens of people, and we can choose times when it is quieter. You will find more tips in our packing list and etiquette guide for your boat day.",
           ],
@@ -585,20 +582,18 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         list: {
           de: [
-            "Frage nach dem Betrag: Welche Gebühr pro Person fällt für meine Route an, und für Kinder?",
-            "Frage nach dem Zahler: In welchem Preis ist sie enthalten, oder zahle ich vor Ort?",
-            "Frage nach dem Zahlweg: Bar in Baht, Quittung oder Ticket, nicht auf Kartenzahlung verlassen",
-            "Frage nach Sperrzeiten für meine Reisezeit, besonders bei Koh Rok und Koh Haa",
-            "Frage nach Mehrfach-Eintritten: Wie viele Gebiete besucht die Route?",
-            "Bargeld in kleinen Baht-Scheinen mitnehmen, falls Sie selbst zahlen",
+            "Fragen Sie, ob und in welcher Form für Ihre Route eine Eintrittsgebühr anfällt, auch für Kinder",
+            "Fragen Sie, wie bezahlt wird: meist bar in Baht vor Ort, Ticket aufbewahren, nicht auf Kartenzahlung verlassen",
+            "Fragen Sie nach Sperrzeiten für Ihre Reisezeit, besonders bei Koh Rok und Koh Haa",
+            "Fragen Sie nach Mehrfach-Eintritten: Wie viele Gebiete besucht die Route?",
+            "Bargeld in kleinen Baht-Scheinen mitnehmen",
           ],
           en: [
-            "Ask for the amount: which fee per person applies to my route, and for children?",
-            "Ask who pays: is it included in the price, or do I pay on site?",
-            "Ask how to pay: cash in baht, receipt or ticket, do not rely on card payment",
+            "Ask whether and in what form an entrance fee applies to your route, also for children",
+            "Ask how it is paid: usually cash in baht on site, keep the ticket, do not rely on card payment",
             "Ask about closures for your travel dates, especially for Koh Rok and Koh Haa",
             "Ask about multiple entries: how many areas does the route visit?",
-            "Bring cash in small baht notes in case you pay yourself",
+            "Bring cash in small baht notes",
           ],
         },
       },
@@ -606,12 +601,12 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
     faq: [
       {
         q: {
-          de: "Wie viel kostet der Nationalpark-Eintritt auf den Inseln bei Krabi?",
-          en: "How much is the national park fee for the islands near Krabi?",
+          de: "Wer legt den Nationalpark-Eintritt auf den Inseln bei Krabi fest?",
+          en: "Who sets the national park fee for the islands near Krabi?",
         },
         a: {
-          de: "Das hängt vom Gebiet ab. Zuletzt genannt wurden für ausländische Erwachsene rund 300 THB für Hong Island und die Phang Nga Bucht, rund 400 THB für Phi Phi und Maya Bay; für die 4 Islands nennen Quellen 200 oder 400 THB. Die Beträge ändern sich, bitte aktuell prüfen.",
-          en: "It depends on the area. For foreign adults, about 300 THB was most recently reported for Hong Island and Phang Nga Bay, about 400 THB for Phi Phi and Maya Bay; for the 4 Islands, sources state 200 or 400 THB. Amounts change, please check current figures.",
+          de: "Die Nationalparkbehörde. Die Sätze hängen vom Gebiet ab, werden in der Regel pro Person erhoben und können sich ändern. Vor Ort gelten die ausgehängten aktuellen Sätze.",
+          en: "The national park authority. The rates depend on the area, are usually charged per person and can change. The rates posted on site are the ones that apply.",
         },
       },
       {
@@ -620,28 +615,28 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
           en: "Do you pay an entrance fee for Hong Island?",
         },
         a: {
-          de: "Ja, für Hong Island wird in der Regel eine Nationalpark-Gebühr pro Person erhoben, zuletzt wurden rund 300 THB für ausländische Erwachsene genannt. Kinder zahlen meist weniger. Bei unserer Tour Hong Lagoons ist die Gebühr laut Leistungsliste im Preis enthalten.",
-          en: "Yes, a national park fee per person is usually charged for Hong Island; about 300 THB for foreign adults was most recently reported. Children usually pay less. On our Hong Lagoons tour the fee is included in the price according to the inclusion list.",
+          de: "Für Hong Island wird in der Regel eine Nationalpark-Gebühr pro Person erhoben, für Kinder gelten häufig andere Sätze. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
+          en: "A national park fee per person is usually charged for Hong Island, and different rates often apply to children. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
         },
       },
       {
         q: {
-          de: "Warum kostet Phi Phi mehr als die 4 Islands?",
-          en: "Why is the Phi Phi park fee higher than the 4 Islands?",
+          de: "Warum gelten für Phi Phi andere Regeln als für die 4 Islands?",
+          en: "Why do different rules apply to Phi Phi than to the 4 Islands?",
         },
         a: {
-          de: "Phi Phi und Maya Bay liegen in einem Gebiet mit eigener Gebührenregelung und besonderen Zugangsregeln. Zuletzt genannt wurden rund 400 THB, für die 4 Islands 200 oder 400 THB. Warum sich die Quellen widersprechen, erklärt der Abschnitt zu den Abweichungen; entscheidend ist der aktuelle Satz.",
-          en: "Phi Phi and Maya Bay lie in an area with its own fee schedule and special access rules. About 400 THB was most recently reported, and 200 or 400 THB for the 4 Islands. The section on differences explains why sources contradict each other; the current rate is what counts.",
+          de: "Phi Phi und Maya Bay liegen in einem Gebiet mit besonderen Zugangsregeln. Warum sich Angaben im Netz widersprechen, erklärt der Abschnitt zu den Abweichungen; entscheidend sind die aktuellen Vorgaben der Nationalparkbehörde.",
+          en: "Phi Phi and Maya Bay lie in an area with special access rules. The section on differences explains why information online contradicts itself; what counts are the current requirements of the national park authority.",
         },
       },
       {
         q: {
-          de: "Sind die Gebühren im Tourpreis enthalten?",
-          en: "Are park fees included in the tour price?",
+          de: "Wie und wo werden die Gebühren bezahlt?",
+          en: "How and where are the fees paid?",
         },
         a: {
-          de: "Bei uns laut Leistungsliste bei Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari und James Bond Bay. Bei den anderen Touren bitte in der Anfrage bestätigen lassen. Bei anderen Anbietern ist die Gebühr oft extra, fragen Sie vor der Buchung nach.",
-          en: "With us, according to the inclusion list, on Hong Lagoons, Phang Nga Uncharted, Phi Phi Early Bird, Koh Rok Safari and James Bond Bay. For the other tours please have it confirmed in your enquiry. With other operators the fee is often extra, so ask before booking.",
+          de: "Die Gebühr wird von der Nationalparkbehörde festgelegt und vor Ort an die Ranger am Eingang des Parks bezahlt. Einzelheiten zu Ihrer Route erfahren Sie bei der Buchung.",
+          en: "The fee is set by the national park authority and paid on site to the rangers at the park entrance. Details for your route you will learn when booking.",
         },
       },
       {
@@ -650,8 +645,8 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
           en: "Can you pay national park fees by card?",
         },
         a: {
-          de: "In der Regel wird bar in Baht bezahlt, Kartenzahlung ist auf den Inseln nicht verlässlich vorgesehen. Wenn Sie die Gebühr selbst zahlen, nehmen Sie ausreichend Bargeld in kleinen Scheinen mit und lassen Sie sich einen Beleg geben.",
-          en: "Payment is usually in cash in baht; card payment is not reliably available on the islands. If you pay the fee yourself, bring enough cash in small notes and ask for a receipt.",
+          de: "In der Regel wird bar in Baht bezahlt, Kartenzahlung ist auf den Inseln nicht verlässlich vorgesehen. Nehmen Sie ausreichend Bargeld in kleinen Scheinen mit und bewahren Sie das Ticket auf.",
+          en: "Payment is usually in cash in baht; card payment is not reliably available on the islands. Bring enough cash in small notes and keep the ticket.",
         },
       },
     ],
