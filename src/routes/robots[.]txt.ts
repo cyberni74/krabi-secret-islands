@@ -1,18 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SITE_URL } from "@/components/secret-islands/seo";
 
-/**
- * robots.txt – everything public stays crawlable (incl. marketplace pages and /api/img images);
- * only auth / agent APIs and private account areas are excluded.
- */
+/** robots.txt – everything public stays crawlable (pages + /bilder and /images pictures); only the private booking inbox is excluded. */
 const BODY = [
   "User-agent: *",
   "Allow: /",
-  "Disallow: /api/auth/",
-  "Disallow: /api/agent",
-  "Disallow: /admin",
-  "Disallow: /account",
-  "Disallow: /chats",
+  "Disallow: /anfragen",
   "",
   `Sitemap: ${SITE_URL}/sitemap.xml`,
   "",

@@ -557,8 +557,6 @@ const dict: Record<string, string> = {
   "Vorheriges": "이전",
   "Nächstes": "다음",
   "Video-Vorschau": "영상 미리보기",
-  "Alle Insider-Artikel: Inseln, Schnorchelspots, Gezeiten & Geheimtipps": "모든 인사이더 아티클: 섬, 스노클링 스폿, 조수 & 비밀 팁",
-  "Zum Insider Guide": "인사이더 가이드 열기",
   "Bewertungen": "리뷰",
   "verifizierte Gäste": "인증된 게스트",
   "Zum Lesen anhalten: Maus darüber oder antippen & halten": "마우스를 올리거나 길게 눌러 일시정지",

@@ -91,6 +91,26 @@ export function detectLang(): Lang {
   return "en";
 }
 
+/**
+ * Language the visitor probably prefers (saved explicit choice, then browser languages), or null (crawlers, unknown).
+ * Used ONLY to suggest a language version in a banner – the page language itself always follows the URL.
+ */
+export function suggestLang(): Lang | null {
+  try {
+    if (/bot|crawl|spider|slurp|lighthouse|inspectiontool/i.test(navigator.userAgent)) return null;
+    const v = localStorage.getItem(LANG_KEY) as Lang | null;
+    if (v && SUPPORTED.has(v)) return v;
+    const list = navigator.languages?.length ? navigator.languages : [navigator.language];
+    for (const tag of list) {
+      const m = tag ? matchLang(tag) : null;
+      if (m) return m;
+    }
+  } catch {
+    /* storage / navigator unavailable */
+  }
+  return null;
+}
+
 /** Translate a source string. zh/ko/ja are keyed by the German text and fall back to English. */
 export function translate(l: L, lang: Lang): string {
   if (lang === "de" || lang === "en") return l[lang];

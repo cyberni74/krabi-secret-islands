@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Anchor, X } from "lucide-react";
-import { LOGO_URL } from "./content";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -18,9 +17,24 @@ const LOCAL_VARIANTS: Record<string, string> = {
     "/images/koh-hong-krabi-luftaufnahme-strand-lagune-720.webp 720w, /images/koh-hong-krabi-luftaufnahme-strand-lagune.webp 1080w",
 };
 
+/** Widths served by Vercel Image Optimization (must match `images.sizes` in vite.config.ts). */
+export const OPTIMIZED_WIDTHS = [480, 800, 1200, 1600];
+
+/**
+ * Same-origin images (/bilder/…, /images/…) are resized + converted to AVIF/WebP by Vercel Image Optimization in
+ * production (`/_vercel/image`). Not available in dev / local preview – there (and if it ever fails) the plain `src` is used.
+ */
+function optimizedSrcSet(src: string): string | undefined {
+  if (!import.meta.env.PROD) return undefined;
+  if (!(src.startsWith("/bilder/") || src.startsWith("/images/")) || src.endsWith(".svg")) return undefined;
+  return OPTIMIZED_WIDTHS.map((w) => `/_vercel/image?url=${encodeURIComponent(src)}&w=${w}&q=75 ${w}w`).join(", ");
+}
+
 export function unsplashSrcSet(src: string): string | undefined {
   const local = LOCAL_VARIANTS[src];
   if (local) return local;
+  const optimized = optimizedSrcSet(src);
+  if (optimized) return optimized;
   if (!src.startsWith("https://images.unsplash.com/")) return undefined;
   const m = /[?&]w=(\d+)/.exec(src);
   if (!m) return undefined;
@@ -48,11 +62,16 @@ export function SmartImage({
   sizes?: string;
 }) {
   const [failed, setFailed] = useState(false);
+  // If the optimised srcSet fails, retry once with the plain `src` before showing the fallback.
+  const [plain, setPlain] = useState(false);
   const ref = useRef<HTMLImageElement>(null);
+  const srcSet = plain ? undefined : unsplashSrcSet(src);
+  const onFail = () => (srcSet ? setPlain(true) : setFailed(true));
   // An SSR-rendered <img> can fail before hydration attaches onError.
   useEffect(() => {
     const img = ref.current;
-    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+    if (img && img.complete && img.naturalWidth === 0) onFail();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [src]);
   if (failed) {
     return (
@@ -67,13 +86,13 @@ export function SmartImage({
     <img
       ref={ref}
       src={src}
-      srcSet={unsplashSrcSet(src)}
-      sizes={unsplashSrcSet(src) ? sizes : undefined}
+      srcSet={srcSet}
+      sizes={srcSet ? sizes : undefined}
       alt={alt}
       loading={eager || priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : undefined}
       decoding={priority ? "sync" : "async"}
-      onError={() => setFailed(true)}
+      onError={onFail}
       className={className}
     />
   );
@@ -102,7 +121,7 @@ export function BrandMark({ className }: { className?: string }) {
   return (
     <img
       ref={ref}
-      src={LOGO_URL}
+      src="/favicon.svg"
       alt=""
       width={40}
       height={40}

@@ -557,8 +557,6 @@ const dict: Record<string, string> = {
   "Vorheriges": "上一个",
   "Nächstes": "下一个",
   "Video-Vorschau": "视频预览",
-  "Alle Insider-Artikel: Inseln, Schnorchelspots, Gezeiten & Geheimtipps": "全部内行文章：海岛、浮潜点、潮汐与私藏秘境",
-  "Zum Insider Guide": "前往 Insider Guide",
   "Bewertungen": "条评价",
   "verifizierte Gäste": "位认证宾客",
   "Zum Lesen anhalten: Maus darüber oder antippen & halten": "悬停或长按即可暂停阅读",

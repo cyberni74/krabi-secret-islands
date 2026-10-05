@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Link, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { QueryProvider } from "@/components/query-provider";
 import appCss from "../styles.css?url";
+import fontLatin from "@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url";
 
 const HTML_LANG: Record<string, string> = { de: "de", en: "en", zh: "zh-Hans", ko: "ko", ja: "ja" };
 
@@ -12,10 +13,15 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#0a192f" },
     ],
     links: [
+      { rel: "preload", href: fontLatin, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/icons/icon-32.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
+
   }),
   component: Root,
   notFoundComponent: NotFound,

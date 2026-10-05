@@ -22,7 +22,7 @@ export const BRAND = {
 };
 
 /** Logo mark generated with Higgsfield (GPT Image 2.5). Move into /public/brand/ for production. */
-export const LOGO_URL = seoImage("krabi-secret-islands-logo.png");
+export const LOGO_URL = "/icons/icon-512.png";
 
 /** Higgsfield illustration: overcrowded longtail boat (used in the Longtail-vs-Speedboat story). Move to /public/images/ for production. */
 export const LONGTAIL_CROWD_IMG = {

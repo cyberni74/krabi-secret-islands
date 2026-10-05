@@ -48,17 +48,30 @@ export function langLinks(path: string, lang: Lang, available: readonly Lang[]) 
   ];
 }
 
-/** Shared <head> links of the Secret Islands / Insider Guide pages. */
-export const BRAND_HEAD_LINKS = [
-  { rel: "icon", type: "image/png", href: LOGO_URL },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
-  },
-];
+/** Shared <head> links of the Secret Islands / Insider Guide pages (icons, manifest and fonts live in __root.tsx). */
+export const BRAND_HEAD_LINKS: { rel: string; href: string; type?: string; sizes?: string }[] = [];
 
 /** Open Graph / Twitter tags for link previews (WhatsApp, Facebook, X …). */
-export function socialMeta(o: { title: string; description: string; url: string; image?: string; type: "website" | "article"; lang: Lang }) {
+/** Default 1200×630 landscape Open Graph image (also used for Discover / link previews of the landing page and hub). */
+export const DEFAULT_OG_IMAGE = {
+  src: "/images/og-krabi-secret-islands.jpg",
+  width: 1200,
+  height: 630,
+  alt: { de: "Privates Speedboat von Krabi Secret Islands vor Kalksteininseln bei Krabi", en: "Krabi Secret Islands private speedboat in front of limestone islands near Krabi" },
+} as const;
+
+export function socialMeta(o: {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  imageAlt?: string;
+  imageSize?: { width: number; height: number };
+  type: "website" | "article";
+  lang: Lang;
+  /** article:author – URL of the author / about page (articles only). */
+  authorUrl?: string;
+}) {
   return [
     { property: "og:type", content: o.type },
     { property: "og:site_name", content: BRAND.name },
@@ -66,11 +79,19 @@ export function socialMeta(o: { title: string; description: string; url: string;
     { property: "og:description", content: o.description },
     { property: "og:url", content: o.url },
     { property: "og:locale", content: OG_LOCALE[o.lang] },
-    ...(o.image ? [{ property: "og:image", content: absUrl(o.image) }] : []),
+    ...(o.image
+      ? [
+          { property: "og:image", content: absUrl(o.image) },
+          ...(o.imageSize ? [{ property: "og:image:width", content: String(o.imageSize.width) }, { property: "og:image:height", content: String(o.imageSize.height) }] : []),
+          ...(o.imageAlt ? [{ property: "og:image:alt", content: o.imageAlt }] : []),
+        ]
+      : []),
+    ...(o.type === "article" && o.authorUrl ? [{ property: "article:author", content: o.authorUrl }] : []),
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: o.title },
     { name: "twitter:description", content: o.description },
     ...(o.image ? [{ name: "twitter:image", content: absUrl(o.image) }] : []),
+    ...(o.image && o.imageAlt ? [{ name: "twitter:image:alt", content: o.imageAlt }] : []),
   ];
 }
 

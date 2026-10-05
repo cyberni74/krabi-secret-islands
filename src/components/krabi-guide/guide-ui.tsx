@@ -9,16 +9,20 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { BookingModal } from "../secret-islands/booking";
 import { BottomBar, Header } from "../secret-islands/sections-top";
-import { BRAND, altFor, type Tour } from "../secret-islands/content";
+import { BRAND, altFor, type Lang, type Tour } from "../secret-islands/content";
 import { AuroraBackground, GlassCard, ScrollProgress, btn } from "../secret-islands/fx";
 import { BrandMark, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
-import { LangBoundary, useHtmlLang, useUrlLang } from "../secret-islands/lang";
+import { FooterTourLinks } from "./footer-links";
+import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
+import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
 import { formatTHB, useSI, useTx, waLink } from "../secret-islands/store";
 import { useGuideLang } from "./guide-helpers";
 import { ARTICLES, CATEGORY_LABEL, type Bi, type GuideArticle } from "./articles";
 
 /* ───────── Image with fallback chain ───────── */
 /** Tries `src`, then `fallback`, then the ocean gradient. */
+const GUIDE_LANGS: Lang[] = ["de", "en"];
+
 export function GuideImage({
   src,
   fallback,
@@ -38,9 +42,16 @@ export function GuideImage({
   sizes?: string;
 }) {
   const [stage, setStage] = useState(0);
+  const [plain, setPlain] = useState(false);
   const ref = useRef<HTMLImageElement>(null);
   const current = stage === 0 ? src : stage === 1 && fallback ? fallback : null;
-  const fail = () => setStage((s) => (s === 0 && fallback ? 1 : 2));
+  const srcSet = current && !plain ? unsplashSrcSet(current) : undefined;
+  const fail = () => {
+    // First retry the plain `src` (the optimised srcSet may be unavailable), then the fallback image.
+    if (srcSet) return setPlain(true);
+    setPlain(false);
+    setStage((s) => (s === 0 && fallback ? 1 : 2));
+  };
   useEffect(() => {
     const img = ref.current;
     if (img && img.complete && img.naturalWidth === 0) fail();
@@ -52,8 +63,8 @@ export function GuideImage({
       ref={ref}
       key={current}
       src={current}
-      srcSet={unsplashSrcSet(current)}
-      sizes={unsplashSrcSet(current) ? sizes : undefined}
+      srcSet={srcSet}
+      sizes={srcSet ? sizes : undefined}
       alt={alt}
       loading={eager || priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : undefined}
@@ -82,6 +93,7 @@ function GuideShellBody({ children }: { children: ReactNode }) {
       <ScrollProgress />
       {/* Same header + mobile action bar as the landing page – the guide is part of the site. */}
       <Header />
+      <LangSuggestBanner available={GUIDE_LANGS} />
       <main className="pb-28">{children}</main>
       <GuideFooter />
       <BottomBar />
@@ -184,7 +196,15 @@ export function TourCard({ tour }: { tour: Tour }) {
         </span>
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-lg font-extrabold leading-snug">{t(tour.title)}</h3>
+        <h3 className="text-lg font-extrabold leading-snug">
+          {TOUR_SLUGS[tour.id] ? (
+            <Link to="/touren/$slug" params={{ slug: TOUR_SLUGS[tour.id] }} search={keepLang} className="hover:text-cyan-200">
+              {t(tour.title)}
+            </Link>
+          ) : (
+            t(tour.title)
+          )}
+        </h3>
         <p className="mt-1.5 text-sm leading-relaxed text-slate-300">{t(tour.short)}</p>
         <p className="mt-3 text-sm text-slate-300">
           {t({ de: "ab", en: "from" })}{" "}
@@ -196,9 +216,15 @@ export function TourCard({ tour }: { tour: Tour }) {
             <Sparkles className="size-4" />
             {t({ de: "Diese Tour buchen", en: "Book this tour" })}
           </button>
-          <Link to="/" search={keepLang} hash="touren" className={cn(btn.glass, "px-4 text-sm")}>
-            {t({ de: "Alle Touren", en: "All tours" })}
-          </Link>
+          {TOUR_SLUGS[tour.id] ? (
+            <Link to="/touren/$slug" params={{ slug: TOUR_SLUGS[tour.id] }} search={keepLang} className={cn(btn.glass, "px-4 text-sm")}>
+              {t({ de: "Details & Ablauf", en: "Details & itinerary" })}
+            </Link>
+          ) : (
+            <Link to="/" search={keepLang} hash="touren" className={cn(btn.glass, "px-4 text-sm")}>
+              {t({ de: "Alle Touren", en: "All tours" })}
+            </Link>
+          )}
         </div>
       </div>
     </GlassCard>
@@ -275,6 +301,7 @@ function GuideFooter() {
             </div>
           ))}
         </div>
+        <FooterTourLinks className="mt-10 border-t border-white/10 pt-8" />
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
           <p>
             © 2026 {BRAND.name} · {t(BRAND.location)}

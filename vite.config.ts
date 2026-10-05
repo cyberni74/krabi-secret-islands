@@ -16,6 +16,21 @@ export default defineConfig(({ command, isPreview }) => ({
       ? [
           nitro({
             preset: "vercel",
+            // Auto-registers server/middleware/* (308 trailing-slash redirect + edge cache headers).
+            serverDir: "./server",
+            vercel: {
+              config: {
+                // Vercel Image Optimization: /_vercel/image?url=…&w=…&q=75 (AVIF/WebP, cached for a year).
+                images: {
+                  sizes: [480, 800, 1200, 1600],
+                  qualities: [75],
+                  formats: ["image/avif", "image/webp"],
+                  minimumCacheTTL: 31536000,
+                  domains: [],
+                  remotePatterns: [],
+                },
+              },
+            },
             routeRules: {
               "/**": {
                 headers: {

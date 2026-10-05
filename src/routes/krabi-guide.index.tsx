@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ARTICLES, getArticle, FEATURED_SLUG } from "@/components/krabi-guide/articles";
 import { GuideHub } from "@/components/krabi-guide/guide-hub";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
-import { BRAND_HEAD_LINKS, GUIDE_PATH, ROBOTS_LARGE_IMAGES, guideHubJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
+import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, GUIDE_PATH, ROBOTS_LARGE_IMAGES, guideHubJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 const HUB_META = {
   title: {
@@ -18,7 +17,15 @@ const HUB_META = {
 export const Route = createFileRoute("/krabi-guide/")({
   // Guide texts exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
   validateSearch: validateLangSearch,
-  head: ({ match }) => {
+  loaderDeps: ({ search }) => ({ lang: search.lang && search.lang !== "de" ? ("en" as const) : ("de" as const) }),
+  // Dynamic import keeps the article data out of the entry bundle (see krabi-guide.$slug.tsx).
+  loader: async ({ deps }) => {
+    const { ARTICLES } = await import("@/components/krabi-guide/articles");
+    const lang = deps.lang;
+    const { title, description } = { title: HUB_META.title[lang], description: HUB_META.description[lang] };
+    return { jsonLd: guideHubJsonLd(lang, { title, description }, ARTICLES) };
+  },
+  head: ({ match, loaderData }) => {
     const lang = match.search.lang && match.search.lang !== "de" ? "en" : "de";
     const title = HUB_META.title[lang];
     const description = HUB_META.description[lang];
@@ -29,8 +36,8 @@ export const Route = createFileRoute("/krabi-guide/")({
         { name: "description", content: description },
         { name: "theme-color", content: "#0a192f" },
         ROBOTS_LARGE_IMAGES,
-        ...socialMeta({ title, description, url, image: getArticle(FEATURED_SLUG)?.image, type: "website", lang }),
-        { "script:ld+json": guideHubJsonLd(lang, { title, description }, ARTICLES) },
+        ...socialMeta({ title, description, url, image: DEFAULT_OG_IMAGE.src, imageSize: DEFAULT_OG_IMAGE, imageAlt: DEFAULT_OG_IMAGE.alt[lang === "de" ? "de" : "en"], type: "website", lang }),
+        ...(loaderData ? [{ "script:ld+json": loaderData.jsonLd }] : []),
       ],
       links: [...langLinks(GUIDE_PATH, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
     };

@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { keepLang } from "./lang-context";
 import { DURATIONS } from "./booking-data";
 import {
   GALLERY,
@@ -32,6 +34,7 @@ import {
 } from "./content";
 import { Assemble, AssembleItem, GlassCard, ScrollScene, SectionTitle, btn, useParallax } from "./fx";
 import { formatTHB, useSI, useTx } from "./store";
+import { TOUR_PAGE_LINK, TOUR_SLUGS } from "./tour-slugs";
 import { SmartImage } from "./ui";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -287,8 +290,25 @@ function TourCard({ tour }: { tour: Tour }) {
             <ArrowRight className="size-4 shrink-0 transition group-hover:translate-x-0.5" />
           </button>
         </div>
+        <TourPageLink tourId={tour.id} className="mt-2 min-h-11 text-sm" />
       </div>
     </GlassCard>
+  );
+}
+
+/** Crawlable link to the tour's own landing page (/touren/<slug>); the modal buttons next to it keep working unchanged. */
+function TourPageLink({ tourId, className }: { tourId: string; className?: string }) {
+  const { t } = useTx();
+  return (
+    <Link
+      to="/touren/$slug"
+      params={{ slug: TOUR_SLUGS[tourId] }}
+      search={keepLang}
+      className={cn("flex items-center justify-center gap-1.5 rounded-xl font-semibold text-cyan-300 transition hover:text-white", className)}
+    >
+      {t(TOUR_PAGE_LINK)}
+      <ArrowRight className="size-3.5" />
+    </Link>
   );
 }
 
@@ -492,6 +512,7 @@ function FishingCard({ tour }: { tour: Tour }) {
             {t({ de: "Buchen", en: "Book" })}
           </button>
         </div>
+        <TourPageLink tourId={tour.id} className="mt-1 min-h-11 text-xs sm:text-sm" />
       </div>
     </GlassCard>
   );

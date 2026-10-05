@@ -5,8 +5,10 @@ import { Lightbox, TourModal } from "./modals";
 import { Faq, FinalCta, Footer, LongtailFaq, Reviews } from "./sections-bottom";
 import { DroneFeature, FishingSection, Gallery, Tours } from "./sections-mid";
 import { BottomBar, Comparison, Header, Hero } from "./sections-top";
-import { REVIEWS_VERIFIED, type Lang } from "./content";
-import { LangBoundary, useHtmlLang } from "./lang";
+import { LANGS, REVIEWS_VERIFIED, type Lang } from "./content";
+
+const LANDING_LANGS: Lang[] = LANGS.map((l) => l.id);
+import { LangBoundary, LangSuggestBanner, useHtmlLang } from "./lang";
 
 /** `urlLang` = validated `?lang=` search param (undefined = German default URL). */
 export function SecretIslandsPage({ urlLang }: { urlLang?: Lang }) {
@@ -25,6 +27,7 @@ function PageBody(): ReactNode {
       <AuroraBackground />
       <ScrollProgress />
       <Header />
+      <LangSuggestBanner available={LANDING_LANGS} />
       <main>
         <Hero />
         <Comparison />

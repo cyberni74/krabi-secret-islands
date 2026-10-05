@@ -557,8 +557,6 @@ const dict: Record<string, string> = {
   "Vorheriges": "前へ",
   "Nächstes": "次へ",
   "Video-Vorschau": "動画プレビュー",
-  "Alle Insider-Artikel: Inseln, Schnorchelspots, Gezeiten & Geheimtipps": "インサイダー記事をすべて：島々、シュノーケルスポット、潮の満ち引き＆とっておき情報",
-  "Zum Insider Guide": "Insider Guide を開く",
   "Bewertungen": "件のレビュー",
   "verifizierte Gäste": "認証済みのゲスト",
   "Zum Lesen anhalten: Maus darüber oder antippen & halten": "ホバーまたは長押しで一時停止",

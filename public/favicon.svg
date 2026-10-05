@@ -1,7 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="KrabiMarketplace">
-  <rect width="32" height="32" rx="9" fill="#0088A3"/>
-  <path fill="#ffffff" d="M7.5 21.5 13.2 8.5 16.6 16.2 20.2 11.2 24.8 21.5Z"/>
-  <path d="M6 24c3.4 2.1 7.2 2.4 10 2.4s6.6-.3 10-2.4" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round"/>
-  <circle cx="6" cy="24" r="1.55" fill="#ffffff"/>
-  <circle cx="26" cy="24" r="1.55" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Krabi Secret Islands">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset="1" stop-color="#0a192f"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="64" height="64" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="64" height="64" fill="url(#bg)"/>
+    <circle cx="14" cy="15" r="6.5" fill="#fcd34d"/>
+    <path d="M30 24 L34 11 L38 24 Z" fill="#164e63"/>
+    <path d="M7 36 H52 L60 29 L51 49 H13 Z" fill="#ffffff"/>
+    <path d="M21 36 L27 25 H40 L45 36 Z" fill="#ffffff"/>
+    <path d="M28 34 L31 28 H38 L41 34 Z" fill="#0e7490"/>
+    <path d="M2 54 Q9 49 16 54 T30 54 T44 54 T58 54 T72 54" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M2 61 Q9 57 16 61 T30 61 T44 61 T58 61 T72 61" fill="none" stroke="#22d3ee" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+  </g>
 </svg>

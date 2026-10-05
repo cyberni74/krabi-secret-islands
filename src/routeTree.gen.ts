@@ -17,6 +17,8 @@ import { Route as BilderFileRouteImport } from './routes/bilder.$file'
 import { Route as KrabiGuideIndexRouteImport } from './routes/krabi-guide.index'
 import { Route as KrabiGuideSlugRouteImport } from './routes/krabi-guide.$slug'
 import { Route as SecretIslandsSplatRouteImport } from './routes/secret-islands.$'
+import { Route as TourenIndexRouteImport } from './routes/touren.index'
+import { Route as TourenSlugRouteImport } from './routes/touren.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +60,16 @@ const SecretIslandsSplatRoute = SecretIslandsSplatRouteImport.update({
   path: '/secret-islands/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TourenIndexRoute = TourenIndexRouteImport.update({
+  id: '/touren/',
+  path: '/touren/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TourenSlugRoute = TourenSlugRouteImport.update({
+  id: '/touren/$slug',
+  path: '/touren/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -67,7 +79,9 @@ export interface FileRoutesByFullPath {
   '/bilder/$file': typeof BilderFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
+  '/touren/$slug': typeof TourenSlugRoute
   '/krabi-guide/': typeof KrabiGuideIndexRoute
+  '/touren/': typeof TourenIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -77,7 +91,9 @@ export interface FileRoutesByTo {
   '/bilder/$file': typeof BilderFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
+  '/touren/$slug': typeof TourenSlugRoute
   '/krabi-guide': typeof KrabiGuideIndexRoute
+  '/touren': typeof TourenIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -88,7 +104,9 @@ export interface FileRoutesById {
   '/bilder/$file': typeof BilderFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
+  '/touren/$slug': typeof TourenSlugRoute
   '/krabi-guide/': typeof KrabiGuideIndexRoute
+  '/touren/': typeof TourenIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -100,7 +118,9 @@ export interface FileRouteTypes {
     | '/bilder/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
+    | '/touren/$slug'
     | '/krabi-guide/'
+    | '/touren/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -110,7 +130,9 @@ export interface FileRouteTypes {
     | '/bilder/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
+    | '/touren/$slug'
     | '/krabi-guide'
+    | '/touren'
   id:
     | '__root__'
     | '/'
@@ -120,7 +142,9 @@ export interface FileRouteTypes {
     | '/bilder/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
+    | '/touren/$slug'
     | '/krabi-guide/'
+    | '/touren/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -131,7 +155,9 @@ export interface RootRouteChildren {
   BilderFileRoute: typeof BilderFileRoute
   KrabiGuideSlugRoute: typeof KrabiGuideSlugRoute
   SecretIslandsSplatRoute: typeof SecretIslandsSplatRoute
+  TourenSlugRoute: typeof TourenSlugRoute
   KrabiGuideIndexRoute: typeof KrabiGuideIndexRoute
+  TourenIndexRoute: typeof TourenIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +218,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SecretIslandsSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/touren/': {
+      id: '/touren/'
+      path: '/touren'
+      fullPath: '/touren/'
+      preLoaderRoute: typeof TourenIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/touren/$slug': {
+      id: '/touren/$slug'
+      path: '/touren/$slug'
+      fullPath: '/touren/$slug'
+      preLoaderRoute: typeof TourenSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -203,7 +243,9 @@ const rootRouteChildren: RootRouteChildren = {
   BilderFileRoute: BilderFileRoute,
   KrabiGuideSlugRoute: KrabiGuideSlugRoute,
   SecretIslandsSplatRoute: SecretIslandsSplatRoute,
+  TourenSlugRoute: TourenSlugRoute,
   KrabiGuideIndexRoute: KrabiGuideIndexRoute,
+  TourenIndexRoute: TourenIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

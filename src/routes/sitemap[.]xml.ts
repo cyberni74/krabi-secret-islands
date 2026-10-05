@@ -2,9 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ARTICLES, GUIDE_UPDATED, readyGuideImages, type GuideArticle } from "@/components/krabi-guide/articles";
 import { AERIAL_SHOTS, GALLERY, IMG, LANGS, TOURS, type Lang } from "@/components/secret-islands/content";
 import { GUIDE_PATH, LANDING_PATH, absUrl, htmlLang, pageUrl } from "@/components/secret-islands/seo";
+import { TOURS_PATH, tourPath } from "@/components/secret-islands/tour-pages";
+import { TOUR_PAGES_UPDATED } from "@/components/secret-islands/tour-seo";
 
 /**
- * XML sitemap for the landing page and the Krabi Insider Guide (all language URLs + hreflang alternates).
+ * XML sitemap for the landing page, the tour landing pages (/touren) and the Krabi Insider Guide (all language URLs + hreflang alternates).
  * Marketplace pages are not listed here – add them (or a sitemap index) when they should be submitted.
  * TODO(owner): bump LANDING_UPDATED when the landing page content changes materially (lastmod must be truthful).
  */
@@ -45,6 +47,8 @@ function buildSitemap() {
   const urls = [
     ...entries(LANDING_PATH, LANGS.map((l) => l.id), LANDING_UPDATED, LANDING_IMAGES),
     ...entries(GUIDE_PATH, ["de", "en"], GUIDE_UPDATED, HUB_IMAGES),
+    ...entries(TOURS_PATH, ["de", "en"], TOUR_PAGES_UPDATED, tourImages()),
+    ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], TOUR_PAGES_UPDATED, [t.image])),
     ...ARTICLES.flatMap((a) => entries(`${GUIDE_PATH}/${a.slug}`, ["de", "en"], a.updated, articleImages(a))),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>

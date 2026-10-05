@@ -100,12 +100,19 @@ export function Header() {
                   {inner}
                 </Link>
               );
-            return onLanding ? (
-              <button key={n.id} type="button" onClick={() => scrollToId(n.id)} className={cls}>
-                {inner}
-              </button>
-            ) : (
-              <Link key={n.id} to="/" search={keepLang} hash={n.id} className={cls}>
+            return (
+              <Link
+                key={n.id}
+                to="/"
+                search={keepLang}
+                hash={n.id}
+                className={cls}
+                onClick={(e) => {
+                  if (!onLanding || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                  e.preventDefault();
+                  scrollToId(n.id);
+                }}
+              >
                 {inner}
               </Link>
             );
@@ -239,18 +246,22 @@ export function BottomBar() {
   });
   const itemCls =
     "flex h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-2xl px-0.5 text-[9.5px] font-bold leading-none text-slate-200 transition hover:bg-white/10 hover:text-white active:scale-95 min-[360px]:text-[10.5px] md:w-16 md:flex-none md:text-[11px]";
-  const section = (id: string, label: { de: string; en: string }, icon: ReactNode) =>
-    onLanding ? (
-      <button type="button" onClick={() => scrollToId(id)} className={itemCls}>
-        {icon}
-        <span>{t(label)}</span>
-      </button>
-    ) : (
-      <Link to="/" search={keepLang} hash={id} className={itemCls}>
-        {icon}
-        <span>{t(label)}</span>
-      </Link>
-    );
+  const section = (id: string, label: { de: string; en: string }, icon: ReactNode) => (
+    <Link
+      to="/"
+      search={keepLang}
+      hash={id}
+      className={itemCls}
+      onClick={(e) => {
+        if (!onLanding || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        scrollToId(id);
+      }}
+    >
+      {icon}
+      <span>{t(label)}</span>
+    </Link>
+  );
   return (
     <div
       className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-2"

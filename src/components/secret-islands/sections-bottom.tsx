@@ -23,103 +23,14 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BRAND, FAQ, LONGTAIL_CROWD_IMG, REVIEWS, ROMANCE_IMGS, TOURS, UI, altFor } from "./content";
-import { ARTICLES as GUIDE_ARTICLES, GUIDE_CATEGORIES, type GuideArticle, type GuideCategory } from "../krabi-guide/articles";
-import { ArticleCard as GuideArticleCard } from "../krabi-guide/guide-ui";
 import { keepLang } from "./lang-context";
+import { FooterTourLinks } from "../krabi-guide/footer-links";
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink } from "./store";
 import { BrandMark, SmartImage, WhatsAppIcon } from "./ui";
 
 /* ───────────────────────── Guide (blog / SEO) ───────────────────────── */
-
-/** Guide articles linked directly from the landing page (pillar pages + core USP islands). */
-const GUIDE_TOP_LINKS = [
-  "krabi-islands-insider-guide",
-  "best-time-to-visit-krabi",
-  "krabi-island-hopping-planner",
-  "koh-roi-hidden-lagoon",
-  "hong-island-krabi",
-  "best-snorkeling-spots-krabi",
-  "krabi-bioluminescent-plankton-night-boat-tour",
-  "krabi-fishing-guide",
-];
-
-export function Guide() {
-  const { t } = useTx();
-  const [cat, setCat] = useState<"all" | GuideCategory>("all");
-  const list = (
-    cat === "all"
-      ? GUIDE_TOP_LINKS.map((slug) => GUIDE_ARTICLES.find((a) => a.slug === slug)).filter((a): a is GuideArticle => !!a)
-      : GUIDE_ARTICLES.filter((a) => a.category === cat)
-  ).slice(0, 6);
-
-  return (
-    <section id="guide" className="relative scroll-mt-24 px-4 py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl">
-        <SectionTitle eyebrow={t(UI.guideEyebrow)} title={t(UI.guideTitle)} sub={t(UI.guideSub)} />
-
-        <div role="tablist" className="hide-scroll -mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
-          {GUIDE_CATEGORIES.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              role="tab"
-              aria-selected={cat === c.id}
-              onClick={() => setCat(c.id)}
-              className={cn(
-                "relative min-h-11 shrink-0 rounded-full px-4 text-sm font-bold transition",
-                cat === c.id ? "text-si-navy" : "si-glass text-slate-200 hover:text-white",
-              )}
-            >
-              {cat === c.id ? (
-                <motion.span
-                  layoutId="guide-cat-pill"
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-si-cyan to-cyan-300 shadow-[0_0_24px_-4px_rgb(6_182_212/0.8)]"
-                  transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                />
-              ) : null}
-              <span className="relative">{t(c.label)}</span>
-            </button>
-          ))}
-        </div>
-
-        <Assemble key={cat} className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>
-          {list.map((a, i) => (
-            <AssembleItem key={a.slug} variant={i % 3 === 1 ? "flip" : "up"} className="h-full">
-              <GuideArticleCard article={a} />
-            </AssembleItem>
-          ))}
-        </Assemble>
-
-        <ScrollScene intensity={0.6} className="mt-10">
-          <Link
-            to="/krabi-guide"
-            search={keepLang}
-            className="si-glass si-glow-border group flex flex-col items-start gap-4 rounded-3xl p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
-          >
-            <span>
-              <span className="block text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">
-                {t({ de: "Krabi Insider Guide", en: "Krabi Insider Guide" })}
-              </span>
-              <span className="mt-1 block text-xl font-extrabold text-white sm:text-2xl">
-                {t({
-                  de: "Alle Insider-Artikel: Inseln, Schnorchelspots, Gezeiten & Geheimtipps",
-                  en: "All insider articles: islands, snorkel spots, tides & secret tips",
-                })}{" "}
-                <span className="text-si-cyan">({GUIDE_ARTICLES.length})</span>
-              </span>
-            </span>
-            <span className={btn.primary}>
-              {t({ de: "Zum Insider Guide", en: "Open the Insider Guide" })}
-              <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-            </span>
-          </Link>
-        </ScrollScene>
-      </div>
-    </section>
-  );
-}
 
 const AVATAR_GRADIENTS = [
   "from-si-cyan to-blue-600",
@@ -148,6 +59,7 @@ function Stars({ className }: { className?: string }) {
     </span>
   );
 }
+
 
 export function Reviews() {
   const { t } = useTx();
@@ -805,6 +717,7 @@ export function Footer() {
           </AnimatePresence>
         </AssembleItem>
       </Assemble>
+      <FooterTourLinks className="mx-auto mt-12 max-w-6xl px-4" />
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 px-4 pt-6 text-xs leading-relaxed text-slate-500">
         <p>{t(UI.legalNote)}</p>
