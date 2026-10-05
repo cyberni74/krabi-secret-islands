@@ -15,9 +15,9 @@ export const BRAND = {
   name: "Krabi Secret Islands",
   domain: "krabi-secret-islands.com",
   email: "info@krabi-secret-islands.com",
-  // TODO: replace with the real WhatsApp business number (international format, digits only).
-  whatsapp: "66812345678",
-  whatsappDisplay: "+66 81 234 5678",
+  // WhatsApp number (international format, digits only).
+  whatsapp: "66922562293",
+  whatsappDisplay: "+66 92 256 2293",
   location: { de: "Ao Nang / Krabi, Thailand", en: "Ao Nang / Krabi, Thailand" },
 };
 

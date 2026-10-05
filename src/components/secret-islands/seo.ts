@@ -90,7 +90,7 @@ export function businessNode(lang: Lang): Json {
     logo: `${SITE_URL}${LOGO_URL}`,
     image: `${SITE_URL}/images/krabi-secret-islands-privates-speedboat.jpg`,
     email: BRAND.email,
-    // TODO(owner): `telephone` omitted on purpose – BRAND.whatsapp is still a placeholder number.
+    telephone: `+${BRAND.whatsapp}`,
     // TODO(owner): add streetAddress / postalCode (and `geo`) of the pier or office once confirmed.
     address: { "@type": "PostalAddress", addressLocality: "Ao Nang", addressRegion: "Krabi", addressCountry: "TH" },
     areaServed: [
