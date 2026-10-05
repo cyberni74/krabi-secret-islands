@@ -528,7 +528,7 @@ export const TOURS: Tour[] = [
       de: "Unsere Expedition in die nördliche Phang-Nga-Bucht: Schwimmen Sie bei Flut durch den Felstunnel in die versteckte Lagune von Koh Roi, entdecken Sie das Kudu-Hong und picknicken Sie allein am Strand von Koh Nok.",
       en: "Our expedition into northern Phang Nga Bay: swim through the rock tunnel into Koh Roi's hidden lagoon at high tide, explore the Kudu hong and picnic alone on Koh Nok's beach.",
     },
-    includes: [INC_BOAT, INC_RELAX, { de: "Kajak für die Lagunen", en: "Kayak for the lagoons" }, INC_PARK, INC_DRINKS, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_DRINKS, INC_TRANSFER],
   },
   {
     id: "phi-phi-early-bird",
@@ -581,8 +581,8 @@ export const TOURS: Tour[] = [
     kind: "island",
     title: { de: "James Bond Island & Phang Nga Bay Privat", en: "James Bond Island & Phang Nga Bay Private" },
     short: {
-      de: "Die Ikone der Bucht – mit Mangroven-Kajak statt Touristenschlange.",
-      en: "The bay's icon – with mangrove kayaking instead of tourist queues.",
+      de: "Die Ikone der Bucht – ohne Touristenschlange.",
+      en: "The bay's icon – without the tourist queues.",
     },
     categories: ["classic", "family"],
     image: IMG.jamesBond,
@@ -592,10 +592,10 @@ export const TOURS: Tour[] = [
     slots: ["morning"],
     stops: ["Khao Phing Kan", "Koh Panyee", "Mangroven"],
     description: {
-      de: "Wir fahren entgegen der Gruppenroute: zuerst Kajak durch die Mangroven, dann das schwimmende Dorf Koh Panyee und James Bond Island am Nachmittag, wenn es ruhig wird.",
-      en: "We run the route in reverse: first kayaking through the mangroves, then the floating village of Koh Panyee and James Bond Island in the afternoon when it gets quiet.",
+      de: "Wir fahren entgegen der Gruppenroute: zuerst die Mangrovenküste, dann das schwimmende Dorf Koh Panyee und James Bond Island am Nachmittag, wenn es ruhig wird.",
+      en: "We run the route in reverse: first the mangrove coast, then the floating village of Koh Panyee and James Bond Island in the afternoon when it gets quiet.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_PARK, { de: "Kajak & Guide", en: "Kayak & guide" }, INC_DRINKS, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_PARK, INC_DRINKS, INC_TRANSFER],
   },
   {
     id: "railay-escape",
@@ -904,13 +904,13 @@ export const ARTICLES: Article[] = [
     body: {
       de: [
         "Nördlich der bekannten James-Bond-Insel liegen Inseln, die in keinem Reisekatalog stehen. Koh Roi ist eine davon: außen eine steile Kalksteinwand, innen eine smaragdgrüne Lagune.",
-        "Der Zugang erfolgt schwimmend oder per Kajak durch einen niedrigen Felstunnel – nur bei passendem Wasserstand. Drinnen: Stille, Mangroven und manchmal Makaken.",
+        "Der Zugang erfolgt schwimmend durch einen niedrigen Felstunnel – nur bei passendem Wasserstand. Drinnen: Stille, Mangroven und manchmal Makaken.",
         "Koh Kudu besitzt ebenfalls ein „Hong“ – einen eingestürzten Höhlenraum, der zum Himmel offen ist. Am Nachmittag fällt das Licht senkrecht hinein.",
         "Weil die Anfahrt mit großen Booten zu lang ist, sind diese Inseln Privat-Chartern vorbehalten. Genau dafür ist unsere Uncharted-Tour gemacht.",
       ],
       en: [
         "North of the famous James Bond Island lie islands you won't find in any brochure. Koh Roi is one of them: a sheer limestone wall outside, an emerald lagoon inside.",
-        "Access is by swimming or kayaking through a low rock tunnel – only at the right tide. Inside: silence, mangroves and sometimes macaques.",
+        "Access is by swimming through a low rock tunnel – only at the right tide. Inside: silence, mangroves and sometimes macaques.",
         "Koh Kudu also has a 'hong' – a collapsed cave chamber open to the sky. In the afternoon the light falls straight in.",
         "Because the trip is too long for big boats, these islands are reserved for private charters. That's exactly what our Uncharted tour is made for.",
       ],

@@ -111,10 +111,8 @@ export const DRINKS: AddOn[] = [
 
 export const BOOKING_EXTRAS: AddOn[] = [
   { id: "drone", emoji: "🚁", label: { de: "4K Drohnen-Paket", en: "4K drone package" }, desc: { de: "Pilot, Reel + 40 Luftbilder, Lieferung am selben Abend", en: "Pilot, reel + 40 aerial photos, same-evening delivery" }, price: 4500, per: "boat", tag: { de: "Bestseller", en: "Bestseller" } },
-  { id: "underwater", emoji: "🤿", label: { de: "Unterwasser-Fotograf", en: "Underwater photographer" }, desc: { de: "GoPro-Aufnahmen beim Schnorcheln", en: "GoPro shots while snorkeling" }, price: 2500, per: "boat" },
   { id: "romance", emoji: "🌹", label: { de: "Romantik-Deko & Blumen", en: "Romance decor & flowers" }, desc: { de: "Für Antrag, Jahrestag & Flitterwochen", en: "For proposals, anniversaries & honeymoons" }, price: 2500, per: "boat" },
   { id: "fishing", emoji: "🎣", label: { de: "Angelstopp mit Ausrüstung", en: "Fishing stop with gear" }, desc: { de: "1 Std. Riff-Angeln während der Inseltour", en: "1 hr reef fishing during the island tour" }, price: 1500, per: "boat" },
-  { id: "sup", emoji: "🏄", label: { de: "SUP & Kajak", en: "SUP & kayak" }, desc: { de: "2 Stand-up-Paddles + 1 Doppelkajak", en: "2 stand-up paddles + 1 double kayak" }, price: 1200, per: "boat" },
 ];
 
 export function addOnAmount(item: AddOn, guests: number, kids = 0) {
