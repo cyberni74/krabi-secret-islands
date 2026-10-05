@@ -728,7 +728,7 @@ export function GuestsStep({ draft, patch }: StepProps) {
           <div className="flex items-center justify-between gap-3">
             <div className="min-w-0">
               <p className="font-extrabold text-white">{t({ de: "davon Kinder", en: "of which children" })}</p>
-              <p className="mt-1 text-xs text-slate-400">{t({ de: "Optional · Schwimmwesten in Kindergröße an Bord", en: "Optional · kids' life jackets on board" })}</p>
+              <p className="mt-1 text-xs text-slate-400">{t({ de: "Optional · Schwimmwesten an Bord", en: "Optional · life jackets on board" })}</p>
             </div>
             <Stepper value={draft.kids} min={0} max={draft.guests} label={t({ de: "Anzahl Kinder", en: "Number of children" })} onChange={(v) => patch({ kids: v })} />
           </div>

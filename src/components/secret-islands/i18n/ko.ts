@@ -172,8 +172,6 @@ const dict: Record<string, string> = {
   "Family Fun Day – Sandbänke & Schildkröten": "패밀리 펀 데이 – 모래톱 & 바다거북",
   "Kurze Fahrten, flache Buchten, viel Schatten – für kleine Entdecker.": "짧은 이동, 얕은 만, 넉넉한 그늘 – 꼬마 탐험가들을 위해.",
   "6 Std. · ab 09:00": "6시간 · 오전 9시부터",
-  "Kinderwesten in allen Größen, Sandspielzeug und Schnorchelmasken für Kids. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "모든 사이즈의 아동용 구명조끼, 모래놀이 장난감, 어린이용 스노클 마스크를 준비합니다. 수심이 얕은 만을 고르고, 가족의 리듬에 맞춰 휴식을 계획합니다.",
-  "Kinder-Equipment": "어린이용 장비",
   "Riff-Angeln Halbtags": "반나절 산호초 낚시",
   "Zackenbarsch, Snapper & Makrele an den Riffen vor Krabi.": "끄라비 앞바다 산호초에서 잡는 그루퍼, 스내퍼 & 고등어.",
   "Ideal für Einsteiger und Familien: Bottom-Fishing und leichtes Jiggen an fischreichen Riffen, keine 30 Minuten vom Hafen. Unser Guide zeigt Ihnen jeden Handgriff.": "초보자와 가족에게 이상적: 선착장에서 30분도 안 되는 풍요로운 산호초에서 바텀 피싱과 라이트 지깅을 즐기세요. 가이드가 모든 동작을 알려드립니다.",
@@ -505,7 +503,6 @@ const dict: Record<string, string> = {
   "max. 5 Gäste – nur Ihre Gruppe": "최대 5명 – 일행만",
   "Anzahl Gäste": "인원 수",
   "davon Kinder": "그중 어린이",
-  "Optional · Schwimmwesten in Kindergröße an Bord": "선택 · 선상 어린이용 구명조끼",
   "Anzahl Kinder": "어린이 수",
   "Anlass? (optional)": "특별한 날인가요? (선택)",
   "Mit einem Klick dazubuchen": "클릭 한 번으로 추가",
@@ -636,6 +633,9 @@ const dict: Record<string, string> = {
   "Schnorchel-Equipment gratis": "스노클링 장비 무료",
   "Schnorchel-Ausrüstung kostenlos": "스노클링 장비 무료",
   "Schnorchel-Ausrüstung kostenlos (bei Buchung auswählen)": "스노클링 장비 무료 (예약 시 선택)",
+  "Die vorgeschriebenen Schwimmwesten sind an Bord, Schnorchelmasken stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "규정에 따른 구명조끼는 선상에 비치되어 있으며, 스노클링 마스크는 무료로 제공합니다. 예약 시 체크해 주세요. 수심이 얕은 만을 골라 여러분의 속도에 맞춰 휴식을 계획합니다.",
+  "Schwimmwesten an Bord": "선상 구명조끼 구비",
+  "Optional · Schwimmwesten an Bord": "선택 · 선상 구명조끼",
 };
 
 export default dict;

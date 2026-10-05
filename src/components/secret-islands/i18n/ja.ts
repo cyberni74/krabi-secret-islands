@@ -172,8 +172,6 @@ const dict: Record<string, string> = {
   "Family Fun Day – Sandbänke & Schildkröten": "Family Fun Day – 砂州とウミガメ",
   "Kurze Fahrten, flache Buchten, viel Schatten – für kleine Entdecker.": "移動は短く、浅い入り江、日陰もたっぷり――小さな探検家のために。",
   "6 Std. · ab 09:00": "6時間 · 09:00 出発",
-  "Kinderwesten in allen Größen, Sandspielzeug und Schnorchelmasken für Kids. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "あらゆるサイズのお子さま用ライフジャケット、砂遊びセット、お子さま用シュノーケルマスクをご用意。遠浅の入り江を選び、休憩はご家族のペースに合わせて計画します。",
-  "Kinder-Equipment": "お子さま用装備",
   "Riff-Angeln Halbtags": "半日リーフフィッシング",
   "Zackenbarsch, Snapper & Makrele an den Riffen vor Krabi.": "Krabi 沖のリーフでハタ、フエダイ＆サワラを狙う。",
   "Ideal für Einsteiger und Familien: Bottom-Fishing und leichtes Jiggen an fischreichen Riffen, keine 30 Minuten vom Hafen. Unser Guide zeigt Ihnen jeden Handgriff.": "初心者やご家族に最適：桟橋から30分以内の魚影の濃いリーフで、底釣りとライトジギング。ガイドがひとつひとつの動作を丁寧にお教えします。",
@@ -505,7 +503,6 @@ const dict: Record<string, string> = {
   "max. 5 Gäste – nur Ihre Gruppe": "最大5名様――お客さまのグループだけ",
   "Anzahl Gäste": "人数",
   "davon Kinder": "うちお子さま",
-  "Optional · Schwimmwesten in Kindergröße an Bord": "オプション · お子さま用ライフジャケットを船上にご用意",
   "Anzahl Kinder": "お子さまの人数",
   "Anlass? (optional)": "ご利用の目的は？（任意）",
   "Mit einem Klick dazubuchen": "ワンクリックで追加",
@@ -636,6 +633,9 @@ const dict: Record<string, string> = {
   "Schnorchel-Equipment gratis": "シュノーケル用品 無料",
   "Schnorchel-Ausrüstung kostenlos": "シュノーケル用品 無料",
   "Schnorchel-Ausrüstung kostenlos (bei Buchung auswählen)": "シュノーケル用品 無料（予約時に選択）",
+  "Die vorgeschriebenen Schwimmwesten sind an Bord, Schnorchelmasken stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "規定の救命胴衣は船上に備え付け、シュノーケルマスクは無料でご用意します。ご予約時にチェックを入れてください。入りやすい浅い入り江を選び、皆さまのペースに合わせて休憩を取ります。",
+  "Schwimmwesten an Bord": "船上に救命胴衣を完備",
+  "Optional · Schwimmwesten an Bord": "オプション · 船上に救命胴衣あり",
 };
 
 export default dict;

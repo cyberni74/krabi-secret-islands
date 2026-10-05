@@ -172,8 +172,6 @@ const dict: Record<string, string> = {
   "Family Fun Day – Sandbänke & Schildkröten": "Family Fun Day——沙洲与海龟",
   "Kurze Fahrten, flache Buchten, viel Schatten – für kleine Entdecker.": "航程短、海湾浅、遮阳足——专为小小探险家打造。",
   "6 Std. · ab 09:00": "6 小时 · 09:00 起",
-  "Kinderwesten in allen Größen, Sandspielzeug und Schnorchelmasken für Kids. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "各尺码儿童救生衣、沙滩玩具和儿童浮潜面罩。我们挑选浅滩入水的海湾，并按您的节奏安排休息。",
-  "Kinder-Equipment": "儿童装备",
   "Riff-Angeln Halbtags": "半日礁石垂钓",
   "Zackenbarsch, Snapper & Makrele an den Riffen vor Krabi.": "在甲米外海礁石垂钓石斑、鲷鱼与鲭鱼。",
   "Ideal für Einsteiger und Familien: Bottom-Fishing und leichtes Jiggen an fischreichen Riffen, keine 30 Minuten vom Hafen. Unser Guide zeigt Ihnen jeden Handgriff.": "新手与家庭的理想之选：在鱼群丰富的礁区进行底钓和轻型铁板钓，距码头不到 30 分钟。向导手把手教您每个动作。",
@@ -505,7 +503,6 @@ const dict: Record<string, string> = {
   "max. 5 Gäste – nur Ihre Gruppe": "最多 5 位宾客——只有您的团队",
   "Anzahl Gäste": "宾客人数",
   "davon Kinder": "其中儿童",
-  "Optional · Schwimmwesten in Kindergröße an Bord": "可选 · 船上备有儿童救生衣",
   "Anzahl Kinder": "儿童人数",
   "Anlass? (optional)": "特别场合？（可选）",
   "Mit einem Klick dazubuchen": "一键加选",
@@ -636,6 +633,9 @@ const dict: Record<string, string> = {
   "Schnorchel-Equipment gratis": "免费浮潜装备",
   "Schnorchel-Ausrüstung kostenlos": "浮潜装备免费",
   "Schnorchel-Ausrüstung kostenlos (bei Buchung auswählen)": "浮潜装备免费（预订时勾选）",
+  "Die vorgeschriebenen Schwimmwesten sind an Bord, Schnorchelmasken stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.": "船上备有规定的救生衣，浮潜面镜由我们免费提供——预订时请勾选。我们会选择入水平缓的海湾，并按您的节奏安排休息。",
+  "Schwimmwesten an Bord": "船上备有救生衣",
+  "Optional · Schwimmwesten an Bord": "可选 · 船上备有救生衣",
 };
 
 export default dict;

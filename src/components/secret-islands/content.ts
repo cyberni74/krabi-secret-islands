@@ -660,10 +660,10 @@ export const TOURS: Tour[] = [
     departures: { morning: "09:00" },
     stops: ["Tup Sandbank", "Chicken Island", "Koh Poda"],
     description: {
-      de: "Kinderwesten in allen Größen, Sandspielzeug und Schnorchelmasken für Kids. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.",
-      en: "Kids' life vests in all sizes, sand toys and kids' snorkel masks. We choose bays with shallow entry and plan breaks to your rhythm.",
+      de: "Die vorgeschriebenen Schwimmwesten sind an Bord, Schnorchelmasken stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen. Wir wählen Buchten mit flachem Einstieg und planen Pausen nach Ihrem Rhythmus.",
+      en: "The mandatory life jackets are on board, and we provide snorkel masks free of charge – please tick them when booking. We choose bays with shallow entry and plan breaks to your rhythm.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, { de: "Kinder-Equipment", en: "Kids' gear" }, INC_SNORKEL, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, { de: "Schwimmwesten an Bord", en: "Life jackets on board" }, INC_SNORKEL, INC_TRANSFER],
   },
   {
     id: "fishing-reef-half",
