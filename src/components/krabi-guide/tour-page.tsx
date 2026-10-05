@@ -15,6 +15,7 @@ import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { SmartImage, WhatsAppIcon } from "../secret-islands/ui";
 import type { GuideCard } from "./guide-meta";
 import { useGuideLang, type GuideLang } from "./guide-helpers";
+import { TrustBlock } from "./trust-block";
 import { ArticleCard, GuideShell } from "./guide-ui";
 
 const bi = (l: L, lang: GuideLang) => l[lang];
@@ -209,6 +210,7 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
         </aside>
 
         <div className="min-w-0 max-w-3xl">
+          <TrustBlock className="mb-8" />
           <div className="space-y-4 text-base leading-[1.75] text-slate-200 sm:text-lg">
             {paragraphs.map((p, i) => (
               <p key={i}>{p}</p>

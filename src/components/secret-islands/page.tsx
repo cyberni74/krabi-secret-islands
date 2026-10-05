@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { BookingModal } from "./booking";
 import { AuroraBackground, ScrollProgress } from "./fx";
 import { Lightbox, TourModal } from "./modals";
+import { TrustBlock } from "../krabi-guide/trust-block";
 import { GuideTeaser } from "../krabi-guide/footer-links";
 import { Faq, FinalCta, Footer, LongtailFaq, Reviews } from "./sections-bottom";
 import { DroneFeature, FishingSection, Gallery, Tours } from "./sections-mid";
@@ -34,6 +35,9 @@ function PageBody(): ReactNode {
       <LangSuggestBanner available={LANDING_LANGS} />
       <main>
         <Hero />
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <TrustBlock className="my-8" />
+        </div>
         <Comparison />
         <Tours />
         <FishingSection />
