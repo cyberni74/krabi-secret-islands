@@ -12,12 +12,12 @@ import { BottomBar, Header } from "../secret-islands/sections-top";
 import { BRAND, altFor, type Lang, type Tour } from "../secret-islands/content";
 import { AuroraBackground, GlassCard, ScrollProgress, btn } from "../secret-islands/fx";
 import { BrandMark, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
-import { FooterTourLinks } from "./footer-links";
+import { FooterGuideLinks, FooterTourLinks } from "./footer-links";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
 import { formatTHB, useSI, useTx, waLink } from "../secret-islands/store";
 import { useGuideLang } from "./guide-helpers";
-import { ARTICLES, CATEGORY_LABEL, type Bi, type GuideArticle } from "./articles";
+import { CATEGORY_LABEL, type Bi, type GuideCard } from "./guide-meta";
 
 /* ───────── Image with fallback chain ───────── */
 /** Tries `src`, then `fallback`, then the ocean gradient. */
@@ -103,7 +103,7 @@ function GuideShellBody({ children }: { children: ReactNode }) {
 }
 
 /* ───────── Breadcrumb ───────── */
-export function Breadcrumb({ article }: { article?: GuideArticle }) {
+export function Breadcrumb({ article }: { article?: Pick<GuideCard, "short"> }) {
   const { t } = useTx();
   const lang = useGuideLang();
   return (
@@ -146,7 +146,7 @@ export function Breadcrumb({ article }: { article?: GuideArticle }) {
 }
 
 /* ───────── Cards ───────── */
-export function ArticleCard({ article, className }: { article: GuideArticle; className?: string }) {
+export function ArticleCard({ article, className }: { article: GuideCard; className?: string }) {
   const lang = useGuideLang();
   const { t } = useTx();
   return (
@@ -254,16 +254,10 @@ export function WhatsAppCta({ topic }: { topic?: Bi }) {
 /* ───────── Footer ───────── */
 function GuideFooter() {
   const { t } = useTx();
-  const lang = useGuideLang();
-  const groups: { title: Bi; items: GuideArticle[] }[] = [
-    { title: { de: "Grundlagen", en: "Essentials" }, items: ARTICLES.filter((a) => a.category === "pillar") },
-    { title: { de: "Inseln", en: "Islands" }, items: ARTICLES.filter((a) => a.category === "island") },
-    { title: { de: "Insider-Wissen", en: "Insider know-how" }, items: ARTICLES.filter((a) => a.category === "insider") },
-  ];
   return (
     <footer className="relative border-t border-white/10 bg-si-navy/60 px-4 pb-28 pt-14 backdrop-blur sm:px-6 md:pb-10">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_3fr]">
           <div>
             <Link to="/" search={keepLang} className="inline-flex items-center gap-2.5">
               <BrandMark className="size-10" />
@@ -282,24 +276,7 @@ function GuideFooter() {
               <WhatsAppCta />
             </div>
           </div>
-          {groups.map((g) => (
-            <div key={g.title.en}>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">{t(g.title)}</p>
-              <ul className="space-y-1">
-                {g.items.map((a) => (
-                  <li key={a.slug}>
-                    <Link
-                      to="/krabi-guide/$slug" search={keepLang}
-                      params={{ slug: a.slug }}
-                      className="inline-flex min-h-8 items-center text-sm text-slate-300 hover:text-white"
-                    >
-                      {a.short[lang]}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <FooterGuideLinks showHeading={false} />
         </div>
         <FooterTourLinks className="mt-10 border-t border-white/10 pt-8" />
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">

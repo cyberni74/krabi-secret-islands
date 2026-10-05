@@ -3,16 +3,19 @@ import { GuideShell } from "@/components/krabi-guide/guide-ui";
 import { TourLandingPage } from "@/components/krabi-guide/tour-page";
 import { btn } from "@/components/secret-islands/fx";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
+import { getTourArticleCards } from "@/lib/server/guide-data";
 import { getTourPage } from "@/components/secret-islands/tour-pages";
 import { tourHead, tourPageLang } from "@/components/secret-islands/tour-seo";
 
 export const Route = createFileRoute("/touren/$slug")({
   // Tour pages exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
   validateSearch: validateLangSearch,
-  // Unknown slug → 404 (not a crash). Only the slug crosses the wire, the copy is bundled.
-  loader: ({ params }) => {
-    if (!getTourPage(params.slug)) throw notFound();
-    return { slug: params.slug };
+  // Unknown slug → 404 (not a crash). The tour copy is bundled; only the ≤4 matching guide cards come from the server.
+  loader: async ({ params }) => {
+    const found = getTourPage(params.slug);
+    if (!found) throw notFound();
+    const articles = await getTourArticleCards({ data: { tourId: found.tour.id } });
+    return { slug: params.slug, articles };
   },
   head: ({ loaderData, match }) => tourHead(loaderData?.slug ?? "", tourPageLang(match.search)),
   component: TourRoute,
@@ -20,8 +23,8 @@ export const Route = createFileRoute("/touren/$slug")({
 });
 
 function TourRoute() {
-  const { slug } = Route.useLoaderData();
-  return <TourLandingPage slug={slug} />;
+  const { slug, articles } = Route.useLoaderData();
+  return <TourLandingPage slug={slug} articles={articles} />;
 }
 
 function TourNotFound() {

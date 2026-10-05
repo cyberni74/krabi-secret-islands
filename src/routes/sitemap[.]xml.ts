@@ -1,16 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ARTICLES, GUIDE_UPDATED, readyGuideImages, type GuideArticle } from "@/components/krabi-guide/articles";
+import { ARTICLES, readyGuideImages, type GuideArticle } from "@/components/krabi-guide/articles";
 import { AERIAL_SHOTS, GALLERY, IMG, LANGS, TOURS, type Lang } from "@/components/secret-islands/content";
 import { GUIDE_PATH, LANDING_PATH, absUrl, htmlLang, pageUrl } from "@/components/secret-islands/seo";
 import { TOURS_PATH, tourPath } from "@/components/secret-islands/tour-pages";
-import { TOUR_PAGES_UPDATED } from "@/components/secret-islands/tour-seo";
+import dates from "@/generated/content-dates.json";
 
 /**
  * XML sitemap for the landing page, the tour landing pages (/touren) and the Krabi Insider Guide (all language URLs + hreflang alternates).
  * Marketplace pages are not listed here – add them (or a sitemap index) when they should be submitted.
- * TODO(owner): bump LANDING_UPDATED when the landing page content changes materially (lastmod must be truthful).
+ * <lastmod> = real change date of the content files (src/generated/content-dates.json, written by `npm run dates` from git).
  */
-const LANDING_UPDATED = "2026-10-04";
 
 function esc(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -45,11 +44,11 @@ function entries(path: string, langs: readonly Lang[], lastmod: string, images: 
 
 function buildSitemap() {
   const urls = [
-    ...entries(LANDING_PATH, LANGS.map((l) => l.id), LANDING_UPDATED, LANDING_IMAGES),
-    ...entries(GUIDE_PATH, ["de", "en"], GUIDE_UPDATED, HUB_IMAGES),
-    ...entries(TOURS_PATH, ["de", "en"], TOUR_PAGES_UPDATED, tourImages()),
-    ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], TOUR_PAGES_UPDATED, [t.image])),
-    ...ARTICLES.flatMap((a) => entries(`${GUIDE_PATH}/${a.slug}`, ["de", "en"], a.updated, articleImages(a))),
+    ...entries(LANDING_PATH, LANGS.map((l) => l.id), dates.landing, LANDING_IMAGES),
+    ...entries(GUIDE_PATH, ["de", "en"], dates.hub, HUB_IMAGES),
+    ...entries(TOURS_PATH, ["de", "en"], dates.tours, tourImages()),
+    ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], dates.tours, [t.image])),
+    ...ARTICLES.flatMap((a) => entries(`${GUIDE_PATH}/${a.slug}`, ["de", "en"], (dates.slugs as Record<string, string>)[a.slug] ?? a.updated, articleImages(a))),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">

@@ -28,15 +28,6 @@ export const Route = createFileRoute("/")({
       links: [
         ...langLinks(LANDING_PATH, lang, LANDING_LANGS),
         ...BRAND_HEAD_LINKS,
-        // LCP: the hero photo (responsive local WebP variants, see LOCAL_VARIANTS in ui.tsx).
-        {
-          rel: "preload",
-          as: "image",
-          href: "/images/koh-hong-krabi-luftaufnahme-strand-lagune-720.webp",
-          imageSrcSet: "/images/koh-hong-krabi-luftaufnahme-strand-lagune-720.webp 720w, /images/koh-hong-krabi-luftaufnahme-strand-lagune.webp 1080w",
-          imageSizes: "100vw",
-          fetchPriority: "high",
-        },
       ],
     };
   },

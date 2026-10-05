@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import type { ReactNode } from "react";
 import { BookingModal } from "./booking";
 import { AuroraBackground, ScrollProgress } from "./fx";
@@ -14,7 +15,9 @@ import { LangBoundary, LangSuggestBanner, useHtmlLang } from "./lang";
 export function SecretIslandsPage({ urlLang }: { urlLang?: Lang }) {
   return (
     <LangBoundary urlLang={urlLang}>
-      <PageBody />
+      <MotionConfig reducedMotion="user">
+        <PageBody />
+      </MotionConfig>
     </LangBoundary>
   );
 }

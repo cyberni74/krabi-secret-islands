@@ -11,6 +11,7 @@ import { PILLAR_ARTICLES } from "./data-pillar";
 import { SNORKEL_RELAX } from "./data-snorkel-relax";
 import { EXTRA_SECTIONS } from "./data-extra";
 import { EXTRA_SECTIONS_2 } from "./data-extra2";
+import CONTENT_DATES from "@/generated/content-dates.json";
 import { MOVIE_ARTICLES } from "./data-movies";
 import { NEW_ARTICLES_D } from "./data-new-d";
 import { NEW_ARTICLES_C } from "./data-new-c";
@@ -22,6 +23,7 @@ export type { Bi, GuideArticle, GuideCategory, GuideImage, GuideSection } from "
 
 export const GUIDE_UPDATED = "2026-10-05";
 export { SITE_URL } from "../secret-islands/seo";
+export { CATEGORY_LABEL, FEATURED_SLUG, GUIDE_CATEGORIES, type GuideCard, type GuideNavItem } from "./guide-meta";
 
 /* ───────────────────────── Keyword map ─────────────────────────
  * Research basis: SERP review (DE + EN) of Krabi island / tour queries, Oct 2026.
@@ -72,20 +74,6 @@ export const KEYWORD_MAP: {
   { slug: "best-snorkeling-spots-krabi", primary: { de: "Schnorcheln Krabi", en: "Krabi snorkeling" }, secondary: ["beste Schnorchelspots Krabi", "best snorkeling Krabi", "Koh Rok snorkeling"], intent: ["info", "comm"], note: "Insider – owner priority (snorkel/swim/relax)." },
 ];
 
-/* ───────────────────────── Categories ───────────────────────── */
-export const GUIDE_CATEGORIES: { id: "all" | GuideCategory; label: Bi }[] = [
-  { id: "all", label: { de: "Alle", en: "All" } },
-  { id: "pillar", label: { de: "Grundlagen", en: "Essentials" } },
-  { id: "island", label: { de: "Inseln", en: "Islands" } },
-  { id: "insider", label: { de: "Insider-Wissen", en: "Insider know-how" } },
-];
-
-export const CATEGORY_LABEL: Record<GuideCategory, Bi> = {
-  pillar: { de: "Grundlagen", en: "Essentials" },
-  island: { de: "Insel-Guide", en: "Island guide" },
-  insider: { de: "Insider-Wissen", en: "Insider know-how" },
-};
-
 /* ───────────────────────── Merge + derive ───────────────────────── */
 export function slugify(s: string) {
   return s
@@ -124,7 +112,7 @@ function finalize(a: GuideArticleInput): GuideArticle {
     ...withSections,
     sections: sections.map((s) => ({ ...s, id: s.id ?? slugify(s.h2.en) })),
     readingMinutes: Math.max(3, Math.round(wordCount(withSections, "de") / 200)),
-    updated: GUIDE_UPDATED,
+    updated: (CONTENT_DATES.slugs as Record<string, string>)[a.slug] ?? GUIDE_UPDATED,
   };
 }
 
@@ -170,5 +158,4 @@ export function readyGuideImages(a: { images?: GuideImage[] }): GuideImage[] {
   return (a.images ?? []).filter((img) => GUIDE_IMAGES_READY.has(img.src.split("/").pop() ?? ""));
 }
 
-export const FEATURED_SLUG = "krabi-islands-insider-guide";
 export const ISLAND_ARTICLES = ARTICLES.filter((a) => a.category === "island");

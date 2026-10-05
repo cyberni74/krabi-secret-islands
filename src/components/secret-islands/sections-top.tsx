@@ -62,7 +62,7 @@ export function Header() {
       style={{ paddingTop: "calc(env(safe-area-inset-top) + 0.75rem)" }}
     >
       <motion.div
-        initial={{ y: -40, opacity: 0 }}
+        initial={false}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
@@ -343,7 +343,7 @@ export function Hero() {
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)] gap-8 px-4 pb-14 pt-28 sm:pb-24 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <motion.div style={{ y: contentY, opacity: contentOpacity }} className="min-w-0">
             <motion.div
-              initial={{ opacity: 0, y: 12, scale: 0.95 }}
+              initial={false}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.05 }}
               className="si-glass mb-5 inline-flex max-w-full items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold text-amber-200 sm:text-sm"
@@ -362,7 +362,7 @@ export function Hero() {
             </h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
@@ -371,7 +371,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
@@ -400,7 +400,7 @@ export function Hero() {
             </motion.div>
 
             <motion.ul
-              initial="hidden"
+              initial={false}
               animate="show"
               variants={{ hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.5 } } }}
               className="mt-7 flex flex-wrap gap-2"
@@ -426,7 +426,7 @@ export function Hero() {
             {stats.map((s, i) => (
               <motion.div
                 key={s.label.de}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(i === 1 && "lg:-translate-x-10")}

@@ -1,11 +1,16 @@
 import { createRootRoute, HeadContent, Link, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
+import { GuideNavContext } from "@/components/krabi-guide/guide-nav-context";
 import { QueryProvider } from "@/components/query-provider";
+import { getGuideNav } from "@/lib/server/guide-data";
 import appCss from "../styles.css?url";
 import fontLatin from "@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url";
 
 const HTML_LANG: Record<string, string> = { de: "de", en: "en", zh: "zh-Hans", ko: "ko", ja: "ja" };
 
 export const Route = createRootRoute({
+  // Article list for the footers (slug/category/short title only, ≈5 KB): fetched once per SSR request and never refetched on client navigation.
+  loader: () => getGuideNav(),
+  staleTime: Infinity,
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -40,6 +45,7 @@ function NotFound() {
 }
 
 function Root() {
+  const guideNav = Route.useLoaderData();
   const langParam = useRouterState({ select: (s) => String((s.location.search as { lang?: string }).lang ?? "de") });
   return (
     <html lang={HTML_LANG[langParam] ?? "de"} className="antialiased" suppressHydrationWarning>
@@ -48,7 +54,9 @@ function Root() {
       </head>
       <body>
         <QueryProvider>
-          <Outlet />
+          <GuideNavContext.Provider value={guideNav}>
+            <Outlet />
+          </GuideNavContext.Provider>
         </QueryProvider>
         <Scripts />
       </body>

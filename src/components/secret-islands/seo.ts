@@ -60,18 +60,36 @@ export const DEFAULT_OG_IMAGE = {
   alt: { de: "Privates Speedboat von Krabi Secret Islands vor Kalksteininseln bei Krabi", en: "Krabi Secret Islands private speedboat in front of limestone islands near Krabi" },
 } as const;
 
+/**
+ * Open Graph image for a page image: the generated scene photos (/bilder/…, all 3:2 landscape) are served at 1200 px width
+ * through Vercel Image Optimization (1200×800); everything else (portrait / unknown size) falls back to the branded 1200×630 default.
+ */
+function ogImageFor(src: string | undefined): { src: string; width: number; height: number } {
+  if (src && src.startsWith("/bilder/")) {
+    const url = import.meta.env.PROD ? `/_vercel/image?url=${encodeURIComponent(src)}&w=1200&q=75` : src;
+    return { src: url, width: 1200, height: 800 };
+  }
+  return { src: DEFAULT_OG_IMAGE.src, width: DEFAULT_OG_IMAGE.width, height: DEFAULT_OG_IMAGE.height };
+}
+
+/** article:author target – the start page / Organization until a real author page exists. */
+const AUTHOR_URL = `${SITE_URL}/`;
+
 export function socialMeta(o: {
   title: string;
   description: string;
   url: string;
   image?: string;
   imageAlt?: string;
+  /** ignored (kept for call-site compatibility): size is derived from the image source. */
   imageSize?: { width: number; height: number };
   type: "website" | "article";
   lang: Lang;
-  /** article:author – URL of the author / about page (articles only). */
+  /** ignored (kept for call-site compatibility): article:author always points to AUTHOR_URL. */
   authorUrl?: string;
 }) {
+  const img = o.image ? ogImageFor(o.image) : undefined;
+  const alt = o.imageAlt ?? o.title;
   return [
     { property: "og:type", content: o.type },
     { property: "og:site_name", content: BRAND.name },
@@ -79,19 +97,19 @@ export function socialMeta(o: {
     { property: "og:description", content: o.description },
     { property: "og:url", content: o.url },
     { property: "og:locale", content: OG_LOCALE[o.lang] },
-    ...(o.image
+    ...(img
       ? [
-          { property: "og:image", content: absUrl(o.image) },
-          ...(o.imageSize ? [{ property: "og:image:width", content: String(o.imageSize.width) }, { property: "og:image:height", content: String(o.imageSize.height) }] : []),
-          ...(o.imageAlt ? [{ property: "og:image:alt", content: o.imageAlt }] : []),
+          { property: "og:image", content: absUrl(img.src) },
+          { property: "og:image:width", content: String(img.width) },
+          { property: "og:image:height", content: String(img.height) },
+          { property: "og:image:alt", content: alt },
         ]
       : []),
-    ...(o.type === "article" && o.authorUrl ? [{ property: "article:author", content: o.authorUrl }] : []),
+    ...(o.type === "article" ? [{ property: "article:author", content: AUTHOR_URL }] : []),
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: o.title },
     { name: "twitter:description", content: o.description },
-    ...(o.image ? [{ name: "twitter:image", content: absUrl(o.image) }] : []),
-    ...(o.image && o.imageAlt ? [{ name: "twitter:image:alt", content: o.imageAlt }] : []),
+    ...(img ? [{ name: "twitter:image", content: absUrl(img.src) }, { name: "twitter:image:alt", content: alt }] : []),
   ];
 }
 

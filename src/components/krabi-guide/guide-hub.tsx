@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Assemble, AssembleItem, GlassCard, ScrollScene, SectionTitle, btn } from "../secret-islands/fx";
 import { useTx } from "../secret-islands/store";
 import { altFor } from "../secret-islands/content";
-import { ARTICLES, FEATURED_SLUG, GUIDE_CATEGORIES, ISLAND_ARTICLES, getArticle, type GuideCategory } from "./articles";
+import { FEATURED_SLUG, GUIDE_CATEGORIES, type GuideCard, type GuideCategory } from "./guide-meta";
 import { ArticleCard, Breadcrumb, GuideImage, GuideShell, WhatsAppCta } from "./guide-ui";
 import { useGuideLang } from "./guide-helpers";
 
@@ -14,21 +14,23 @@ function norm(s: string) {
   return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "");
 }
 
-export function GuideHub() {
+export function GuideHub({ cards }: { cards: GuideCard[] }) {
   return (
     <GuideShell>
-      <HubHero />
-      <IslandNav />
-      <ArticleBrowser />
+      <HubHero cards={cards} />
+      <IslandNav cards={cards} />
+      <ArticleBrowser cards={cards} />
       <HubCta />
     </GuideShell>
   );
 }
 
-function HubHero() {
+function HubHero({ cards }: { cards: GuideCard[] }) {
   const { t } = useTx();
   const lang = useGuideLang();
-  const featured = getArticle(FEATURED_SLUG)!;
+  const featured = cards.find((a) => a.slug === FEATURED_SLUG) ?? cards[0];
+  const islandCount = cards.filter((a) => a.category === "island").length;
+  if (!featured) return null;
   return (
     <section className="relative px-4 pb-10 pt-28 sm:px-6 sm:pt-32">
       <div className="mx-auto max-w-6xl">
@@ -59,11 +61,11 @@ function HubHero() {
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-300">
               <span className="inline-flex items-center gap-1.5">
                 <Compass className="size-4 text-si-cyan" />
-                {ARTICLES.length} {t({ de: "Artikel", en: "articles" })}
+                {cards.length} {t({ de: "Artikel", en: "articles" })}
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <MapPin className="size-4 text-si-gold" />
-                {ISLAND_ARTICLES.length} {t({ de: "Insel-Guides", en: "island guides" })}
+                {islandCount} {t({ de: "Insel-Guides", en: "island guides" })}
               </span>
             </div>
           </div>
@@ -96,7 +98,7 @@ function HubHero() {
   );
 }
 
-function IslandNav() {
+function IslandNav({ cards }: { cards: GuideCard[] }) {
   const { t } = useTx();
   const lang = useGuideLang();
   return (
@@ -106,7 +108,7 @@ function IslandNav() {
           {t({ de: "Direkt zur Insel", en: "Jump to an island" })}
         </p>
         <ul className="hide-scroll -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
-          {ISLAND_ARTICLES.map((a) => (
+          {cards.filter((a) => a.category === "island").map((a) => (
             <li key={a.slug} className="shrink-0">
               <Link
                 to="/krabi-guide/$slug" search={keepLang}
@@ -124,7 +126,7 @@ function IslandNav() {
   );
 }
 
-function ArticleBrowser() {
+function ArticleBrowser({ cards }: { cards: GuideCard[] }) {
   const { t } = useTx();
   const lang = useGuideLang();
   const [q, setQ] = useState("");
@@ -132,7 +134,7 @@ function ArticleBrowser() {
 
   const list = useMemo(() => {
     const nq = norm(q.trim());
-    return ARTICLES.filter((a) => {
+    return cards.filter((a) => {
       if (cat !== "all" && a.category !== cat) return false;
       if (!nq) return true;
       const hay = norm(
@@ -140,7 +142,7 @@ function ArticleBrowser() {
       );
       return nq.split(/\s+/).every((w) => hay.includes(w));
     });
-  }, [q, cat, lang]);
+  }, [cards, q, cat, lang]);
 
   return (
     <section id="artikel" className="scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16">

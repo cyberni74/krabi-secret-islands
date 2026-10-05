@@ -24,7 +24,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BRAND, FAQ, LONGTAIL_CROWD_IMG, REVIEWS, ROMANCE_IMGS, TOURS, UI, altFor } from "./content";
 import { keepLang } from "./lang-context";
-import { FooterTourLinks } from "../krabi-guide/footer-links";
+import { FooterGuideLinks, FooterTourLinks } from "../krabi-guide/footer-links";
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink } from "./store";
@@ -358,7 +358,7 @@ function LongtailItem({
           onClick={onToggle}
           className="flex min-h-16 w-full items-center gap-3 px-4 py-4 text-left sm:gap-4 sm:px-5"
         >
-          <span className="hidden w-7 shrink-0 text-sm font-black tabular-nums text-cyan-200/60 sm:block">
+          <span className="hidden w-7 shrink-0 text-sm font-black tabular-nums text-cyan-200 sm:block">
             {String(index + 1).padStart(2, "0")}
           </span>
           <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-xl bg-white/5 text-xl ring-1 ring-white/10">
@@ -456,7 +456,7 @@ export function Faq() {
                       onClick={() => setOpen(isOpen ? null : i)}
                       className="flex min-h-16 w-full items-center gap-4 px-5 py-4 text-left"
                     >
-                      <span className="hidden w-7 shrink-0 text-sm font-black tabular-nums text-cyan-200/60 sm:block">
+                      <span className="hidden w-7 shrink-0 text-sm font-black tabular-nums text-cyan-200 sm:block">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className={cn("flex-1 font-bold transition", isOpen ? "text-white" : "text-slate-200")}>
@@ -718,6 +718,7 @@ export function Footer() {
         </AssembleItem>
       </Assemble>
       <FooterTourLinks className="mx-auto mt-12 max-w-6xl px-4" />
+      <FooterGuideLinks className="mx-auto mt-10 max-w-6xl px-4" />
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 px-4 pt-6 text-xs leading-relaxed text-slate-500">
         <p>{t(UI.legalNote)}</p>

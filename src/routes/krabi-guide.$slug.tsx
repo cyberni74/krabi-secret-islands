@@ -1,30 +1,21 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
-import { getArticle } from "@/components/krabi-guide/articles";
 import { GuideArticlePage } from "@/components/krabi-guide/guide-article";
 import { GuideShell } from "@/components/krabi-guide/guide-ui";
 import { btn } from "@/components/secret-islands/fx";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
-import { BRAND_HEAD_LINKS, GUIDE_PATH, ROBOTS_LARGE_IMAGES, absUrl, guideArticleJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
+import { getGuideArticle } from "@/lib/server/guide-data";
+import { BRAND_HEAD_LINKS, GUIDE_PATH, ROBOTS_LARGE_IMAGES, absUrl, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 export const Route = createFileRoute("/krabi-guide/$slug")({
   // Guide texts exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
   validateSearch: validateLangSearch,
   loaderDeps: ({ search }) => ({ lang: search.lang && search.lang !== "de" ? ("en" as const) : ("de" as const) }),
-  // The article data (≈500 KB of text) is loaded with a dynamic import: it stays out of the entry bundle (every page) and is
-  // only fetched on guide pages. Only what <head> needs crosses the wire; the article text itself is bundled with the page chunk.
+  // The article (text, FAQ, related cards, JSON-LD) comes from a server function: it is rendered into the SSR HTML and ships as
+  // loader data of THIS article only – the article data module itself is never part of a client chunk.
   loader: async ({ params, deps }) => {
-    const { CATEGORY_LABEL, getArticle, readyGuideImages } = await import("@/components/krabi-guide/articles");
-    const a = getArticle(params.slug);
-    if (!a) throw notFound();
-    const lang = deps.lang;
-    return {
-      slug: a.slug,
-      title: a.title[lang],
-      description: a.metaDescription[lang],
-      image: a.image,
-      updated: a.updated,
-      jsonLd: guideArticleJsonLd(lang, { ...a, gallery: readyGuideImages(a).map((i) => i.src) }, CATEGORY_LABEL[a.category][lang]),
-    };
+    const data = await getGuideArticle({ data: { slug: params.slug, lang: deps.lang } });
+    if (!data) throw notFound();
+    return data;
   },
   head: ({ loaderData, match }) => {
     if (!loaderData) {
@@ -38,17 +29,17 @@ export const Route = createFileRoute("/krabi-guide/$slug")({
       };
     }
     const lang = match.search.lang && match.search.lang !== "de" ? "en" : "de";
-    const path = `${GUIDE_PATH}/${loaderData.slug}`;
-    const { title, description } = loaderData;
+    const path = `${GUIDE_PATH}/${loaderData.article.slug}`;
+    const { title, description, image, updated, jsonLd } = loaderData.head;
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { name: "theme-color", content: "#0a192f" },
         ROBOTS_LARGE_IMAGES,
-        ...socialMeta({ title, description, url: pageUrl(path, lang), image: loaderData.image, imageAlt: title, type: "article", lang, authorUrl: absUrl("/ueber-uns") }),
-        { property: "article:modified_time", content: loaderData.updated },
-        { "script:ld+json": loaderData.jsonLd },
+        ...socialMeta({ title, description, url: pageUrl(path, lang), image, imageAlt: title, type: "article", lang, authorUrl: absUrl("/ueber-uns") }),
+        { property: "article:modified_time", content: updated },
+        { "script:ld+json": jsonLd },
       ],
       links: [...langLinks(path, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
     };
@@ -58,9 +49,8 @@ export const Route = createFileRoute("/krabi-guide/$slug")({
 });
 
 function ArticleRoute() {
-  const { slug } = Route.useLoaderData();
-  const article = getArticle(slug)!;
-  return <GuideArticlePage article={article} />;
+  const data = Route.useLoaderData();
+  return <GuideArticlePage data={data} />;
 }
 
 function ArticleNotFound() {

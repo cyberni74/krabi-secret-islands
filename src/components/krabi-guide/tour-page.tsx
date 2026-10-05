@@ -13,18 +13,11 @@ import { formatTHB, useSI, waLink } from "../secret-islands/store";
 import { BOAT_FACTS, MAX_GUESTS, formatHours, formatTime, getTourPage, stopName, tourFaq, tourStarts } from "../secret-islands/tour-pages";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { SmartImage, WhatsAppIcon } from "../secret-islands/ui";
-import { ARTICLES } from "./articles";
+import type { GuideCard } from "./guide-meta";
 import { useGuideLang, type GuideLang } from "./guide-helpers";
 import { ArticleCard, GuideShell } from "./guide-ui";
 
 const bi = (l: L, lang: GuideLang) => l[lang];
-
-/** Guide articles that point to this tour (their `tourIds` contain it), the ones where it is the lead tour first. Max. 4. */
-function articlesForTour(tourId: string, max = 4) {
-  return ARTICLES.filter((a) => a.tourIds.includes(tourId))
-    .sort((a, b) => a.tourIds.indexOf(tourId) - b.tourIds.indexOf(tourId))
-    .slice(0, max);
-}
 
 /* ───────── Breadcrumb ───────── */
 function TourBreadcrumb({ tourName }: { tourName?: string }) {
@@ -105,10 +98,10 @@ export function TourLinkCard({ tour }: { tour: Tour }) {
 }
 
 /* ───────── Tour page ───────── */
-export function TourLandingPage({ slug }: { slug: string }) {
+export function TourLandingPage({ slug, articles }: { slug: string; articles: GuideCard[] }) {
   return (
     <GuideShell>
-      <TourView slug={slug} />
+      <TourView slug={slug} articles={articles} />
     </GuideShell>
   );
 }
@@ -121,7 +114,7 @@ function SectionH2({ children, id }: { children: React.ReactNode; id?: string })
   );
 }
 
-function TourView({ slug }: { slug: string }) {
+function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
   const lang = useGuideLang();
   const openBooking = useSI((s) => s.openBooking);
   const found = getTourPage(slug)!;
@@ -129,7 +122,6 @@ function TourView({ slug }: { slug: string }) {
   const starts = tourStarts(tour);
   const faq = tourFaq(tour, page, lang);
   const related = page.related.map((id) => TOURS.find((t) => t.id === id)).filter((t): t is Tour => !!t);
-  const articles = articlesForTour(tour.id);
   const title = bi(tour.title, lang);
   const paragraphs = bi(page.intro, lang).split("\n\n");
   const waText =

@@ -5,7 +5,11 @@ import { cn } from "@/lib/utils";
 import { Assemble, AssembleItem, GlassCard, SectionTitle, btn } from "../secret-islands/fx";
 import { useSI, useTx } from "../secret-islands/store";
 import { altFor } from "../secret-islands/content";
-import { CATEGORY_LABEL, readyGuideImages, relatedArticles, type GuideArticle } from "./articles";
+import type { GuideArticle } from "./types";
+import { CATEGORY_LABEL, type GuideCard } from "./guide-meta";
+
+/** Loader payload of /krabi-guide/$slug (see src/lib/server/guide-data.ts). */
+export type GuideArticleData = { article: GuideArticle; related: GuideCard[]; gallery: string[] };
 import {
   ArticleCard,
   Breadcrumb,
@@ -16,10 +20,10 @@ import {
 } from "./guide-ui";
 import { formatDate, toursByIds, useGuideLang } from "./guide-helpers";
 
-export function GuideArticlePage({ article }: { article: GuideArticle }) {
+export function GuideArticlePage({ data }: { data: GuideArticleData }) {
   return (
     <GuideShell>
-      <ArticleView article={article} />
+      <ArticleView article={data.article} related={data.related} galleryFiles={data.gallery} />
     </GuideShell>
   );
 }
@@ -52,14 +56,13 @@ function Toc({ article }: { article: GuideArticle }) {
   );
 }
 
-function ArticleView({ article }: { article: GuideArticle }) {
+function ArticleView({ article, related, galleryFiles }: { article: GuideArticle; related: GuideCard[]; galleryFiles: string[] }) {
   const { t } = useTx();
   const lang = useGuideLang();
   const openBooking = useSI((s) => s.openBooking);
   const tours = toursByIds(article.tourIds);
-  const related = relatedArticles(article);
   const tocTitle = t({ de: "Inhalt", en: "Contents" });
-  const gallery = readyGuideImages(article);
+  const gallery = (article.images ?? []).filter((img) => galleryFiles.includes(img.src));
 
   return (
     <article lang={lang}>
@@ -118,7 +121,7 @@ function ArticleView({ article }: { article: GuideArticle }) {
           {article.sections.map((s, i) => (
             <section key={s.id} id={s.id} className="scroll-mt-24 pt-10">
               <div className="flex items-baseline gap-3">
-                <span aria-hidden className="font-mono text-sm font-bold text-si-cyan/70">
+                <span aria-hidden className="font-mono text-sm font-bold text-cyan-300">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h2 className="text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">{s.h2[lang]}</h2>

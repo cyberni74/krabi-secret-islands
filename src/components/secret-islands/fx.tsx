@@ -199,7 +199,8 @@ export function SplitReveal({
   return (
     <motion.span
       className={cn("inline", className)}
-      initial="hidden"
+      // Above-the-fold headlines render in their final state (no hidden SSR HTML → better LCP); the rest animates on scroll.
+      initial={immediate ? false : "hidden"}
       {...(immediate ? { animate: "show" } : { whileInView: "show", viewport: { once: true, margin: "-40px" } })}
       variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06, delayChildren: delay } } }}
       aria-label={text}

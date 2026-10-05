@@ -1,29 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuideHub } from "@/components/krabi-guide/guide-hub";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
-import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, GUIDE_PATH, ROBOTS_LARGE_IMAGES, guideHubJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
-
-const HUB_META = {
-  title: {
-    de: "Krabi Insider Guide – Inseln, Geheimtipps & Reisewissen",
-    en: "Krabi Insider Guide – Islands, Hidden Gems & Travel Tips",
-  },
-  description: {
-    de: "Krabi Insider Guide: alle Inseln von Koh Poda bis Koh Roi, beste Reisezeit, Gezeiten, Schnorchelspots, Lagunen und Timing-Tipps lokaler Kapitäne aus Ao Nang.",
-    en: "Krabi Insider Guide: every island from Koh Poda to Koh Roi, best time to visit, tides, snorkel spots, lagoons and timing tips from local captains in Ao Nang.",
-  },
-};
+import { HUB_META } from "@/components/krabi-guide/guide-meta";
+import { getGuideCards, getGuideHubJsonLd } from "@/lib/server/guide-data";
+import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, GUIDE_PATH, ROBOTS_LARGE_IMAGES, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 export const Route = createFileRoute("/krabi-guide/")({
   // Guide texts exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
   validateSearch: validateLangSearch,
   loaderDeps: ({ search }) => ({ lang: search.lang && search.lang !== "de" ? ("en" as const) : ("de" as const) }),
-  // Dynamic import keeps the article data out of the entry bundle (see krabi-guide.$slug.tsx).
+  // Cards + JSON-LD come from server functions: the article data module never reaches the client bundle.
   loader: async ({ deps }) => {
-    const { ARTICLES } = await import("@/components/krabi-guide/articles");
-    const lang = deps.lang;
-    const { title, description } = { title: HUB_META.title[lang], description: HUB_META.description[lang] };
-    return { jsonLd: guideHubJsonLd(lang, { title, description }, ARTICLES) };
+    const [cards, jsonLd] = await Promise.all([getGuideCards(), getGuideHubJsonLd({ data: { lang: deps.lang } })]);
+    return { cards, jsonLd };
   },
   head: ({ match, loaderData }) => {
     const lang = match.search.lang && match.search.lang !== "de" ? "en" : "de";
@@ -42,5 +31,10 @@ export const Route = createFileRoute("/krabi-guide/")({
       links: [...langLinks(GUIDE_PATH, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
     };
   },
-  component: GuideHub,
+  component: HubRoute,
 });
+
+function HubRoute() {
+  const { cards } = Route.useLoaderData();
+  return <GuideHub cards={cards} />;
+}
