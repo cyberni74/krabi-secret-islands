@@ -401,7 +401,7 @@ export type Tour = {
 const INC_BOAT: L = { de: "Privates Speedboat & Kapitän", en: "Private speedboat & captain" };
 const INC_DRINKS: L = { de: "Wasser, Softdrinks & Obst", en: "Water, soft drinks & fruit" };
 const INC_TRANSFER: L = { de: "Hotel-Transfer Ao Nang/Krabi", en: "Hotel transfer Ao Nang/Krabi" };
-const INC_SNORKEL: L = { de: "Schnorchel-Equipment", en: "Snorkel gear" };
+const INC_SNORKEL: L = { de: "Schnorchel-Equipment gratis (bei Buchung auswählen)", en: "Snorkel gear free (select when booking)" };
 const INC_PARK: L = { de: "Nationalpark-Gebühren", en: "National park fees" };
 const INC_RELAX: L = { de: "Zeit zum Schnorcheln, Schwimmen & Entspannen", en: "Time to snorkel, swim & relax" };
 const INC_SWIM_FISH: L = { de: "Badestopp zum Schwimmen & Abkühlen", en: "Swim stop to cool off" };
@@ -506,7 +506,7 @@ export const TOURS: Tour[] = [
       de: "Früh am Morgen gehört die Hong-Lagune Ihnen. Danach geht's zur winzigen Bucht von Koh Lao Lading und zu den Doppelstränden von Koh Pakbia – ideal für ein langes Schwimm- und Schnorchelpicknick.",
       en: "Early in the morning, Hong Lagoon belongs to you. Then on to the tiny cove of Koh Lao Lading and the twin beaches of Koh Pakbia – perfect for a long swim and snorkel picnic.",
     },
-    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_PARK, { de: "Schnorchel-Equipment & SUP", en: "Snorkel gear & SUP" }, INC_TRANSFER],
+    includes: [INC_BOAT, INC_RELAX, INC_DRINKS, INC_PARK, INC_SNORKEL, INC_TRANSFER],
   },
   {
     id: "phang-nga-uncharted",
@@ -971,8 +971,8 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { de: "Wie viel Zeit bleibt zum Schnorcheln, Schwimmen und Entspannen?", en: "How much time is there to snorkel, swim and relax?" },
     a: {
-      de: "So viel Sie möchten – das ist der große Vorteil einer privaten Tour. Kein Gruppenzeitplan treibt Sie weiter: Sie schnorcheln an den Riffen, solange es Spaß macht, schwimmen in türkisen Buchten und entspannen auf den gepolsterten Liegeflächen im Schatten oder am einsamen Strand. Schnorchel-Equipment für Erwachsene und Kinder ist bei allen Inseltouren inklusive.",
-      en: "As much as you like – that's the big advantage of a private tour. No group schedule rushes you on: snorkel the reefs as long as you enjoy it, swim in turquoise bays and relax on the cushioned shaded sun pads or on a lonely beach. Snorkel gear for adults and kids is included on all island tours.",
+      de: "So viel Sie möchten – das ist der große Vorteil einer privaten Tour. Kein Gruppenzeitplan treibt Sie weiter: Sie schnorcheln an den Riffen, solange es Spaß macht, schwimmen in türkisen Buchten und entspannen auf den gepolsterten Liegeflächen im Schatten oder am einsamen Strand. Schnorchel-Equipment stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen.",
+      en: "As much as you like – that's the big advantage of a private tour. No group schedule rushes you on: snorkel the reefs as long as you enjoy it, swim in turquoise bays and relax on the cushioned shaded sun pads or on a lonely beach. We provide snorkel gear free of charge – please tick it when booking.",
     },
   },
   {

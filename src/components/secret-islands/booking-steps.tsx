@@ -964,7 +964,9 @@ export function Receipt({ draft }: { draft: Draft }) {
               </span>
             ) : null}
           </span>
-          <span className="shrink-0 font-semibold tabular-nums text-white">{formatTHB(itemAmount(i, draft.guests, draft.kids))}</span>
+          <span className="shrink-0 font-semibold tabular-nums text-white">
+            {i.price === 0 ? t({ de: "Kostenlos", en: "Free" }) : formatTHB(itemAmount(i, draft.guests, draft.kids))}
+          </span>
         </li>
       ));
 

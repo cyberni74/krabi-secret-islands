@@ -279,7 +279,7 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       },
       {
         them: { de: "Ausrüstung gegen Aufpreis oder in falscher Größe", en: "Gear at extra cost or in the wrong size" },
-        us: { de: "Schnorchel-Ausrüstung für Erwachsene & Kinder inklusive", en: "Snorkel gear for adults & kids included" },
+        us: { de: "Schnorchel-Ausrüstung kostenlos (bei Buchung auswählen)", en: "Snorkel gear free (select when booking)" },
       },
       {
         them: { de: "Volle Strände, kein ruhiger Platz zum Abschalten", en: "Crowded beaches, no quiet place to switch off" },

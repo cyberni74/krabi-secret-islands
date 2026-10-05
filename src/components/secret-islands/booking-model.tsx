@@ -240,7 +240,12 @@ export function buildMessage(d: Draft, lang: Lang, tOp: (l: L) => string) {
     lines.push(`*${tOp(title)}:*`);
     for (const i of chosen) {
       const amount = itemAmount(i, d.guests, d.kids);
-      const calc = i.per === "person" ? `${d.guests} × ${formatTHB(i.price)} = ${formatTHB(amount)}` : formatTHB(amount);
+      const calc =
+        i.price === 0
+          ? tOp({ de: "kostenlos", en: "free" })
+          : i.per === "person"
+            ? `${d.guests} × ${formatTHB(i.price)} = ${formatTHB(amount)}`
+            : formatTHB(amount);
       lines.push(`• ${tOp(i.label)} – ${calc}`);
     }
   };

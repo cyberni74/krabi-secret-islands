@@ -196,9 +196,11 @@ export function AddOnCard({
         </span>
         <span className="mt-0.5 block text-[13px] leading-snug text-slate-400">{t(item.desc)}</span>
         <span className="mt-2 flex flex-wrap items-baseline gap-x-2 text-sm">
-          <span className="font-bold text-cyan-300">{formatTHB(item.price)}</span>
+          <span className="font-bold text-cyan-300">{item.price === 0 ? t({ de: "Kostenlos", en: "Free" }) : formatTHB(item.price)}</span>
           <span className="text-xs text-slate-400">
-            {item.per === "person"
+            {item.price === 0
+              ? ""
+              : item.per === "person"
               ? t({ de: "pro Person", en: "per person" })
               : item.per === "child"
                 ? t({ de: "pro Kind", en: "per child" })
@@ -264,7 +266,7 @@ export const inputCls =
 export function IncludedStrip({ className }: { className?: string }) {
   const { t } = useTx();
   const items = [
-    { e: "🤿", l: t({ de: "Schnorchel-Equipment", en: "Snorkel gear" }) },
+    { e: "🤿", l: t({ de: "Schnorchel-Equipment gratis", en: "Snorkel gear free" }) },
     { e: "🏊", l: t({ de: "Zeit zum Schwimmen", en: "Time to swim" }) },
     { e: "🌴", l: t({ de: "Entspannen im Schatten", en: "Relax in the shade" }) },
   ];

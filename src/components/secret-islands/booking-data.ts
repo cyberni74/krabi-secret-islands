@@ -110,6 +110,7 @@ export const DRINKS: AddOn[] = [
 ];
 
 export const BOOKING_EXTRAS: AddOn[] = [
+  { id: "snorkel", emoji: "🤿", label: { de: "Schnorchel-Ausrüstung", en: "Snorkel gear" }, desc: { de: "Maske, Schnorchel & Flossen für alle Gäste – kostenlos, bitte hier ankreuzen", en: "Mask, snorkel & fins for all guests – free, please tick it here" }, price: 0, per: "boat", tag: { de: "Kostenlos", en: "Free" } },
   { id: "drone", emoji: "🚁", label: { de: "4K Drohnen-Paket", en: "4K drone package" }, desc: { de: "Pilot, Reel + 40 Luftbilder, Lieferung am selben Abend", en: "Pilot, reel + 40 aerial photos, same-evening delivery" }, price: 4500, per: "boat", tag: { de: "Bestseller", en: "Bestseller" } },
   { id: "romance", emoji: "🌹", label: { de: "Romantik-Deko & Blumen", en: "Romance decor & flowers" }, desc: { de: "Für Antrag, Jahrestag & Flitterwochen", en: "For proposals, anniversaries & honeymoons" }, price: 2500, per: "boat" },
   { id: "fishing", emoji: "🎣", label: { de: "Angelstopp mit Ausrüstung", en: "Fishing stop with gear" }, desc: { de: "1 Std. Riff-Angeln während der Inseltour", en: "1 hr reef fishing during the island tour" }, price: 1500, per: "boat" },

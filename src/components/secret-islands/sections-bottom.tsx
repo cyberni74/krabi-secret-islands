@@ -620,7 +620,7 @@ export function FinalCta() {
     { icon: BadgeCheck, label: t({ de: "TAT-Lizenz", en: "TAT licence" }), tone: "text-si-gold" },
     { icon: ShieldCheck, label: t({ de: "Marine Department geprüft", en: "Marine Department certified" }), tone: "text-cyan-200" },
     { icon: RefreshCcw, label: t({ de: "Kostenlose Umbuchung", en: "Free rebooking" }), tone: "text-emerald-300" },
-    { icon: Waves, label: t({ de: "Schnorchel-Ausrüstung inklusive", en: "Snorkel gear included" }), tone: "text-sky-300" },
+    { icon: Waves, label: t({ de: "Schnorchel-Ausrüstung kostenlos", en: "Snorkel gear free" }), tone: "text-sky-300" },
     { icon: Zap, label: t({ de: "Antwort < 30 Min.", en: "Reply < 30 min" }), tone: "text-amber-200" },
   ];
   return (
