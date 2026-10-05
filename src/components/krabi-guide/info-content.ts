@@ -45,12 +45,12 @@ export const INFO_SECTIONS: InfoSection[] = [
       de: [
         "Alle unsere Touren starten in Ao Nang. Sie müssen sich nicht selbst zum Boot durchschlagen: Der Hotel-Transfer Ao Nang/Krabi ist bei unseren Touren in der Leistungsliste aufgeführt, und die Abholung vom Hotel ist flexibel. Das ist ein wesentlicher Unterschied zu Gruppentouren, bei denen Sie am Pier warten, bis der Sammelbus weitere Hotels abgeklappert hat.",
         "Den genauen Treffpunkt, die Abholzeit und eine Wegbeschreibung schicken wir Ihnen nach Ihrer Anfrage per WhatsApp oder E-Mail, abgestimmt auf Ihr Hotel und Ihre Tour. Die Startzeiten sind je nach Tour unterschiedlich: früh am Morgen um 07:00 oder 08:00 Uhr (zum Beispiel Phi Phi und die Inseltouren), um 13:00 Uhr bei der 4-Islands-Tour und am späten Nachmittag bzw. Abend bei Sunset- und Plankton-Touren.",
-        "Ob eine Abholung in Railay möglich ist und wie es mit Parkplätzen für den eigenen Mietwagen oder Roller aussieht, bestätigen wir Ihnen bei der Anfrage. Nennen Sie uns dazu einfach Ihr Hotel und den gewünschten Tag.",
+        "Wie es mit Parkplätzen für den eigenen Mietwagen oder Roller aussieht, bestätigen wir Ihnen bei der Anfrage. Nennen Sie uns dazu einfach Ihr Hotel und den gewünschten Tag.",
       ],
       en: [
         "All our tours start in Ao Nang. You do not have to find your own way to the boat: the hotel transfer Ao Nang/Krabi is listed in the inclusions of our tours, and the hotel pick-up is flexible. That is a key difference from group tours, where you wait at the pier until the shuttle has collected other hotels.",
         "We send you the exact meeting point, pick-up time and directions by WhatsApp or e-mail after your inquiry, tailored to your hotel and your tour. Start times differ by tour: early in the morning at 7 or 8 am (for example Phi Phi and the island tours), at 1 pm on the 4 Islands tour and late afternoon or evening on sunset and plankton tours.",
-        "Whether a pick-up in Railay is possible and how parking works for your own rental car or scooter, we confirm when you inquire. Just tell us your hotel and the day you have in mind.",
+        "How parking works for your own rental car or scooter, we confirm when you inquire. Just tell us your hotel and the day you have in mind.",
       ],
     },
     list: {
@@ -58,13 +58,13 @@ export const INFO_SECTIONS: InfoSection[] = [
         "Start: Ao Nang, privates Speedboat, max. 5 Gäste",
         "Hotel-Transfer Ao Nang/Krabi laut Leistungsliste der Tour",
         "Treffpunkt und Zeit bestätigen wir nach der Anfrage per WhatsApp oder E-Mail",
-        "Railay-Abholung und Parken: Bestätigung bei der Anfrage",
+        "Parken mit Mietwagen oder Roller: Bestätigung bei der Anfrage",
       ],
       en: [
         "Start: Ao Nang, private speedboat, max. 5 guests",
         "Hotel transfer Ao Nang/Krabi according to the tour inclusions",
         "We confirm meeting point and time after your inquiry by WhatsApp or e-mail",
-        "Railay pick-up and parking: confirmed when you inquire",
+        "Parking with a rental car or scooter: confirmed when you inquire",
       ],
     },
     links: [
@@ -82,8 +82,8 @@ export const INFO_SECTIONS: InfoSection[] = [
       {
         q: { de: "Werde ich vom Hotel abgeholt?", en: "Will I be picked up from my hotel?" },
         a: {
-          de: "Ja, bei Hotels in Ao Nang und Krabi ist der Hotel-Transfer in der Leistungsliste der Touren enthalten. Bei anderen Unterkünften, etwa in Railay, klären wir die Abholung bei der Anfrage.",
-          en: "Yes, for hotels in Ao Nang and Krabi the hotel transfer is part of the tour inclusions. For other accommodation, for example in Railay, we clarify the pick-up when you inquire.",
+          de: "Ja, bei Hotels in Ao Nang und Krabi ist der Hotel-Transfer in der Leistungsliste der Touren enthalten.",
+          en: "Yes, for hotels in Ao Nang and Krabi the hotel transfer is part of the tour inclusions.",
         },
       },
     ],
