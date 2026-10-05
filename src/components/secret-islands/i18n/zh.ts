@@ -54,6 +54,8 @@ const dict: Record<string, string> = {
   "Langsam – weniger Zeit an den Spots": "速度慢——景点停留时间短",
   "Wie viel Zeit bleibt zum Schnorcheln, Schwimmen und Entspannen?": "有多少时间可以浮潜、游泳和放松？",
   "So viel Sie möchten – das ist der große Vorteil einer privaten Tour. Kein Gruppenzeitplan treibt Sie weiter: Sie schnorcheln an den Riffen, solange es Spaß macht, schwimmen in türkisen Buchten und entspannen auf den gepolsterten Liegeflächen im Schatten oder am einsamen Strand. Schnorchel-Equipment für Erwachsene und Kinder ist bei allen Inseltouren inklusive.": "想玩多久就玩多久——这正是私人游的最大优势。没有团队行程催促：在珊瑚礁浮潜到尽兴，在碧绿海湾畅游，或在遮阳软垫日光床、无人海滩上悠然放松。所有海岛游均含成人及儿童浮潜装备。",
+  "Kann man bei Ihnen tauchen?": "你们提供潜水吗？",
+  "Nein, professionelles Tauchen (Gerätetauchen mit Flasche, Tauchgänge oder Tauchkurse) bieten wir nicht an. Bei uns geht es ums Schnorcheln, Schwimmen und Baden: Mit Maske, Schnorchel und Flossen erkunden Sie die Riffe direkt vom Boot, springen in türkise Buchten und entspannen am Strand. Wer tauchen möchte, bucht dafür bitte einen spezialisierten Tauchanbieter.": "不提供。我们不开展专业潜水（水肺潜水、带队下潜或潜水课程）。我们的行程以浮潜、游泳和戏水为主：戴上面镜、呼吸管和脚蹼，直接从船上探索珊瑚礁，跳入碧绿的海湾，在沙滩上放松。如需潜水，请另行预订专业潜水服务商。",
   "Warum maximal 5 Gäste?": "为何最多只接待 5 位宾客？",
   "Weil echte Privatsphäre und Komfort nur mit wenigen Gästen funktionieren. Jeder hat eine eigene Liegefläche im Schatten, das Boot bleibt ruhig und wir erreichen flache Buchten, in die große Boote nicht fahren können.": "因为真正的私密与舒适，只有人少才能实现。每位宾客都有专属遮阳躺位，船身平稳，还能驶入大船无法进入的浅水海湾。",
   "Ist das Drohnenfliegen legal und genehmigt?": "无人机飞行合法吗？",

@@ -976,6 +976,13 @@ export const FAQ: { q: L; a: L }[] = [
     },
   },
   {
+    q: { de: "Kann man bei Ihnen tauchen?", en: "Do you offer diving?" },
+    a: {
+      de: "Nein, professionelles Tauchen (Gerätetauchen mit Flasche, Tauchgänge oder Tauchkurse) bieten wir nicht an. Bei uns geht es ums Schnorcheln, Schwimmen und Baden: Mit Maske, Schnorchel und Flossen erkunden Sie die Riffe direkt vom Boot, springen in türkise Buchten und entspannen am Strand. Wer tauchen möchte, bucht dafür bitte einen spezialisierten Tauchanbieter.",
+      en: "No, we don't offer professional diving (scuba diving, guided dives or dive courses). Our tours are about snorkeling, swimming and bathing: with mask, snorkel and fins you explore the reefs straight from the boat, jump into turquoise bays and relax on the beach. If you want to dive, please book a specialised dive operator.",
+    },
+  },
+  {
     q: { de: "Warum maximal 5 Gäste?", en: "Why a maximum of 5 guests?" },
     a: {
       de: "Weil echte Privatsphäre und Komfort nur mit wenigen Gästen funktionieren. Jeder hat eine eigene Liegefläche im Schatten, das Boot bleibt ruhig und wir erreichen flache Buchten, in die große Boote nicht fahren können.",
