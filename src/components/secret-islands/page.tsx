@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { BookingModal } from "./booking";
 import { AuroraBackground, ScrollProgress } from "./fx";
 import { Lightbox, TourModal } from "./modals";
+import { GuideTeaser } from "../krabi-guide/footer-links";
 import { Faq, FinalCta, Footer, LongtailFaq, Reviews } from "./sections-bottom";
 import { DroneFeature, FishingSection, Gallery, Tours } from "./sections-mid";
 import { BottomBar, Comparison, Header, Hero } from "./sections-top";
@@ -41,6 +42,7 @@ function PageBody(): ReactNode {
         {REVIEWS_VERIFIED ? <Reviews /> : null}
         <LongtailFaq />
         <Faq />
+        <GuideTeaser />
         <FinalCta />
       </main>
       <Footer />

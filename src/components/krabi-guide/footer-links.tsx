@@ -89,3 +89,47 @@ export function FooterGuideLinks({ className, showHeading = true }: { className?
     </nav>
   );
 }
+
+const TEASER_SLUGS = [
+  "private-boat-charter-krabi-cost",
+  "krabi-itinerary-3-5-7-days",
+  "hong-island-krabi",
+  "phi-phi-maya-bay-early-morning",
+  "koh-rok-koh-haa",
+  "best-snorkeling-spots-krabi",
+  "krabi-boat-tours-rainy-season",
+  "krabi-with-kids",
+];
+
+/** Visible landing-page block with 8 key guide articles as real links (server HTML). */
+export function GuideTeaser() {
+  const { lang } = useTx();
+  const nav = useGuideNav();
+  const de = lang === "de";
+  const items = TEASER_SLUGS.map((s) => nav.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
+  if (!items.length) return null;
+  return (
+    <section aria-labelledby="guide-teaser" className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <h2 id="guide-teaser" className="text-2xl font-extrabold text-white sm:text-3xl">
+        {de ? "Krabi-Guide: Wissen für Ihren Tag auf dem Wasser" : "Krabi Guide: know-how for your day on the water"}
+      </h2>
+      <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {items.map((a) => (
+          <li key={a.slug}>
+            <Link
+              to="/krabi-guide/$slug"
+              params={{ slug: a.slug }}
+              search={keepLang}
+              className="flex h-full min-h-16 items-center rounded-2xl border border-white/10 bg-white/[0.04] p-4 font-semibold leading-snug text-slate-100 transition hover:border-white/25 hover:bg-white/[0.07]"
+            >
+              {de ? a.short.de : a.short.en}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Link to={GUIDE_PATH} search={keepLang} className="mt-5 inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
+        {de ? "Alle Artikel im Insider Guide" : "All articles in the Insider Guide"} →
+      </Link>
+    </section>
+  );
+}
