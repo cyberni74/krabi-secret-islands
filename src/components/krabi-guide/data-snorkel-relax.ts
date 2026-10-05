@@ -111,11 +111,11 @@ export const SNORKEL_RELAX: Record<string, GuideSection> = {
     body: {
       de: [
         "Koh Nok ist der perfekte Badestopp: Das Wasser vor dem Strand ist meist ruhig und flach, ideal zum Schwimmen und für Kinder. An den Felsen am Rand des Strandes lässt sich entspannt schnorcheln, auch wenn die Sicht in der Phang Nga Bucht selten so klar ist wie an den Inseln im offenen Meer.",
-        "Zum Entspannen suchen Sie sich am besten einen Platz im Schatten der Bäume am Strandrand – auf dem Boot gibt es zusätzlich Sonnensegel. Am klarsten ist das Wasser bei Flut und in der Trockenzeit.",
+        "Zum Entspannen suchen Sie sich am besten einen Platz im Schatten der Bäume am Strandrand – auf dem Boot spendet die Hardtop-Kabine zusätzlich Schatten. Am klarsten ist das Wasser bei Flut und in der Trockenzeit.",
       ],
       en: [
         "Koh Nok is the perfect swim stop: the water off the beach is usually calm and shallow, ideal for swimming and for children. You can snorkel along the rocks at the edges of the beach, although visibility in Phang Nga Bay is rarely as clear as at the islands in the open sea.",
-        "For relaxing, find a spot in the shade of the trees at the edge of the beach – the boat also has a sunshade. The water is clearest at high tide and in the dry season.",
+        "For relaxing, find a spot in the shade of the trees at the edge of the beach – the boat’s hardtop cabin also gives shade. The water is clearest at high tide and in the dry season.",
       ],
     },
   },

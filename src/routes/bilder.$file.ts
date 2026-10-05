@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { RENAMED_IMAGES, upstreamFor } from "@/components/secret-islands/image-map";
+import { RENAMED_IMAGES, upstreamFor, upstreamLightFor } from "@/components/secret-islands/image-map";
 
 /**
  * /bilder/<seo-name>.webp – same-origin, SEO-named image URLs for the generated scene photos.
@@ -20,7 +20,9 @@ export const Route = createFileRoute("/bilder/$file")({
         }
         const upstream = upstreamFor(params.file);
         if (!upstream) return new Response("Not found", { status: 404 });
-        const res = await fetch(upstream);
+        const light = upstreamLightFor(params.file);
+        let res = light ? await fetch(light).catch(() => null) : null;
+        if (!res?.ok) res = await fetch(upstream);
         if (!res.ok || !res.body) return new Response("Upstream error", { status: 502 });
         return new Response(res.body, {
           headers: {

@@ -490,11 +490,11 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Ab Ao Nang ist Koh Rok eine der längsten Tagesfahrten – mit dem Speedboat je nach Route und Wetter etwa anderthalb bis zwei Stunden pro Strecke. Ein Ganztagesausflug ist daher Pflicht. Viele kombinieren die Fahrt mit einem Stopp bei Koh Haa auf dem Hin- oder Rückweg.",
-            "Ein komfortables Boot mit Schatten, Sitzpolstern und genügend Getränken macht auf dieser Strecke einen großen Unterschied.",
+            "Ein komfortables Boot mit Schatten, bequemen Bootssesseln und genügend Getränken macht auf dieser Strecke einen großen Unterschied.",
           ],
           en: [
             "From Ao Nang, Koh Rok is one of the longest day trips – about one and a half to two hours each way by speedboat, depending on route and weather. A full-day trip is therefore a must. Many combine it with a stop at Koh Haa on the way out or back.",
-            "A comfortable boat with shade, cushioned seats and plenty of drinks makes a big difference on this route.",
+            "A comfortable boat with shade, comfortable boat chairs and plenty of drinks makes a big difference on this route.",
           ],
         },
       },

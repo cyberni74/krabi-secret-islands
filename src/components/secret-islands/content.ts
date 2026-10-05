@@ -35,13 +35,13 @@ export const LONGTAIL_CROWD_IMG = {
 
 /** Higgsfield: our speedboat alone in a turquoise lagoon, couple relaxing with champagne. Move to /public/images/ for production. */
 export const ROMANCE_IMGS = [
-  seoImage("privates-speedboat-krabi-paar-champagner-1.webp"),
-  seoImage("privates-speedboat-krabi-paar-champagner-2.webp"),
+  seoImage("privates-speedboat-krabi-paar-champagner-heck.webp"),
+  seoImage("privates-speedboat-krabi-paar-champagner-bucht.webp"),
 ].map((src) => ({
   src,
   alt: {
-    de: "Privates Speedboat in türkiser Lagune bei Krabi: Paar entspannt mit Champagner auf der Liegefläche",
-    en: "Private speedboat in a turquoise lagoon near Krabi: couple relaxing with champagne on the sun pad",
+    de: "Privates Speedboat in türkiser Lagune bei Krabi: Paar stößt auf dem Heck mit Champagner an",
+    en: "Private speedboat in a turquoise lagoon near Krabi: couple toasting with champagne on the stern deck",
   },
 }));
 
@@ -59,17 +59,17 @@ export const IMG = {
   kudu: seoImage("koh-kudu-hoehle-phang-nga-bucht.webp"),
   maya: seoImage("maya-bay-phi-phi-sonnenaufgang.webp"),
   reef: seoImage("schnorcheln-krabi-korallenriff-schildkroete.webp"),
-  snorkelCouple: seoImage("paar-schnorcheln-privates-speedboat-krabi.webp"),
-  plankton: seoImage("leuchtendes-plankton-krabi-nacht-speedboat.webp"),
-  fishReef: seoImage("riff-angeln-krabi-zackenbarsch.webp"),
-  deepSea: seoImage("hochseeangeln-krabi-trolling-andamanensee.webp"),
-  squid: seoImage("nacht-tintenfischangeln-krabi.webp"),
-  bbq: seoImage("catch-and-cook-bbq-krabi-sonnenuntergang.webp"),
-  dinner: seoImage("candlelight-dinner-speedboat-sonnenuntergang-krabi.webp"),
+  snorkelCouple: seoImage("paar-schnorcheln-korallenriff-privates-speedboat-krabi.webp"),
+  plankton: seoImage("leuchtendes-plankton-schnorcheln-nacht-krabi.webp"),
+  fishReef: seoImage("riff-angeln-krabi-zackenbarsch-heck.webp"),
+  deepSea: seoImage("hochseeangeln-trolling-andamanensee-krabi.webp"),
+  squid: seoImage("nacht-tintenfischangeln-speedboat-krabi.webp"),
+  bbq: seoImage("catch-and-cook-strand-bbq-krabi.webp"),
+  dinner: seoImage("candlelight-dinner-heck-speedboat-krabi.webp"),
   jamesBond: seoImage("james-bond-island-phang-nga-bucht.webp"),
   railay: seoImage("railay-beach-krabi-goldene-stunde.webp"),
-  droneAerial: seoImage("speedboat-krabi-drohnenaufnahme-inseln.webp"),
-  family: seoImage("familie-sandbank-krabi-kinder-schnorcheln.webp"),
+  droneAerial: seoImage("speedboat-krabi-drohnenaufnahme-karstinseln.webp"),
+  family: seoImage("familie-kinder-schnorcheln-sandbank-krabi.webp"),
   // Generic aliases used across guide articles and gallery.
   sandbar: "",
   lagoon: "",
@@ -320,7 +320,7 @@ export const COMPARISON: {
     points: [
       { de: "Max. 5 Gäste – nur Ihre Gruppe", en: "Max. 5 guests – only your group" },
       { de: "Leise, saubere 4-Takt-Motoren", en: "Quiet, clean 4-stroke engines" },
-      { de: "Schattige Liegeflächen & Bimini-Top", en: "Shaded sun pads & bimini top" },
+      { de: "Hardtop-Kabine mit Schatten", en: "Hardtop cabin with shade" },
       { de: "Optionale 4K Drohnenfotos", en: "Optional 4K drone photos" },
       { de: "Flexible Routen & geheime Spots", en: "Flexible routes & secret spots" },
       { de: "Viel Zeit zum Schnorcheln, Schwimmen & Entspannen", en: "Plenty of time to snorkel, swim & relax" },
@@ -941,8 +941,8 @@ export const REVIEWS: { name: string; origin: L; type: L; text: L; tour: L }[] =
     type: { de: "Familie · 2 Kinder", en: "Family · 2 kids" },
     tour: { de: "Hong Island Secret Lagoons", en: "Hong Island Secret Lagoons" },
     text: {
-      de: "Mit Kindern auf einem Longtail – nie wieder. Hier: Schatten, Polster, leiser Motor, kalte Getränke. Die Kids haben Schildkröten gesehen und wollen nächstes Jahr wieder hin.",
-      en: "Kids on a longtail – never again. Here: shade, cushions, a quiet engine, cold drinks. The kids saw turtles and want to come back next year.",
+      de: "Mit Kindern auf einem Longtail – nie wieder. Hier: Schatten, bequeme Bootssessel, leiser Motor, kalte Getränke. Die Kids haben Schildkröten gesehen und wollen nächstes Jahr wieder hin.",
+      en: "Kids on a longtail – never again. Here: shade, comfortable boat chairs, a quiet engine, cold drinks. The kids saw turtles and want to come back next year.",
     },
   },
   {
@@ -971,8 +971,8 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { de: "Wie viel Zeit bleibt zum Schnorcheln, Schwimmen und Entspannen?", en: "How much time is there to snorkel, swim and relax?" },
     a: {
-      de: "So viel Sie möchten – das ist der große Vorteil einer privaten Tour. Kein Gruppenzeitplan treibt Sie weiter: Sie schnorcheln an den Riffen, solange es Spaß macht, schwimmen in türkisen Buchten und entspannen auf den gepolsterten Liegeflächen im Schatten oder am einsamen Strand. Schnorchel-Equipment stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen.",
-      en: "As much as you like – that's the big advantage of a private tour. No group schedule rushes you on: snorkel the reefs as long as you enjoy it, swim in turquoise bays and relax on the cushioned shaded sun pads or on a lonely beach. We provide snorkel gear free of charge – please tick it when booking.",
+      de: "So viel Sie möchten – das ist der große Vorteil einer privaten Tour. Kein Gruppenzeitplan treibt Sie weiter: Sie schnorcheln an den Riffen, solange es Spaß macht, schwimmen in türkisen Buchten und entspannen im Schatten oder am einsamen Strand. Schnorchel-Equipment stellen wir kostenlos zur Verfügung – bitte bei der Buchung ankreuzen.",
+      en: "As much as you like – that's the big advantage of a private tour. No group schedule rushes you on: snorkel the reefs as long as you enjoy it, swim in turquoise bays and relax in the shade or on a lonely beach. We provide snorkel gear free of charge – please tick it when booking.",
     },
   },
   {
@@ -985,8 +985,8 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { de: "Warum maximal 5 Gäste?", en: "Why a maximum of 5 guests?" },
     a: {
-      de: "Weil echte Privatsphäre und Komfort nur mit wenigen Gästen funktionieren. Jeder hat eine eigene Liegefläche im Schatten, das Boot bleibt ruhig und wir erreichen flache Buchten, in die große Boote nicht fahren können.",
-      en: "Because real privacy and comfort only work with few guests. Everyone has their own shaded lounging spot, the boat stays calm and we reach shallow bays big boats can't enter.",
+      de: "Weil echte Privatsphäre und Komfort nur mit wenigen Gästen funktionieren. Jeder hat genug Platz an Bord, das Boot bleibt ruhig und wir erreichen flache Buchten, in die große Boote nicht fahren können.",
+      en: "Because real privacy and comfort only work with few guests. Everyone has plenty of room on board, the boat stays calm and we reach shallow bays big boats can't enter.",
     },
   },
   {
@@ -1020,8 +1020,8 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { de: "Sind die Touren für Kinder und Senioren geeignet?", en: "Are the tours suitable for kids and seniors?" },
     a: {
-      de: "Absolut. Das Boot hat eine stabile Einstiegsleiter, gepolsterte Sitze und Schatten. Tempo und Wellengang passen wir an Ihre Gruppe an.",
-      en: "Absolutely. The boat has a sturdy boarding ladder, cushioned seats and shade. We adjust speed and route to your group.",
+      de: "Absolut. Das Boot hat eine stabile Einstiegsleiter, Sitzbank, bequeme Bootssessel und Schatten. Tempo und Wellengang passen wir an Ihre Gruppe an.",
+      en: "Absolutely. The boat has a sturdy boarding ladder, a bench seat, comfortable boat chairs and shade. We adjust speed and route to your group.",
     },
   },
 ];

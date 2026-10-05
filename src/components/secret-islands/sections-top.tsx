@@ -4,6 +4,7 @@ import {
   Check,
   ChevronDown,
   Globe,
+  HelpCircle,
   Images,
   Sailboat,
   ShieldCheck,
@@ -14,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { AERIAL_SHOTS, BRAND, COMPARISON, IMG, LANGS, UI, altFor, type ComparisonId } from "./content";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, Marquee, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
@@ -221,39 +222,63 @@ function LangMenu() {
   );
 }
 
-/* ───────────────────────── Mobile bottom bar ───────────────────────── */
+/* ───────────────────────── Floating dock (all screen sizes) ───────────────────────── */
 
+const DOCK_TOURS = { de: "Touren", en: "Tours" };
+const DOCK_GUIDE = { de: "Guide", en: "Guide" };
+const DOCK_WA = { de: "WhatsApp", en: "WhatsApp" };
+
+/** Floating quick-access menu at the bottom: tours, insider guide, booking, FAQ, WhatsApp. */
 export function BottomBar() {
   const { t, tOp } = useTx();
   const openBooking = useSI((s) => s.openBooking);
+  const onLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
   const waText = tOp({
     de: "Hallo! Ich möchte eine private Speedboat-Tour anfragen. Wunschdatum: … / Personen: …",
     en: "Hi! I'd like to request a private speedboat tour. Preferred date: … / Guests: …",
   });
+  const itemCls =
+    "flex h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-2xl px-0.5 text-[9.5px] font-bold leading-none text-slate-200 transition hover:bg-white/10 hover:text-white active:scale-95 min-[360px]:text-[10.5px] md:w-16 md:flex-none md:text-[11px]";
+  const section = (id: string, label: { de: string; en: string }, icon: ReactNode) =>
+    onLanding ? (
+      <button type="button" onClick={() => scrollToId(id)} className={itemCls}>
+        {icon}
+        <span>{t(label)}</span>
+      </button>
+    ) : (
+      <Link to="/" search={keepLang} hash={id} className={itemCls}>
+        {icon}
+        <span>{t(label)}</span>
+      </Link>
+    );
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 px-2.5 md:hidden"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-2"
       style={{ paddingBottom: "calc(0.6rem + env(safe-area-inset-bottom))" }}
     >
-      <div className="si-glass-strong grid grid-cols-2 gap-1.5 rounded-[1.4rem] p-1.5">
-        <a
-          href={waLink(waText)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex h-12 min-w-0 items-center justify-center gap-1 rounded-2xl bg-si-wa/90 px-2 text-[13px] font-bold text-white active:scale-[0.98] min-[360px]:text-[14px]"
-        >
-          <WhatsAppIcon className="size-5 shrink-0" />
-          <span className="min-w-0 text-center leading-tight">{t(UI.ctaWhatsapp)}</span>
-        </a>
+      <nav
+        aria-label={t({ de: "Schnellzugriff", en: "Quick access" })}
+        className="si-glass-strong pointer-events-auto flex w-full max-w-[26rem] items-center gap-0.5 rounded-[1.6rem] p-1.5 md:w-auto md:max-w-full shadow-[0_18px_50px_-18px_rgb(0_0_0/0.9)]"
+      >
+        {section("touren", DOCK_TOURS, <Sailboat className="size-5 text-cyan-300" />)}
+        <Link to="/krabi-guide" search={keepLang} className={itemCls}>
+          <BookOpen className="size-5 text-cyan-300" />
+          <span>{t(DOCK_GUIDE)}</span>
+        </Link>
         <button
           type="button"
           onClick={() => openBooking()}
-          className="flex h-12 min-w-0 items-center justify-center gap-1.5 rounded-2xl bg-gradient-to-r from-si-cyan to-cyan-300 px-2 text-[13px] font-bold text-si-navy min-[360px]:text-[14px] shadow-[0_8px_24px_-8px_rgb(6_182_212/0.9)] active:scale-[0.98]"
+          className="mx-0.5 flex h-12 min-w-0 flex-[2] items-center justify-center gap-1 rounded-2xl bg-gradient-to-r from-si-cyan to-cyan-300 px-2 text-[12px] font-extrabold text-si-navy shadow-[0_8px_24px_-8px_rgb(6_182_212/0.9)] active:scale-[0.97] min-[360px]:gap-1.5 min-[360px]:text-[13px] md:min-w-[6.4rem] md:flex-none md:px-4 md:text-sm"
         >
-          <Sparkles className="size-4 shrink-0" />
-          <span className="min-w-0 text-center leading-tight">{t(BOOK)}</span>
+          <Sparkles className="hidden size-4 shrink-0 min-[400px]:block" />
+          <span className="whitespace-nowrap leading-tight">{t(BOOK)}</span>
         </button>
-      </div>
+        {section("faq", UI.navFaq, <HelpCircle className="size-5 text-cyan-300" />)}
+        <a href={waLink(waText)} target="_blank" rel="noopener noreferrer" className={itemCls}>
+          <WhatsAppIcon className="size-5 text-si-wa" />
+          <span>{t(DOCK_WA)}</span>
+        </a>
+      </nav>
     </div>
   );
 }

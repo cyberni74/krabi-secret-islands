@@ -82,7 +82,7 @@ function GuideShellBody({ children }: { children: ReactNode }) {
       <ScrollProgress />
       {/* Same header + mobile action bar as the landing page – the guide is part of the site. */}
       <Header />
-      <main className="pb-16">{children}</main>
+      <main className="pb-28">{children}</main>
       <GuideFooter />
       <BottomBar />
       <BookingModal />

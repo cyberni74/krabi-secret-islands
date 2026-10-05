@@ -11,11 +11,12 @@ import { PILLAR_ARTICLES } from "./data-pillar";
 import { SNORKEL_RELAX } from "./data-snorkel-relax";
 import { EXTRA_SECTIONS } from "./data-extra";
 import { EXTRA_SECTIONS_2 } from "./data-extra2";
+import { MOVIE_ARTICLES } from "./data-movies";
 import type { Bi, GuideArticle, GuideArticleInput, GuideCategory, GuideImage, GuideSection } from "./types";
 
 export type { Bi, GuideArticle, GuideCategory, GuideImage, GuideSection } from "./types";
 
-export const GUIDE_UPDATED = "2026-10-04";
+export const GUIDE_UPDATED = "2026-10-05";
 export { SITE_URL } from "../secret-islands/seo";
 
 /* ───────────────────────── Keyword map ─────────────────────────
@@ -31,6 +32,7 @@ export const KEYWORD_MAP: {
   intent: KeywordIntent[];
   note: string;
 }[] = [
+  { slug: "krabi-movie-locations-james-bond-the-beach", primary: { de: "Filme gedreht in Krabi", en: "movies filmed in Krabi" }, secondary: ["Drehorte Krabi", "James Bond Island Film", "The Beach Drehort", "Phang Nga Bay movie locations"], intent: ["info"], note: "Insider – film & TV locations, links to Phang Nga and Phi Phi tours." },
   { slug: "krabi-islands-insider-guide", primary: { de: "Krabi Inseln", en: "Krabi islands" }, secondary: ["Inseln bei Krabi", "best islands Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "Schnorcheln Krabi"], intent: ["info", "comm"], note: "Pillar/hub – links to every island page." },
   { slug: "best-time-to-visit-krabi", primary: { de: "Krabi beste Reisezeit", en: "best time to visit Krabi" }, secondary: ["Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month", "Maya Bay closure"], intent: ["info"], note: "Pillar – seasonal planning; feeds tour bookings by month." },
   { slug: "krabi-island-hopping-planner", primary: { de: "Krabi Insel-Hopping", en: "Krabi island hopping" }, secondary: ["Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour"], intent: ["comm", "trans"], note: "Pillar – closest to booking intent (boat choice)." },
@@ -117,6 +119,7 @@ export const ARTICLES: GuideArticle[] = [
   ...ISLAND_ARTICLES_B,
   ...INSIDER_ARTICLES_A,
   ...INSIDER_ARTICLES_B,
+  ...MOVIE_ARTICLES,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));
@@ -136,6 +139,11 @@ export function relatedArticles(a: GuideArticle): GuideArticle[] {
  */
 export const GUIDE_IMAGES_READY = new Set<string>([
   // "leuchtendes-plankton-krabi-nacht-wasser.webp",
+  // Own AI-generated place scenes for the film-locations article (served via /bilder/, see secret-islands/image-map.ts).
+  "khao-phing-kan-strand-phang-nga-bucht-drehort.webp",
+  "maya-bay-phi-phi-leh-luftaufnahme-kalksteinwaende.webp",
+  "koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp",
+  "pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp",
 ]);
 
 /** Gallery photos of an article whose files exist. */

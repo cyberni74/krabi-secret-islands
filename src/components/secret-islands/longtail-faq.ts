@@ -84,8 +84,8 @@ export const LONGTAIL_INTRO: {
       {
         time: "07:50",
         text: {
-          de: "Sie lassen sich auf gepolsterte Liegeflächen im Schatten sinken. Kalte Getränke warten.",
-          en: "You sink onto cushioned sun pads in the shade. Cold drinks are waiting.",
+          de: "Sie lassen sich in den Schatten sinken. Kalte Getränke warten.",
+          en: "You sink into the shade. Cold drinks are waiting.",
         },
       },
       {
@@ -131,17 +131,17 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       en: "How comfortable is it compared to a longtail boat?",
     },
     story: {
-      de: "Auf einem Longtail sitzen Sie auf schmalen Holzbrettern – nach einer halben Stunde spüren Sie jede Welle im Rücken. Bei uns strecken Sie sich auf gepolsterten Liegeflächen aus, ein Sonnendach hält die Mittagshitze fern. Sie kommen am Strand an und fühlen sich ausgeruht statt durchgeschüttelt.",
-      en: "On a longtail you sit on narrow wooden planks – after half an hour you feel every wave in your back. With us you stretch out on cushioned sun pads while a canopy keeps the midday heat away. You arrive at the beach feeling rested instead of rattled.",
+      de: "Auf einem Longtail sitzen Sie auf schmalen Holzbrettern – nach einer halben Stunde spüren Sie jede Welle im Rücken. Bei uns sitzen Sie bequem auf einem modernen Speedboat, die Hardtop-Kabine hält die Mittagshitze fern. Sie kommen am Strand an und fühlen sich ausgeruht statt durchgeschüttelt.",
+      en: "On a longtail you sit on narrow wooden planks – after half an hour you feel every wave in your back. With us you sit comfortably on a modern speedboat while the hardtop cabin keeps the midday heat away. You arrive at the beach feeling rested instead of rattled.",
     },
     rows: [
       {
         them: { de: "Harte Holzbänke ohne Lehne", en: "Hard wooden benches without backrest" },
-        us: { de: "Gepolsterte Liegeflächen & Sitzpolster", en: "Cushioned sun pads & seats" },
+        us: { de: "Sitzbank & bequeme Bootssessel", en: "Bench seat & comfortable boat chairs" },
       },
       {
         them: { de: "Oft kaum Schatten in der Mittagssonne", en: "Often barely any shade in the midday sun" },
-        us: { de: "Sonnendach – Schatten, wann immer Sie möchten", en: "Canopy – shade whenever you want it" },
+        us: { de: "Hardtop-Kabine – Schatten, wann immer Sie möchten", en: "Hardtop cabin – shade whenever you want it" },
       },
       {
         them: { de: "Jeder Wellenschlag geht direkt in den Rücken", en: "Every wave goes straight into your back" },
@@ -149,8 +149,8 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       },
     ],
     insider: {
-      de: "Viele Gäste schlafen auf der Rückfahrt einfach ein – Kopf im Polster, Sonne im Gesicht, das Rauschen des Meeres im Ohr.",
-      en: "Many guests simply fall asleep on the way back – head on a cushion, sun on their face, the sea whispering in their ears.",
+      de: "Viele Gäste schlafen auf der Rückfahrt einfach ein – den Kopf an die Lehne gelehnt, Sonne im Gesicht, das Rauschen des Meeres im Ohr.",
+      en: "Many guests simply fall asleep on the way back – head resting against the seat, sun on their face, the sea whispering in their ears.",
     },
   },
   {
@@ -269,8 +269,8 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       en: "How much time is really left for snorkelling, swimming and relaxing?",
     },
     story: {
-      de: "Genau dafür fahren Sie raus – und genau das kommt auf Gruppentouren oft zu kurz. Kaum ist die Maske auf, ruft schon jemand zurück ins Boot; es bleiben oft nur kurze Stopps. Bei uns gibt es keinen Pfiff und keine Uhr. Sie schnorcheln über bunten Korallen, solange Sie Lust haben, schwimmen von einer leeren Bucht zur nächsten und dösen danach auf gepolsterten Liegeflächen im Schatten, während das Boot sanft schaukelt.",
-      en: "That's exactly why you go out on the water – and exactly what group tours often cut short. Your mask is barely on before someone calls everyone back to the boat; there are often only short stops. With us there's no whistle and no clock. You snorkel over colourful coral for as long as you like, swim from one empty bay to the next and then doze on cushioned sun pads in the shade while the boat gently rocks.",
+      de: "Genau dafür fahren Sie raus – und genau das kommt auf Gruppentouren oft zu kurz. Kaum ist die Maske auf, ruft schon jemand zurück ins Boot; es bleiben oft nur kurze Stopps. Bei uns gibt es keinen Pfiff und keine Uhr. Sie schnorcheln über bunten Korallen, solange Sie Lust haben, schwimmen von einer leeren Bucht zur nächsten und ruhen sich danach im Schatten aus, während das Boot sanft schaukelt.",
+      en: "That's exactly why you go out on the water – and exactly what group tours often cut short. Your mask is barely on before someone calls everyone back to the boat; there are often only short stops. With us there's no whistle and no clock. You snorkel over colourful coral for as long as you like, swim from one empty bay to the next and then rest in the shade while the boat gently rocks.",
     },
     rows: [
       {
@@ -283,7 +283,7 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       },
       {
         them: { de: "Volle Strände, kein ruhiger Platz zum Abschalten", en: "Crowded beaches, no quiet place to switch off" },
-        us: { de: "Einsame Strände & schattige Liegeflächen an Bord", en: "Lonely beaches & shaded sun pads on board" },
+        us: { de: "Einsame Strände & Schatten an Bord", en: "Lonely beaches & shade on board" },
       },
     ],
     insider: {
@@ -351,13 +351,13 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       en: "Is the tour suitable for children and older guests?",
     },
     story: {
-      de: "Kinder werden auf harten Bänken schnell unruhig, und für ältere Gäste wird schon der Einstieg über eine wackelige Bordwand zur Herausforderung. Bei uns gibt es Schatten, Polster, Platz für eine Pause und eine Crew, die beim Ein- und Aussteigen die Hand reicht. Und weil nur Ihre Familie an Bord ist, bestimmen Sie das Tempo – inklusive Mittagsschlaf.",
-      en: "Children quickly get restless on hard benches, and for older guests even climbing over a wobbly gunwale can be a challenge. With us there's shade, cushions, room for a break and a crew that offers a hand getting on and off. And because only your family is on board, you set the pace – nap time included.",
+      de: "Kinder werden auf harten Bänken schnell unruhig, und für ältere Gäste wird schon der Einstieg über eine wackelige Bordwand zur Herausforderung. Bei uns gibt es Schatten, bequeme Sessel, Platz für eine Pause und eine Crew, die beim Ein- und Aussteigen die Hand reicht. Und weil nur Ihre Familie an Bord ist, bestimmen Sie das Tempo – inklusive Mittagsschlaf.",
+      en: "Children quickly get restless on hard benches, and for older guests even climbing over a wobbly gunwale can be a challenge. With us there's shade, comfortable chairs, room for a break and a crew that offers a hand getting on and off. And because only your family is on board, you set the pace – nap time included.",
     },
     rows: [
       {
         them: { de: "Unbequem und kaum Schatten für Kinder", en: "Uncomfortable with little shade for kids" },
-        us: { de: "Schatten & Polster – Platz zum Ausruhen", en: "Shade & cushions – room to rest" },
+        us: { de: "Schatten & Sessel – Platz zum Ausruhen", en: "Shade & chairs – room to rest" },
       },
       {
         them: { de: "Einstieg oft wackelig und ohne Hilfe", en: "Boarding often wobbly and unassisted" },
