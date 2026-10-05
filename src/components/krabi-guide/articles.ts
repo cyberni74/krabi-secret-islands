@@ -13,6 +13,8 @@ import { EXTRA_SECTIONS } from "./data-extra";
 import { EXTRA_SECTIONS_2 } from "./data-extra2";
 import CONTENT_DATES from "@/generated/content-dates.json";
 import { MOVIE_ARTICLES } from "./data-movies";
+import { NEW_ARTICLES_F } from "./data-new-f";
+import { NEW_ARTICLES_E } from "./data-new-e";
 import { NEW_ARTICLES_D } from "./data-new-d";
 import { NEW_ARTICLES_C } from "./data-new-c";
 import { NEW_ARTICLES_B } from "./data-new-b";
@@ -127,6 +129,8 @@ export const ARTICLES: GuideArticle[] = [
   ...NEW_ARTICLES_B,
   ...NEW_ARTICLES_C,
   ...NEW_ARTICLES_D,
+  ...NEW_ARTICLES_E,
+  ...NEW_ARTICLES_F,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));

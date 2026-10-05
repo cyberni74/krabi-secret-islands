@@ -636,6 +636,7 @@ const dict: Record<string, string> = {
   "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.": "私人快艇之旅 | 从奥南出发，最多 5 位宾客：Koh Roi、洪岛（Hong Island）、日落晚餐、夜光浮游生物与钓鱼之旅。按船计价，欢迎咨询您的日期。",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "该日期因季节性封闭无法预订此行程。",
   "Saisonsperre": "季节性封闭",
+  "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "甲米石灰岩岛屿间的私人快艇",
 };
 
 export default dict;

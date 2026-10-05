@@ -432,6 +432,27 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
           en: "Yes. Our Sunset & Night Glow Combo leaves in the afternoon, shows you the sunset in front of the limestone cliffs and ends with a swim in the glowing plankton.",
         },
       },
+      {
+        q: { de: "Was ist die beste Zeit für leuchtendes Plankton in Krabi?", en: "What is the best time for glowing plankton in Krabi?" },
+        a: {
+          de: "Entscheidend ist vor allem die Dunkelheit: Nach Einbruch der Dunkelheit und in mondlosen Nächten rund um Neumond ist das Leuchten in der Regel besser zu sehen. Eine feste Saison oder ein Garantiemonat lässt sich nicht nennen, das Phänomen ist natürlich und schwankt.",
+          en: "Darkness matters most: after dark and on moonless nights around new moon the glow is usually easier to see. No fixed season or guaranteed month can be named, as the phenomenon is natural and varies.",
+        },
+      },
+      {
+        q: { de: "Wird das Plankton garantiert leuchten?", en: "Is the plankton guaranteed to glow?" },
+        a: {
+          de: "Nein. Wie stark das Wasser leuchtet, hängt von der Natur ab und kann von Nacht zu Nacht unterschiedlich sein. Dunklere Nächte um Neumond tendieren zu einem deutlicheren Leuchten, versprechen können wir es aber nicht.",
+          en: "No. How strongly the water glows depends on nature and can differ from night to night. Darker nights around new moon tend to give a stronger glow, but we cannot promise it.",
+        },
+      },
+      {
+        q: { de: "Was sollte man zur Plankton-Tour mitnehmen?", en: "What should you bring on a plankton tour?" },
+        a: {
+          de: "Badesachen, ein Handtuch und eine leichte Jacke für die Rückfahrt. Verzichten Sie kurz vor dem Schwimmen auf Insektenspray und Sonnencreme.",
+          en: "Swimwear, a towel and a light jacket for the ride back. Skip insect spray and sunscreen just before swimming.",
+        },
+      },
     ],
     related: ["koh-poda-guide", "railay-phra-nang-cave", "krabi-with-kids", "boat-day-packing-list-etiquette"],
     tourIds: ["plankton-night", "sunset-glow-combo"],

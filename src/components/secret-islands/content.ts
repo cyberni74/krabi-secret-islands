@@ -51,6 +51,8 @@ export const IMG = {
   // Our real speedboat (owner photo, /public/images). Never use stock photos showing longtail boats.
   // Hero: aerial of Koh Hong (owner-supplied photo, /public/images).
   hero: "/images/koh-hong-krabi-luftaufnahme-strand-lagune.webp",
+  // New hero candidate (not active yet: set `hero` to this once the owner has picked the final variant).
+  heroNew: seoImage("krabi-private-speedboat-hero.webp"),
   boat: "/images/krabi-secret-islands-privates-speedboat.webp",
   poda: seoImage("koh-poda-krabi-strand-kalksteinfelsen.webp"),
   tup: seoImage("tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
@@ -101,6 +103,10 @@ IMG.bay = IMG.maya;
  * Unknown URLs get an empty alt (decorative) instead of a guessed description.
  */
 export const IMAGE_ALT: Record<string, L> = {
+  [IMG.heroNew]: {
+    de: "Privates Speedboat zwischen Kalksteinfelsen in Krabi",
+    en: "Private speedboat among limestone islands in Krabi",
+  },
   [IMG.hero]: {
     de: "Luftaufnahme von Koh Hong bei Krabi: türkises Wasser, weißer Sandstrand und Kalksteinfelsen",
     en: "Aerial view of Koh Hong near Krabi: turquoise water, white sand beach and limestone cliffs",

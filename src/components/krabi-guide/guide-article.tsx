@@ -143,6 +143,39 @@ function ArticleView({ article, related, galleryFiles }: { article: GuideArticle
                   ))}
                 </ul>
               ) : null}
+              {s.table ? (
+                <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10">
+                  <table className="w-full min-w-[34rem] border-collapse text-left text-sm sm:text-[15px]">
+                    {s.table.caption ? <caption className="sr-only">{s.table.caption[lang]}</caption> : null}
+                    <thead className="bg-white/[0.06] text-xs uppercase tracking-wide text-cyan-200">
+                      <tr>
+                        {s.table.head.map((h, j) => (
+                          <th key={j} scope="col" className="px-3 py-3 font-bold">
+                            {h[lang]}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/10 text-slate-200">
+                      {s.table.rows.map((row, r) => (
+                        <tr key={r}>
+                          {row.map((cell, c) =>
+                            c === 0 ? (
+                              <th key={c} scope="row" className="px-3 py-3 font-bold text-white">
+                                {cell[lang]}
+                              </th>
+                            ) : (
+                              <td key={c} className="px-3 py-3 align-top">
+                                {cell[lang]}
+                              </td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : null}
               {s.tip ? (
                 <aside className="si-glass relative mt-6 overflow-hidden rounded-2xl border-l-4 border-l-si-gold p-5">
                   <p className="mb-1.5 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.18em] text-si-gold">

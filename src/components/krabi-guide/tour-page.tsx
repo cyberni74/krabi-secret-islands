@@ -378,8 +378,8 @@ const priceTextEn = (n: number) => `THB ${String(n).replace(/\B(?=(\d{3})+(?!\d)
 
 /* ───────── Overview /touren ───────── */
 const HUB_INTRO: L = {
-  de: "Alle unsere Touren fahren Sie privat: ein weißes Hardtop-Kabinenboot, höchstens fünf Gäste und ein Preis pro Boot statt pro Person. Hier finden Sie jede Tour mit Route, Ablauf, Inklusivleistungen und häufigen Fragen, von der Hong-Lagune über Phi Phi am frühen Morgen und James Bond Island bis zu Sunset-Dinner, leuchtendem Plankton und Angeltouren. Schnorchel-Equipment stellen wir kostenlos zur Verfügung, bitte bei der Buchung ankreuzen. Passt keine Tour genau, stellen Sie Ihre eigene im Tour-Baukasten zusammen.",
-  en: "You travel on all our tours privately: a white hardtop cabin boat, a maximum of five guests and a price per boat instead of per person. Here you find every tour with route, itinerary, inclusions and frequently asked questions, from Hong Lagoon via Phi Phi in the early morning and James Bond Island to sunset dinner, glowing plankton and fishing trips. We provide snorkel gear free of charge, please tick it when booking. If no tour fits exactly, build your own in the tour builder.",
+  de: "Eine Krabi Bootstour privat, das heißt bei uns: Alle unsere Ausflüge fahren Sie ohne fremde Gäste, im weißen Hardtop-Kabinenboot mit höchstens fünf Gästen und einem Preis pro Boot statt pro Person. Hier finden Sie jede Tour mit Route, Ablauf, Inklusivleistungen und häufigen Fragen, von der Hong-Lagune über Phi Phi am frühen Morgen und James Bond Island bis zu Sunset-Dinner, leuchtendem Plankton und Angeltouren. Schnorchel-Equipment stellen wir kostenlos zur Verfügung, bitte bei der Buchung ankreuzen. Passt keine Tour genau, stellen Sie Ihre eigene im Tour-Baukasten zusammen.",
+  en: "Our private boat tours in Krabi from Ao Nang are exactly that, private: you travel on all of them in a white hardtop cabin boat with a maximum of five guests and a price per boat instead of per person. Here you find every tour with route, itinerary, inclusions and frequently asked questions, from Hong Lagoon via Phi Phi in the early morning and James Bond Island to sunset dinner, glowing plankton and fishing trips. We provide snorkel gear free of charge, please tick it when booking. If no tour fits exactly, build your own in the tour builder.",
 };
 
 export function ToursHubPage() {
@@ -405,7 +405,7 @@ function HubView() {
       <div className="mx-auto max-w-6xl">
         <TourBreadcrumb />
         <h1 className="max-w-4xl text-[2rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl">
-          {lang === "de" ? "Private Bootstouren in Krabi: alle 15 Touren ab Ao Nang" : "Private Boat Tours in Krabi: All 15 Tours from Ao Nang"}
+          {lang === "de" ? "Krabi Bootstour privat: alle 15 Krabi Ausflüge ab Ao Nang" : "Private Boat Tours Krabi from Ao Nang: All 15 Tours"}
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-200">{bi(HUB_INTRO, lang)}</p>
         <p className="mt-4 text-sm font-semibold text-slate-300">

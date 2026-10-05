@@ -30,11 +30,11 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
     ],
     title: {
       de: "Private Bootstour Krabi: Kosten & Preise 2026",
-      en: "Private Boat Tour Krabi: Cost & Prices 2026",
+      en: "Krabi Private Boat Tour Price 2026",
     },
     metaDescription: {
       de: "Was kostet eine private Bootstour in Krabi? Longtail, Speedboot und Premium-Charter im Vergleich: Preis pro Boot, Nebenkosten und Leistungen.",
-      en: "How much does a private boat tour in Krabi cost? Longtail, speedboat and premium charter compared: price per boat, extras and what is included.",
+      en: "Krabi private boat tour price: what does it cost? Longtail, speedboat and premium charter compared: price per boat, extras and what is included.",
     },
     h1: {
       de: "Was kostet eine private Bootstour in Krabi?",
@@ -42,7 +42,7 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
     },
     intro: {
       de: "„Was kostet eine private Bootstour in Krabi?“ ist die Frage, die vor fast jeder Buchung steht – und die Antworten im Netz sind verwirrend, weil sie Äpfel mit Birnen vergleichen: Preise pro Person neben Preisen pro Boot, Angebote mit und ohne Nationalpark-Gebühr, Longtail neben Speedboot. Dieser Guide sortiert die Kosten einer privaten Bootstour in Krabi so, dass Sie am Ende wirklich vergleichen können. Wir nennen unsere eigenen Preise pro Boot exakt, erklären, welche Nebenkosten bei Angeboten häufig fehlen, und geben Ihnen eine Checkliste mit, mit der Sie jeden Anbieter prüfen – auch uns. Konkrete Preise anderer Anbieter nennen wir bewusst nicht: Sie schwanken stark nach Saison, Boot und Dauer und wären morgen schon veraltet.",
-      en: "“How much does a private boat tour in Krabi cost?” is the question in front of almost every booking – and the answers online are confusing because they compare apples with oranges: prices per person next to prices per boat, offers with and without national park fees, longtails next to speedboats. This guide sorts out the cost of a private boat tour in Krabi so that you can genuinely compare. We state our own prices per boat exactly, explain which extras are often missing from offers, and give you a checklist for vetting any operator – including us. We deliberately do not quote other operators’ prices: they vary widely by season, boat and duration and would be outdated tomorrow.",
+      en: "“How much does a private boat tour in Krabi cost?” is the question in front of almost every booking – and the answers online are confusing because they compare apples with oranges: prices per person next to prices per boat, offers with and without national park fees, longtails next to speedboats. This guide sorts out the Krabi private boat tour price so that you can genuinely compare. We state our own prices per boat exactly, explain which extras are often missing from offers, and give you a checklist for vetting any operator – including us. We deliberately do not quote other operators’ prices: they vary widely by season, boat and duration and would be outdated tomorrow.",
     },
     sections: [
       {
@@ -647,6 +647,20 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         a: {
           de: "In der Regel wird bar in Baht bezahlt, Kartenzahlung ist auf den Inseln nicht verlässlich vorgesehen. Nehmen Sie ausreichend Bargeld in kleinen Scheinen mit und bewahren Sie das Ticket auf.",
           en: "Payment is usually in cash in baht; card payment is not reliably available on the islands. Bring enough cash in small notes and keep the ticket.",
+        },
+      },
+      {
+        q: { de: "Muss man auf den Inseln bei Krabi Eintritt bezahlen?", en: "Do you have to pay an entrance fee on the islands near Krabi?" },
+        a: {
+          de: "An vielen Inseln und Nationalpark-Zielen ja. Die Gebühr wird vor Ort direkt an die Ranger am Eingang des Parks bezahlt und ist nicht im Preis unserer Tour enthalten. Welche Gebühr für Ihre Route anfällt, erfahren Sie bei der Buchung.",
+          en: "At many islands and national park destinations, yes. The fee is paid on site directly to the rangers at the park entrance and is not part of our tour price. Which fee applies to your route you will learn when booking.",
+        },
+      },
+      {
+        q: { de: "Können sich die Nationalpark-Gebühren ändern?", en: "Can the national park fees change?" },
+        a: {
+          de: "Ja. Die Gebühren legt die Nationalparkbehörde fest und kann sie ändern. Maßgeblich sind die Sätze, die vor Ort ausgehängt sind.",
+          en: "Yes. The fees are set by the national park authority and can change. The rates posted on site are the ones that count.",
         },
       },
     ],

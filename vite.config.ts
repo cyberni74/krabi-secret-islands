@@ -22,7 +22,7 @@ export default defineConfig(({ command, isPreview }) => ({
               config: {
                 // Vercel Image Optimization: /_vercel/image?url=…&w=…&q=75 (AVIF/WebP, cached for a year).
                 images: {
-                  sizes: [480, 800, 1200, 1600],
+                  sizes: [480, 800, 1200, 1600, 2400],
                   qualities: [75],
                   formats: ["image/avif", "image/webp"],
                   minimumCacheTTL: 31536000,

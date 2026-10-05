@@ -18,7 +18,7 @@ const LOCAL_VARIANTS: Record<string, string> = {
 };
 
 /** Widths served by Vercel Image Optimization (must match `images.sizes` in vite.config.ts). */
-export const OPTIMIZED_WIDTHS = [480, 800, 1200, 1600];
+export const OPTIMIZED_WIDTHS = [480, 800, 1200, 1600, 2400];
 
 /**
  * Same-origin images (/bilder/…, /images/…) are resized + converted to AVIF/WebP by Vercel Image Optimization in
@@ -51,6 +51,8 @@ export function SmartImage({
   eager,
   priority,
   sizes = "100vw",
+  width,
+  height,
 }: {
   src: string;
   alt: string;
@@ -60,6 +62,9 @@ export function SmartImage({
   priority?: boolean;
   /** `sizes` for the responsive srcSet (rendered width of the image). */
   sizes?: string;
+  /** Intrinsic size (reserves space / avoids layout shift for in-flow images). */
+  width?: number;
+  height?: number;
 }) {
   const [failed, setFailed] = useState(false);
   // If the optimised srcSet fails, retry once with the plain `src` before showing the fallback.
@@ -89,6 +94,8 @@ export function SmartImage({
       srcSet={srcSet}
       sizes={srcSet ? sizes : undefined}
       alt={alt}
+      width={width}
+      height={height}
       loading={eager || priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : undefined}
       decoding={priority ? "sync" : "async"}

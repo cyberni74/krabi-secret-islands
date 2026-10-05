@@ -6,7 +6,7 @@ import type { TourPageContent } from "./tour-pages";
  */
 export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   "railay-escape": {
-    title: { de: "Railay & Phra Nang Bootstour privat: Halbtagestour", en: "Private Railay & Phra Nang Boat Tour: Half-Day Trip" },
+    title: { de: "Railay & Phra Nang Bootstour privat: Halbtagestour", en: "Private Railay & Phra Nang Tour from Ao Nang by Speedboat" },
     description: {
       de: "Railay und Phra Nang privat per Speedboat ab Ao Nang: 4 Stunden mit Höhle, Kletterfelsen und Badestopp an Koh Poda. Flexible Startzeit, max. 5 Gäste.",
       en: "Railay and Phra Nang privately by speedboat from Ao Nang: 4 hours with the cave, climbing cliffs and a swim stop at Koh Poda. Flexible start, max. 5 guests.",
@@ -54,7 +54,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "sunset-dinner": {
-    title: { de: "Sunset Dinner Krabi: Romantische Bootstour privat", en: "Sunset Dinner Krabi: Private Romantic Boat Tour" },
+    title: { de: "Sunset Dinner Krabi: Romantische Bootstour privat", en: "Private Sunset Dinner Tour from Ao Nang by Speedboat" },
     description: {
       de: "Sunset Dinner an Bord in Krabi: Champagner zum Sonnenuntergang, 3-Gänge-Dinner vor Phra Nang. Private Bootstour für Paare ab Ao Nang, 4 Stunden ab 15:30 Uhr.",
       en: "Sunset dinner on board in Krabi: champagne at sunset and a 3-course dinner off Phra Nang. Private boat tour for couples from Ao Nang, 4 hours from 3:30 pm.",
@@ -102,7 +102,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "family-sandbars": {
-    title: { de: "Familien-Bootstour Krabi privat: Sandbänke & Inseln", en: "Private Family Boat Tour Krabi: Sandbars & Islands" },
+    title: { de: "Familien-Bootstour Krabi privat: Sandbänke & Inseln", en: "Private Family Boat Tour from Ao Nang by Speedboat" },
     description: {
       de: "Familien-Bootstour in Krabi privat ab Ao Nang: Tup-Sandbank, Chicken Island und Koh Poda mit kurzen Fahrten, flachen Buchten und Schatten. Max. 5 Gäste.",
       en: "Private family boat tour in Krabi from Ao Nang: Tup sandbar, Chicken Island and Koh Poda with short rides, shallow bays and shade. Max. 5 guests, 6 hours.",
@@ -150,7 +150,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "fishing-reef-half": {
-    title: { de: "Angeln Krabi: Riff-Angeltour halbtags privat", en: "Fishing Trip Krabi: Private Half-Day Reef Fishing" },
+    title: { de: "Angeln Krabi: Riff-Angeltour halbtags privat", en: "Private Reef Fishing Tour from Ao Nang by Speedboat" },
     description: {
       de: "Angeltour in Krabi halbtags und privat ab Ao Nang: Riff-Angeln auf Zackenbarsch, Snapper und Makrele, inkl. Ruten, Köder und Guide. Max. 5 Gäste, 4 Stunden.",
       en: "Private half-day fishing trip in Krabi from Ao Nang: reef fishing for grouper, snapper and mackerel, rods, bait and guide included. Max. 5 guests, 4 hours.",
@@ -198,7 +198,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "fishing-deep-sea": {
-    title: { de: "Hochseeangeln Krabi: Deep-Sea-Tour privat ab Ao Nang", en: "Deep Sea Fishing Krabi: Private Full-Day Trolling Trip" },
+    title: { de: "Hochseeangeln Krabi: Deep-Sea-Tour privat ab Ao Nang", en: "Private Deep Sea Fishing Tour from Ao Nang by Speedboat" },
     description: {
       de: "Hochseeangeln ab Ao Nang ganztags und privat: Trolling auf Königsmakrele, Barrakuda und Thun an Phi Phis Außenriffen. Thai-Lunch, Profi-Ausrüstung, 5 Gäste.",
       en: "Private full-day deep sea fishing from Ao Nang: trolling for king mackerel, barracuda and tuna on Phi Phi's outer reefs. Thai lunch, pro gear, max. 5 guests.",
@@ -246,7 +246,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "fishing-night-squid": {
-    title: { de: "Tintenfisch angeln Krabi: Nachttour privat ab Ao Nang", en: "Squid Fishing Krabi: Private Night Trip from Ao Nang" },
+    title: { de: "Tintenfisch angeln Krabi: Nachttour privat ab Ao Nang", en: "Private Night Squid Fishing Tour from Ao Nang by Speedboat" },
     description: {
       de: "Nacht-Tintenfischangeln in Krabi privat ab 18:00 Uhr: Handleinen unter grünen Lampen, Fang wird an Bord gegrillt. Ruten, Köder, Guide inklusive, max. 5 Gäste.",
       en: "Private night squid fishing in Krabi from 6 pm: hand lines under green lamps, your catch grilled on board. Rods, bait, guide included, max. 5 guests, 4 hours.",
@@ -294,7 +294,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "fishing-catch-cook": {
-    title: { de: "Catch & Cook Krabi: Angeln und Sunset BBQ privat", en: "Catch & Cook Krabi: Private Fishing and Sunset BBQ" },
+    title: { de: "Catch & Cook Krabi: Angeln und Sunset BBQ privat", en: "Private Catch & Cook Sunset BBQ Tour from Ao Nang by Speedboat" },
     description: {
       de: "Catch & Cook in Krabi: nachmittags angeln, abends Strand-BBQ zum Sonnenuntergang. Private Tour ab Ao Nang, 6 Stunden ab 13:00 Uhr, max. 5 Gäste.",
       en: "Catch & Cook in Krabi: fish in the afternoon, beach BBQ at sunset. Private tour from Ao Nang, 6 hours from 1 pm, max. 5 guests, price per boat.",

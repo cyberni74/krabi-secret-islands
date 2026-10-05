@@ -282,6 +282,20 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
           en: "Pileh Lagoon, Viking Cave from outside and Bamboo Island are still worth a visit. Alternatively, the Hong lagoons, the Poda islands with the Tup sandbar or Phang Nga Bay offer lovely days on the water around Krabi, depending on weather and wind.",
         },
       },
+      {
+        q: { de: "Wann ist die beste Zeit für einen Besuch in Maya Bay?", en: "What is the best time to visit Maya Bay?" },
+        a: {
+          de: "Am besten früh am Morgen, bevor die großen Ausflugsboote eintreffen. Unsere Phi Phi Early Bird Tour startet deshalb um 07:00 Uhr. Außerhalb der jährlichen Schließzeit (zuletzt 1. August bis 30. September) ist die Bucht in der Regel zugänglich.",
+          en: "Early in the morning, before the big excursion boats arrive. That is why our Phi Phi Early Bird tour leaves at 7 am. Outside the annual closure period (most recently 1 August to 30 September) the bay is usually accessible.",
+        },
+      },
+      {
+        q: { de: "Kann man Maya Bay mit einem Privatboot besuchen?", en: "Can you visit Maya Bay by private boat?" },
+        a: {
+          de: "Ja, ab Ao Nang als privater Speedboat-Ausflug mit flexibler Startzeit. Es gelten dieselben Regeln wie für alle Boote: Termine und Zugangsregeln legt die Nationalparkbehörde fest und kann sie ändern, und Schwimmen in der Bucht ist nicht erlaubt.",
+          en: "Yes, from Ao Nang as a private speedboat trip with a flexible start time. The same rules apply as for all boats: dates and access rules are set by the national park authority and can change, and swimming in the bay is not allowed.",
+        },
+      },
     ],
     related: [
       "phi-phi-maya-bay-early-morning",
@@ -573,6 +587,27 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         a: {
           de: "Der Oktober ist ein Übergangsmonat: Er gehört meist noch zu den regenreichen Monaten, die Saison nimmt aber gegen Ende des Monats Fahrt auf. Planen Sie Puffertage ein und bevorzugen Sie geschützte Ziele. Dafür sind die Strände leerer.",
           en: "October is a transition month: it usually still counts among the rainy months, but the season picks up towards the end of the month. Plan buffer days and prefer sheltered destinations. In return the beaches are emptier.",
+        },
+      },
+      {
+        q: { de: "Wann ist die beste Zeit für eine Bootstour in Krabi?", en: "When is the best time for a boat tour in Krabi?" },
+        a: {
+          de: "In der Regel außerhalb der Regenzeit, also etwa von November bis April, wenn die See meist ruhiger ist. Koh Rok und Koh Haa sind etwa von Mitte November bis Mitte Mai geöffnet. In der Regenzeit (etwa Mai bis Oktober) sind Touren an vielen Tagen trotzdem möglich.",
+          en: "Usually outside the rainy season, roughly November to April, when the sea is mostly calmer. Koh Rok and Koh Haa are open from about mid-November to mid-May. In the rainy season (about May to October) tours are still possible on many days.",
+        },
+      },
+      {
+        q: { de: "Was passiert, wenn das Wetter schlecht ist?", en: "What happens if the weather is bad?" },
+        a: {
+          de: "Bei Schlechtwetter bieten wir eine kostenlose Umbuchung an. Bei Sturmwarnung, starkem Wind oder hohem Seegang geht Sicherheit vor, dann wird die Fahrt verschoben.",
+          en: "In bad weather we offer free rebooking. With a storm warning, strong wind or heavy swell, safety comes first and the trip is postponed.",
+        },
+      },
+      {
+        q: { de: "Wird man in der Regenzeit leichter seekrank?", en: "Do you get seasick more easily in the rainy season?" },
+        a: {
+          de: "Bei mehr Wellen kann das vorkommen. Wählen Sie geschützte Routen und den Vormittag, wenn die See oft ruhiger ist. Praktische Tipps finden Sie in unserem Guide zu Seekrankheit auf Bootstouren.",
+          en: "With bigger waves it can happen. Choose sheltered routes and the morning, when the sea is often calmer. You will find practical tips in our guide to seasickness on boat tours.",
         },
       },
     ],

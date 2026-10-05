@@ -12,7 +12,11 @@ export type GuideSection = {
   /** Insider tip box. */
   tip?: Bi;
   list?: BiList;
+  /** Optional comparison/data table (rendered as a responsive, scrollable <table>). First column is the row header. */
+  table?: GuideTable;
 };
+
+export type GuideTable = { caption?: Bi; head: Bi[]; rows: Bi[][] };
 
 export type GuideArticleInput = {
   slug: string;

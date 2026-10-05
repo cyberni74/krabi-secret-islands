@@ -1,0 +1,200 @@
+{
+  "location": "Ao Nang, Krabi (8.03°N, 98.82°E)",
+  "timezone": "UTC+7",
+  "year": 2026,
+  "method": "NOAA solar position algorithm, sunset at zenith 90.833°, civil dusk at 96°",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "month": 1,
+      "day": 1,
+      "sunrise": "06:38",
+      "sunset": "18:18",
+      "civilDusk": "18:41"
+    },
+    {
+      "date": "2026-01-15",
+      "month": 1,
+      "day": 15,
+      "sunrise": "06:43",
+      "sunset": "18:25",
+      "civilDusk": "18:47"
+    },
+    {
+      "date": "2026-02-01",
+      "month": 2,
+      "day": 1,
+      "sunrise": "06:45",
+      "sunset": "18:32",
+      "civilDusk": "18:54"
+    },
+    {
+      "date": "2026-02-15",
+      "month": 2,
+      "day": 15,
+      "sunrise": "06:43",
+      "sunset": "18:35",
+      "civilDusk": "18:56"
+    },
+    {
+      "date": "2026-03-01",
+      "month": 3,
+      "day": 1,
+      "sunrise": "06:38",
+      "sunset": "18:36",
+      "civilDusk": "18:57"
+    },
+    {
+      "date": "2026-03-15",
+      "month": 3,
+      "day": 15,
+      "sunrise": "06:32",
+      "sunset": "18:36",
+      "civilDusk": "18:57"
+    },
+    {
+      "date": "2026-04-01",
+      "month": 4,
+      "day": 1,
+      "sunrise": "06:23",
+      "sunset": "18:35",
+      "civilDusk": "18:56"
+    },
+    {
+      "date": "2026-04-15",
+      "month": 4,
+      "day": 15,
+      "sunrise": "06:16",
+      "sunset": "18:34",
+      "civilDusk": "18:55"
+    },
+    {
+      "date": "2026-05-01",
+      "month": 5,
+      "day": 1,
+      "sunrise": "06:10",
+      "sunset": "18:34",
+      "civilDusk": "18:56"
+    },
+    {
+      "date": "2026-05-15",
+      "month": 5,
+      "day": 15,
+      "sunrise": "06:06",
+      "sunset": "18:36",
+      "civilDusk": "18:58"
+    },
+    {
+      "date": "2026-06-01",
+      "month": 6,
+      "day": 1,
+      "sunrise": "06:06",
+      "sunset": "18:39",
+      "civilDusk": "19:02"
+    },
+    {
+      "date": "2026-06-15",
+      "month": 6,
+      "day": 15,
+      "sunrise": "06:08",
+      "sunset": "18:43",
+      "civilDusk": "19:06"
+    },
+    {
+      "date": "2026-07-01",
+      "month": 7,
+      "day": 1,
+      "sunrise": "06:11",
+      "sunset": "18:46",
+      "civilDusk": "19:09"
+    },
+    {
+      "date": "2026-07-15",
+      "month": 7,
+      "day": 15,
+      "sunrise": "06:14",
+      "sunset": "18:47",
+      "civilDusk": "19:10"
+    },
+    {
+      "date": "2026-08-01",
+      "month": 8,
+      "day": 1,
+      "sunrise": "06:17",
+      "sunset": "18:45",
+      "civilDusk": "19:07"
+    },
+    {
+      "date": "2026-08-15",
+      "month": 8,
+      "day": 15,
+      "sunrise": "06:18",
+      "sunset": "18:41",
+      "civilDusk": "19:03"
+    },
+    {
+      "date": "2026-09-01",
+      "month": 9,
+      "day": 1,
+      "sunrise": "06:17",
+      "sunset": "18:33",
+      "civilDusk": "18:54"
+    },
+    {
+      "date": "2026-09-15",
+      "month": 9,
+      "day": 15,
+      "sunrise": "06:15",
+      "sunset": "18:25",
+      "civilDusk": "18:46"
+    },
+    {
+      "date": "2026-10-01",
+      "month": 10,
+      "day": 1,
+      "sunrise": "06:13",
+      "sunset": "18:16",
+      "civilDusk": "18:37"
+    },
+    {
+      "date": "2026-10-15",
+      "month": 10,
+      "day": 15,
+      "sunrise": "06:12",
+      "sunset": "18:09",
+      "civilDusk": "18:30"
+    },
+    {
+      "date": "2026-11-01",
+      "month": 11,
+      "day": 1,
+      "sunrise": "06:13",
+      "sunset": "18:03",
+      "civilDusk": "18:25"
+    },
+    {
+      "date": "2026-11-15",
+      "month": 11,
+      "day": 15,
+      "sunrise": "06:16",
+      "sunset": "18:02",
+      "civilDusk": "18:24"
+    },
+    {
+      "date": "2026-12-01",
+      "month": 12,
+      "day": 1,
+      "sunrise": "06:23",
+      "sunset": "18:04",
+      "civilDusk": "18:27"
+    },
+    {
+      "date": "2026-12-15",
+      "month": 12,
+      "day": 15,
+      "sunrise": "06:30",
+      "sunset": "18:09",
+      "civilDusk": "18:32"
+    }
+  ]
+}

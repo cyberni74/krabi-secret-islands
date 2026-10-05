@@ -544,6 +544,27 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
           en: "Yes, as a full-day trip by speedboat. Allow about one and a half to two hours each way.",
         },
       },
+      {
+        q: { de: "Wann beginnt die Saison für Koh Rok und Koh Haa?", en: "When does the season for Koh Rok and Koh Haa start?" },
+        a: {
+          de: "Offiziell endet die Sperrzeit am 15. November, die Saison beginnt also am 16. November und läuft etwa bis Mitte Mai. Manche Quellen nennen als Ende der Sperrzeit schon Ende Oktober. Die genauen Daten legt die Parkverwaltung fest und kann sie ändern.",
+          en: "Officially the closure ends on 15 November, so the season starts on 16 November and runs until about mid-May. Some sources give the end of October as the end of the closure. The exact dates are set by the park administration and can change.",
+        },
+      },
+      {
+        q: { de: "Welcher Monat ist der beste für Koh Rok?", en: "Which month is best for Koh Rok?" },
+        a: {
+          de: "Einen einzelnen besten Monat gibt es nicht. In der Hauptsaison von etwa Mitte November bis Mitte Mai sind die Bedingungen meist ideal, mit ruhiger See und guter Sicht unter Wasser. Wind und Wellen am Tag selbst entscheiden am Ende.",
+          en: "There is no single best month. In the open season from roughly mid-November to mid-May conditions are usually ideal, with calm seas and good visibility underwater. Wind and waves on the day itself decide in the end.",
+        },
+      },
+      {
+        q: { de: "Lohnt sich Koh Rok im Vergleich zu anderen Schnorchelspots?", en: "Is Koh Rok worth it compared with other snorkel spots?" },
+        a: {
+          de: "Wenn Sie klares Wasser, Korallen und mit Glück Schildkröten sehen möchten, ja. Dafür ist es eine der längsten Tagesfahrten ab Ao Nang, mit etwa anderthalb bis zwei Stunden pro Strecke. Wer weniger Fahrzeit will, findet näher gelegene Schnorchelziele.",
+          en: "If you want clear water, coral and, with luck, turtles, yes. In return it is one of the longest day trips from Ao Nang, at about one and a half to two hours each way. If you prefer less travel time, there are snorkel spots closer by.",
+        },
+      },
     ],
     related: ["best-time-to-visit-krabi", "boat-day-packing-list-etiquette", "phi-phi-maya-bay-early-morning", "krabi-with-kids"],
     tourIds: ["koh-rok-safari"],
