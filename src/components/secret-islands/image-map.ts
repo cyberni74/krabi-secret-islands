@@ -6,11 +6,7 @@
 const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_37pB8NNBCXw21nrSwh5C0AozDjm/";
 
 export const SEO_IMAGES: Record<string, string> = {
-  // Hero candidate A (Higgsfield job 5381ee12, 2k/high). Candidates: B = cc870ddf-7dda-46e0-9a62-501ce93475fc (hf_20261005_123404_…png).
-  // TEMPORARY hero previews (not used on any page): remove after the owner has picked a variant.
-  "hero-variant-a.webp": "hf_20261005_123403_5381ee12-597c-405d-bc75-a144138f9656.png",
-  "hero-variant-b.webp": "hf_20261005_123404_cc870ddf-7dda-46e0-9a62-501ce93475fc.png",
-  "hero-variant-c.webp": "hf_20261005_123606_e2983804-bbb2-436f-8dc0-195436e2fdc1.png",
+  // Hero (Higgsfield job 5381ee12, 2k/high, variant A chosen by the owner).
   "krabi-private-speedboat-hero.webp": "hf_20261005_123403_5381ee12-597c-405d-bc75-a144138f9656.png",
   "koh-poda-krabi-strand-kalksteinfelsen.webp": "hf_20261005_002150_8d7c6492-5f34-4934-b3b4-75f0b9a82121_min.webp",
   "tup-sandbank-krabi-ebbe-drohnenaufnahme.webp": "hf_20261005_002150_dfdc534c-9c4e-4bec-b0a0-7b576b419b45_min.webp",

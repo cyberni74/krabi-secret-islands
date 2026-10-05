@@ -335,7 +335,7 @@ export function Hero() {
     <>
       <section ref={ref} id="top" className="relative isolate flex min-h-[100svh] items-end overflow-hidden">
         <motion.div style={{ y: bgY, scale: bgScale }} className="si-fallback absolute inset-0 -z-20 will-change-transform">
-          <SmartImage src={IMG.hero} alt={t(altFor(IMG.hero))} priority className="absolute inset-0 size-full object-cover object-[50%_62%]" />
+          <SmartImage src={IMG.hero} alt={t(altFor(IMG.hero))} priority width={2048} height={1152} className="absolute inset-0 size-full object-cover object-center" />
         </motion.div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-si-navy via-si-navy/60 to-si-navy/20" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_15%_85%,rgb(6_182_212/0.25),transparent_70%)]" />

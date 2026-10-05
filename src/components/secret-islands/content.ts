@@ -49,10 +49,10 @@ export const ROMANCE_IMGS = [
 
 export const IMG = {
   // Our real speedboat (owner photo, /public/images). Never use stock photos showing longtail boats.
-  // Hero: aerial of Koh Hong (owner-supplied photo, /public/images).
-  hero: "/images/koh-hong-krabi-luftaufnahme-strand-lagune.webp",
-  // New hero candidate (not active yet: set `hero` to this once the owner has picked the final variant).
-  heroNew: seoImage("krabi-private-speedboat-hero.webp"),
+  // Hero: private speedboat among limestone islands (Higgsfield GPT Image 2.5, 2K; variant chosen by the owner).
+  hero: seoImage("krabi-private-speedboat-hero.webp"),
+  // Aerial of Koh Hong (owner-supplied photo, /public/images) – former hero, now the aerial-shots / pillar image.
+  hongAerial: "/images/koh-hong-krabi-luftaufnahme-strand-lagune.webp",
   boat: "/images/krabi-secret-islands-privates-speedboat.webp",
   poda: seoImage("koh-poda-krabi-strand-kalksteinfelsen.webp"),
   tup: seoImage("tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
@@ -103,11 +103,11 @@ IMG.bay = IMG.maya;
  * Unknown URLs get an empty alt (decorative) instead of a guessed description.
  */
 export const IMAGE_ALT: Record<string, L> = {
-  [IMG.heroNew]: {
+  [IMG.hero]: {
     de: "Privates Speedboat zwischen Kalksteinfelsen in Krabi",
     en: "Private speedboat among limestone islands in Krabi",
   },
-  [IMG.hero]: {
+  [IMG.hongAerial]: {
     de: "Luftaufnahme von Koh Hong bei Krabi: türkises Wasser, weißer Sandstrand und Kalksteinfelsen",
     en: "Aerial view of Koh Hong near Krabi: turquoise water, white sand beach and limestone cliffs",
   },
@@ -196,7 +196,7 @@ export const IMAGE_ALT: Record<string, L> = {
  * clips were removed because they were presented as our own footage). Add own drone clips here once they exist.
  */
 export const AERIAL_SHOTS: { src: string; title: L }[] = [
-  { src: IMG.hero, title: { de: "Koh Hong von oben", en: "Koh Hong from above" } },
+  { src: IMG.hongAerial, title: { de: "Koh Hong von oben", en: "Koh Hong from above" } },
   { src: IMG.droneAerial, title: { de: "Private Bucht von oben", en: "Private bay from above" } },
   { src: IMG.tup, title: { de: "Tup-Sandbank bei Ebbe", en: "Tup sandbar at low tide" } },
 ];

@@ -186,7 +186,7 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
     ],
     related: ["krabi-island-hopping-planner", "best-time-to-visit-krabi", "hong-island-krabi", "koh-roi-hidden-lagoon"],
     tourIds: ["4islands-sunset", "hong-lagoons", "phang-nga-uncharted"],
-    image: IMG.hero,
+    image: IMG.hongAerial,
   },
 
   /* ───────────────────────── Pillar 2: best time / monsoon ───────────────────────── */
