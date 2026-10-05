@@ -8,7 +8,7 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
     category: "pillar",
     short: { de: "Alle Inseln", en: "All islands" },
     primaryKeyword: "Krabi Inseln",
-    keywords: ["Krabi Inseln", "Krabi islands", "Inseln bei Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "best islands Krabi"],
+    keywords: ["Krabi Inseln", "Krabi islands", "Inseln bei Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "best islands Krabi", "Krabi Inseln Karte", "welche Inseln bei Krabi", "Krabi Inselhopping privat", "Krabi islands map", "best island tour Krabi"],
     title: {
       de: "Krabi Inseln – der komplette Insider-Guide",
       en: "Krabi Islands – the Complete Insider Guide",
@@ -195,7 +195,7 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
     category: "pillar",
     short: { de: "Reisezeit", en: "Best time" },
     primaryKeyword: "Krabi beste Reisezeit",
-    keywords: ["Krabi beste Reisezeit", "best time to visit Krabi", "Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month"],
+    keywords: ["Krabi beste Reisezeit", "best time to visit Krabi", "Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month", "Krabi Oktober Wetter", "Krabi Hochsaison Dezember", "Krabi Nebensaison Vorteile", "Krabi November Wetter", "Krabi monsoon months"],
     title: {
       de: "Krabi beste Reisezeit: Monsun, Wetter & Inseln",
       en: "Best Time to Visit Krabi: Monsoon, Weather & Seas",
@@ -363,7 +363,7 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
     category: "pillar",
     short: { de: "Insel-Hopping", en: "Island hopping" },
     primaryKeyword: "Krabi Insel-Hopping",
-    keywords: ["Krabi Insel-Hopping", "Krabi island hopping", "Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour"],
+    keywords: ["Krabi Insel-Hopping", "Krabi island hopping", "Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour", "Inselhopping Krabi Kosten privat", "Krabi Island Hopping Route 4 Islands", "Krabi Inselhopping Dauer", "Krabi island hopping tips", "private vs group island hopping Krabi"],
     title: {
       de: "Krabi Insel-Hopping planen: Routen, Zeiten, Boote",
       en: "Krabi Island Hopping: Routes, Timing & Boats",

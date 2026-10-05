@@ -21,6 +21,11 @@ export const MOVIE_ARTICLES: GuideArticleInput[] = [
       "movies filmed in Krabi",
       "Krabi film locations",
       "Der Mann mit dem goldenen Colt Drehort",
+      "Mann mit dem goldenen Colt Drehort",
+      "Krabi Filmkulisse",
+      "The Beach Drehort Maya Bay",
+      "Man with the Golden Gun island",
+      "Krabi movie locations tour"
     ],
     title: {
       de: "Filme in Krabi gedreht: James Bond, The Beach & mehr",
@@ -102,14 +107,14 @@ export const MOVIE_ARTICLES: GuideArticleInput[] = [
             "Anreise: per Boot; ein Tagesausflug mit dem Speedboat ab Ao Nang ist gut machbar",
             "Beste Zeit: früh am Morgen oder später Nachmittag – mittags ist es am vollsten",
             "Regel: Koh Tapu nicht anfahren, Abstand halten",
-            "Eintritt: Nationalparkgebühr, in der Regel pro Person; bei unseren Touren ist sie enthalten",
+            "Eintritt: Nationalparkgebühr, in der Regel pro Person; bei mehreren unserer Touren laut Leistungsliste enthalten, sonst bei der Anfrage klären",
           ],
           en: [
             "Location: Phang Nga Bay, Ao Phang Nga National Park",
             "Getting there: by boat; a day trip by speedboat from Ao Nang is quite doable",
             "Best time: early in the morning or late afternoon – midday is busiest",
             "Rule: do not approach Koh Tapu, keep your distance",
-            "Entry: national park fee, usually per person; included on our tours",
+            "Entry: national park fee, usually per person; included on several of our tours according to the inclusions list, otherwise confirmed on request",
           ],
         },
         tip: {

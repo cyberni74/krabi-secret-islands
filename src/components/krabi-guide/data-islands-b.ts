@@ -8,7 +8,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Roi", en: "Koh Roi" },
     primaryKeyword: "Koh Roi",
-    keywords: ["Koh Roi", "Koh Roi Lagune", "Koh Roi hidden lagoon", "Phang Nga Bucht Geheimtipp", "Koh Roi Krabi", "secret lagoon Krabi"],
+    keywords: ["Koh Roi", "Koh Roi Lagune", "Koh Roi hidden lagoon", "Phang Nga Bucht Geheimtipp", "Koh Roi Krabi", "secret lagoon Krabi", "Roi Island lagoon", "versteckte Lagune Krabi Boot", "Koh Roi Zugang Flut", "Koh Roi Drohnenfoto"],
     title: {
       de: "Koh Roi: die versteckte Lagune der Phang Nga Bay",
       en: "Koh Roi: the Hidden Lagoon of Phang Nga Bay",
@@ -147,7 +147,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Kudu & Koh Nok", en: "Koh Kudu & Koh Nok" },
     primaryKeyword: "Koh Kudu",
-    keywords: ["Koh Kudu", "Koh Kudu Yai", "Koh Nok", "Koh Kudu Lagune", "Phang Nga Bay islands", "ruhige Inseln Krabi"],
+    keywords: ["Koh Kudu", "Koh Kudu Yai", "Koh Nok", "Koh Kudu Lagune", "Phang Nga Bay islands", "ruhige Inseln Krabi", "Koh Kudu Höhle", "Koh Kudu Krabi Boot", "Kudu Island", "Koh Nok Krabi", "ruhige Insel Krabi"],
     title: {
       de: "Koh Kudu & Koh Nok: stille Inseln der Phang Nga",
       en: "Koh Kudu & Koh Nok: Quiet Islands of Phang Nga",
@@ -281,7 +281,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "Phi Phi & Maya Bay", en: "Phi Phi & Maya Bay" },
     primaryKeyword: "Phi Phi early morning",
-    keywords: ["Phi Phi early morning", "Maya Bay ohne Menschen", "Phi Phi Tour ab Krabi", "Maya Bay Regeln", "Pileh Lagoon", "Bamboo Island"],
+    keywords: ["Phi Phi early morning", "Maya Bay ohne Menschen", "Phi Phi Tour ab Krabi", "Maya Bay Regeln", "Pileh Lagoon", "Bamboo Island", "Maya Bay offen", "Maya Bay Wiedereröffnung", "Pileh Lagoon früh", "Phi Phi Speedboot privat", "Phi Phi Tagestour ab Ao Nang"],
     title: {
       de: "Phi Phi & Maya Bay früh morgens: Insider-Guide",
       en: "Phi Phi & Maya Bay Early Morning: Insider Guide",
@@ -424,7 +424,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Rok & Koh Haa", en: "Koh Rok & Koh Haa" },
     primaryKeyword: "Koh Rok Schnorcheln",
-    keywords: ["Koh Rok Schnorcheln", "Koh Rok snorkeling", "Koh Haa", "Koh Rok Nai", "Koh Rok Nok", "Mu Ko Lanta Nationalpark"],
+    keywords: ["Koh Rok Schnorcheln", "Koh Rok snorkeling", "Koh Haa", "Koh Rok Nai", "Koh Rok Nok", "Mu Ko Lanta Nationalpark", "Koh Haa Lagune", "Koh Rok Saison geöffnet", "Koh Rok Sperrzeit Mai Oktober", "Koh Rok Tagestour ab Krabi", "Koh Rok Schildkröten"],
     title: {
       de: "Koh Rok & Koh Haa: Schnorchel-Guide ab Krabi",
       en: "Koh Rok & Koh Haa: Snorkelling Guide from Krabi",
@@ -556,7 +556,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     category: "island",
     short: { de: "James Bond Island", en: "James Bond Island" },
     primaryKeyword: "James Bond Island ab Krabi",
-    keywords: ["James Bond Island ab Krabi", "James Bond Island tour from Krabi", "Phang Nga Bay", "Khao Phing Kan", "Koh Panyee", "Koh Tapu"],
+    keywords: ["James Bond Island ab Krabi", "James Bond Island tour from Krabi", "Phang Nga Bay", "Khao Phing Kan", "Koh Panyee", "Koh Tapu", "Khao Phing Kan Eintritt", "James Bond Island privat", "Phang Nga Bay private tour", "Koh Panyee Mittagessen", "James Bond Island early morning"],
     title: {
       de: "James Bond Island ab Krabi: Phang Nga Bay Guide",
       en: "James Bond Island from Krabi: Phang Nga Bay Guide",

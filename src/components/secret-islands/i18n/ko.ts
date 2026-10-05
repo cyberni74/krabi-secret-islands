@@ -107,8 +107,6 @@ const dict: Record<string, string> = {
   "Mein Freund hat mir in der Lagune von Koh Roi einen Antrag gemacht – die Drohne hat alles gefilmt. Diese Aufnahmen sind unbezahlbar. Danke für die perfekte Organisation!": "남자친구가 Koh Roi 라군에서 프러포즈했는데, 드론이 모든 순간을 담아 줬어요. 그 영상은 값을 매길 수 없어요. 완벽하게 준비해 주셔서 감사합니다!",
   "Freunde · 4 Personen": "친구 · 4명",
   "Wir waren um 8 Uhr allein in der Hong-Lagune, während die Gruppenboote erst um 11 kamen. Absolut jeden Baht wert.": "오전 8시에 Hong Lagoon을 저희끼리 독차지했어요. 단체 보트는 11시에야 도착하더라고요. 한 푼도 아깝지 않았어요.",
-  "Krabi Secret Islands – Private Speedboat-Touren für max. 5 Gäste": "Krabi Secret Islands – 최대 5인 프라이빗 스피드보트 투어",
-  "Private Speedboat-Touren ab Ao Nang, Krabi, für max. 5 Gäste: Koh Roi, Koh Kudu, Hong Island, 4-Islands Sunset & Angeltouren. Wunschtermin anfragen.": "끄라비 Ao Nang 출발 최대 5인 프라이빗 스피드보트 투어: Koh Roi, Koh Kudu, Hong Island, 4-Islands 선셋 & 낚시 투어. 원하시는 날짜를 문의하세요.",
   "Früh": "이른 아침",
   "Mittag": "한낮",
   "Abend": "저녁",
@@ -637,6 +635,8 @@ const dict: Record<string, string> = {
   "Kinder werden auf harten Bänken schnell unruhig, und für ältere Gäste wird schon der Einstieg über eine wackelige Bordwand zur Herausforderung. Bei uns gibt es Schatten, bequeme Sessel, Platz für eine Pause und eine Crew, die beim Ein- und Aussteigen die Hand reicht. Und weil nur Ihre Familie an Bord ist, bestimmen Sie das Tempo – inklusive Mittagsschlaf.": "아이들은 딱딱한 벤치에서 금세 보채고, 어르신들께는 흔들리는 뱃전을 넘어 타는 것조차 부담이 됩니다. 저희 배에는 그늘과 편안한 의자, 쉴 공간이 있고, 승하선 때 손을 내밀어 주는 크루가 있습니다. 가족만 탑승하니 속도는 여러분이 정하세요. 낮잠 시간도 포함입니다.",
   "Schatten & Sessel – Platz zum Ausruhen": "그늘과 의자 – 편히 쉴 공간",
   "Schnellzugriff": "빠른 메뉴",
+  "Krabi Secret Islands: Private Speedboot-Touren ab Ao Nang": "끄라비 시크릿 아일랜드: 아오낭 출발 프라이빗 스피드보트 투어",
+  "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.": "아오낭 출발 프라이빗 스피드보트 투어, 최대 5명: Koh Roi, 홍 아일랜드, 선셋 디너, 플랑크톤, 낚시 투어. 보트 1대 기준 요금, 원하시는 날짜를 문의하세요.",
 };
 
 export default dict;

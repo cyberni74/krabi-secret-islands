@@ -8,7 +8,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Schnorcheln", en: "Snorkelling" },
     primaryKeyword: "Schnorcheln Krabi",
-    keywords: ["Schnorcheln Krabi", "Krabi snorkeling", "beste Schnorchelspots Krabi", "best snorkeling Krabi", "Koh Rok snorkeling", "Krabi reef-safe sunscreen"],
+    keywords: ["Schnorcheln Krabi", "Krabi snorkeling", "beste Schnorchelspots Krabi", "best snorkeling Krabi", "Koh Rok snorkeling", "Krabi reef-safe sunscreen", "Schnorcheln Krabi Anfänger", "Krabi Schnorchelausrüstung kostenlos", "snorkeling Krabi turtles", "beste Zeit Schnorcheln Krabi", "Krabi snorkel private boat"],
     title: {
       de: "Schnorcheln in Krabi: die besten Spots",
       en: "Krabi Snorkeling: the Best Spots & Insider Tips",
@@ -169,7 +169,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Mit Kindern", en: "With kids" },
     primaryKeyword: "Krabi mit Kindern",
-    keywords: ["Krabi mit Kindern", "Krabi with kids", "Krabi Familienurlaub", "family boat tour Krabi", "Ao Nang mit Kindern", "Schnorcheln Krabi"],
+    keywords: ["Krabi mit Kindern", "Krabi with kids", "Krabi Familienurlaub", "family boat tour Krabi", "Ao Nang mit Kindern", "Schnorcheln Krabi", "Krabi Kinder Bootstour Sicherheit", "Schwimmwesten Kinder Boot", "Krabi family speedboat", "Krabi mit Baby", "Krabi Teenager Aktivitäten"],
     title: {
       de: "Krabi mit Kindern: Inseln, Boote & Familientipps",
       en: "Krabi with Kids: Islands, Boats & Family Tips",
@@ -310,7 +310,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Packliste", en: "Packing list" },
     primaryKeyword: "Packliste Bootstour Thailand",
-    keywords: ["Packliste Bootstour Thailand", "what to bring boat trip Krabi", "Krabi boat trip tips", "riffschonende Sonnencreme Thailand", "Nationalpark Regeln Krabi", "Krabi snorkeling"],
+    keywords: ["Packliste Bootstour Thailand", "what to bring boat trip Krabi", "Krabi boat trip tips", "riffschonende Sonnencreme Thailand", "Nationalpark Regeln Krabi", "Krabi snorkeling", "was mitnehmen Bootstour Thailand", "Reef-safe sunscreen Thailand", "wasserdichte Tasche Boot", "Krabi boat tour what to wear", "Trinkgeld Kapitän Thailand"],
     title: {
       de: "Packliste & Etikette für Bootstage in Krabi",
       en: "Krabi Boat Day: Packing List & Etiquette",
@@ -452,7 +452,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Foto & Drohne", en: "Photo & drone" },
     primaryKeyword: "Krabi Fotospots",
-    keywords: ["Krabi Fotospots", "Krabi photo spots", "Krabi drone spots", "Instagram Spots Krabi", "Drohne Thailand Regeln", "Krabi sunset spot"],
+    keywords: ["Krabi Fotospots", "Krabi photo spots", "Krabi drone spots", "Instagram Spots Krabi", "Drohne Thailand Regeln", "Krabi sunset spot", "Drohnenfotos Krabi", "Drohnen Genehmigung Thailand", "Krabi aerial photos", "Sonnenuntergang Fotos Boot", "Krabi Instagram Inseln"],
     title: {
       de: "Krabi Fotospots: die besten Foto- & Drohnenorte",
       en: "Krabi Photo Spots: Best Places for Photo & Drone",
@@ -588,7 +588,7 @@ export const INSIDER_ARTICLES_B: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Geheime Lagunen", en: "Secret lagoons" },
     primaryKeyword: "Krabi Geheimtipps Strände",
-    keywords: ["Krabi Geheimtipps Strände", "secret beaches Krabi", "hidden lagoon Krabi", "Krabi Lagunen", "Krabi hidden gems", "Schnorcheln Krabi"],
+    keywords: ["Krabi Geheimtipps Strände", "secret beaches Krabi", "hidden lagoon Krabi", "Krabi Lagunen", "Krabi hidden gems", "Schnorcheln Krabi", "versteckte Strände Krabi", "Krabi Geheimtipps Boot", "hidden beaches Krabi by boat", "Krabi Lagune Hong", "Krabi beaches without crowds"],
     title: {
       de: "Krabi Geheimtipps: versteckte Strände & Lagunen",
       en: "Secret Beaches & Hidden Lagoons in Krabi",

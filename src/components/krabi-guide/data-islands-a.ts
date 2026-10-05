@@ -8,7 +8,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Poda", en: "Koh Poda" },
     primaryKeyword: "Koh Poda",
-    keywords: ["Koh Poda", "Poda Island", "Koh Poda Krabi", "Koh Poda Schnorcheln", "Poda Island sunset", "Ao Nang Insel"],
+    keywords: ["Koh Poda", "Poda Island", "Koh Poda Krabi", "Koh Poda Schnorcheln", "Poda Island sunset", "Ao Nang Insel", "Poda Island Strand", "Koh Poda Sonnenuntergang", "Poda Island snorkeling"],
     title: {
       de: "Koh Poda: Insider-Guide zur Postkarteninsel",
       en: "Koh Poda: Insider Guide to Krabi’s Postcard Isle",
@@ -149,7 +149,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     category: "island",
     short: { de: "Chicken Island & Tup", en: "Chicken & Tup" },
     primaryKeyword: "Tup Sandbank Ebbe",
-    keywords: ["Tup Sandbank Ebbe", "Chicken Island Krabi", "Tup Island sandbar", "Koh Tup", "Koh Kai Krabi", "Thale Waek"],
+    keywords: ["Tup Sandbank Ebbe", "Chicken Island Krabi", "Tup Island sandbar", "Koh Tup", "Koh Kai Krabi", "Thale Waek", "Chicken Island Aussicht Felsen", "Tup Island sandbank low tide", "Koh Gai Krabi", "Tup Island Ebbe Uhrzeit"],
     title: {
       de: "Tup-Sandbank & Chicken Island: Ebbe-Guide",
       en: "Tup Sandbar & Chicken Island: Low-Tide Guide",
@@ -281,7 +281,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     category: "island",
     short: { de: "Railay & Phra Nang", en: "Railay & Phra Nang" },
     primaryKeyword: "Railay Phra Nang Cave",
-    keywords: ["Railay Phra Nang Cave", "Phra Nang Beach", "Railay Beach Krabi", "Phra Nang Lagoon", "Railay Viewpoint", "Railay Klettern"],
+    keywords: ["Railay Phra Nang Cave", "Phra Nang Beach", "Railay Beach Krabi", "Phra Nang Lagoon", "Railay Viewpoint", "Railay Klettern", "Phra Nang Beach Boot", "Princess Cave Krabi", "Railay Beach per Boot", "Railay Lagoon Hike", "Phra Nang Cave Beach sunset"],
     title: {
       de: "Railay & Phra Nang Cave Beach: Insider-Guide",
       en: "Railay & Phra Nang Cave Beach: Insider Guide",
@@ -420,7 +420,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     category: "island",
     short: { de: "Koh Hong", en: "Hong Island" },
     primaryKeyword: "Hong Island Krabi",
-    keywords: ["Hong Island Krabi", "Koh Hong Krabi", "Hong Lagune", "Hong Island Viewpoint", "Than Bok Khorani Nationalpark", "Hong Island Tour"],
+    keywords: ["Hong Island Krabi", "Koh Hong Krabi", "Hong Lagune", "Hong Island Viewpoint", "Than Bok Khorani Nationalpark", "Hong Island Tour", "Koh Hong Krabi Eintritt", "Hong Island Lagoon", "Hong Island vs Koh Hong Phang Nga", "Hong Island Tour privat"],
     title: {
       de: "Hong Island Krabi: Lagune, Viewpoint & Timing",
       en: "Hong Island Krabi: Lagoon, Viewpoint & Timing",
@@ -559,7 +559,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     category: "island",
     short: { de: "Lao Lading & Pakbia", en: "Lao Lading & Pakbia" },
     primaryKeyword: "Koh Lao Lading",
-    keywords: ["Koh Lao Lading", "Koh Pakbia", "Lao Lading Island", "Hong Archipel", "Krabi Geheimtipp Strand", "Pakbia snorkeling"],
+    keywords: ["Koh Lao Lading", "Koh Pakbia", "Lao Lading Island", "Hong Archipel", "Krabi Geheimtipp Strand", "Pakbia snorkeling", "Koh Pakbia Sandbank", "Hong Islands Nationalpark Eintritt", "Koh Lading Strand", "Hong archipelago private boat"],
     title: {
       de: "Koh Lao Lading & Koh Pakbia: Hong-Geheimtipps",
       en: "Koh Lao Lading & Koh Pakbia: Hong’s Hidden Gems",

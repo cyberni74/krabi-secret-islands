@@ -107,8 +107,6 @@ const dict: Record<string, string> = {
   "Mein Freund hat mir in der Lagune von Koh Roi einen Antrag gemacht – die Drohne hat alles gefilmt. Diese Aufnahmen sind unbezahlbar. Danke für die perfekte Organisation!": "男友在 Koh Roi 的泻湖里向我求婚——无人机记录下了一切。这段影像无价。感谢你们完美的安排！",
   "Freunde · 4 Personen": "好友 · 4 人",
   "Wir waren um 8 Uhr allein in der Hong-Lagune, während die Gruppenboote erst um 11 kamen. Absolut jeden Baht wert.": "早上 8 点，Hong 泻湖只有我们，团队船 11 点才到。每一铢都花得值。",
-  "Krabi Secret Islands – Private Speedboat-Touren für max. 5 Gäste": "Krabi Secret Islands – 最多 5 位宾客的私人快艇之旅",
-  "Private Speedboat-Touren ab Ao Nang, Krabi, für max. 5 Gäste: Koh Roi, Koh Kudu, Hong Island, 4-Islands Sunset & Angeltouren. Wunschtermin anfragen.": "从甲米 Ao Nang 出发的私人快艇之旅，最多 5 位宾客：Koh Roi、Koh Kudu、Hong Island、4-Islands 日落之旅及海钓之旅。立即预约心仪日期。",
   "Früh": "清晨",
   "Mittag": "正午",
   "Abend": "傍晚",
@@ -637,6 +635,8 @@ const dict: Record<string, string> = {
   "Kinder werden auf harten Bänken schnell unruhig, und für ältere Gäste wird schon der Einstieg über eine wackelige Bordwand zur Herausforderung. Bei uns gibt es Schatten, bequeme Sessel, Platz für eine Pause und eine Crew, die beim Ein- und Aussteigen die Hand reicht. Und weil nur Ihre Familie an Bord ist, bestimmen Sie das Tempo – inklusive Mittagsschlaf.": "孩子在硬板凳上很快就会坐不住，而对年长宾客来说，单是翻过摇晃的船舷上船都是挑战。在我们的船上，有阴凉、有舒适的座椅、有休息空间，还有船员在上下船时伸手相扶。而且船上只有您一家，节奏由您决定——午睡时间也包括在内。",
   "Schatten & Sessel – Platz zum Ausruhen": "阴凉与座椅——尽享休憩空间",
   "Schnellzugriff": "快捷入口",
+  "Krabi Secret Islands: Private Speedboot-Touren ab Ao Nang": "甲米 Secret Islands：奥南出发的私人快艇之旅",
+  "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.": "私人快艇之旅 | 从奥南出发，最多 5 位宾客：Koh Roi、洪岛（Hong Island）、日落晚餐、夜光浮游生物与钓鱼之旅。按船计价，欢迎咨询您的日期。",
 };
 
 export default dict;

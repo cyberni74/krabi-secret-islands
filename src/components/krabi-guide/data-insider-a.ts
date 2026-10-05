@@ -11,7 +11,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Ohne Massen", en: "Beat the crowds" },
     primaryKeyword: "Krabi ohne Touristenmassen",
-    keywords: ["Krabi ohne Touristenmassen", "Krabi avoid crowds", "Krabi Geheimtipps", "beste Uhrzeit Inseltour Krabi", "Krabi quiet islands", "Phi Phi early morning"],
+    keywords: ["Krabi ohne Touristenmassen", "Krabi avoid crowds", "Krabi Geheimtipps", "beste Uhrzeit Inseltour Krabi", "Krabi quiet islands", "Phi Phi early morning", "Krabi Inseln leer", "beste Zeit Hong Island", "Krabi Nebensaison weniger Touristen", "Krabi early morning tour", "Krabi crowds tour boats 11 am"],
     title: {
       de: "Krabi ohne Touristenmassen: das Timing-Geheimnis",
       en: "Krabi Without the Crowds: the Timing Secret",
@@ -158,7 +158,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Gezeiten", en: "Tides" },
     primaryKeyword: "Krabi Gezeiten",
-    keywords: ["Krabi Gezeiten", "Krabi tide table", "Ebbe und Flut Krabi", "Tup Sandbank Ebbe", "Springtide Krabi", "Krabi tides islands"],
+    keywords: ["Krabi Gezeiten", "Krabi tide table", "Ebbe und Flut Krabi", "Tup Sandbank Ebbe", "Springtide Krabi", "Krabi tides islands", "Gezeitenkalender Krabi", "Tup Sandbank Ebbe Uhrzeit", "Krabi Springflut", "tide table Ao Nang", "Ebbe Flut Railay"],
     title: {
       de: "Krabi Gezeiten: Ebbe & Flut für Inseltouren",
       en: "Krabi Tides Explained: Low & High Tide Guide",
@@ -299,7 +299,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Leuchtendes Plankton", en: "Glowing plankton" },
     primaryKeyword: "leuchtendes Plankton Krabi",
-    keywords: ["leuchtendes Plankton Krabi", "Krabi bioluminescent plankton", "Biolumineszenz Krabi", "Krabi night boat tour", "Plankton Tour Ao Nang", "glowing plankton Thailand"],
+    keywords: ["leuchtendes Plankton Krabi", "Krabi bioluminescent plankton", "Biolumineszenz Krabi", "Krabi night boat tour", "Plankton Tour Ao Nang", "glowing plankton Thailand", "leuchtendes Plankton Krabi Saison", "Neumond Plankton", "Plankton Krabi Speedboot privat", "glowing plankton Krabi months", "Krabi plankton tour private"],
     title: {
       de: "Leuchtendes Plankton Krabi: Nachttour per Speedboat",
       en: "Krabi Bioluminescent Plankton: Private Night Boat",
@@ -462,7 +462,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     category: "insider",
     short: { de: "Angeln", en: "Fishing" },
     primaryKeyword: "Krabi fishing trip",
-    keywords: ["Krabi fishing trip", "Angeln Krabi", "Krabi Angeltour", "deep sea fishing Krabi", "squid fishing Krabi", "catch and cook Krabi"],
+    keywords: ["Krabi fishing trip", "Angeln Krabi", "Krabi Angeltour", "deep sea fishing Krabi", "squid fishing Krabi", "catch and cook Krabi", "Angeln Krabi Tour privat", "Nachtangeln Tintenfisch Krabi", "fishing charter Krabi", "Krabi trolling"],
     title: {
       de: "Angeln in Krabi: Fischarten, Saison, Catch & Cook",
       en: "Krabi Fishing Trip Guide: Species, Season, Cook",

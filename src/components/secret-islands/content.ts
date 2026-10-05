@@ -1032,11 +1032,11 @@ export const FAQ: { q: L; a: L }[] = [
  */
 export const SEO_META = {
   title: {
-    de: "Krabi Secret Islands – Private Speedboat-Touren für max. 5 Gäste",
-    en: "Krabi Secret Islands – Private Speedboat Tours, Max. 5 Guests",
+    de: "Krabi Secret Islands: Private Speedboot-Touren ab Ao Nang",
+    en: "Krabi Secret Islands: Private Speedboat Tours, Ao Nang",
   },
   description: {
-    de: "Private Speedboat-Touren ab Ao Nang, Krabi, für max. 5 Gäste: Koh Roi, Koh Kudu, Hong Island, 4-Islands Sunset & Angeltouren. Wunschtermin anfragen.",
-    en: "Private speedboat tours from Ao Nang, Krabi, for max. 5 guests: Koh Roi, Koh Kudu, Hong Island, 4-Islands sunset & fishing trips. Request your date.",
+    de: "Private Speedboot-Touren ab Ao Nang für max. 5 Gäste: Koh Roi, Hong Island, Sunset-Dinner, Plankton und Angeltouren. Preis pro Boot, Wunschtermin anfragen.",
+    en: "Private speedboat tours from Ao Nang for max. 5 guests: Koh Roi, Hong Island, sunset dinner, plankton and fishing trips. Price per boat, request your date.",
   },
 };

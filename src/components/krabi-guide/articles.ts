@@ -12,6 +12,10 @@ import { SNORKEL_RELAX } from "./data-snorkel-relax";
 import { EXTRA_SECTIONS } from "./data-extra";
 import { EXTRA_SECTIONS_2 } from "./data-extra2";
 import { MOVIE_ARTICLES } from "./data-movies";
+import { NEW_ARTICLES_D } from "./data-new-d";
+import { NEW_ARTICLES_C } from "./data-new-c";
+import { NEW_ARTICLES_B } from "./data-new-b";
+import { NEW_ARTICLES_A } from "./data-new-a";
 import type { Bi, GuideArticle, GuideArticleInput, GuideCategory, GuideImage, GuideSection } from "./types";
 
 export type { Bi, GuideArticle, GuideCategory, GuideImage, GuideSection } from "./types";
@@ -33,6 +37,17 @@ export const KEYWORD_MAP: {
   note: string;
 }[] = [
   { slug: "krabi-movie-locations-james-bond-the-beach", primary: { de: "Filme gedreht in Krabi", en: "movies filmed in Krabi" }, secondary: ["Drehorte Krabi", "James Bond Island Film", "The Beach Drehort", "Phang Nga Bay movie locations"], intent: ["info"], note: "Insider – film & TV locations, links to Phang Nga and Phi Phi tours." },
+  { slug: "private-boat-charter-krabi-cost", primary: { de: "Private Bootstour Krabi Kosten", en: "private boat tour Krabi cost" }, secondary: ["Krabi Boot privat mieten Preis", "Bootscharter Ao Nang", "private Speedbootcharter Krabi pro Boot", "4 Islands privat Krabi Kosten", "Krabi Inselhopping privat lohnt sich"], intent: ["comm", "trans"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-honeymoon-proposal-private-boat", primary: { de: "Flitterwochen Krabi Bootstour", en: "Krabi honeymoon private boat" }, secondary: ["Heiratsantrag Krabi Boot", "romantische Bootstour Krabi", "Krabi Sunset Dinner privat", "Krabi Paare Tipps", "Krabi leuchtendes Plankton romantisch"], intent: ["comm", "trans"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-sunset-boat-tour-private", primary: { de: "Sunset Tour Krabi privat", en: "Krabi sunset boat tour private" }, secondary: ["Sonnenuntergang Krabi Boot", "Sunset Cruise Krabi", "Ao Nang Sonnenuntergang Boot", "Krabi Sunset Dinner Boot", "Sonnenuntergang Railay Phra Nang"], intent: ["comm", "trans"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "longtail-vs-speedboat-krabi", primary: { de: "Longtail oder Speedboot Krabi", en: "longtail vs speedboat Krabi" }, secondary: ["Longtail Boot Krabi Erfahrung", "Speedboot Krabi privat", "Krabi Bootstour Longtail Speedboat Unterschied", "Longtail Boot Krabi laut nass", "schnellstes Boot Krabi Inseln"], intent: ["comm"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-national-park-fees-islands", primary: { de: "Nationalpark Gebühren Krabi", en: "Krabi national park fees" }, secondary: ["Hong Island Eintritt", "Phi Phi Eintritt Nationalpark", "Nationalpark-Gebühr Phang Nga Bucht", "Eintritt Inseln Krabi Ausländer", "Nationalparkgebühr Bootstour inklusive"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "maya-bay-open-closed-dates", primary: { de: "Ist Maya Bay offen", en: "is Maya Bay open" }, secondary: ["Maya Bay Schließzeit", "Maya Bay Wiedereröffnung 1. Oktober", "Maya Bay Regeln Schwimmen", "Maya Bay Eintritt", "Maya Bay von Krabi aus"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-boat-tours-rainy-season", primary: { de: "Krabi Bootstour Regenzeit", en: "Krabi boat tour rainy season" }, secondary: ["Krabi Monsun Bootstour", "Inselhopping Krabi Nebensaison", "Bootstour abgesagt Krabi Wetter", "Nationalpark Sperrung Krabi Mai Oktober", "Krabi boat tours monsoon"], intent: ["info", "comm"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-itinerary-3-5-7-days", primary: { de: "Krabi Reiseplan 5 Tage", en: "Krabi itinerary 5 days" }, secondary: ["Krabi 3 Tage Route", "Krabi 7 Tage Reiseplan", "Krabi wie viele Tage", "Krabi Rundreise Ao Nang Railay Inseln", "Krabi 3 days itinerary"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-boat-seasickness-tips", primary: { de: "Seekrank Bootstour Krabi", en: "seasick Krabi boat tour" }, secondary: ["Seekrankheit Speedboot Thailand", "Seekrank Phi Phi Tour", "was hilft gegen Seekrankheit Bootstour", "bester Sitzplatz Speedboot", "Seekrankheit Kinder Bootstour"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "ao-nang-vs-railay-where-to-stay", primary: { de: "Ao Nang oder Railay", en: "Ao Nang vs Railay" }, secondary: ["Krabi wo übernachten", "Railay Beach Unterkunft", "Ao Nang Hotels Lage", "Krabi Unterkunft für Inselhopping", "Railay nur per Boot erreichbar"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "phi-phi-don-vs-phi-phi-leh", primary: { de: "Phi Phi Don oder Leh", en: "Phi Phi Don vs Phi Phi Leh" }, secondary: ["Phi Phi Unterschied Don Leh", "Phi Phi Tagesausflug ab Krabi", "Ton Sai Bay Loh Dalum", "Pileh Lagoon Viking Cave", "Phi Phi Übernachten oder Tagestour"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
   { slug: "krabi-islands-insider-guide", primary: { de: "Krabi Inseln", en: "Krabi islands" }, secondary: ["Inseln bei Krabi", "best islands Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "Schnorcheln Krabi"], intent: ["info", "comm"], note: "Pillar/hub – links to every island page." },
   { slug: "best-time-to-visit-krabi", primary: { de: "Krabi beste Reisezeit", en: "best time to visit Krabi" }, secondary: ["Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month", "Maya Bay closure"], intent: ["info"], note: "Pillar – seasonal planning; feeds tour bookings by month." },
   { slug: "krabi-island-hopping-planner", primary: { de: "Krabi Insel-Hopping", en: "Krabi island hopping" }, secondary: ["Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour"], intent: ["comm", "trans"], note: "Pillar – closest to booking intent (boat choice)." },
@@ -120,6 +135,10 @@ export const ARTICLES: GuideArticle[] = [
   ...INSIDER_ARTICLES_A,
   ...INSIDER_ARTICLES_B,
   ...MOVIE_ARTICLES,
+  ...NEW_ARTICLES_A,
+  ...NEW_ARTICLES_B,
+  ...NEW_ARTICLES_C,
+  ...NEW_ARTICLES_D,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));
