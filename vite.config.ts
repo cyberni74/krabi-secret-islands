@@ -12,7 +12,25 @@ export default defineConfig(({ command, isPreview }) => ({
     tailwindcss(),
     tanstackStart(),
     // Vercel output only for production builds / preview.
-    ...(command === "build" || isPreview ? [nitro({ preset: "vercel" })] : []),
+    ...(command === "build" || isPreview
+      ? [
+          nitro({
+            preset: "vercel",
+            routeRules: {
+              "/**": {
+                headers: {
+                  "x-content-type-options": "nosniff",
+                  "referrer-policy": "strict-origin-when-cross-origin",
+                  "x-frame-options": "SAMEORIGIN",
+                  "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+                },
+              },
+              "/images/**": { headers: { "cache-control": "public, max-age=604800, stale-while-revalidate=86400" } },
+              "/anfragen": { headers: { "x-robots-tag": "noindex, nofollow", "cache-control": "no-store" } },
+            },
+          }),
+        ]
+      : []),
     viteReact(),
   ],
 }));
