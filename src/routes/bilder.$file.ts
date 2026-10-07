@@ -11,6 +11,13 @@ export const Route = createFileRoute("/bilder/$file")({
   server: {
     handlers: {
       GET: async ({ params }) => {
+        // Retired Higgsfield mark. Keep the old SEO URL pointed at the owner lockup.
+        if (params.file === "krabi-secret-islands-logo.png") {
+          return new Response(null, {
+            status: 301,
+            headers: { location: "/brand/new/logo-800w.png", "cache-control": "public, max-age=86400" },
+          });
+        }
         const renamed = RENAMED_IMAGES[params.file];
         if (renamed) {
           return new Response(null, {

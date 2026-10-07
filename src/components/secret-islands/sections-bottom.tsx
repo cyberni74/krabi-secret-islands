@@ -28,7 +28,7 @@ import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "../krabi-guid
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink } from "./store";
-import { BrandMark, SmartImage, WhatsAppIcon } from "./ui";
+import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 /* ───────────────────────── Guide (blog / SEO) ───────────────────────── */
 
@@ -609,12 +609,9 @@ export function Footer() {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-si-cyan/70 to-transparent" />
       <Assemble className="mx-auto grid max-w-6xl gap-10 px-4 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.15fr_0.75fr]" stagger={0.08}>
         <AssembleItem>
-          <p className="flex items-center gap-2.5 text-lg font-extrabold text-white">
-            <BrandMark className="size-11" />
-            <span>
-              Krabi <span className="text-si-cyan">Secret</span> Islands
-            </span>
-          </p>
+          <Link to="/" search={keepLang} className="inline-flex rounded-2xl bg-white p-1.5 shadow-[0_10px_30px_-18px_rgb(0_0_0/0.8)]">
+            <BrandLogo alt={BRAND.name} sizes="160px" className="w-36 sm:w-40" />
+          </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">{t(UI.footerTagline)}</p>
           <div className="mt-5 flex flex-wrap gap-2">
             <span className="flex items-center gap-1.5 rounded-full bg-si-gold/10 px-3 py-1.5 text-xs font-bold text-si-gold ring-1 ring-si-gold/30">

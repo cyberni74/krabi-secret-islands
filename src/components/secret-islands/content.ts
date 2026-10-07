@@ -21,8 +21,8 @@ export const BRAND = {
   location: { de: "Ao Nang / Krabi, Thailand", en: "Ao Nang / Krabi, Thailand" },
 };
 
-/** Logo mark generated with Higgsfield (GPT Image 2.5). Move into /public/brand/ for production. */
-export const LOGO_URL = "/icons/icon-512.png";
+/** Owner-supplied lockup (transparent PNG). Square app icon derived from the round scene: /icons/icon-512.png. */
+export const LOGO_URL = "/brand/new/logo-800w.png";
 
 /** Higgsfield illustration: overcrowded longtail boat (used in the Longtail-vs-Speedboat story). Move to /public/images/ for production. */
 export const LONGTAIL_CROWD_IMG = {

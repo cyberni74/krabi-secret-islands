@@ -34,7 +34,6 @@ export const SEO_IMAGES: Record<string, string> = {
   "phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp": "hf_20261005_024039_f5f9803e-c31e-41ac-91d5-777bd5f9c2fc.png",
   "koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp": "hf_20261005_024039_33dae3e3-0a32-4454-9591-5f67a2307f41.png",
   "pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp": "hf_20261005_024039_deef18ac-5467-4a99-b244-f30355bbf0bf.png",
-  "krabi-secret-islands-logo.png": "hf_20261004_044905_49752f2a-c380-4b9a-a061-294ac851b827.png",
 };
 
 /**

@@ -11,7 +11,7 @@ import { BookingModal } from "../secret-islands/booking";
 import { BottomBar, Header } from "../secret-islands/sections-top";
 import { BRAND, altFor, type Lang, type Tour } from "../secret-islands/content";
 import { AuroraBackground, GlassCard, ScrollProgress, btn } from "../secret-islands/fx";
-import { BrandMark, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
+import { BrandLogo, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "./footer-links";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
@@ -259,9 +259,8 @@ function GuideFooter() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[1.2fr_3fr]">
           <div>
-            <Link to="/" search={keepLang} className="inline-flex items-center gap-2.5">
-              <BrandMark className="size-10" />
-              <span className="text-lg font-extrabold">{BRAND.name}</span>
+            <Link to="/" search={keepLang} className="inline-flex rounded-2xl bg-white p-1.5">
+              <BrandLogo alt={BRAND.name} sizes="160px" className="w-36 sm:w-40" />
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-300">
               {t({

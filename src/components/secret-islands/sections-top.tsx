@@ -22,7 +22,7 @@ import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, Marquee, ScrollSc
 import { useSwitchLang } from "./lang";
 import { keepLang } from "./lang-context";
 import { scrollToId, useSI, useTx, waLink } from "./store";
-import { BrandMark, SmartImage, WhatsAppIcon } from "./ui";
+import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 const NAV = [
   { id: "touren", label: UI.navTours },
@@ -66,23 +66,26 @@ export function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "pointer-events-auto mx-auto flex items-center gap-2 rounded-full pl-2 pr-2 transition-all duration-500 sm:gap-3",
+          "pointer-events-auto mx-auto flex items-center gap-2 rounded-full py-1 pl-1.5 pr-2 transition-all duration-500 sm:gap-3",
           scrolled
-            ? "si-glass-strong h-14 max-w-6xl shadow-[0_20px_60px_-20px_rgb(0_0_0/0.8)]"
-            : "si-glass h-16 max-w-6xl",
+            ? "si-glass-strong max-w-6xl shadow-[0_20px_60px_-20px_rgb(0_0_0/0.8)]"
+            : "si-glass max-w-6xl py-1.5",
         )}
       >
         <Link
           to="/"
           search={keepLang}
           hash={onLanding ? "top" : undefined}
-          className="flex min-w-0 items-center gap-2 pl-1 text-white"
-          aria-label={BRAND.name}
+          className="flex min-w-0 shrink-0 items-center rounded-2xl bg-white p-1 shadow-[0_8px_24px_-12px_rgb(0_0_0/0.55)]"
         >
-          <BrandMark className={cn("transition-all duration-500", scrolled ? "size-9" : "size-10")} />
-          <span className="hidden min-w-0 text-[13px] font-extrabold leading-[1.1] tracking-tight min-[360px]:block min-[360px]:text-[14px] sm:text-base">
-            Krabi <span className="si-text-gradient">Secret</span> Islands
-          </span>
+          <BrandLogo
+            alt={BRAND.name}
+            sizes="(min-width: 640px) 144px, 88px"
+            className={cn(
+              "w-[5.5rem] max-w-[24vw] transition-all duration-500 sm:max-w-none",
+              scrolled ? "w-14 sm:w-20" : "sm:w-36",
+            )}
+          />
         </Link>
 
         <nav className="ml-4 hidden items-center gap-0.5 lg:flex">

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Anchor, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -105,36 +105,42 @@ export function SmartImage({
   );
 }
 
-/** Brand logo mark; falls back to an anchor tile if the image can't load. */
-export function BrandMark({ className }: { className?: string }) {
+/** Owner lockup. 400w is enough for the header; 800w covers retina and the footer. */
+const BRAND_LOGO_WEBP = "/brand/new/logo-400w.webp 400w, /brand/new/logo-800w.webp 800w";
+const BRAND_LOGO_PNG = "/brand/new/logo-400w.png 400w, /brand/new/logo-800w.png 800w";
+
+export function BrandLogo({
+  className,
+  alt = "Krabi Secret Islands",
+  sizes = "144px",
+}: {
+  className?: string;
+  alt?: string;
+  sizes?: string;
+}) {
   const [failed, setFailed] = useState(false);
-  const ref = useRef<HTMLImageElement>(null);
-  useEffect(() => {
-    const img = ref.current;
-    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
-  }, []);
   if (failed) {
     return (
-      <span
-        className={cn(
-          "grid shrink-0 place-items-center rounded-xl bg-gradient-to-br from-si-cyan to-si-cyan-dark text-white shadow-lg shadow-si-cyan/30",
-          className,
-        )}
-      >
-        <Anchor className="size-[55%]" strokeWidth={2.2} />
+      <span className={cn("inline-flex items-center px-2 text-sm font-extrabold leading-tight text-[#0b3a5b]", className)}>
+        {alt}
       </span>
     );
   }
   return (
-    <img
-      ref={ref}
-      src="/favicon.svg"
-      alt=""
-      width={40}
-      height={40}
-      onError={() => setFailed(true)}
-      className={cn("shrink-0 object-contain", className)}
-    />
+    <picture>
+      <source type="image/webp" srcSet={BRAND_LOGO_WEBP} sizes={sizes} />
+      <img
+        src="/brand/new/logo-800w.png"
+        srcSet={BRAND_LOGO_PNG}
+        sizes={sizes}
+        alt={alt}
+        width={800}
+        height={751}
+        decoding="async"
+        onError={() => setFailed(true)}
+        className={cn("block h-auto max-w-full object-contain", className)}
+      />
+    </picture>
   );
 }
 
