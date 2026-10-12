@@ -80,11 +80,8 @@ export function Header() {
         >
           <BrandLogo
             alt={BRAND.name}
-            sizes="(min-width: 640px) 144px, 88px"
-            className={cn(
-              "w-[5.5rem] max-w-[24vw] transition-all duration-500 sm:max-w-none",
-              scrolled ? "w-14 sm:w-20" : "sm:w-36",
-            )}
+            sizes="(min-width: 640px) 96px, 64px"
+            className={cn("transition-all duration-500", scrolled ? "w-11 sm:w-14" : "w-14 sm:w-20")}
           />
         </Link>
 
