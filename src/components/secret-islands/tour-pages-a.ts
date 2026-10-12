@@ -59,6 +59,19 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
       },
     ],
     related: ["family-sandbars", "sunset-dinner", "railay-escape"],
+    figure: {
+      src: "/images/karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
+      width: 1536,
+      height: 1024,
+      alt: {
+        de: "Karte der 4 Islands bei Ao Nang, Krabi: Startpunkt Ao Nang, Chicken Island, Tup Island, Koh Poda und Phra Nang Beach/Railay mit Beispielroute und ungefähren Fahrzeiten",
+        en: "Map of the 4 Islands near Ao Nang, Krabi: starting point Ao Nang, Chicken Island, Tup Island, Koh Poda and Phra Nang Beach/Railay with an example route and approximate travel times",
+      },
+      caption: {
+        de: "Die 4 Islands bei Ao Nang mit Beispielroute. Fahrzeiten sind ungefähre Richtwerte, die Reihenfolge richtet sich nach Seegang und Gezeiten.",
+        en: "The 4 Islands near Ao Nang with an example route. Travel times are rough guides, and the order depends on sea conditions and tides (map labels in German).",
+      },
+    },
   },
 
   "plankton-night": {

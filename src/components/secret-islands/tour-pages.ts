@@ -28,6 +28,8 @@ export type TourPageContent = {
   faq: { q: L; a: L }[];
   /** Tour ids of the three related tours. */
   related: string[];
+  /** Optional figure shown under the itinerary (own image file in /public/images). */
+  figure?: { src: string; alt: L; caption?: L; width: number; height: number };
 };
 
 export const TOUR_PAGES: Record<string, TourPageContent> = { ...TOUR_PAGES_A, ...TOUR_PAGES_B };

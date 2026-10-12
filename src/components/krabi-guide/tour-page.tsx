@@ -250,6 +250,19 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
                 text={`${formatHours(tour.hours, lang)} · ${bi(tour.duration, lang)}`}
               />
             </ol>
+            {page.figure ? (
+              <figure className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                <SmartImage
+                  src={page.figure.src}
+                  alt={bi(page.figure.alt, lang)}
+                  width={page.figure.width}
+                  height={page.figure.height}
+                  sizes="(min-width: 1024px) 720px, 100vw"
+                  className="h-auto w-full"
+                />
+                {page.figure.caption ? <figcaption className="px-4 py-3 text-sm leading-relaxed text-slate-300">{bi(page.figure.caption, lang)}</figcaption> : null}
+              </figure>
+            ) : null}
           </section>
 
           <section className="pt-10" aria-labelledby="inklusive">

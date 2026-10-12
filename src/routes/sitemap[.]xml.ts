@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ARTICLES, readyGuideImages, type GuideArticle } from "@/components/krabi-guide/articles";
 import { AERIAL_SHOTS, GALLERY, IMG, LANGS, TOURS, type Lang } from "@/components/secret-islands/content";
 import { GUIDE_PATH, LANDING_PATH, absUrl, htmlLang, pageUrl } from "@/components/secret-islands/seo";
-import { TOURS_PATH, tourPath } from "@/components/secret-islands/tour-pages";
+import { TOUR_PAGES, TOURS_PATH, tourPath } from "@/components/secret-islands/tour-pages";
 import { INFO_PATH } from "@/components/secret-islands/tour-seo";
 import dates from "@/generated/content-dates.json";
 
@@ -49,7 +49,7 @@ function buildSitemap() {
     ...entries(GUIDE_PATH, ["de", "en"], dates.hub, HUB_IMAGES),
     ...entries(TOURS_PATH, ["de", "en"], dates.tours, tourImages()),
     ...entries(INFO_PATH, ["de", "en"], dates.info),
-    ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], dates.tours, [t.image])),
+    ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], dates.tours, [t.image, ...(TOUR_PAGES[t.id]?.figure ? [TOUR_PAGES[t.id].figure!.src] : [])])),
     ...ARTICLES.flatMap((a) => entries(`${GUIDE_PATH}/${a.slug}`, ["de", "en"], (dates.slugs as Record<string, string>)[a.slug] ?? a.updated, articleImages(a))),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
