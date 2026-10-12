@@ -15,6 +15,7 @@ import CONTENT_DATES from "@/generated/content-dates.json";
 import { MOVIE_ARTICLES } from "./data-movies";
 import { NEW_ARTICLES_F } from "./data-new-f";
 import { NEW_ARTICLES_G } from "./data-new-g";
+import { NEW_ARTICLES_H } from "./data-new-h";
 import { NEW_ARTICLES_E } from "./data-new-e";
 import { NEW_ARTICLES_D } from "./data-new-d";
 import { NEW_ARTICLES_C } from "./data-new-c";
@@ -133,6 +134,7 @@ export const ARTICLES: GuideArticle[] = [
   ...NEW_ARTICLES_E,
   ...NEW_ARTICLES_F,
   ...NEW_ARTICLES_G,
+  ...NEW_ARTICLES_H,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));
