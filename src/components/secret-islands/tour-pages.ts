@@ -109,7 +109,13 @@ export function tourFaq(tour: Tour, page: TourPageContent, lang: TourLang): { q:
     lang === "de"
       ? `Die Tour kostet ab ${priceText(tour.price, lang)} pro Boot für bis zu ${MAX_GUESTS} Gäste, nicht pro Person. Enthalten sind: ${included}. ${park}`
       : `The tour costs from ${priceText(tour.price, lang)} per boat for up to ${MAX_GUESTS} guests, not per person. Included: ${included}. ${park}`;
-  return [...items, { q, a }];
+  const times = tourStarts(tour).map((x) => formatTime(x.time, lang)).join(" / ");
+  const startQ = lang === "de" ? "Wo startet die Tour und wie komme ich dorthin?" : "Where does the tour start and how do I get there?";
+  const startA =
+    lang === "de"
+      ? `Die Tour startet wahlweise in Ao Nang oder in Krabi Town (Startzeit ${times}). Vor Ort sind Taxis günstig; den genauen Treffpunkt bestätigen wir Ihnen nach der Anfrage.`
+      : `The tour starts either in Ao Nang or in Krabi Town (start time ${times}). Taxis are cheap locally; we confirm the exact meeting point after your inquiry.`;
+  return [...items, { q: startQ, a: startA }, { q, a }];
 }
 
 /** Short audience labels for schema.org `touristType`, derived from the tour's categories. */

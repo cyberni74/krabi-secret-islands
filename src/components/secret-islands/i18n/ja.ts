@@ -627,12 +627,12 @@ const dict: Record<string, string> = {
   "Schatten & Sessel – Platz zum Ausruhen": "日陰と椅子――ゆっくり休めるスペース",
   "Schnellzugriff": "クイックアクセス",
   "Bootstour Krabi privat ab Ao Nang | Krabi Secret Islands": "クラビ貸切ボートツアー・島めぐり | Krabi Secret Islands",
-  "Bootstour Krabi privat ab Ao Nang: Inselhopping zu 4 Islands, Hong Island, Phi Phi und Koh Roi, Sunset, Plankton und Angeln. Max. 5 Gäste, Preis pro Boot.": "アオナン発クラビの貸切スピードボートツアー：4アイランド、ホン島、ピピ島、Koh Roiの島めぐり、サンセット、夜光プランクトン、釣り。最大5名、ボート1隻あたりの料金。",
+  "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.": "アオナン・クラビタウン発のクラビ貸切ボートツアー：4アイランド、ホン島、ピピ島の島めぐり、サンセット、夜光プランクトン、釣り。最大5名、ボート1隻あたりの料金。",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "この日は季節閉鎖のため、このツアーは予約できません。",
   "Saisonsperre": "季節閉鎖",
   "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "クラビの石灰岩の島々の間を進むプライベートスピードボート",
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "グループツアーの一日は、多くが待ち時間で占められます。送迎バス、他のお客様、ボート、次のプログラムを待ち、のんびりした移動が残りの時間を奪います。私たちには送迎バスはありません。他の人がバスや移動に費やす時間を、あなたはスポットで過ごせます。",
-  "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "貸切チャーター – 乗船は貴グループのみ。集合場所と時間はご相談のうえ決定します。",
+  "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "貸切チャーター – 乗船は貴グループのみ。アオナンまたはクラビタウンから出発し、集合場所と時間はご相談のうえ決定します。",
   "Hilft bei der Absprache des Treffpunkts": "集合場所の調整に役立ちます",
 };
 

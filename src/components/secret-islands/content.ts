@@ -1039,7 +1039,7 @@ export const SEO_META = {
     en: "Krabi Boat Tours & Island Hopping | Krabi Secret Islands",
   },
   description: {
-    de: "Bootstour Krabi privat ab Ao Nang: Inselhopping zu 4 Islands, Hong Island, Phi Phi und Koh Roi, Sunset, Plankton und Angeln. Max. 5 Gäste, Preis pro Boot.",
-    en: "Private Krabi boat tours from Ao Nang: island hopping to the 4 Islands, Hong Island, Phi Phi and Koh Roi, sunset, plankton and fishing. Max. 5 guests per boat.",
+    de: "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.",
+    en: "Private Krabi boat tours from Ao Nang and Krabi Town: island hopping to the 4 Islands, Hong Island, Phi Phi, sunset, plankton, fishing. Max. 5 guests per boat.",
   },
 };

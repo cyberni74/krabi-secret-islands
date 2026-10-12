@@ -23,8 +23,8 @@ export const INFO_META = {
     en: "Krabi Private Boat Tour Info: Meeting Point, What's Included, Private vs Group",
   },
   description: {
-    de: "Treffpunkt Ao Nang, was im Preis einer privaten Bootstour enthalten ist, privat oder Gruppentour und eine Tagesroute 4 Islands + Sunset – alle Infos vor der Buchung.",
-    en: "Meeting point Ao Nang, what a private boat tour price includes, private vs group tour and a one-day route 4 Islands + sunset – everything to know before you book.",
+    de: "Treffpunkt Ao Nang und Krabi Town, was im Preis einer privaten Bootstour enthalten ist, privat oder Gruppentour und eine Tagesroute 4 Islands + Sunset – alle Infos vor der Buchung.",
+    en: "Meeting point Ao Nang and Krabi Town, what a private boat tour price includes, private vs group tour and a one-day route 4 Islands + sunset – everything to know before you book.",
   },
   h1: {
     de: "Krabi Bootstour: Infos vor der Buchung",
@@ -40,43 +40,43 @@ export const INFO_SECTIONS: InfoSection[] = [
   /* 1 ─────────────────────────── Meeting point */
   {
     id: "treffpunkt-ao-nang",
-    h2: { de: "Krabi Bootstour Treffpunkt: Start in Ao Nang", en: "Krabi boat tour meeting point: start in Ao Nang" },
+    h2: { de: "Krabi Bootstour Treffpunkt: Start in Ao Nang oder Krabi Town", en: "Krabi boat tour meeting point: start in Ao Nang or Krabi Town" },
     body: {
       de: [
-        "Alle unsere Touren starten in Ao Nang. Vor Ort sind Taxis günstig, sodass Sie von Ihrem Hotel unkompliziert zum Treffpunkt kommen. Anders als bei Gruppentouren wartet dabei kein Sammelbus auf andere Gäste: Ihr Boot fährt los, wenn Ihre Gruppe da ist.",
+        "Alle unsere Touren starten wahlweise in Ao Nang oder in Krabi Town. Vor Ort sind Taxis günstig, sodass Sie von Ihrem Hotel unkompliziert zum Treffpunkt kommen. Anders als bei Gruppentouren wartet dabei kein Sammelbus auf andere Gäste: Ihr Boot fährt los, wenn Ihre Gruppe da ist.",
         "Den genauen Treffpunkt, die Startzeit und eine Wegbeschreibung schicken wir Ihnen nach Ihrer Anfrage per WhatsApp oder E-Mail, abgestimmt auf Ihre Tour. Die Startzeiten sind je nach Tour unterschiedlich: früh am Morgen um 07:00 oder 08:00 Uhr (zum Beispiel Phi Phi und die Inseltouren), um 13:00 Uhr bei der 4-Islands-Tour und am späten Nachmittag bzw. Abend bei Sunset- und Plankton-Touren.",
         "Wie es mit Parkplätzen für den eigenen Mietwagen oder Roller aussieht, bestätigen wir Ihnen bei der Anfrage. Nennen Sie uns dazu einfach den gewünschten Tag.",
       ],
       en: [
-        "All our tours start in Ao Nang. Taxis are cheap locally, so getting from your hotel to the meeting point is easy. Unlike group tours there is no shuttle bus waiting for other guests: your boat leaves when your group is there.",
+        "All our tours start either in Ao Nang or in Krabi Town. Taxis are cheap locally, so getting from your hotel to the meeting point is easy. Unlike group tours there is no shuttle bus waiting for other guests: your boat leaves when your group is there.",
         "We send you the exact meeting point, start time and directions by WhatsApp or e-mail after your inquiry, tailored to your tour. Start times differ by tour: early in the morning at 7 or 8 am (for example Phi Phi and the island tours), at 1 pm on the 4 Islands tour and late afternoon or evening on sunset and plankton tours.",
         "How parking works for your own rental car or scooter, we confirm when you inquire. Just tell us the day you have in mind.",
       ],
     },
     list: {
       de: [
-        "Start: Ao Nang, privates Speedboat, max. 5 Gäste",
+        "Start: Ao Nang oder Krabi Town, privates Speedboat, max. 5 Gäste",
         "Anreise zum Treffpunkt: Taxis sind vor Ort günstig",
         "Treffpunkt und Zeit bestätigen wir nach der Anfrage per WhatsApp oder E-Mail",
         "Parken mit Mietwagen oder Roller: Bestätigung bei der Anfrage",
       ],
       en: [
-        "Start: Ao Nang, private speedboat, max. 5 guests",
+        "Start: Ao Nang or Krabi Town, private speedboat, max. 5 guests",
         "Getting to the meeting point: taxis are cheap locally",
         "We confirm meeting point and time after your inquiry by WhatsApp or e-mail",
         "Parking with a rental car or scooter: confirmed when you inquire",
       ],
     },
     links: [
-      { kind: "tours", label: { de: "Alle Touren ab Ao Nang", en: "All tours from Ao Nang" } },
+      { kind: "tours", label: { de: "Alle Touren ab Ao Nang und Krabi Town", en: "All tours from Ao Nang and Krabi Town" } },
       { kind: "guide", slug: "ao-nang-vs-railay-where-to-stay", label: { de: "Ao Nang oder Railay: Wo wohnen?", en: "Ao Nang vs Railay: where to stay" } },
     ],
     faq: [
       {
-        q: { de: "Wo ist der Treffpunkt für die Bootstour in Ao Nang?", en: "Where is the meeting point for the boat tour in Ao Nang?" },
+        q: { de: "Wo ist der Treffpunkt für die Bootstour in Ao Nang oder Krabi Town?", en: "Where is the meeting point for the boat tour in Ao Nang or Krabi Town?" },
         a: {
-          de: "Die Touren starten in Ao Nang. Den genauen Treffpunkt und die Startzeit bestätigen wir Ihnen nach der Anfrage per WhatsApp oder E-Mail.",
-          en: "The tours start in Ao Nang. We confirm the exact meeting point and start time after your inquiry by WhatsApp or e-mail.",
+          de: "Die Touren starten wahlweise in Ao Nang oder in Krabi Town. Den genauen Treffpunkt und die Startzeit bestätigen wir Ihnen nach der Anfrage per WhatsApp oder E-Mail.",
+          en: "The tours start either in Ao Nang or in Krabi Town. We confirm the exact meeting point and start time after your inquiry by WhatsApp or e-mail.",
         },
       },
       {
@@ -188,7 +188,7 @@ export const INFO_SECTIONS: InfoSection[] = [
         ],
         [
           { de: "Start", en: "Start" },
-          { de: "Ab Ao Nang, Treffpunkt nach Absprache", en: "From Ao Nang, meeting point agreed with you" },
+          { de: "Ab Ao Nang oder Krabi Town, Treffpunkt nach Absprache", en: "From Ao Nang or Krabi Town, meeting point agreed with you" },
           { de: "Feste Abfahrt, meist mit Sammel-Pickup", en: "Fixed departure, usually with shared pick-up" },
         ],
         [
@@ -237,16 +237,16 @@ export const INFO_SECTIONS: InfoSection[] = [
     },
     list: {
       de: [
-        "13:00 Uhr: Start in Ao Nang",
+        "13:00 Uhr: Start in Ao Nang oder Krabi Town",
         "Nachmittag: Koh Poda, Chicken Island, Tup-Sandbank (bei Niedrigwasser begehbar) und Bucht von Phra Nang, Reihenfolge nach Seegang und Gezeiten",
         "Zwischendurch: Zeit zum Schnorcheln, Schwimmen und Entspannen",
-        "Abend: Sonnenuntergang mit Prosecco, Rückfahrt nach Ao Nang",
+        "Abend: Sonnenuntergang mit Prosecco, Rückfahrt zum Startpunkt",
       ],
       en: [
-        "1 pm: start in Ao Nang",
+        "1 pm: start in Ao Nang or Krabi Town",
         "Afternoon: Koh Poda, Chicken Island, the Tup sandbar (walkable at low tide) and the bay of Phra Nang, order depending on sea and tides",
         "In between: time to snorkel, swim and relax",
-        "Evening: sunset with prosecco, return to Ao Nang",
+        "Evening: sunset with prosecco, return to the starting point",
       ],
     },
     links: [
@@ -260,8 +260,8 @@ export const INFO_SECTIONS: InfoSection[] = [
       {
         q: { de: "Wie lange dauert die 4-Islands-Tour mit Sonnenuntergang?", en: "How long does the 4 Islands tour with sunset take?" },
         a: {
-          de: "Sechs Stunden ab 13:00 Uhr in Ao Nang. Der Preis gilt pro Boot für bis zu fünf Gäste.",
-          en: "Six hours from 1 pm in Ao Nang. The price applies per boat for up to five guests.",
+          de: "Sechs Stunden ab 13:00 Uhr, Start in Ao Nang oder Krabi Town. Der Preis gilt pro Boot für bis zu fünf Gäste.",
+          en: "Six hours from 1 pm, starting in Ao Nang or Krabi Town. The price applies per boat for up to five guests.",
         },
       },
       {

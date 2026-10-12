@@ -30,13 +30,6 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
         },
       },
       {
-        q: { de: "Wo startet die 4-Islands-Tour und wie komme ich dorthin?", en: "Where does the 4 Islands tour start and how do I get there?" },
-        a: {
-          de: "Die Tour startet um 13:00 Uhr in Ao Nang. Von Ihrem Hotel kommen Sie vor Ort günstig per Taxi hin; den genauen Treffpunkt bestätigen wir Ihnen nach der Anfrage.",
-          en: "The tour starts at 1 pm in Ao Nang. Taxis from your hotel are cheap locally; we confirm the exact meeting point after your inquiry.",
-        },
-      },
-      {
         q: { de: "Wann ist die Tup-Sandbank bei der 4-Islands-Tour begehbar?", en: "When can you walk the Tup sandbar on the 4 Islands tour?" },
         a: {
           de: "Rund um das Niedrigwasser, das sich jeden Tag verschiebt. Am deutlichsten ist die Sandbank bei Springtiden um Neumond und Vollmond, bei Flut ist sie überspült. Nennen Sie uns Ihr Wunschdatum in der Anfrage, dann berücksichtigen wir das Niedrigwasser bei der Planung.",

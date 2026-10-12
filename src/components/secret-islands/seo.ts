@@ -135,6 +135,7 @@ export function businessNode(lang: Lang): Json {
     areaServed: [
       { "@type": "AdministrativeArea", name: "Krabi" },
       { "@type": "Place", name: "Ao Nang" },
+      { "@type": "Place", name: "Krabi Town" },
       { "@type": "Place", name: "Phang Nga Bay" },
     ],
     priceRange: `฿${Math.min(...prices).toLocaleString("en-US")}–฿${Math.max(...prices).toLocaleString("en-US")}`,

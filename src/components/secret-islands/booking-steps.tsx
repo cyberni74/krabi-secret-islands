@@ -635,7 +635,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
           </div>
         )}
         <p className="mt-4 text-xs text-slate-400">
-          {t({ de: "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.", en: "Private charter – only your group on board, we agree meeting point and time with you." })}
+          {t({ de: "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.", en: "Private charter – only your group on board, start in Ao Nang or Krabi Town, we agree meeting point and time with you." })}
         </p>
       </section>
     </div>
