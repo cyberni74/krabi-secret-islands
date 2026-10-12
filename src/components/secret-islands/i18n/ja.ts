@@ -634,6 +634,7 @@ const dict: Record<string, string> = {
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "グループツアーの一日は、多くが待ち時間で占められます。送迎バス、他のお客様、ボート、次のプログラムを待ち、のんびりした移動が残りの時間を奪います。私たちには送迎バスはありません。他の人がバスや移動に費やす時間を、あなたはスポットで過ごせます。",
   "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "貸切チャーター – 乗船は貴グループのみ。アオナンまたはクラビタウンから出発し、集合場所と時間はご相談のうえ決定します。",
   "Hilft bei der Absprache des Treffpunkts": "集合場所の調整に役立ちます",
+  "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel": "朝霧に包まれたパンガー湾の石灰岩の断崖の前のスピードボート",
 };
 
 export default dict;

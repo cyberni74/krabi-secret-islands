@@ -260,7 +260,7 @@ function GuideFooter() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_3fr]">
           <div>
             <Link to="/" search={keepLang} className="inline-flex rounded-2xl bg-white p-1.5">
-              <BrandLogo alt={BRAND.name} sizes="160px" className="w-36 sm:w-40" />
+              <BrandLogo alt={`${BRAND.name} Logo`} sizes="160px" className="w-36 sm:w-40" />
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-300">
               {t({

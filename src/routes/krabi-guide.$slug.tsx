@@ -1,6 +1,7 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { GuideArticlePage } from "@/components/krabi-guide/guide-article";
 import { GuideShell } from "@/components/krabi-guide/guide-ui";
+import { altFor } from "@/components/secret-islands/content";
 import { btn } from "@/components/secret-islands/fx";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
 import { getGuideArticle } from "@/lib/server/guide-data";
@@ -37,7 +38,7 @@ export const Route = createFileRoute("/krabi-guide/$slug")({
         { name: "description", content: description },
         { name: "theme-color", content: "#0a192f" },
         ROBOTS_LARGE_IMAGES,
-        ...socialMeta({ title, description, url: pageUrl(path, lang), image, imageAlt: title, type: "article", lang, authorUrl: absUrl("/ueber-uns") }),
+        ...socialMeta({ title, description, url: pageUrl(path, lang), image, imageAlt: altFor(loaderData.article.image)[lang] || title, type: "article", lang, authorUrl: absUrl("/ueber-uns") }),
         { property: "article:modified_time", content: updated },
         { "script:ld+json": jsonLd },
       ],

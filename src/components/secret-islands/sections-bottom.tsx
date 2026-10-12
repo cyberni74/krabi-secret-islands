@@ -610,7 +610,7 @@ export function Footer() {
       <Assemble className="mx-auto grid max-w-6xl gap-10 px-4 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.15fr_0.75fr]" stagger={0.08}>
         <AssembleItem>
           <Link to="/" search={keepLang} className="inline-flex rounded-2xl bg-white p-1.5 shadow-[0_10px_30px_-18px_rgb(0_0_0/0.8)]">
-            <BrandLogo alt={BRAND.name} sizes="160px" className="w-36 sm:w-40" />
+            <BrandLogo alt={`${BRAND.name} Logo`} sizes="160px" className="w-36 sm:w-40" />
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">{t(UI.footerTagline)}</p>
           <div className="mt-5 flex flex-wrap gap-2">

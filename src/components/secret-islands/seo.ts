@@ -57,7 +57,7 @@ export const DEFAULT_OG_IMAGE = {
   src: "/images/og-krabi-secret-islands.jpg",
   width: 1200,
   height: 630,
-  alt: { de: "Privates Speedboat von Krabi Secret Islands vor Kalksteininseln bei Krabi", en: "Krabi Secret Islands private speedboat in front of limestone islands near Krabi" },
+  alt: { de: "Krabi Secret Islands Logo: Karstinseln und Strand – private Speedboot-Touren ab Ao Nang und Krabi Town", en: "Krabi Secret Islands logo: limestone islands and beach – private speedboat tours from Ao Nang and Krabi Town" },
 } as const;
 
 /**

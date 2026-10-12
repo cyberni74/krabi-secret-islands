@@ -15,7 +15,7 @@ export const Route = createFileRoute("/bilder/$file")({
         if (params.file === "krabi-secret-islands-logo.png") {
           return new Response(null, {
             status: 301,
-            headers: { location: "/brand/new/logo-800w.png", "cache-control": "public, max-age=86400" },
+            headers: { location: "/brand/krabi-secret-islands-logo-800w.png", "cache-control": "public, max-age=86400" },
           });
         }
         const renamed = RENAMED_IMAGES[params.file];

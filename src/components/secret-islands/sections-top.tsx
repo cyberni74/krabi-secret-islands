@@ -79,7 +79,7 @@ export function Header() {
           className="flex min-w-0 shrink-0 items-center rounded-2xl bg-white p-1 shadow-[0_8px_24px_-12px_rgb(0_0_0/0.55)]"
         >
           <BrandLogo
-            alt={BRAND.name}
+            alt={`${BRAND.name} Logo`}
             sizes="(min-width: 640px) 96px, 64px"
             className={cn("transition-all duration-500", scrolled ? "w-11 sm:w-14" : "w-14 sm:w-20")}
           />

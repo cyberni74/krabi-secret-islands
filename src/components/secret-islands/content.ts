@@ -22,7 +22,7 @@ export const BRAND = {
 };
 
 /** Owner-supplied lockup (transparent PNG). Square app icon derived from the round scene: /icons/icon-512.png. */
-export const LOGO_URL = "/brand/new/logo-800w.png";
+export const LOGO_URL = "/brand/krabi-secret-islands-logo-800w.png";
 
 /** Higgsfield illustration: overcrowded longtail boat (used in the Longtail-vs-Speedboat story). Move to /public/images/ for production. */
 export const LONGTAIL_CROWD_IMG = {
@@ -103,6 +103,10 @@ IMG.bay = IMG.maya;
  * Unknown URLs get an empty alt (decorative) instead of a guessed description.
  */
 export const IMAGE_ALT: Record<string, L> = {
+  "/bilder/phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp": {
+    de: "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel",
+    en: "Speedboat in front of limestone karst cliffs in Phang Nga Bay in morning mist",
+  },
   [IMG.hero]: {
     de: "Privates Speedboat zwischen Kalksteinfelsen in Krabi",
     en: "Private speedboat among limestone islands in Krabi",

@@ -106,12 +106,12 @@ export function SmartImage({
 }
 
 /** Owner lockup. 400w is enough for the header; 800w covers retina and the footer. */
-const BRAND_LOGO_WEBP = "/brand/new/logo-400w.webp 400w, /brand/new/logo-800w.webp 800w";
-const BRAND_LOGO_PNG = "/brand/new/logo-400w.png 400w, /brand/new/logo-800w.png 800w";
+const BRAND_LOGO_WEBP = "/brand/krabi-secret-islands-logo-400w.webp 400w, /brand/krabi-secret-islands-logo-800w.webp 800w";
+const BRAND_LOGO_PNG = "/brand/krabi-secret-islands-logo-400w.png 400w, /brand/krabi-secret-islands-logo-800w.png 800w";
 
 export function BrandLogo({
   className,
-  alt = "Krabi Secret Islands",
+  alt = "Krabi Secret Islands Logo",
   sizes = "144px",
 }: {
   className?: string;
@@ -130,7 +130,7 @@ export function BrandLogo({
     <picture>
       <source type="image/webp" srcSet={BRAND_LOGO_WEBP} sizes={sizes} />
       <img
-        src="/brand/new/logo-800w.png"
+        src="/brand/krabi-secret-islands-logo-800w.png"
         srcSet={BRAND_LOGO_PNG}
         sizes={sizes}
         alt={alt}
