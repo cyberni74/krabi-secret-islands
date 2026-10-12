@@ -187,6 +187,20 @@ function ArticleView({ article, related, galleryFiles }: { article: GuideArticle
                   </table>
                 </div>
               ) : null}
+              {s.steps ? (
+                <ol className="mt-5 space-y-3">
+                  {s.steps.map((st, j) => (
+                    <li key={j} className="flex gap-3 text-base leading-relaxed text-slate-200">
+                      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-si-cyan/20 text-xs font-extrabold text-si-cyan">
+                        {j + 1}
+                      </span>
+                      <span>
+                        <strong className="text-white">{st.name[lang]}</strong> {st.text[lang]}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
               {s.tip ? (
                 <aside className="si-glass relative mt-6 overflow-hidden rounded-2xl border-l-4 border-l-si-gold p-5">
                   <p className="mb-1.5 flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.18em] text-si-gold">

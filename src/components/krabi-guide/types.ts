@@ -16,7 +16,11 @@ export type GuideSection = {
   table?: GuideTable;
   /** Optional inline figure shown under the section text (own image file, e.g. /images/<seo-name>.webp). */
   figure?: GuideFigure;
+  /** Optional numbered how-to steps (rendered as an ordered list; emitted as HowTo JSON-LD, named after the H2). */
+  steps?: GuideStep[];
 };
+
+export type GuideStep = { name: Bi; text: Bi };
 
 export type GuideFigure = { src: string; alt: Bi; caption?: Bi; width: number; height: number };
 

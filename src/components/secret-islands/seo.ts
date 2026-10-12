@@ -282,6 +282,7 @@ export function guideArticleJsonLd(
     keywords: string[];
     readingMinutes: number;
     faq: { q: Bi; a: Bi }[];
+    sections?: { id?: string; h2: Bi; steps?: { name: Bi; text: Bi }[] }[];
   },
   section: string,
 ): Json {
@@ -317,6 +318,29 @@ export function guideArticleJsonLd(
         { name: a.short[lang], url },
       ]),
       faqNode(url, a.faq.map((f) => ({ q: f.q[lang], a: f.a[lang] }))),
+      ...howToNodes(url, lang, a.sections ?? []),
     ],
   };
+}
+
+/** HowTo JSON-LD for sections that carry visible numbered steps (same text as on the page). */
+function howToNodes(
+  url: string,
+  lang: GuideLang,
+  sections: { id?: string; h2: Bi; steps?: { name: Bi; text: Bi }[] }[],
+): Json[] {
+  return sections
+    .filter((s) => s.steps?.length)
+    .map((s) => ({
+      "@type": "HowTo",
+      "@id": `${url}#howto`,
+      name: s.h2[lang],
+      step: (s.steps ?? []).map((st, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: st.name[lang],
+        text: st.text[lang],
+        url: `${url}#${s.id ?? "howto"}`,
+      })),
+    }));
 }

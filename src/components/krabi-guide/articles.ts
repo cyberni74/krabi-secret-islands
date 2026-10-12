@@ -16,6 +16,7 @@ import { MOVIE_ARTICLES } from "./data-movies";
 import { NEW_ARTICLES_F } from "./data-new-f";
 import { NEW_ARTICLES_G } from "./data-new-g";
 import { NEW_ARTICLES_H } from "./data-new-h";
+import { NEW_ARTICLES_I } from "./data-new-i";
 import { NEW_ARTICLES_E } from "./data-new-e";
 import { NEW_ARTICLES_D } from "./data-new-d";
 import { NEW_ARTICLES_C } from "./data-new-c";
@@ -54,6 +55,7 @@ export const KEYWORD_MAP: {
   { slug: "krabi-boat-seasickness-tips", primary: { de: "Seekrank Bootstour Krabi", en: "seasick Krabi boat tour" }, secondary: ["Seekrankheit Speedboot Thailand", "Seekrank Phi Phi Tour", "was hilft gegen Seekrankheit Bootstour", "bester Sitzplatz Speedboot", "Seekrankheit Kinder Bootstour"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
   { slug: "ao-nang-vs-railay-where-to-stay", primary: { de: "Ao Nang oder Railay", en: "Ao Nang vs Railay" }, secondary: ["Krabi wo übernachten", "Railay Beach Unterkunft", "Ao Nang Hotels Lage", "Krabi Unterkunft für Inselhopping", "Railay nur per Boot erreichbar"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
   { slug: "phi-phi-don-vs-phi-phi-leh", primary: { de: "Phi Phi Don oder Leh", en: "Phi Phi Don vs Phi Phi Leh" }, secondary: ["Phi Phi Unterschied Don Leh", "Phi Phi Tagesausflug ab Krabi", "Ton Sai Bay Loh Dalum", "Pileh Lagoon Viking Cave", "Phi Phi Übernachten oder Tagestour"], intent: ["info"], note: "New (Oct 2026) – see docs/keyword-brief.md." },
+  { slug: "krabi-island-hopping-tour-solo-ein-tag", primary: { de: "Krabi Island Hopping Tour", en: "Krabi island hopping tour" }, secondary: ["Krabi Inselhopping", "Krabi 4 Islands Tour", "Krabi allein reisen", "Krabi island hopping alone"], intent: ["info", "comm"], note: "New (Oct 2026) – one-day guide with FAQ + HowTo." },
   { slug: "krabi-islands-insider-guide", primary: { de: "Krabi Inseln", en: "Krabi islands" }, secondary: ["Inseln bei Krabi", "best islands Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "Schnorcheln Krabi"], intent: ["info", "comm"], note: "Pillar/hub – links to every island page." },
   { slug: "best-time-to-visit-krabi", primary: { de: "Krabi beste Reisezeit", en: "best time to visit Krabi" }, secondary: ["Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month", "Maya Bay closure"], intent: ["info"], note: "Pillar – seasonal planning; feeds tour bookings by month." },
   { slug: "krabi-island-hopping-planner", primary: { de: "Krabi Insel-Hopping", en: "Krabi island hopping" }, secondary: ["Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour"], intent: ["comm", "trans"], note: "Pillar – closest to booking intent (boat choice)." },
@@ -135,6 +137,7 @@ export const ARTICLES: GuideArticle[] = [
   ...NEW_ARTICLES_F,
   ...NEW_ARTICLES_G,
   ...NEW_ARTICLES_H,
+  ...NEW_ARTICLES_I,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));
