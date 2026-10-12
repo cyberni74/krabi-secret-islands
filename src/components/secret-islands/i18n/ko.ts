@@ -643,6 +643,22 @@ const dict: Record<string, string> = {
   "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "끄라비 Tup 모래톱과 뒤쪽의 치킨 아일랜드: 청록빛 바다를 가로지르는 하얀 모래길",
   "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "끄라비 석회암 절벽 앞 하얀 모래 해변, 청록빛 바다와 보트",
   "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "끄라비 석회암 절벽 사이 에메랄드빛 라군과 보트 두 척",
+  "Vielen Dank für Ihre Bewertung!": "리뷰를 남겨 주셔서 감사합니다!",
+  "Sie erscheint nach einer kurzen Prüfung auf dieser Seite.": "간단한 확인 후 이 페이지에 게시됩니다.",
+  "Bitte wählen Sie Ihre Sterne.": "별점을 선택해 주세요.",
+  "Zu viele Bewertungen. Bitte versuchen Sie es morgen erneut.": "리뷰가 너무 많습니다. 내일 다시 시도해 주세요.",
+  "Bitte ohne Links schreiben.": "링크 없이 작성해 주세요.",
+  "Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.": "전송에 실패했습니다. 다시 시도해 주세요.",
+  "Ihre Bewertung": "나의 리뷰",
+  "Sterne": "별점",
+  "Bewertung in Sternen": "별점 평가",
+  "Ihre Erfahrung (optional)": "경험 (선택)",
+  "Sende …": "전송 중…",
+  "Bewertung abschicken": "리뷰 제출",
+  "Ohne Anmeldung. Wir speichern nur Name, Sterne und Text.": "가입 없이 이용할 수 있습니다. 이름, 별점, 내용만 저장합니다.",
+  "Was unsere Gäste sagen": "고객 후기",
+  "Bewertungen:": "리뷰:",
+  "Seien Sie der Erste und bewerten Sie uns.": "첫 번째 리뷰를 남겨 주세요.",
 };
 
 export default dict;

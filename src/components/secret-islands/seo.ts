@@ -197,14 +197,45 @@ function breadcrumbNode(url: string, crumbs: { name: string; url: string }[]): J
 
 const HOME_CRUMB: L = { de: "Startseite", en: "Home" };
 
+/**
+ * Visible guest reviews (approved by the operator) as AggregateRating + Review on the business node.
+ * Only emitted when reviews exist, and only on the page that shows them. Switch off with GUEST_REVIEW_MARKUP = false.
+ * NOTE: Google does not show review stars for a business's own reviews of itself (self-serving reviews); the markup is
+ * valid and harmless, but a star snippet in the search results is not guaranteed.
+ */
+const GUEST_REVIEW_MARKUP = true;
+function guestReviewMarkup(
+  node: Json,
+  reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string }[] },
+): Json {
+  if (!GUEST_REVIEW_MARKUP || !reviews || reviews.count < 1) return node;
+  return {
+    ...node,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: reviews.average,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: reviews.count,
+    },
+    review: reviews.items.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      datePublished: r.date,
+      ...(r.text ? { reviewBody: r.text } : {}),
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+    })),
+  };
+}
+
 /** /secret-islands: business + page + tours + ONE FAQPage (regular FAQ + Longtail-vs-Speedboat FAQ, both visible). */
-export function landingJsonLd(lang: Lang): Json {
+export function landingJsonLd(lang: Lang, reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string }[] }): Json {
   const url = pageUrl(LANDING_PATH, lang);
   const tr = (l: L) => translate(l, lang);
   return {
     "@context": "https://schema.org",
     "@graph": [
-      businessNode(lang),
+      guestReviewMarkup(businessNode(lang), reviews),
       {
         "@type": "WebPage",
         "@id": url,

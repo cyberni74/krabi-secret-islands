@@ -9,22 +9,24 @@ import { Faq, FinalCta, Footer, LongtailFaq, Reviews } from "./sections-bottom";
 import { DroneFeature, FishingSection, Gallery, Tours } from "./sections-mid";
 import { BottomBar, Comparison, Header, Hero } from "./sections-top";
 import { LANGS, REVIEWS_VERIFIED, type Lang } from "./content";
+import { GuestReviews } from "./guest-reviews";
+import type { PublicReviews } from "@/lib/server/guest-reviews";
 
 const LANDING_LANGS: Lang[] = LANGS.map((l) => l.id);
 import { LangBoundary, LangSuggestBanner, useHtmlLang } from "./lang";
 
 /** `urlLang` = validated `?lang=` search param (undefined = German default URL). */
-export function SecretIslandsPage({ urlLang }: { urlLang?: Lang }) {
+export function SecretIslandsPage({ urlLang, reviews }: { urlLang?: Lang; reviews: PublicReviews }) {
   return (
     <LangBoundary urlLang={urlLang}>
       <MotionConfig reducedMotion="user">
-        <PageBody />
+        <PageBody reviews={reviews} />
       </MotionConfig>
     </LangBoundary>
   );
 }
 
-function PageBody(): ReactNode {
+function PageBody({ reviews }: { reviews: PublicReviews }): ReactNode {
   useHtmlLang();
 
   return (
@@ -44,6 +46,7 @@ function PageBody(): ReactNode {
         <DroneFeature />
         <Gallery />
         {REVIEWS_VERIFIED ? <Reviews /> : null}
+        <GuestReviews data={reviews} />
         <LongtailFaq />
         <Faq />
         <GuideTeaser />

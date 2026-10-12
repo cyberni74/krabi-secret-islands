@@ -7,6 +7,8 @@ import { AuroraBackground, btn } from "@/components/secret-islands/fx";
 import { WhatsAppIcon } from "@/components/secret-islands/ui";
 import { listBookingRequests, updateBookingRequest, type BookingStatus } from "@/lib/server/booking-requests";
 import { adminLogin, adminLogout, getAdminState } from "@/lib/server/admin";
+import { adminListGuestReviews, adminSetReviewStatus } from "@/lib/server/guest-reviews";
+import { StarDisplay } from "@/components/secret-islands/guest-reviews";
 
 /** Admin inbox for booking requests from the Secret Islands booking wizard (admins only, not indexed). */
 export const Route = createFileRoute("/anfragen")({
@@ -91,6 +93,7 @@ function BookingInbox() {
                 <RequestCard key={r.id} row={r} />
               ))}
             </ul>
+            <ReviewModeration />
           </>
         )}
       </div>
@@ -222,5 +225,63 @@ function RequestCard({ row: r }: { row: Row }) {
         </div>
       </div>
     </li>
+  );
+}
+
+function ReviewModeration() {
+  const qc = useQueryClient();
+  const q = useQuery({ queryKey: ["guest-reviews-admin"], queryFn: () => adminListGuestReviews(), retry: false });
+  const act = useMutation({
+    mutationFn: (v: { id: string; status: "pending" | "approved" | "rejected" | "delete" }) => adminSetReviewStatus({ data: v }),
+    onSuccess: () => void qc.invalidateQueries({ queryKey: ["guest-reviews-admin"] }),
+  });
+  const rows = q.data ?? [];
+  const pending = rows.filter((r) => r.status === "pending").length;
+  const LABEL = { pending: "Zu prüfen", approved: "Veröffentlicht", rejected: "Abgelehnt" } as const;
+  return (
+    <section className="mt-12">
+      <h2 className="text-2xl font-extrabold">
+        Bewertungen {pending ? <span className="ml-2 rounded-full bg-si-cyan px-3 py-0.5 align-middle text-sm text-si-navy">{pending} neu</span> : null}
+      </h2>
+      {q.isLoading ? <p className="mt-4 text-slate-300">Lade …</p> : null}
+      {!q.isLoading && rows.length === 0 ? <p className="mt-4 text-slate-300">Noch keine Bewertungen.</p> : null}
+      <ul className="mt-4 space-y-3">
+        {rows.map((r) => (
+          <li key={r.id} className="si-glass rounded-3xl p-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <StarDisplay value={r.rating} className="size-5" />
+                <b>{r.rating.toLocaleString("de-DE", { minimumFractionDigits: 1 })} / 5</b>
+                <span className="text-slate-300">{r.name}</span>
+              </div>
+              <span className="text-xs text-slate-400">
+                {new Date(r.created_at).toLocaleString("de-DE", { dateStyle: "medium", timeStyle: "short" })} · {r.lang.toUpperCase()} · {LABEL[r.status]}
+              </span>
+            </div>
+            {r.text ? <p className="mt-3 rounded-2xl bg-white/5 p-3 text-sm text-slate-200">{r.text}</p> : null}
+            <div className="mt-3 flex flex-wrap gap-2">
+              {r.status !== "approved" ? (
+                <button type="button" disabled={act.isPending} onClick={() => act.mutate({ id: r.id, status: "approved" })} className="min-h-11 rounded-xl bg-emerald-500 px-4 text-sm font-bold text-white">
+                  Veröffentlichen
+                </button>
+              ) : null}
+              {r.status !== "rejected" ? (
+                <button type="button" disabled={act.isPending} onClick={() => act.mutate({ id: r.id, status: "rejected" })} className="si-glass min-h-11 rounded-xl px-4 text-sm font-bold">
+                  Ablehnen
+                </button>
+              ) : null}
+              <button
+                type="button"
+                disabled={act.isPending}
+                onClick={() => window.confirm("Bewertung endgültig löschen?") && act.mutate({ id: r.id, status: "delete" })}
+                className="si-glass min-h-11 rounded-xl px-4 text-sm font-bold text-rose-300"
+              >
+                Löschen
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

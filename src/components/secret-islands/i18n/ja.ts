@@ -643,6 +643,22 @@ const dict: Record<string, string> = {
   "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "背景にチキンアイランドを望むタップ島の砂州。ターコイズの海を横切る白い砂の道",
   "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "クラビの石灰岩の断崖の前の白い砂浜、ターコイズの海とボート",
   "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "クラビの石灰岩の壁に囲まれたエメラルドグリーンのラグーンと2艘のボート",
+  "Vielen Dank für Ihre Bewertung!": "レビューありがとうございます！",
+  "Sie erscheint nach einer kurzen Prüfung auf dieser Seite.": "簡単な確認の後、このページに掲載されます。",
+  "Bitte wählen Sie Ihre Sterne.": "星の数を選んでください。",
+  "Zu viele Bewertungen. Bitte versuchen Sie es morgen erneut.": "レビューが多すぎます。明日もう一度お試しください。",
+  "Bitte ohne Links schreiben.": "リンクなしで書いてください。",
+  "Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.": "送信に失敗しました。もう一度お試しください。",
+  "Ihre Bewertung": "あなたのレビュー",
+  "Sterne": "星",
+  "Bewertung in Sternen": "星の評価",
+  "Ihre Erfahrung (optional)": "ご体験（任意）",
+  "Sende …": "送信中…",
+  "Bewertung abschicken": "レビューを送信",
+  "Ohne Anmeldung. Wir speichern nur Name, Sterne und Text.": "登録不要です。お名前、星の数、コメントのみ保存します。",
+  "Was unsere Gäste sagen": "お客様の声",
+  "Bewertungen:": "レビュー：",
+  "Seien Sie der Erste und bewerten Sie uns.": "最初のレビューをお寄せください。",
 };
 
 export default dict;

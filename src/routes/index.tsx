@@ -4,6 +4,7 @@ import { validateLangSearch } from "@/components/secret-islands/lang-context";
 import { SecretIslandsPage } from "@/components/secret-islands/page";
 import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, LANDING_PATH, ROBOTS_LARGE_IMAGES, landingJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 import { translate } from "@/components/secret-islands/store";
+import { getPublicReviews } from "@/lib/server/guest-reviews";
 
 /** Every page text is translated (zh/ko/ja via i18n dictionaries), so all five languages get their own URL. */
 const LANDING_LANGS = LANGS.map((l) => l.id);
@@ -11,7 +12,8 @@ const LANDING_LANGS = LANGS.map((l) => l.id);
 export const Route = createFileRoute("/")({
   // `?lang=en|zh|ko|ja` = language-addressable URL (German default has no parameter). SSR renders that language.
   validateSearch: validateLangSearch,
-  head: ({ match }) => {
+  loader: () => getPublicReviews(),
+  head: ({ match, loaderData }) => {
     const lang = match.search.lang ?? "de";
     const title = translate(SEO_META.title, lang);
     const description = translate(SEO_META.description, lang);
@@ -23,7 +25,7 @@ export const Route = createFileRoute("/")({
         { name: "theme-color", content: "#0a192f" },
         ROBOTS_LARGE_IMAGES,
         ...socialMeta({ title, description, url, image: DEFAULT_OG_IMAGE.src, imageSize: DEFAULT_OG_IMAGE, imageAlt: DEFAULT_OG_IMAGE.alt[lang === "de" ? "de" : "en"], type: "website", lang }),
-        { "script:ld+json": landingJsonLd(lang) },
+        { "script:ld+json": landingJsonLd(lang, loaderData) },
       ],
       links: [
         ...langLinks(LANDING_PATH, lang, LANDING_LANGS),
@@ -36,5 +38,6 @@ export const Route = createFileRoute("/")({
 
 function SecretIslandsRoute() {
   const { lang } = Route.useSearch();
-  return <SecretIslandsPage urlLang={lang} />;
+  const reviews = Route.useLoaderData();
+  return <SecretIslandsPage urlLang={lang} reviews={reviews} />;
 }

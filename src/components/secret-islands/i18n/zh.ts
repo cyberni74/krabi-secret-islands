@@ -643,6 +643,22 @@ const dict: Record<string, string> = {
   "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "Tup 沙洲与背景中的鸡岛：穿过碧绿海水的白色沙带",
   "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "甲米石灰岩峭壁前的白色沙滩、碧绿海水与船只",
   "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "甲米石灰岩峭壁之间的翡翠绿泻湖，水面上有两艘船",
+  "Vielen Dank für Ihre Bewertung!": "感谢您的评价！",
+  "Sie erscheint nach einer kurzen Prüfung auf dieser Seite.": "经过简短审核后将显示在本页面。",
+  "Bitte wählen Sie Ihre Sterne.": "请选择星级。",
+  "Zu viele Bewertungen. Bitte versuchen Sie es morgen erneut.": "评价过多，请明天再试。",
+  "Bitte ohne Links schreiben.": "请勿包含链接。",
+  "Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.": "发送失败，请重试。",
+  "Ihre Bewertung": "您的评价",
+  "Sterne": "星级",
+  "Bewertung in Sternen": "星级评分",
+  "Ihre Erfahrung (optional)": "您的体验（选填）",
+  "Sende …": "发送中…",
+  "Bewertung abschicken": "提交评价",
+  "Ohne Anmeldung. Wir speichern nur Name, Sterne und Text.": "无需注册。我们只保存姓名、星级和文字。",
+  "Was unsere Gäste sagen": "客人怎么说",
+  "Bewertungen:": "评价：",
+  "Seien Sie der Erste und bewerten Sie uns.": "成为第一个评价我们的人。",
 };
 
 export default dict;
