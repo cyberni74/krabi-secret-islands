@@ -239,14 +239,10 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       en: "Do group tours really waste that much time?",
     },
     story: {
-      de: "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns beginnt der Urlaub an Ihrer Hoteltür – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.",
-      en: "A group day is largely made of waiting: for the shuttle bus, for other guests, for the boat, for the next item on the programme. Slow crossings eat up the rest. With us your holiday starts at your hotel door – and the time others spend on buses and in transit, you spend at the spots.",
+      de: "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.",
+      en: "A group day is largely made of waiting: for the shuttle bus, for other guests, for the boat, for the next item on the programme. Slow crossings eat up the rest. With us there is no shuttle bus – and the time others spend on buses and in transit, you spend at the spots.",
     },
     rows: [
-      {
-        them: { de: "Sammel-Pickups durch mehrere Hotels", en: "Shared pick-ups across several hotels" },
-        us: { de: "Direkter Transfer nur für Sie", en: "Direct transfer just for you" },
-      },
       {
         them: { de: "Warten auf Nachzügler an jedem Stopp", en: "Waiting for latecomers at every stop" },
         us: { de: "Es geht los, wenn Sie bereit sind", en: "We leave when you're ready" },

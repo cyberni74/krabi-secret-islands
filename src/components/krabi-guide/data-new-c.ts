@@ -808,12 +808,12 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
         body: {
           de: [
             "Für die meisten Reisenden ist Ao Nang die praktische Basis: viele Unterkünfte, Restaurants, Läden und kurze Wege zu den Abfahrtsorten der Boote. Railay ist ruhiger und landschaftlich beeindruckend, mit Kletterfelsen und Stränden, aber nur per Boot erreichbar, was die Logistik etwas komplizierter macht.",
-            "Aus Boot-Sicht hat beides Vorteile. Von Ao Nang aus erreichen Sie fast alle unsere Ziele ohne Umweg, und der Hotel-Transfer Ao Nang/Krabi ist bei unseren Touren inklusive. Railay-Gäste starten bequem in Richtung Phra Nang und Poda. Entscheiden Sie nach Ihrem Reisetyp: Wer abends Auswahl sucht, wählt Ao Nang; wer Ruhe mag, Railay.",
+            "Aus Boot-Sicht hat beides Vorteile. Von Ao Nang aus erreichen Sie fast alle unsere Ziele ohne Umweg. Railay-Gäste starten bequem in Richtung Phra Nang und Poda. Entscheiden Sie nach Ihrem Reisetyp: Wer abends Auswahl sucht, wählt Ao Nang; wer Ruhe mag, Railay.",
             "Eine eigene Gegenüberstellung der beiden Orte planen wir als separaten Guide. Wenn Sie Fragen zur Lage haben, beraten wir Sie gern bei der Buchung.",
           ],
           en: [
             "For most travellers Ao Nang is the practical base: plenty of accommodation, restaurants, shops and short distances to the boat departure points. Railay is quieter and scenically impressive, with climbing cliffs and beaches, but reachable only by boat, which makes logistics a little more complicated.",
-            "From a boat perspective both have advantages. From Ao Nang you reach almost all our destinations without a detour, and the hotel transfer Ao Nang/Krabi is included with our tours. Railay guests start conveniently towards Phra Nang and Poda. Decide by your travel type: if you want choice in the evening, pick Ao Nang; if you like quiet, Railay.",
+            "From a boat perspective both have advantages. From Ao Nang you reach almost all our destinations without a detour. Railay guests start conveniently towards Phra Nang and Poda. Decide by your travel type: if you want choice in the evening, pick Ao Nang; if you like quiet, Railay.",
             "We plan a dedicated comparison of the two places as a separate guide. If you have questions about the location, we are happy to advise you when booking.",
           ],
         },
@@ -845,12 +845,12 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
           de: [
             "Mit Kindern lohnen sich kürzere Boottage und flache Buchten. Der Family Fun Day und die Railay-Halbtagestour sind dafür gemacht; die vorgeschriebenen Schwimmwesten sind an Bord, Schnorchelmasken stellen wir kostenlos zur Verfügung (bei der Buchung ankreuzen). Planen Sie Pausen nach dem Rhythmus der Kinder und Schattenplätze ein. Das Hardtop-Kabinenboot bietet Schatten und Sitzbank bzw. bequeme Bootssessel.",
             "Als Paar passen Sunset Romance & Dinner, die Sunset & Night Glow Kombi und die Plankton-Tour. Ein längerer Phi-Phi-Tag oder der Phang-Nga-Tag lassen sich mit einem ruhigen Abend kombinieren. Wenn Sie Erinnerungen von oben möchten, gibt es das 4K-Drohnenpaket gegen Aufpreis.",
-            "Für Senioren oder Gäste mit weniger Ausdauer sind kürzere, nahe Touren und feste Pausen entscheidend. Lassen Sie lange Tage mit früher Abfahrt aus, setzen Sie auf Halbtags-Touren und nutzen Sie den Hotel-Transfer. Sprechen Sie uns bei der Buchung auf Mobilitätswünsche an, damit wir das Boot und die Route darauf abstimmen können.",
+            "Für Senioren oder Gäste mit weniger Ausdauer sind kürzere, nahe Touren und feste Pausen entscheidend. Lassen Sie lange Tage mit früher Abfahrt aus und setzen Sie auf Halbtags-Touren. Sprechen Sie uns bei der Buchung auf Mobilitätswünsche an, damit wir das Boot und die Route darauf abstimmen können.",
           ],
           en: [
             "With children, shorter boat days and shallow bays are worthwhile. The Family Fun Day and the Railay half-day tour are made for this; the mandatory life jackets are on board, and we provide snorkel masks free of charge (tick them when booking). Plan breaks to the children’s rhythm and shaded spots. The hardtop cabin boat offers shade as well as a bench and comfortable boat seats.",
             "As a couple, Sunset Romance & Dinner, the Sunset & Night Glow Combo and the plankton tour fit. A longer Phi Phi day or the Phang Nga day can be combined with a quiet evening. If you want memories from above, the 4K drone package is available for an extra fee.",
-            "For seniors or guests with less stamina, shorter, nearby tours and set breaks are decisive. Skip long days with an early departure, rely on half-day tours and use the hotel transfer. Tell us about mobility wishes when booking so we can adapt the boat and route.",
+            "For seniors or guests with less stamina, shorter, nearby tours and set breaks are decisive. Skip long days with an early departure and rely on half-day tours. Tell us about mobility wishes when booking so we can adapt the boat and route.",
           ],
         },
       },

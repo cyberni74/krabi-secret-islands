@@ -51,12 +51,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Die meisten Bootstouren rund um Krabi sind für Gruppen gebaut: feste Abfahrtszeit, feste Stopps, dreißig bis vierzig Gäste an Bord. Für Paare, die Zeit für sich suchen, ist das die falsche Ausgangslage. Auf einem privaten Boot bestimmen Sie den Ablauf: Wann ankern wir, wie lange bleiben wir an einer Bucht, wann gibt es das Dinner? Es gibt keine Gruppe, auf die jemand warten muss, und niemanden, der Ihnen im Bild steht.",
-            "Unser Boot ist ein weißes Hardtop-Kabinenboot mit zwei Motoren à 300 PS und Platz für höchstens fünf Gäste. Für zwei Personen bedeutet das: reichlich Raum, eine Sitzbank und bequeme Bootssessel, Schatten durch die Hardtop-Kabine und ein Heck-Cockpit, in dem das Dinner und der Sekt serviert werden. Hotel-Transfer in Ao Nang und Krabi gehört bei den Touren zur Leistung, sodass Sie vom Hotel aus ohne Umwege starten.",
+            "Unser Boot ist ein weißes Hardtop-Kabinenboot mit zwei Motoren à 300 PS und Platz für höchstens fünf Gäste. Für zwei Personen bedeutet das: reichlich Raum, eine Sitzbank und bequeme Bootssessel, Schatten durch die Hardtop-Kabine und ein Heck-Cockpit, in dem das Dinner und der Sekt serviert werden.",
             "Auch Ihre Gäste müssen nicht zu zweit sein: Wer die Flitterwochen mit Trauzeugen, Eltern oder Freunden verbindet, kann bis zu fünf Personen mitnehmen. Der Preis gilt pro Boot, nicht pro Person – bei kleinen Gruppen ein Vorteil.",
           ],
           en: [
             "Most boat tours around Krabi are built for groups: fixed departure time, fixed stops, thirty to forty guests on board. For couples looking for time to themselves, that is the wrong starting point. On a private boat you decide the flow: when do we anchor, how long do we stay in a bay, when is dinner served? There is no group anyone has to wait for, and nobody standing in your photo.",
-            "Our boat is a white hardtop cabin boat with two 300 hp engines and room for no more than five guests. For two people that means plenty of space, a bench seat and comfortable boat chairs, shade from the hardtop cabin and a rear cockpit where dinner and sparkling wine are served. Hotel transfer in Ao Nang and Krabi is part of the tours, so you start from your hotel without detours.",
+            "Our boat is a white hardtop cabin boat with two 300 hp engines and room for no more than five guests. For two people that means plenty of space, a bench seat and comfortable boat chairs, shade from the hardtop cabin and a rear cockpit where dinner and sparkling wine are served.",
             "You do not have to be just two, either: if you combine the honeymoon with witnesses, parents or friends, you can bring up to five people. The price is per boat, not per person – an advantage for small groups.",
           ],
         },
@@ -419,12 +419,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Wir bieten drei Touren an, bei denen der Sonnenuntergang eingeplant ist. Alle sind privat, alle gelten pro Boot für bis zu fünf Gäste, alle enthalten den Hotel-Transfer in Ao Nang und Krabi. Die Startzeiten sind so gewählt, dass Sie vor dem Sonnenuntergang genug Zeit zum Baden und Ankommen haben.",
+            "Wir bieten drei Touren an, bei denen der Sonnenuntergang eingeplant ist. Alle sind privat, alle gelten pro Boot für bis zu fünf Gäste. Die Startzeiten sind so gewählt, dass Sie vor dem Sonnenuntergang genug Zeit zum Baden und Ankommen haben.",
             "Wann Sie zurück sind, ergibt sich aus Startzeit und Dauer: Bei 15:30 Uhr plus vier Stunden sind das grob 19:30 Uhr, bei der Kombi mit sechs Stunden grob 21:30 Uhr. Bei der Plankton-Tour mit Start 18:00 Uhr und vier Stunden Dauer sind Sie gegen 22 Uhr zurück. Das sind Richtwerte; der genaue Ablauf richtet sich nach Wetter, Wind und Ihrem Tempo.",
             "Ein gemeinsames Muster: früh genug starten, am späten Nachmittag baden oder schnorcheln, zum Sonnenuntergang ankern, dann entweder Dinner, Rückfahrt oder Plankton. Bei allen Touren können Sie auf Wunsch das 4K-Drohnenpaket und Catering (500 THB pro Person) dazubuchen.",
           ],
           en: [
-            "We offer three tours in which the sunset is built in. All are private, all apply per boat for up to five guests, all include hotel transfer in Ao Nang and Krabi. The start times are chosen so that you have enough time to swim and settle in before the sunset.",
+            "We offer three tours in which the sunset is built in. All are private, all apply per boat for up to five guests. The start times are chosen so that you have enough time to swim and settle in before the sunset.",
             "When you are back follows from start time and duration: 3:30 pm plus four hours means roughly 7:30 pm, the combo with six hours roughly 9:30 pm. On the plankton tour, starting at 6 pm with four hours, you are back around 10 pm. These are guidelines; the exact schedule depends on weather, wind and your pace.",
             "A common pattern: start early enough, swim or snorkel in the late afternoon, anchor for the sunset, then either dinner, the ride back or plankton. On all tours you can add the 4K drone package and catering (500 THB per person) if you like.",
           ],

@@ -194,19 +194,19 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
       },
       {
         h2: {
-          de: "Wie Ihre Unterkunft die Bootstour beeinflusst: Treffpunkt, Abholung, Startzeit",
-          en: "How your base affects your boat tour: meeting point, pickup, start time",
+          de: "Wie Ihre Unterkunft die Bootstour beeinflusst: Treffpunkt, Startzeit",
+          en: "How your base affects your boat tour: meeting point, start time",
         },
         body: {
           de: [
-            "Für uns ist diese Frage die wichtigste im Vergleich. Unsere privaten Speedboat-Touren starten ab Ao Nang. In den Tourdaten ist ein Hotel-Transfer für Ao Nang und Krabi aufgeführt. Wenn Sie in Ao Nang wohnen, ist der Weg zum Boot deshalb kurz und unkompliziert: Sie müssen morgens nicht erst eine Überfahrt organisieren, bevor Ihr Inseltag beginnt.",
-            "Wenn Sie in Railay wohnen, sieht es anders aus. Ob und wo wir Sie dort aufnehmen können, hängt von Wasserstand, Wetter und der gewünschten Route ab und ist keine Selbstverständlichkeit. Sprechen Sie das bitte bei der Anfrage an, nennen Sie Ihre Unterkunft und Ihren Wunschtermin, und wir klären gemeinsam, wie der Treffpunkt aussehen kann. Versprechen können wir einen Railay-Start nicht ohne Rückfrage.",
+            "Für uns ist diese Frage die wichtigste im Vergleich. Unsere privaten Speedboat-Touren starten ab Ao Nang; den Treffpunkt bestätigen wir nach Ihrer Anfrage. Wenn Sie in Ao Nang wohnen, ist der Weg zum Boot deshalb kurz und unkompliziert: Sie müssen morgens nicht erst eine Überfahrt organisieren, bevor Ihr Inseltag beginnt.",
+            "Wenn Sie in Railay wohnen, sieht es anders aus. Ob ein Start von Railay aus möglich ist, hängt von Wasserstand, Wetter und der gewünschten Route ab und ist keine Selbstverständlichkeit. Sprechen Sie das bitte bei der Anfrage an, nennen Sie Ihre Unterkunft und Ihren Wunschtermin, und wir klären gemeinsam, wie der Treffpunkt aussehen kann. Versprechen können wir einen Railay-Start nicht ohne Rückfrage.",
             "Die Startzeit ist der zweite Punkt. Frühe Touren wie Phi Phi Early Bird starten um 07:00 Uhr. Wer in Railay wohnt, muss für einen solchen Termin eventuell vorher mit einem Boot zum Festland, und das spricht in der Praxis für Ao Nang, wenn Sie vor allem frühe Touren planen. Nachmittagstouren oder der Sunset-Slot sind flexibler.",
             "Umgekehrt gilt: Wer in Ao Nang wohnt, kann Railay unkompliziert als Teil einer Bootstour besuchen. Unsere Railay & Phra Nang Half-Day Escape dauert vier Stunden mit flexiblem Start, und die 4-Islands-Tour endet mit dem Sonnenuntergang vor den Felsen von Phra Nang. Sie erleben Railay, ohne dort wohnen zu müssen.",
           ],
           en: [
-            "For us this is the most important question in the comparison. Our private speedboat tours start from Ao Nang. In the tour data a hotel transfer for Ao Nang and Krabi is listed. If you stay in Ao Nang, the way to the boat is therefore short and uncomplicated: you do not first have to arrange a crossing in the morning before your island day begins.",
-            "If you stay in Railay, things look different. Whether and where we can pick you up there depends on water level, weather and the route you want, and is not a given. Please raise it when you enquire, tell us your accommodation and preferred date, and we will work out together what the meeting point can look like. We cannot promise a start from Railay without checking first.",
+            "For us this is the most important question in the comparison. Our private speedboat tours start from Ao Nang; we confirm the meeting point after your enquiry. If you stay in Ao Nang, the way to the boat is therefore short and uncomplicated: you do not first have to arrange a crossing in the morning before your island day begins.",
+            "If you stay in Railay, things look different. Whether a start from Railay is possible depends on water level, weather and the route you want, and is not a given. Please raise it when you enquire, tell us your accommodation and preferred date, and we will work out together what the meeting point can look like. We cannot promise a start from Railay without checking first.",
             "Start time is the second point. Early tours such as Phi Phi Early Bird leave at 7 am. If you stay in Railay, you might need to cross to the mainland by boat beforehand for such an appointment, and in practice that favours Ao Nang if you mainly plan early tours. Afternoon tours or the sunset slot are more flexible.",
             "Conversely, if you stay in Ao Nang you can easily visit Railay as part of a boat tour. Our Railay & Phra Nang Half-Day Escape lasts four hours with a flexible start, and the 4-Islands tour ends with sunset in front of the cliffs of Phra Nang. You experience Railay without having to live there.",
           ],
@@ -226,13 +226,13 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
             "Die Frage Ao Nang oder Railay blendet aus, dass es weitere Optionen gibt. Wir erwähnen sie nur kurz und nur dort, wo wir sicher sind, damit Sie die Landkarte im Kopf haben.",
             "Klong Muang und Tubkaek sind Strandabschnitte nördlich von Ao Nang, die als ruhiger und weitläufiger gelten. Sie liegen nicht direkt am Trubel, brauchen für Ausflüge aber meist ein Fahrzeug oder einen Transfer. Wenn Ihnen Ao Nang zu geschäftig ist, Railay aber zu umständlich, können sie einen Mittelweg darstellen.",
             "Krabi Town ist die Provinzhauptstadt am Fluss, mit Märkten und einem anderen, eher alltäglichen Charakter. Sie ist keine Strandbasis und eignet sich vor allem als Zwischenstopp oder für Gäste, die Stadtleben bevorzugen. Für Inselausflüge ist die Anreise zu den Anlegern weiter.",
-            "Wenn Sie eine dieser Alternativen erwägen, fragen Sie vorab bei uns nach dem Transfer zum Boot. Unser Transfer ist für Ao Nang und Krabi ausgewiesen; Einzelheiten besprechen wir bei der Anfrage.",
+            "Wenn Sie eine dieser Alternativen erwägen, beachten Sie: Unsere Touren starten ab Ao Nang, und Sie kommen selbst zum Treffpunkt, den wir nach Ihrer Anfrage bestätigen.",
           ],
           en: [
             "The question of Ao Nang or Railay hides the fact that there are other options. We mention them only briefly and only where we are sure, so that you have the map in your head.",
             "Klong Muang and Tubkaek are beach areas north of Ao Nang that are considered quieter and more spread out. They are not right in the bustle, but for excursions they usually need a vehicle or a transfer. If Ao Nang is too busy for you but Railay too awkward, they can be a middle path.",
             "Krabi Town is the provincial capital on the river, with markets and a different, more everyday character. It is not a beach base and suits above all as a stopover or for guests who prefer town life. For island trips the journey to the piers is longer.",
-            "If you are considering one of these alternatives, ask us about the transfer to the boat in advance. Our transfer is listed for Ao Nang and Krabi; we discuss details when you enquire.",
+            "If you are considering one of these alternatives, note that our tours start from Ao Nang and you make your own way to the meeting point, which we confirm after your enquiry.",
           ],
         },
       },
@@ -295,8 +295,8 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
       {
         q: { de: "Kann man von Railay Bootstouren starten?", en: "Can you start a private boat tour from Railay?" },
         a: {
-          de: "Unsere Touren starten ab Ao Nang; ein Hotel-Transfer ist für Ao Nang und Krabi ausgewiesen. Ob wir Sie in Railay aufnehmen können, hängt von Wasserstand, Wetter und Route ab. Bitte nennen Sie uns bei der Anfrage Ihre Unterkunft und Ihren Wunschtermin, dann klären wir den Treffpunkt.",
-          en: "Our tours start from Ao Nang; a hotel transfer is listed for Ao Nang and Krabi. Whether we can pick you up in Railay depends on water level, weather and route. When you enquire, please tell us your accommodation and preferred date, and we will clarify the meeting point.",
+          de: "Unsere Touren starten ab Ao Nang, und Sie kommen selbst zum Treffpunkt. Ob ein Start von Railay aus möglich ist, hängt von Wasserstand, Wetter und Route ab. Bitte nennen Sie uns bei der Anfrage Ihre Unterkunft und Ihren Wunschtermin, dann klären wir den Treffpunkt.",
+          en: "Our tours start from Ao Nang, and you make your own way to the meeting point. Whether a start from Railay is possible depends on water level, weather and route. When you enquire, please tell us your accommodation and preferred date, and we will clarify the meeting point.",
         },
       },
       {

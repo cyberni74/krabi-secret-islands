@@ -117,7 +117,6 @@ const dict: Record<string, string> = {
   "Zeit zum Schnorcheln, Schwimmen & Entspannen": "스노클링, 수영 & 휴식 시간",
   "Wasser, Softdrinks & Obst": "생수, 청량음료 & 과일",
   "Sunset-Prosecco": "선셋 프로세코",
-  "Hotel-Transfer Ao Nang/Krabi": "Ao Nang/Krabi 호텔 픽업·샌딩",
   "Night Glow – Leuchtendes Plankton per Speedboat": "Night Glow – 스피드보트로 만나는 야광 플랑크톤",
   "Nachts im leuchtenden Meer schwimmen – jede Bewegung funkelt blau.": "밤바다의 빛 속에서 수영하세요. 움직일 때마다 바다가 푸르게 반짝입니다.",
   "4 Std. · ab 18:00": "4시간 · 오후 6시부터",
@@ -343,9 +342,6 @@ const dict: Record<string, string> = {
   "Kein geschützter Platz für Elektronik": "전자기기를 보호할 공간이 없음",
   "Trockener Stauraum für Handy & Kamera": "휴대폰 & 카메라용 방수 수납공간",
   "Verliert man auf Gruppentouren wirklich so viel Zeit?": "단체 투어는 정말 그렇게 시간을 낭비하나요?",
-  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns beginnt der Urlaub an Ihrer Hoteltür – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "단체 투어의 하루는 대부분 기다림입니다. 셔틀버스를, 다른 손님을, 보트를, 다음 일정을. 느린 이동이 나머지 시간을 잡아먹죠. 저희와 함께라면 여행은 호텔 문 앞에서 시작됩니다. 다른 이들이 버스와 이동에 쓰는 시간을 당신은 명소에서 보냅니다.",
-  "Sammel-Pickups durch mehrere Hotels": "여러 호텔을 도는 합승 픽업",
-  "Direkter Transfer nur für Sie": "오직 당신만을 위한 직행 픽업",
   "Warten auf Nachzügler an jedem Stopp": "매 스톱마다 늦는 사람 기다리기",
   "Es geht los, wenn Sie bereit sind": "준비되시면 바로 출발",
   "Langsame Überfahrten zwischen den Inseln": "섬 사이의 느린 이동",
@@ -481,7 +477,6 @@ const dict: Record<string, string> = {
   "Abfahrtszeit": "출발 시간",
   "Wählen Sie zuerst ein Datum im Kalender.": "먼저 달력에서 날짜를 선택하세요.",
   "Freie Tage sind mit einem Punkt markiert.": "예약 가능한 날에는 점이 표시되어 있습니다.",
-  "Privat-Charter – nur Ihre Gruppe an Bord, flexible Abholung vom Hotel.": "프라이빗 차터 – 일행만 탑승, 유연한 호텔 픽업.",
   "Zwischensumme": "소계",
   "Gäste": "명",
   "max. 5 Gäste – nur Ihre Gruppe": "최대 5명 – 일행만",
@@ -503,7 +498,6 @@ const dict: Record<string, string> = {
   "WhatsApp / Telefon": "WhatsApp / 전화번호",
   "* Name sowie E-Mail oder WhatsApp/Telefon erforderlich": "* 이름과 이메일 또는 WhatsApp/전화번호 필수",
   "Hotel (optional)": "호텔 (선택)",
-  "Für die kostenlose Abholung": "무료 픽업을 위해",
   "z. B. Centara Ao Nang": "예: Centara Ao Nang",
   "Wünsche & Fragen": "요청 사항 & 질문",
   "Allergien, Lieblingsinsel, Überraschung …": "알레르기, 좋아하는 섬, 깜짝 이벤트 …",
@@ -637,6 +631,9 @@ const dict: Record<string, string> = {
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "계절 폐쇄로 이 날짜에는 이 투어를 예약할 수 없습니다.",
   "Saisonsperre": "계절 폐쇄",
   "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "크라비 석회암 섬 사이를 달리는 프라이빗 스피드보트",
+  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "단체 투어의 상당 부분은 기다림입니다. 셔틀버스, 다른 손님, 보트, 다음 일정을 기다리고, 느린 이동이 나머지 시간을 잡아먹습니다. 저희는 셔틀버스가 없습니다. 다른 사람들이 버스와 이동에 쓰는 시간을 여러분은 명소에서 보냅니다.",
+  "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "프라이빗 차터 – 보트에는 일행만 탑승하며, 만나는 장소와 시간은 함께 정합니다.",
+  "Hilft bei der Absprache des Treffpunkts": "만나는 장소를 정하는 데 도움이 됩니다",
 };
 
 export default dict;

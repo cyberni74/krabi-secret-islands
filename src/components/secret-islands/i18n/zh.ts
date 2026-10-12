@@ -117,7 +117,6 @@ const dict: Record<string, string> = {
   "Zeit zum Schnorcheln, Schwimmen & Entspannen": "浮潜、游泳与放松时光",
   "Wasser, Softdrinks & Obst": "饮用水、软饮与水果",
   "Sunset-Prosecco": "日落普罗塞克",
-  "Hotel-Transfer Ao Nang/Krabi": "Ao Nang/Krabi 酒店接送",
   "Night Glow – Leuchtendes Plankton per Speedboat": "Night Glow——乘快艇探访荧光浮游生物",
   "Nachts im leuchtenden Meer schwimmen – jede Bewegung funkelt blau.": "夜游发光的大海——每一次划动都闪烁蓝光。",
   "4 Std. · ab 18:00": "4 小时 · 18:00 起",
@@ -343,9 +342,6 @@ const dict: Record<string, string> = {
   "Kein geschützter Platz für Elektronik": "电子设备无处防护",
   "Trockener Stauraum für Handy & Kamera": "手机与相机的干燥储物空间",
   "Verliert man auf Gruppentouren wirklich so viel Zeit?": "拼团游真的会浪费那么多时间吗？",
-  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns beginnt der Urlaub an Ihrer Hoteltür – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "拼团的一天大半在等待：等接驳车、等其他客人、等船、等下一个行程。缓慢的航渡又吃掉剩下的时间。与我们同行，假期从您的酒店门口开始——别人花在巴士和路上的时间，您都在景点尽情享受。",
-  "Sammel-Pickups durch mehrere Hotels": "接驳车绕多家酒店拼车接送",
-  "Direkter Transfer nur für Sie": "专属直达接送",
   "Warten auf Nachzügler an jedem Stopp": "每一站都要等迟到的人",
   "Es geht los, wenn Sie bereit sind": "您准备好，我们就出发",
   "Langsame Überfahrten zwischen den Inseln": "岛屿间航渡缓慢",
@@ -481,7 +477,6 @@ const dict: Record<string, string> = {
   "Abfahrtszeit": "出发时间",
   "Wählen Sie zuerst ein Datum im Kalender.": "请先在日历中选择日期。",
   "Freie Tage sind mit einem Punkt markiert.": "可预订日期以圆点标记。",
-  "Privat-Charter – nur Ihre Gruppe an Bord, flexible Abholung vom Hotel.": "私人包船——船上只有您的团队，酒店接送时间灵活。",
   "Zwischensumme": "小计",
   "Gäste": "位宾客",
   "max. 5 Gäste – nur Ihre Gruppe": "最多 5 位宾客——只有您的团队",
@@ -503,7 +498,6 @@ const dict: Record<string, string> = {
   "WhatsApp / Telefon": "WhatsApp / 电话",
   "* Name sowie E-Mail oder WhatsApp/Telefon erforderlich": "* 需填写姓名及电子邮箱或 WhatsApp/电话",
   "Hotel (optional)": "酒店（可选）",
-  "Für die kostenlose Abholung": "用于免费接送",
   "z. B. Centara Ao Nang": "例如 Centara Ao Nang",
   "Wünsche & Fragen": "需求与问题",
   "Allergien, Lieblingsinsel, Überraschung …": "过敏信息、心仪海岛、惊喜安排……",
@@ -637,6 +631,9 @@ const dict: Record<string, string> = {
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "该日期因季节性封闭无法预订此行程。",
   "Saisonsperre": "季节性封闭",
   "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "甲米石灰岩岛屿间的私人快艇",
+  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "团队游的很大一部分时间都花在等待上：等接驳车、等其他游客、等船、等下一个行程。缓慢的航行吞掉了剩下的时间。与我们同行没有接驳车——别人花在车上和路上的时间，您可以留在景点里。",
+  "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "私人包船——船上只有您的团体，集合地点和时间由我们与您商定。",
+  "Hilft bei der Absprache des Treffpunkts": "有助于商定集合地点",
 };
 
 export default dict;

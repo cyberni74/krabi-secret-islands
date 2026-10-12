@@ -117,7 +117,6 @@ const dict: Record<string, string> = {
   "Zeit zum Schnorcheln, Schwimmen & Entspannen": "シュノーケル、スイム、リラックスの時間",
   "Wasser, Softdrinks & Obst": "お水、ソフトドリンク＆フルーツ",
   "Sunset-Prosecco": "サンセット・プロセッコ",
-  "Hotel-Transfer Ao Nang/Krabi": "ホテル送迎 Ao Nang／Krabi",
   "Night Glow – Leuchtendes Plankton per Speedboat": "Night Glow – スピードボートで夜光プランクトンへ",
   "Nachts im leuchtenden Meer schwimmen – jede Bewegung funkelt blau.": "夜の光る海で泳ぐ――動くたびに青くきらめきます。",
   "4 Std. · ab 18:00": "4時間 · 18:00 出発",
@@ -343,9 +342,6 @@ const dict: Record<string, string> = {
   "Kein geschützter Platz für Elektronik": "電子機器を守れる場所がない",
   "Trockener Stauraum für Handy & Kamera": "スマートフォンやカメラ用のドライ収納",
   "Verliert man auf Gruppentouren wirklich so viel Zeit?": "グループツアーは本当にそんなに時間を無駄にしますか？",
-  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns beginnt der Urlaub an Ihrer Hoteltür – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "グループツアーの1日は、待ち時間の連続です。送迎バスを待ち、ほかの参加者を待ち、ボートを待ち、次のプログラムを待つ。残りの時間も、のんびりした移動に消えていきます。私たちなら、休暇はホテルの玄関から始まります。ほかの人がバスや移動に費やす時間を、お客さまは目的地で過ごせるのです。",
-  "Sammel-Pickups durch mehrere Hotels": "複数のホテルを回る乗合送迎",
-  "Direkter Transfer nur für Sie": "お客さまだけのダイレクト送迎",
   "Warten auf Nachzügler an jedem Stopp": "毎回、遅れてくる人を待つ",
   "Es geht los, wenn Sie bereit sind": "出発はお客さまの準備ができたら",
   "Langsame Überfahrten zwischen den Inseln": "島から島へののんびりした移動",
@@ -481,7 +477,6 @@ const dict: Record<string, string> = {
   "Abfahrtszeit": "出発時間",
   "Wählen Sie zuerst ein Datum im Kalender.": "まずカレンダーで日付を選んでください。",
   "Freie Tage sind mit einem Punkt markiert.": "空きのある日はドットで表示されています。",
-  "Privat-Charter – nur Ihre Gruppe an Bord, flexible Abholung vom Hotel.": "プライベートチャーター――ボートにはお客さまのグループだけ、ホテル送迎も柔軟に対応。",
   "Zwischensumme": "小計",
   "Gäste": "ゲスト",
   "max. 5 Gäste – nur Ihre Gruppe": "最大5名様――お客さまのグループだけ",
@@ -503,7 +498,6 @@ const dict: Record<string, string> = {
   "WhatsApp / Telefon": "WhatsApp／電話番号",
   "* Name sowie E-Mail oder WhatsApp/Telefon erforderlich": "* お名前と、メールアドレスまたは WhatsApp／電話番号が必要です",
   "Hotel (optional)": "ホテル（任意）",
-  "Für die kostenlose Abholung": "無料送迎のため",
   "z. B. Centara Ao Nang": "例：Centara Ao Nang",
   "Wünsche & Fragen": "ご要望＆ご質問",
   "Allergien, Lieblingsinsel, Überraschung …": "アレルギー、お気に入りの島、サプライズ …",
@@ -637,6 +631,9 @@ const dict: Record<string, string> = {
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "この日は季節閉鎖のため、このツアーは予約できません。",
   "Saisonsperre": "季節閉鎖",
   "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "クラビの石灰岩の島々の間を進むプライベートスピードボート",
+  "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "グループツアーの一日は、多くが待ち時間で占められます。送迎バス、他のお客様、ボート、次のプログラムを待ち、のんびりした移動が残りの時間を奪います。私たちには送迎バスはありません。他の人がバスや移動に費やす時間を、あなたはスポットで過ごせます。",
+  "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "貸切チャーター – 乗船は貴グループのみ。集合場所と時間はご相談のうえ決定します。",
+  "Hilft bei der Absprache des Treffpunkts": "集合場所の調整に役立ちます",
 };
 
 export default dict;

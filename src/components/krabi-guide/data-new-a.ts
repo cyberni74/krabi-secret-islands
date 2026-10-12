@@ -114,13 +114,13 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
           de: [
             "Der typische Streitpunkt bei Angeboten ist der Unterschied zwischen „Boot gemietet“ und „Tag organisiert“. Vier Posten fehlen besonders oft im ersten Preis:",
             "Nationalpark-Gebühren werden pro Person erhoben und je nach Ziel unterschiedlich festgelegt. Manche Anbieter rechnen sie extra und lassen Sie vor Ort bar zahlen, andere schließen sie ein. Wie hoch sie ungefähr sind, beschreibt unser Artikel zu den Nationalpark-Gebühren in Krabi.",
-            "Essen und Getränke sind der zweite Klassiker: Häufig gibt es nur Wasser, Mittagessen oder Obst kosten extra oder müssen selbst mitgebracht werden. Schnorchelausrüstung ist drittens bei manchen Angeboten kostenpflichtig oder nur in begrenzten Größen vorhanden. Und viertens der Transfer: Ob Sie am Pier starten oder am Hotel abgeholt werden, ändert die Planung und manchmal den Preis.",
+            "Essen und Getränke sind der zweite Klassiker: Häufig gibt es nur Wasser, Mittagessen oder Obst kosten extra oder müssen selbst mitgebracht werden. Schnorchelausrüstung ist drittens bei manchen Angeboten kostenpflichtig oder nur in begrenzten Größen vorhanden. Und viertens der Transfer: Wie Sie zum Startpunkt kommen, ändert die Planung und manchmal den Preis.",
             "Zusätzlich lohnt die Frage nach Kraftstoff und Überstunden. Bei vielen Charter-Modellen ist der Treibstoff im Preis, bei weiten Zielen oder Verlängerungen kann es Aufschläge geben. Lassen Sie sich diese Punkte vor der Buchung schriftlich bestätigen.",
           ],
           en: [
             "The typical sticking point with offers is the difference between “boat rented” and “day organised”. Four items are especially often missing from the first price:",
             "National park fees are charged per person and set differently depending on the destination. Some operators bill them separately and have you pay cash on site, others include them. Our article on national park fees in Krabi describes roughly how high they are.",
-            "Food and drinks are the second classic: often only water is provided, while lunch or fruit costs extra or must be brought along. Third, snorkel gear is chargeable with some offers or only available in limited sizes. And fourth, the transfer: whether you start at the pier or are picked up at your hotel changes your planning and sometimes the price.",
+            "Food and drinks are the second classic: often only water is provided, while lunch or fruit costs extra or must be brought along. Third, snorkel gear is chargeable with some offers or only available in limited sizes. And fourth, the transfer: how you get to the starting point changes your planning and sometimes the price.",
             "It is also worth asking about fuel and overtime. With many charter models fuel is in the price, but distant destinations or extensions may carry surcharges. Have these points confirmed in writing before you book.",
           ],
         },
@@ -136,11 +136,11 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen sowie der Hotel-Transfer Ao Nang/Krabi. Bei den meisten Inseltouren kommen Wasser, Softdrinks und Obst hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
+            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän sowie Zeit zum Schnorcheln, Schwimmen und Entspannen. Bei den meisten Inseltouren kommen Wasser, Softdrinks und Obst hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "Eine Auswahl, jeweils ab-Preis pro Boot und Dauer laut Tourenliste:",
           ],
           en: [
-            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain, time to snorkel, swim and relax, and the hotel transfer Ao Nang/Krabi. Most island tours add water, soft drinks and fruit; snorkel gear is free and ticked when booking. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
+            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain and time to snorkel, swim and relax. Most island tours add water, soft drinks and fruit; snorkel gear is free and ticked when booking. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "A selection, each from-price per boat and duration as listed:",
           ],
         },

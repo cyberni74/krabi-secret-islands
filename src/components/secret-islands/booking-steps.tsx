@@ -635,7 +635,7 @@ export function DateStep({ draft, patch, todayISO }: StepProps) {
           </div>
         )}
         <p className="mt-4 text-xs text-slate-400">
-          {t({ de: "Privat-Charter – nur Ihre Gruppe an Bord, flexible Abholung vom Hotel.", en: "Private charter – only your group on board, flexible hotel pick-up." })}
+          {t({ de: "Privat-Charter – nur Ihre Gruppe an Bord, Treffpunkt und Zeit stimmen wir mit Ihnen ab.", en: "Private charter – only your group on board, we agree meeting point and time with you." })}
         </p>
       </section>
     </div>
@@ -897,7 +897,7 @@ export function ContactStep({
         ) : (
           <p className="-mt-2 text-xs text-slate-500">{t({ de: "* Name sowie E-Mail oder WhatsApp/Telefon erforderlich", en: "* Name plus e-mail or WhatsApp/phone required" })}</p>
         )}
-        <Field label={t({ de: "Hotel (optional)", en: "Hotel (optional)" })} hint={t({ de: "Für die kostenlose Abholung", en: "For the free pick-up" })}>
+        <Field label={t({ de: "Hotel (optional)", en: "Hotel (optional)" })} hint={t({ de: "Hilft bei der Absprache des Treffpunkts", en: "Helps us agree the meeting point" })}>
           <input className={inputCls} value={draft.hotel} onChange={(ev) => patch({ hotel: ev.target.value })} placeholder={t({ de: "z. B. Centara Ao Nang", en: "e.g. Centara Ao Nang" })} />
         </Field>
         <Field label={t({ de: "Wünsche & Fragen", en: "Wishes & questions" })}>

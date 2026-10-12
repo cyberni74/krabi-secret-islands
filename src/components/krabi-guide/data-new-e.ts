@@ -221,12 +221,12 @@ export const NEW_ARTICLES_E: GuideArticleInput[] = [
         body: {
           de: [
             "Die „4-Islands VIP & Sunset Special“ ist unsere private Variante der Tour: Koh Poda, Chicken Island, Tup-Sandbank und Phra Nang Cave. Sie dauert 6 Stunden und startet um 13:00 Uhr. Sie laufen bei Ebbe über die Tup-Sandbank, schnorcheln an Chicken Island und genießen den Sonnenuntergang vor Phra Nang, mit gekühltem Prosecco an Bord.",
-            "Der Preis liegt bei ab 18.500 THB pro Boot für bis zu 5 Gäste, nicht pro Person. Bei zwei Personen teilen Sie sich diesen Betrag also zu zweit, bei fünf Personen zu fünft. Im Preis sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Entspannen, Wasser und Softdrinks, der Sunset-Prosecco, die Schnorchelausrüstung und der Hotel-Transfer enthalten.",
+            "Der Preis liegt bei ab 18.500 THB pro Boot für bis zu 5 Gäste, nicht pro Person. Bei zwei Personen teilen Sie sich diesen Betrag also zu zweit, bei fünf Personen zu fünft. Im Preis sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Entspannen, Wasser und Softdrinks, der Sunset-Prosecco und die Schnorchelausrüstung enthalten.",
             "Eine Eintrittsgebühr fällt vor Ort an und ist nicht im Tourpreis enthalten. Ob und in welcher Höhe sie an Ihrem Ziel erhoben wird, erfahren Sie bei der Buchung; den Hintergrund erklärt unser Artikel zu den Nationalpark-Gebühren in Krabi. Die Anfrage ist unverbindlich, ein Termin ist erst nach unserer Bestätigung reserviert.",
           ],
           en: [
             "The “4-Islands VIP & Sunset Special” is our private version of the tour: Koh Poda, Chicken Island, Tup sandbar and Phra Nang Cave. It lasts 6 hours and starts at 1 pm. You walk the Tup sandbar at low tide, snorkel at Chicken Island and enjoy the sunset in front of Phra Nang, with chilled prosecco on board.",
-            "The price is from 18,500 THB per boat for up to 5 guests, not per person. With two people you split that amount between two, with five between five. According to the inclusion list the price covers the private speedboat with captain, time to relax, water and soft drinks, the sunset prosecco, snorkel gear and the hotel transfer.",
+            "The price is from 18,500 THB per boat for up to 5 guests, not per person. With two people you split that amount between two, with five between five. According to the inclusion list the price covers the private speedboat with captain, time to relax, water and soft drinks, the sunset prosecco and snorkel gear.",
             "An entrance fee is charged on site and is not included in the tour price. Whether and how much applies at your destination, you will learn when booking; our article on national park fees in Krabi explains the background. The enquiry is non-binding, and a date is only reserved once we confirm it.",
           ],
         },
