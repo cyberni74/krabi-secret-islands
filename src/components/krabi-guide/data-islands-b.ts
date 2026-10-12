@@ -301,6 +301,16 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
     sections: [
       {
         h2: { de: "Phi Phi Don und Phi Phi Leh", en: "Phi Phi Don and Phi Phi Leh" },
+        figure: {
+          src: "/images/phi-phi-maya-bay-luftaufnahme-speedboote-krabi.webp",
+          width: 2400,
+          height: 1799,
+          alt: {
+            de: "Maya Bay auf Phi Phi Leh aus der Luft: Speedboote auf türkisem Wasser zwischen hohen Kalksteinfelsen",
+            en: "Maya Bay on Phi Phi Leh from above: speedboats on turquoise water between tall limestone cliffs",
+          },
+          caption: { de: "Foto: Humphrey M / Unsplash", en: "Photo: Humphrey M / Unsplash" },
+        },
         body: {
           de: [
             "Die Inselgruppe besteht aus der bewohnten Hauptinsel Phi Phi Don mit Hotels, Restaurants und dem Hafen Ton Sai sowie der unbewohnten, felsigen Phi Phi Leh mit Maya Bay, Pileh Lagoon und Viking Cave. Dazu kommen kleinere Inseln wie Bamboo Island und Mosquito Island im Norden.",

@@ -359,6 +359,16 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           de: "Kurzantwort: zwei Inseln, zwei Zwecke",
           en: "Short answer: two islands, two purposes",
         },
+        figure: {
+          src: "/images/phi-phi-inseln-luftaufnahme-bucht-speedboot-krabi.webp",
+          width: 2400,
+          height: 1799,
+          alt: {
+            de: "Luftaufnahme der Phi-Phi-Inseln bei Krabi: bewaldete Kalksteinfelsen, türkise Bucht und ein Speedboot mit Kielwasser",
+            en: "Aerial view of the Phi Phi islands near Krabi: forested limestone cliffs, a turquoise bay and a speedboat leaving a wake",
+          },
+          caption: { de: "Foto: Miltiadis Fragkidis / Unsplash", en: "Photo: Miltiadis Fragkidis / Unsplash" },
+        },
         body: {
           de: [
             "Phi Phi Don ist die Insel, auf der Menschen wohnen, übernachten, essen und ankommen. Phi Phi Leh ist die Insel, die man ansieht, besucht und wieder verlässt. Beide gehören zur Phi-Phi-Gruppe in der Provinz Krabi und liegen so nah beieinander, dass sie sich an einem Tag verbinden lassen.",

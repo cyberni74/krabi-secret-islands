@@ -28,6 +28,16 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     sections: [
       {
         h2: { de: "Lage und Anreise nach Koh Poda", en: "Location and getting to Koh Poda" },
+        figure: {
+          src: "/images/koh-poda-felsen-ao-nang-krabi.webp",
+          width: 2400,
+          height: 1600,
+          alt: {
+            de: "Steiler Kalksteinfelsen im Meer vor Koh Poda bei Ao Nang, Krabi",
+            en: "Steep limestone rock rising from the sea off Koh Poda near Ao Nang, Krabi",
+          },
+          caption: { de: "Foto: Simon Wiedensohler / Unsplash", en: "Photo: Simon Wiedensohler / Unsplash" },
+        },
         body: {
           de: [
             "Koh Poda liegt südwestlich von Ao Nang und gehört zum Nationalpark Hat Noppharat Thara–Mu Ko Phi Phi. Mit dem Speedboat sind Sie bei ruhiger See in etwa 15 bis 20 Minuten dort, mit dem Longtail etwas länger. Beim Betreten der Insel wird in der Regel eine Nationalparkgebühr fällig.",
