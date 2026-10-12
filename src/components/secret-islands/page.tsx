@@ -46,11 +46,11 @@ function PageBody({ reviews }: { reviews: PublicReviews }): ReactNode {
         <DroneFeature />
         <Gallery />
         {REVIEWS_VERIFIED ? <Reviews /> : null}
-        <GuestReviews data={reviews} />
         <LongtailFaq />
         <Faq />
         <GuideTeaser />
         <FinalCta />
+        <GuestReviews data={reviews} />
       </main>
       <Footer />
       <BottomBar />
