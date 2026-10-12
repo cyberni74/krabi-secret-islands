@@ -558,23 +558,23 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     slug: "koh-lao-lading-koh-pakbia",
     category: "island",
     short: { de: "Lao Lading & Pakbia", en: "Lao Lading & Pakbia" },
-    primaryKeyword: "Koh Lao Lading",
-    keywords: ["Koh Lao Lading", "Koh Pakbia", "Lao Lading Island", "Hong Archipel", "Krabi Geheimtipp Strand", "Pakbia snorkeling", "Koh Pakbia Sandbank", "Hong Islands Nationalpark Eintritt", "Koh Lading Strand", "Hong archipelago private boat"],
+    primaryKeyword: "Koh Lao Lading Krabi",
+    keywords: ["Koh Lao Lading", "Koh Pakbia", "Lao Lading Island", "Hong Archipel", "Krabi Geheimtipp Strand", "Pakbia snorkeling", "Koh Pakbia Sandbank", "Hong Islands Nationalpark Eintritt", "Koh Lading Strand", "Hong archipelago private boat", "Koh Lao Lading Krabi", "Koh Lao La Ding", "Koh Lao Landing", "Ko Lao Lading", "Koh Lao Lading from Ao Nang", "Koh Lao Lading boat tour"],
     title: {
-      de: "Koh Lao Lading & Koh Pakbia: Hong-Geheimtipps",
-      en: "Koh Lao Lading & Koh Pakbia: Hong’s Hidden Gems",
+      de: "Koh Lao Lading Krabi: Strand zwischen Felsen & Pakbia",
+      en: "Koh Lao Lading Krabi: Hidden Beach & Koh Pakbia Guide",
     },
     metaDescription: {
-      de: "Koh Lao Lading und Koh Pakbia: der Mini-Strand zwischen Felswänden, Sandbänke und Schnorchelspots im Hong-Archipel – mit Timing-Tipps für einen ruhigen Besuch.",
-      en: "Koh Lao Lading and Koh Pakbia: the tiny beach between rock walls, sandbars and snorkel spots in the Hong archipelago – with timing tips for a quiet visit.",
+      de: "Koh Lao Lading in Krabi: der Mini-Strand zwischen Felswänden, dazu Koh Pakbia mit Sandbänken und Schnorchelspots im Hong-Archipel. Tipps für einen ruhigen Besuch.",
+      en: "Koh Lao Lading in Krabi: the tiny beach between rock walls, plus Koh Pakbia sandbars and snorkel spots in the Hong archipelago. Tips for a quiet visit.",
     },
     h1: {
-      de: "Koh Lao Lading & Koh Pakbia – die stillen Nachbarn von Hong Island",
-      en: "Koh Lao Lading & Koh Pakbia – Hong Island’s quiet neighbours",
+      de: "Koh Lao Lading Krabi & Koh Pakbia – die stillen Nachbarn von Hong Island",
+      en: "Koh Lao Lading Krabi (Ko Lao La Ding) & Koh Pakbia – Hong Island’s quiet neighbours",
     },
     intro: {
-      de: "Koh Lao Lading ist eine der kleinsten Badeinseln vor Krabi – und vielleicht eine der fotogensten. Ein schmaler Strand liegt eingeklemmt zwischen zwei hohen Felswänden, davor flaches, klares Wasser. Gleich daneben lockt Koh Pakbia mit Sandflächen und Schnorchelspots. Beide gehören zum Hong-Archipel und stehen meist im Schatten der berühmten Hong-Lagune. Genau deshalb sind sie unser Tipp für entspannte Stunden.",
-      en: "Koh Lao Lading is one of the smallest swimming islands off Krabi – and perhaps one of the most photogenic. A narrow beach is wedged between two high rock walls, with shallow, clear water in front. Right next door, Koh Pakbia tempts with sandy stretches and snorkel spots. Both belong to the Hong archipelago and usually live in the shadow of the famous Hong lagoon. That is exactly why they are our tip for relaxed hours.",
+      de: "Koh Lao Lading (auch Ko Lao Lading, Koh Lao La Ding oder Koh Lao Landing geschrieben) ist eine der kleinsten Badeinseln vor Krabi – und vielleicht eine der fotogensten. Ein schmaler Strand liegt eingeklemmt zwischen zwei hohen Felswänden, davor flaches, klares Wasser. Gleich daneben lockt Koh Pakbia mit Sandflächen und Schnorchelspots. Beide gehören zum Hong-Archipel und stehen meist im Schatten der berühmten Hong-Lagune. Genau deshalb sind sie unser Tipp für entspannte Stunden.",
+      en: "Koh Lao Lading (also spelled Ko Lao Lading, Koh Lao La Ding or Koh Lao Landing) is one of the smallest swimming islands off Krabi – and perhaps one of the most photogenic. A narrow beach is wedged between two high rock walls, with shallow, clear water in front. Right next door, Koh Pakbia tempts with sandy stretches and snorkel spots. Both belong to the Hong archipelago and usually live in the shadow of the famous Hong lagoon. That is exactly why they are our tip for relaxed hours.",
     },
     sections: [
       {
@@ -653,6 +653,20 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
       },
     ],
     faq: [
+      {
+        q: { de: "Wie schreibt man Koh Lao Lading richtig?", en: "How do you spell Koh Lao Lading?" },
+        a: {
+          de: "Üblich ist „Koh Lao Lading“. Man findet die Insel auch als Ko Lao Lading, Koh Lao La Ding oder Koh Lao Landing; gemeint ist immer dieselbe kleine Badeinsel im Hong-Archipel vor Krabi.",
+          en: "The usual spelling is “Koh Lao Lading”. You will also find Ko Lao Lading, Koh Lao La Ding or Koh Lao Landing; they all mean the same small swimming island in the Hong archipelago off Krabi.",
+        },
+      },
+      {
+        q: { de: "Wie komme ich von Ao Nang nach Koh Lao Lading?", en: "How do you get from Ao Nang to Koh Lao Lading?" },
+        a: {
+          de: "Nur per Boot. Im Tour-Baukasten rechnen wir ab Ao Nang mit etwa 35 Minuten Fahrt mit dem Speedboat. Koh Lao Lading ist ein Stopp unserer privaten Hong-Island-Tour, zusammen mit der Hong-Lagune und Koh Pakbia.",
+          en: "Only by boat. In our tour builder we count about 35 minutes by speedboat from Ao Nang. Koh Lao Lading is a stop on our private Hong Island tour, together with Hong Lagoon and Koh Pakbia.",
+        },
+      },
       {
         q: { de: "Wo liegt Koh Lao Lading?", en: "Where is Koh Lao Lading?" },
         a: {

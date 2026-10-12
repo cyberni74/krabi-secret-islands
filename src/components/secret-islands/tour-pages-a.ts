@@ -181,6 +181,13 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
     },
     faq: [
       {
+        q: { de: "Fährt die Hong-Island-Tour nach Koh Lao Lading (Ko Lao La Ding)?", en: "Does the Hong Island tour visit Koh Lao Lading (Ko Lao La Ding)?" },
+        a: {
+          de: "Ja. Koh Lao Lading, auch Ko Lao Lading oder Koh Lao La Ding geschrieben, ist neben der Hong-Lagune und Koh Pakbia einer der Stopps der Tour.",
+          en: "Yes. Koh Lao Lading, also spelled Ko Lao Lading or Koh Lao La Ding, is one of the stops of the tour, alongside Hong Lagoon and Koh Pakbia.",
+        },
+      },
+      {
         q: { de: "Ist Mittagessen bei der Hong-Island-Tour inklusive?", en: "Is lunch included on the Hong Island tour?" },
         a: {
           de: "Im Tourpreis sind Wasser, Softdrinks und Obst enthalten. Ein Mittagessen können Sie bei der Buchung dazubuchen, zum Beispiel eine Thai-Lunchbox oder Catering an Bord.",

@@ -68,14 +68,17 @@ export const NEW_ARTICLES_F: GuideArticleInput[] = [
       "sunset time Ao Nang",
       "golden hour Krabi",
       "Krabi Sonnenuntergang Bootstour",
+      "Krabi sunset time",
+      "Ao Nang sunset time",
+      "sunset time Krabi today",
     ],
     title: {
       de: "Sonnenuntergang Krabi: Uhrzeiten pro Monat 2026",
-      en: "Krabi Sunset Time by Month (Ao Nang, 2026)",
+      en: "Krabi Sunset Time by Month: Ao Nang Sunset Times 2026",
     },
     metaDescription: {
       de: `Wann geht die Sonne unter Krabi? Tabelle für Ao Nang mit Uhrzeiten pro Monat (${MIN}–${MAX} Uhr), Golden Hour, Blue Hour und wann Sie aufs Boot sollten.`,
-      en: `Krabi sunset time by month for Ao Nang: table of all 12 months (${to12(MIN)}–${to12(MAX)}), golden hour, blue hour and when to start your boat trip.`,
+      en: `Krabi sunset time and Ao Nang sunset time by month: table of all 12 months (${to12(MIN)}–${to12(MAX)}), golden hour, blue hour and when to start your boat trip.`,
     },
     h1: {
       de: "Sonnenuntergang Krabi: Uhrzeiten pro Monat und die beste Startzeit fürs Boot",
