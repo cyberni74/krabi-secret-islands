@@ -18,8 +18,6 @@ export const BRAND = {
   // WhatsApp number (international format, digits only).
   whatsapp: "66922562293",
   whatsappDisplay: "+66 92 256 2293",
-  // Voice phone (owner-supplied, used in structured data only until shown on the site).
-  phone: "+66863743496",
   location: { de: "Ao Nang / Krabi, Thailand", en: "Ao Nang / Krabi, Thailand" },
 };
 

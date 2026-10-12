@@ -129,21 +129,7 @@ export function businessNode(lang: Lang): Json {
     logo: `${SITE_URL}${LOGO_URL}`,
     image: `${SITE_URL}/images/krabi-secret-islands-privates-speedboat.jpg`,
     email: BRAND.email,
-    telephone: BRAND.phone,
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        telephone: BRAND.phone,
-        availableLanguage: ["German", "English"],
-      },
-      {
-        "@type": "ContactPoint",
-        contactType: "reservations",
-        telephone: `+${BRAND.whatsapp}`,
-        availableLanguage: ["German", "English"],
-      },
-    ],
+    telephone: `+${BRAND.whatsapp}`,
     // TODO(owner): add streetAddress / postalCode (and `geo`) of the pier or office once confirmed.
     address: { "@type": "PostalAddress", addressLocality: "Ao Nang", addressRegion: "Krabi", addressCountry: "TH" },
     areaServed: [
