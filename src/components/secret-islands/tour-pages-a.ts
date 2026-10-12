@@ -7,10 +7,10 @@ import type { TourPageContent } from "./tour-pages";
  */
 export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   "4islands-sunset": {
-    title: { de: "4 Islands privat ab Ao Nang: Sunset-Tour ab 13 Uhr", en: "Private 4 Islands Tour from Ao Nang by Speedboat" },
+    title: { de: "4 Islands Tour Krabi privat ab Ao Nang: Sunset ab 13 Uhr", en: "Private 4 Islands Tour from Ao Nang by Speedboat" },
     description: {
-      de: "Private 4-Islands-Tour ab Ao Nang: Koh Poda, Chicken Island, Tup-Sandbank und Phra Nang zum Sonnenuntergang. Eigenes Speedboot für max. 5 Gäste, mit Prosecco.",
-      en: "Private 4 Islands tour from Ao Nang: Koh Poda, Chicken Island, Tup sandbar and Phra Nang at sunset. Your own speedboat for max. 5 guests, prosecco included.",
+      de: "4 Inseln Tour Krabi privat ab Ao Nang: Koh Poda, Chicken Island, Tup-Sandbank und Phra Nang zum Sunset. Eigenes Speedboot, max. 5 Gäste, mit Prosecco.",
+      en: "Krabi 4 islands tour by speedboat, private from Ao Nang: Koh Poda, Chicken Island, Tup sandbar and Phra Nang at sunset. Max. 5 guests, hotel pickup.",
     },
     h1: { de: "4 Islands privat: VIP- und Sunset-Tour ab Ao Nang", en: "Private 4 Islands Tour from Ao Nang: VIP & Sunset Special" },
     intro: {
@@ -22,6 +22,20 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
       en: "For everyone who wants to see the famous islands without joining the midday rush: couples, families and small groups of friends up to five people. Also for first-time visitors to Krabi who want one afternoon of swimming, sandbar and sunset.",
     },
     faq: [
+      {
+        q: { de: "Fährt die 4-Islands-Tour mit Speedboot oder Longtail?", en: "Is the 4 Islands tour by speedboat or longtail boat?" },
+        a: {
+          de: "Mit unserem privaten Speedboot, einem weißen Hardtop-Kabinenboot für höchstens fünf Gäste. Longtail-Touren bieten wir nicht an; worin sich beide Boote unterscheiden, erklärt unser Guide „Longtail oder Speedboot“.",
+          en: "By our private speedboat, a white hardtop cabin boat for a maximum of five guests. We do not offer longtail tours; our guide “Longtail vs Speedboat” explains how the two boats differ.",
+        },
+      },
+      {
+        q: { de: "Ist die Abholung vom Hotel inklusive?", en: "Is hotel pickup included?" },
+        a: {
+          de: "Ja, der Hotel-Transfer Ao Nang/Krabi steht in der Leistungsliste der Tour. Treffpunkt und Abholzeit bestätigen wir Ihnen nach der Anfrage.",
+          en: "Yes, the hotel transfer Ao Nang/Krabi is part of the tour inclusions. We confirm the meeting point and pickup time after your inquiry.",
+        },
+      },
       {
         q: { de: "Wann ist die Tup-Sandbank bei der 4-Islands-Tour begehbar?", en: "When can you walk the Tup sandbar on the 4 Islands tour?" },
         a: {
@@ -151,10 +165,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "hong-lagoons": {
-    title: { de: "Hong Island privat ab Ao Nang: Lagunen & Buchten", en: "Private Hong Island Tour from Ao Nang by Speedboat" },
+    title: { de: "Hong Island Tour Krabi privat ab Ao Nang: Lagunen", en: "Private Hong Island Tour from Ao Nang by Speedboat" },
     description: {
-      de: "Hong Island privat ab Ao Nang: früh zur Hong-Lagune, dann Koh Lao Lading und Koh Pakbia. Eigenes Speedboot, max. 5 Gäste, 7 Std.",
-      en: "Private Hong Island tour from Ao Nang: early to Hong Lagoon, then Koh Lao Lading and Koh Pakbia. Own speedboat, max. 5 guests, 7 hrs.",
+      de: "Hong Island Tour Krabi privat: Tagesausflug ab Ao Nang zur Hong-Lagune, Koh Lao Lading und Koh Pakbia. Eigenes Speedboot, max. 5 Gäste, 7 Std.",
+      en: "Private Hong Islands day trip from Ao Nang by speedboat: Hong Lagoon, Koh Lao Lading and Koh Pakbia. Max. 5 guests, 7 hrs, hotel pickup, snorkel gear.",
     },
     h1: { de: "Hong Island privat: Secret Lagoons und Hidden Bays", en: "Private Hong Island Tour: Secret Lagoons & Hidden Bays" },
     intro: {
@@ -166,6 +180,20 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
       en: "For couples, families and photo fans who prefer to see lagoons and small bays early and in peace. Also suitable for families with children who like to snorkel and picnic on the beach.",
     },
     faq: [
+      {
+        q: { de: "Ist Mittagessen bei der Hong-Island-Tour inklusive?", en: "Is lunch included on the Hong Island tour?" },
+        a: {
+          de: "Im Tourpreis sind Wasser, Softdrinks und Obst enthalten. Ein Mittagessen können Sie bei der Buchung dazubuchen, zum Beispiel eine Thai-Lunchbox oder Catering an Bord.",
+          en: "Water, soft drinks and fruit are included in the tour price. You can add lunch when booking, for example a Thai lunch box or catering on board.",
+        },
+      },
+      {
+        q: { de: "Gibt es Hotel-Abholung und Schnorchel-Ausrüstung?", en: "Is there hotel pickup and snorkel gear?" },
+        a: {
+          de: "Ja. Hotel-Transfer Ao Nang/Krabi und Schnorchel-Equipment stehen in der Leistungsliste; die Ausrüstung ist kostenlos und wird bei der Buchung angekreuzt.",
+          en: "Yes. Hotel transfer Ao Nang/Krabi and snorkel gear are in the inclusions; the gear is free and ticked when booking.",
+        },
+      },
       {
         q: { de: "Wie weit ist Hong Island von Ao Nang entfernt?", en: "How far is Hong Island from Ao Nang?" },
         a: {
@@ -247,10 +275,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "phi-phi-early-bird": {
-    title: { de: "Phi Phi früh morgens privat ab Krabi: Maya Bay Tour", en: "Private Phi Phi Early Morning Tour from Ao Nang by Speedboat" },
+    title: { de: "Phi Phi Tour ab Krabi privat: Maya Bay & Bamboo Island", en: "Private Phi Phi Islands Tour from Ao Nang by Speedboat" },
     description: {
-      de: "Phi Phi privat ab Ao Nang um 07:00 Uhr: Maya Bay, Pileh-Lagune, Viking Cave und Bamboo Island vor den Fähren. Eigenes Speedboat für max. 5 Gäste, 8 Stunden.",
-      en: "Private Phi Phi tour from Ao Nang at 7 am: Maya Bay, Pileh Lagoon, Viking Cave and Bamboo Island before the ferries. Own speedboat, max. 5 guests, 8 hours.",
+      de: "Bootstour Phi Phi ab Krabi um 07:00 Uhr: Maya Bay, Pileh-Lagune, Viking Cave und Bamboo Island vor den Fähren. Privates Speedboot, max. 5 Gäste, 8 Std.",
+      en: "Phi Phi day trip from Krabi by speedboat at 7 am: Maya Bay, Pileh Lagoon, Viking Cave and Bamboo Island before the ferries. Max. 5 guests, hotel pickup.",
     },
     h1: { de: "Phi Phi Early Bird: Maya Bay, Pileh-Lagune und Bamboo Island vor allen anderen", en: "Phi Phi Early Bird: Maya Bay, Pileh Lagoon and Bamboo Island Before Everyone Else" },
     intro: {
@@ -262,6 +290,20 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
       en: "For couples, families with older children and photographers who want to see the Phi Phi highlights on one long day with an early start. If you do not like getting up early, a later tour suits you better.",
     },
     faq: [
+      {
+        q: { de: "Ist Bamboo Island bei der Phi-Phi-Tour dabei?", en: "Does the Phi Phi tour include Bamboo Island?" },
+        a: {
+          de: "Ja. Bamboo Island gehört neben Maya Bay, der Pileh-Lagune und der Viking Cave zu den Stopps unserer Phi-Phi-Tour.",
+          en: "Yes. Bamboo Island is one of the stops of our Phi Phi tour, together with Maya Bay, Pileh Lagoon and Viking Cave.",
+        },
+      },
+      {
+        q: { de: "Sind Hotel-Abholung und Schnorcheln inklusive?", en: "Are hotel pickup and snorkeling included?" },
+        a: {
+          de: "Ja. Hotel-Transfer Ao Nang/Krabi und Schnorchel-Equipment stehen in der Leistungsliste; die Ausrüstung ist kostenlos und wird bei der Buchung angekreuzt.",
+          en: "Yes. Hotel transfer Ao Nang/Krabi and snorkel gear are in the inclusions; the gear is free and ticked when booking.",
+        },
+      },
       {
         q: { de: "Kann man in Maya Bay schwimmen?", en: "Can you swim in Maya Bay?" },
         a: {

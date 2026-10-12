@@ -695,10 +695,13 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
       "Krabi 4 islands speedboat or longtail",
       "Krabi speedboat noise",
       "Krabi boat for seasickness",
+      "Krabi longtail boat tours",
+      "private longtail boat tour Ao Nang",
+      "Krabi 4 islands tour by longtail boat",
     ],
     title: {
       de: "Longtail oder Speedboot Krabi: Was passt zu Ihnen?",
-      en: "Longtail vs Speedboat Krabi: Which One to Book?",
+      en: "Krabi Longtail Boat Tour vs Speedboat: Which to Book?",
     },
     metaDescription: {
       de: "Longtail oder Speedboot in Krabi? Tempo, Lärm, Komfort, Seegang und Preis im Vergleich – und was eine private Charter für Ihren Tag verändert.",
@@ -947,6 +950,13 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
       },
     ],
     faq: [
+      {
+        q: { de: "Bieten Sie auch Longtail-Touren an?", en: "Do you offer longtail boat tours?" },
+        a: {
+          de: "Nein. Wir fahren ausschließlich mit unserem privaten Speedboot, einem weißen Hardtop-Kabinenboot für höchstens fünf Gäste, ab Ao Nang. Wer eine Longtail-Tour sucht, findet in diesem Vergleich, worin sich beide Boote unterscheiden.",
+          en: "No. We only run our private speedboat, a white hardtop cabin boat for a maximum of five guests, from Ao Nang. If you are looking for a longtail tour, this comparison shows how the two boats differ.",
+        },
+      },
       {
         q: {
           de: "Longtail oder Speedboot: was ist besser in Krabi?",
