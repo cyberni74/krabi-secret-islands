@@ -315,7 +315,7 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
       "krabi-tides-guide",
     ],
     tourIds: ["railay-escape", "4islands-sunset"],
-    image: IMG.railay,
+    image: IMG.krabiTown,
   },
 
   /* ───────────────────────── Phi Phi Don vs Phi Phi Leh ───────────────────────── */

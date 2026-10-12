@@ -635,6 +635,14 @@ const dict: Record<string, string> = {
   "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "프라이빗 차터 – 보트에는 일행만 탑승하며, 아오낭 또는 끄라비 타운에서 출발하고 만나는 장소와 시간은 함께 정합니다.",
   "Hilft bei der Absprache des Treffpunkts": "만나는 장소를 정하는 데 도움이 됩니다",
   "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel": "아침 안개 속 팡아만 석회암 절벽 앞의 스피드보트",
+  "Dieselbe Bucht bei Krabi bei Ebbe (links) und bei Flut (rechts) vor Kalksteinfelsen – Vergleich der Gezeiten": "끄라비의 같은 만, 썰물(왼쪽)과 밀물(오른쪽) 비교 – 석회암 절벽 앞",
+  "Uferpromenade in Krabi Town bei Sonnenuntergang mit Booten am Steg und Kalksteinfelsen am Fluss": "일몰 무렵의 끄라비 타운 강변 산책로, 선착장의 보트와 강 건너 석회암 산",
+  "Luftaufnahme von Kalksteininseln und türkisem Flachwasser vor Krabi mit einem Speedboot in der Andamanensee": "끄라비 앞바다의 석회암 섬과 청록빛 얕은 바다 항공 사진, 안다만해를 달리는 스피드보트",
+  "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser": "라일레이와 프라낭의 해변, 높은 석회암 절벽, 하얀 모래와 청록빛 바다",
+  "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi": "끄라비 석회암 절벽 사이 청록빛 만과 하얀 해변 항공 사진",
+  "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "끄라비 Tup 모래톱과 뒤쪽의 치킨 아일랜드: 청록빛 바다를 가로지르는 하얀 모래길",
+  "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "끄라비 석회암 절벽 앞 하얀 모래 해변, 청록빛 바다와 보트",
+  "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "끄라비 석회암 절벽 사이 에메랄드빛 라군과 보트 두 척",
 };
 
 export default dict;

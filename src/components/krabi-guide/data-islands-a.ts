@@ -272,7 +272,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     ],
     related: ["krabi-tides-guide", "koh-poda-guide", "krabi-with-kids", "krabi-photo-drone-spots"],
     tourIds: ["4islands-sunset", "family-sandbars"],
-    image: IMG.tup,
+    image: IMG.tupChicken,
   },
 
   /* ───────────────────────── Railay & Phra Nang ───────────────────────── */
@@ -411,7 +411,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     ],
     related: ["koh-poda-guide", "chicken-island-tup-sandbar", "krabi-photo-drone-spots", "secret-beaches-lagoons-krabi"],
     tourIds: ["railay-escape", "4islands-sunset", "sunset-dinner"],
-    image: IMG.railay,
+    image: IMG.railayBeach,
   },
 
   /* ───────────────────────── Koh Hong (Krabi) ───────────────────────── */
@@ -550,7 +550,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     ],
     related: ["koh-lao-lading-koh-pakbia", "krabi-tides-guide", "secret-beaches-lagoons-krabi", "krabi-bioluminescent-plankton-night-boat-tour"],
     tourIds: ["hong-lagoons", "plankton-night"],
-    image: IMG.hong,
+    image: IMG.emeraldLagoon,
   },
 
   /* ───────────────────────── Koh Lao Lading & Koh Pakbia ───────────────────────── */
@@ -691,6 +691,6 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
     ],
     related: ["hong-island-krabi", "secret-beaches-lagoons-krabi", "krabi-tides-guide", "krabi-island-hopping-planner"],
     tourIds: ["hong-lagoons"],
-    image: IMG.snorkelCouple,
+    image: IMG.beachBoats,
   },
 ];

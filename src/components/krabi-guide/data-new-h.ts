@@ -352,6 +352,6 @@ export const NEW_ARTICLES_H: GuideArticleInput[] = [
       "krabi-boat-tours-rainy-season",
     ],
     tourIds: ["4islands-sunset", "hong-lagoons", "phi-phi-early-bird"],
-    image: IMG.hong,
+    image: IMG.karstAerial,
   },
 ];

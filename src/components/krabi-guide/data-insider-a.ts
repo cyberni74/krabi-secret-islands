@@ -290,7 +290,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     ],
     related: ["chicken-island-tup-sandbar", "hong-island-krabi", "koh-roi-hidden-lagoon", "krabi-island-hopping-planner"],
     tourIds: ["4islands-sunset", "family-sandbars", "hong-lagoons"],
-    image: IMG.tup,
+    image: IMG.ebbeFlut,
   },
 
   /* ───────────────────────── Bioluminescent plankton (private speedboat) ───────────────────────── */

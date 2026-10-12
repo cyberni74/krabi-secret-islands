@@ -635,6 +635,14 @@ const dict: Record<string, string> = {
   "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "私人包船——船上只有您的团体，从奥南或甲米镇出发，集合地点和时间由我们与您商定。",
   "Hilft bei der Absprache des Treffpunkts": "有助于商定集合地点",
   "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel": "攀牙湾石灰岩峭壁前的快艇，晨雾缭绕",
+  "Dieselbe Bucht bei Krabi bei Ebbe (links) und bei Flut (rechts) vor Kalksteinfelsen – Vergleich der Gezeiten": "同一海湾在甲米退潮（左）与涨潮（右）时的对比，背景是石灰岩峭壁",
+  "Uferpromenade in Krabi Town bei Sonnenuntergang mit Booten am Steg und Kalksteinfelsen am Fluss": "日落时分的甲米镇河畔步道，码头停靠着船只，河对岸是石灰岩山丘",
+  "Luftaufnahme von Kalksteininseln und türkisem Flachwasser vor Krabi mit einem Speedboot in der Andamanensee": "甲米海域石灰岩岛屿与碧绿浅水的航拍，安达曼海上有一艘快艇",
+  "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser": "莱利与帕南海滩，高耸的石灰岩峭壁、白沙与碧绿海水",
+  "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi": "甲米石灰岩峭壁之间碧绿海湾与白色沙滩的航拍",
+  "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "Tup 沙洲与背景中的鸡岛：穿过碧绿海水的白色沙带",
+  "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "甲米石灰岩峭壁前的白色沙滩、碧绿海水与船只",
+  "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "甲米石灰岩峭壁之间的翡翠绿泻湖，水面上有两艘船",
 };
 
 export default dict;

@@ -54,6 +54,14 @@ export const IMG = {
   // Aerial of Koh Hong (owner-supplied photo, /public/images) – former hero, now the aerial-shots / pillar image.
   hongAerial: "/images/koh-hong-krabi-luftaufnahme-strand-lagune.webp",
   boat: "/images/krabi-secret-islands-privates-speedboat.webp",
+  ebbeFlut: "/images/gezeiten-ebbe-flut-vergleich-bucht-krabi.webp",
+  krabiTown: "/images/krabi-town-uferpromenade-sonnenuntergang.webp",
+  karstAerial: "/images/karstinseln-luftaufnahme-speedboat-andamanensee-krabi.webp",
+  railayBeach: "/images/railay-strand-kalksteinfelsen-boote-krabi.webp",
+  turquoiseBay: "/images/tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
+  tupChicken: "/images/tup-sandbank-chicken-island-krabi-luftblick.webp",
+  beachBoats: "/images/weisser-strand-kalksteinfelsen-boote-krabi.webp",
+  emeraldLagoon: "/images/smaragdgruene-lagune-kalksteinwaende-krabi.webp",
   poda: seoImage("koh-poda-krabi-strand-kalksteinfelsen.webp"),
   tup: seoImage("tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
   hong: seoImage("hong-island-krabi-smaragdgruene-lagune.webp"),
@@ -103,6 +111,38 @@ IMG.bay = IMG.maya;
  * Unknown URLs get an empty alt (decorative) instead of a guessed description.
  */
 export const IMAGE_ALT: Record<string, L> = {
+  [IMG.ebbeFlut]: {
+    de: "Dieselbe Bucht bei Krabi bei Ebbe (links) und bei Flut (rechts) vor Kalksteinfelsen – Vergleich der Gezeiten",
+    en: "The same bay near Krabi at low tide (left) and high tide (right) in front of limestone cliffs – tide comparison",
+  },
+  [IMG.krabiTown]: {
+    de: "Uferpromenade in Krabi Town bei Sonnenuntergang mit Booten am Steg und Kalksteinfelsen am Fluss",
+    en: "Krabi Town riverfront promenade at sunset with boats at the pier and limestone hills across the river",
+  },
+  [IMG.karstAerial]: {
+    de: "Luftaufnahme von Kalksteininseln und türkisem Flachwasser vor Krabi mit einem Speedboot in der Andamanensee",
+    en: "Aerial view of limestone islands and turquoise shallows off Krabi with a speedboat in the Andaman Sea",
+  },
+  [IMG.railayBeach]: {
+    de: "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser",
+    en: "Beach at Railay and Phra Nang with tall limestone cliffs, white sand and turquoise water",
+  },
+  [IMG.turquoiseBay]: {
+    de: "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi",
+    en: "Aerial view of a turquoise bay with a white beach between limestone cliffs near Krabi",
+  },
+  [IMG.tupChicken]: {
+    de: "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi",
+    en: "Tup sandbar with Chicken Island in the background: white sand strip through turquoise water near Krabi",
+  },
+  [IMG.beachBoats]: {
+    de: "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi",
+    en: "White sand beach with boats in front of limestone cliffs and turquoise water near Krabi",
+  },
+  [IMG.emeraldLagoon]: {
+    de: "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi",
+    en: "Emerald lagoon between limestone walls with two boats near Krabi",
+  },
   "/bilder/phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp": {
     de: "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel",
     en: "Speedboat in front of limestone karst cliffs in Phang Nga Bay in morning mist",

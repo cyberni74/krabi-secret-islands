@@ -635,6 +635,14 @@ const dict: Record<string, string> = {
   "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "貸切チャーター – 乗船は貴グループのみ。アオナンまたはクラビタウンから出発し、集合場所と時間はご相談のうえ決定します。",
   "Hilft bei der Absprache des Treffpunkts": "集合場所の調整に役立ちます",
   "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel": "朝霧に包まれたパンガー湾の石灰岩の断崖の前のスピードボート",
+  "Dieselbe Bucht bei Krabi bei Ebbe (links) und bei Flut (rechts) vor Kalksteinfelsen – Vergleich der Gezeiten": "クラビの同じ入り江の干潮（左）と満潮（右）の比較。石灰岩の断崖を背景に",
+  "Uferpromenade in Krabi Town bei Sonnenuntergang mit Booten am Steg und Kalksteinfelsen am Fluss": "夕暮れのクラビタウンの川沿いの遊歩道。桟橋のボートと対岸の石灰岩の山",
+  "Luftaufnahme von Kalksteininseln und türkisem Flachwasser vor Krabi mit einem Speedboot in der Andamanensee": "クラビ沖の石灰岩の島々とターコイズの浅瀬の空撮。アンダマン海を進むスピードボート",
+  "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser": "ライレイとプラナンのビーチ。そびえる石灰岩の断崖、白い砂、ターコイズの海",
+  "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi": "クラビの石灰岩の断崖に囲まれたターコイズの入り江と白い砂浜の空撮",
+  "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi": "背景にチキンアイランドを望むタップ島の砂州。ターコイズの海を横切る白い砂の道",
+  "Weißer Sandstrand mit Booten vor Kalksteinfelsen und türkisem Wasser bei Krabi": "クラビの石灰岩の断崖の前の白い砂浜、ターコイズの海とボート",
+  "Smaragdgrüne Lagune zwischen Kalksteinwänden mit zwei Booten bei Krabi": "クラビの石灰岩の壁に囲まれたエメラルドグリーンのラグーンと2艘のボート",
 };
 
 export default dict;
