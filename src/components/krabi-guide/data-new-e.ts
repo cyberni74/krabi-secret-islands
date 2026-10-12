@@ -39,12 +39,12 @@ export const NEW_ARTICLES_E: GuideArticleInput[] = [
       en: "4 islands Krabi names explained: Koh Poda, Chicken Island, Tup and Phra Nang, how they lie, when the sandbar shows and what a private tour costs per boat.",
     },
     h1: {
-      de: "4 Islands Krabi: Namen, Karte in Worten, Sandbank-Timing und Preise",
-      en: "4 Islands Krabi: names, the map in words, sandbar timing and price",
+      de: "4 Islands Krabi: Namen, Karte, Sandbank-Timing und Preise",
+      en: "4 Islands Krabi: names, map, sandbar timing and price",
     },
     intro: {
-      de: "Die „4 Islands“ gehören zu den meistgebuchten Touren in Krabi – und trotzdem ist selten klar, welche vier Inseln überhaupt gemeint sind, wie sie zueinander liegen und warum der Zeitpunkt über Ihren Tag entscheidet. Dieser Guide beantwortet genau das: die Namen der vier Inseln (Koh Poda, Chicken Island, Tup Island und Phra Nang/Railay), eine Karte in Worten statt als Bild, die typische Reihenfolge, das Timing der Tup-Sandbank im Verhältnis zu den Gezeiten und die Frage, wann es voll wird und wann nicht. Am Ende stehen die Eckdaten unserer privaten Variante, der „4-Islands VIP & Sunset Special“, samt Preis pro Boot. Alle Angaben sind als Orientierung gedacht: Wasserstand, Wetter und Andrang ändern sich von Tag zu Tag.",
-      en: "The “4 Islands” are among the most booked tours in Krabi – yet it is rarely clear which four islands are meant, how they sit relative to each other and why timing decides your day. This guide answers exactly that: the names of the four islands (Koh Poda, Chicken Island, Tup Island and Phra Nang/Railay), a map in words instead of a picture, the typical order of stops, the timing of the Tup sandbar in relation to the tides and the question of when it gets busy and when it does not. At the end you will find the key facts of our private version, the “4-Islands VIP & Sunset Special”, including the price per boat. Everything here is meant as orientation: water level, weather and crowds change from day to day.",
+      de: "Die „4 Islands“ gehören zu den meistgebuchten Touren in Krabi – und trotzdem ist selten klar, welche vier Inseln überhaupt gemeint sind, wie sie zueinander liegen und warum der Zeitpunkt über Ihren Tag entscheidet. Dieser Guide beantwortet genau das: die Namen der vier Inseln (Koh Poda, Chicken Island, Tup Island und Phra Nang/Railay), eine Karte mit Beispielroute, die typische Reihenfolge, das Timing der Tup-Sandbank im Verhältnis zu den Gezeiten und die Frage, wann es voll wird und wann nicht. Am Ende stehen die Eckdaten unserer privaten Variante, der „4-Islands VIP & Sunset Special“, samt Preis pro Boot. Alle Angaben sind als Orientierung gedacht: Wasserstand, Wetter und Andrang ändern sich von Tag zu Tag.",
+      en: "The “4 Islands” are among the most booked tours in Krabi – yet it is rarely clear which four islands are meant, how they sit relative to each other and why timing decides your day. This guide answers exactly that: the names of the four islands (Koh Poda, Chicken Island, Tup Island and Phra Nang/Railay), a map with an example route, the typical order of stops, the timing of the Tup sandbar in relation to the tides and the question of when it gets busy and when it does not. At the end you will find the key facts of our private version, the “4-Islands VIP & Sunset Special”, including the price per boat. Everything here is meant as orientation: water level, weather and crowds change from day to day.",
     },
     sections: [
       {
@@ -105,17 +105,30 @@ export const NEW_ARTICLES_E: GuideArticleInput[] = [
       {
         id: "map-in-words",
         h2: {
-          de: "Die 4 Island Tour Krabi Karte – in Worten erklärt",
-          en: "The 4 island tour Krabi map – explained in words",
+          de: "Die 4 Island Tour Krabi Karte – erklärt",
+          en: "The 4 island tour Krabi map – explained",
+        },
+        figure: {
+          src: "/images/karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
+          width: 1536,
+          height: 1024,
+          alt: {
+            de: "Karte der 4 Islands bei Ao Nang, Krabi: Startpunkt Ao Nang, Chicken Island, Tup Island, Koh Poda und Phra Nang Beach/Railay mit Beispielroute und ungefähren Fahrzeiten",
+            en: "Map of the 4 Islands near Ao Nang, Krabi: starting point Ao Nang, Chicken Island, Tup Island, Koh Poda and Phra Nang Beach/Railay with an example route and approximate travel times",
+          },
+          caption: {
+            de: "Die 4 Islands bei Ao Nang mit Beispielroute. Fahrzeiten sind ungefähre Richtwerte, die Reihenfolge richtet sich nach Seegang und Gezeiten.",
+            en: "The 4 Islands near Ao Nang with an example route. Travel times are rough guides, and the order depends on sea conditions and tides (map labels in German).",
+          },
         },
         body: {
           de: [
-            "Statt einer Bildkarte hier die Geografie so, wie Sie sie vom Boot aus erleben. Ausgangspunkt ist Ao Nang. Von dort liegen alle vier Stationen im Süden und Südwesten, also in Richtung Railay und offenes Meer. Die Poda-Gruppe liegt nach unseren Tourdaten nur 15 bis 30 Minuten von Ao Nang entfernt. Das ist der Grund, warum die 4 Islands auch mit einem Start am frühen Nachmittag funktionieren.",
+            "Die Karte zeigt die vier Stationen mit einer Beispielroute; hier dieselbe Geografie so, wie Sie sie vom Boot aus erleben. Ausgangspunkt ist Ao Nang. Von dort liegen alle vier Stationen im Süden und Südwesten, also in Richtung Railay und offenes Meer. Die Poda-Gruppe liegt nach unseren Tourdaten nur 15 bis 30 Minuten von Ao Nang entfernt. Das ist der Grund, warum die 4 Islands auch mit einem Start am frühen Nachmittag funktionieren.",
             "Koh Poda liegt südwestlich von Ao Nang und ist die am weitesten „draußen“ gelegene der vier Stationen. Chicken Island und die Tup-Sandbank liegen von Koh Poda nur wenige Bootsminuten entfernt, und zwar so dicht beieinander, dass Sie beide in einem Zug erleben. Die Sandbank verläuft zwischen den kleinen Inseln Koh Tup und Koh Kai, und die Felsspitze von Chicken Island ragt direkt daneben auf. Phra Nang Cave Beach und Railay liegen ebenfalls nur wenige Bootsminuten von dieser Gruppe entfernt, an der Kalksteinhalbinsel mit den großen Felswänden.",
             "Im Kopf lässt sich das als Dreieck merken: Ao Nang und Railay als Küstenpunkte, Koh Poda mit Chicken Island und Tup als Inselgruppe davor. Weil die Abstände zwischen den Inseln kurz sind, verbringen Sie wenig Zeit mit Fahren und viel Zeit im Wasser oder am Strand.",
           ],
           en: [
-            "Instead of a picture map, here is the geography as you experience it from the boat. The starting point is Ao Nang. From there all four stops lie to the south and southwest, towards Railay and the open sea. According to our tour data the Poda group is only 15 to 30 minutes from Ao Nang. That is why the 4 Islands also work with a start in the early afternoon.",
+            "The map shows the four stops with an example route; here is the same geography as you experience it from the boat. The starting point is Ao Nang. From there all four stops lie to the south and southwest, towards Railay and the open sea. According to our tour data the Poda group is only 15 to 30 minutes from Ao Nang. That is why the 4 Islands also work with a start in the early afternoon.",
             "Koh Poda lies southwest of Ao Nang and is the stop furthest “out” of the four. Chicken Island and the Tup sandbar are only a few boat minutes from Koh Poda, and so close to each other that you experience both in one go. The sandbar runs between the small islands of Koh Tup and Koh Kai, and the rock pinnacle of Chicken Island rises right next to it. Phra Nang Cave Beach and Railay are also only a few boat minutes from this group, on the limestone peninsula with the big cliffs.",
             "You can remember it as a triangle: Ao Nang and Railay as coastal points, with Koh Poda, Chicken Island and Tup as the island group in front of them. Because the distances between the islands are short, you spend little time travelling and a lot of time in the water or on the beach.",
           ],

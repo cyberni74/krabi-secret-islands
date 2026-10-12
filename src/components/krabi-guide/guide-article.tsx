@@ -131,6 +131,17 @@ function ArticleView({ article, related, galleryFiles }: { article: GuideArticle
                   <p key={j}>{p}</p>
                 ))}
               </div>
+              {s.figure ? (
+                <figure className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                  <GuideImage
+                    src={s.figure.src}
+                    alt={s.figure.alt[lang]}
+                    sizes="(min-width: 1024px) 720px, 100vw"
+                    className="h-auto w-full"
+                  />
+                  {s.figure.caption ? <figcaption className="px-4 py-3 text-sm leading-relaxed text-slate-300">{s.figure.caption[lang]}</figcaption> : null}
+                </figure>
+              ) : null}
               {s.list ? (
                 <ul className="mt-5 space-y-2.5">
                   {s.list[lang].map((li, j) => (

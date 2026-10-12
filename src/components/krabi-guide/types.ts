@@ -14,7 +14,11 @@ export type GuideSection = {
   list?: BiList;
   /** Optional comparison/data table (rendered as a responsive, scrollable <table>). First column is the row header. */
   table?: GuideTable;
+  /** Optional inline figure shown under the section text (own image file, e.g. /images/<seo-name>.webp). */
+  figure?: GuideFigure;
 };
+
+export type GuideFigure = { src: string; alt: Bi; caption?: Bi; width: number; height: number };
 
 export type GuideTable = { caption?: Bi; head: Bi[]; rows: Bi[][] };
 

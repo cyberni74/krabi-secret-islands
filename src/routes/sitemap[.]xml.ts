@@ -30,7 +30,7 @@ const LANDING_IMAGES = [IMG.hero, ...tourImages(), ...AERIAL_SHOTS.map((s) => s.
 /** Hub: the article card images. */
 const HUB_IMAGES = ARTICLES.map((a) => a.image);
 /** Article: hero, uploaded gallery photos, tour cards. */
-const articleImages = (a: GuideArticle) => [a.image, ...readyGuideImages(a).map((i) => i.src), ...tourImages(a.tourIds)];
+const articleImages = (a: GuideArticle) => [a.image, ...readyGuideImages(a).map((i) => i.src), ...a.sections.flatMap((s) => (s.figure ? [s.figure.src] : [])), ...tourImages(a.tourIds)];
 
 function entries(path: string, langs: readonly Lang[], lastmod: string, images: readonly string[] = []) {
   const alternates = [
