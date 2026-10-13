@@ -181,11 +181,11 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
         h2: { de: "Und unser Speedboat?", en: "And our speedboat?" },
         body: {
           de: [
-            "Auch ein Speedboat verbrennt Kraftstoff und erzeugt Abgase. Wir versprechen keine „saubere“ Fahrt und können keine Messwerte vorlegen. Wir fahren mit einem privaten Speedboat für maximal 5 Gäste mit zwei Außenbordmotoren. Der Unterschied liegt in der Bauart: Die Motoren sind für den Bootsbetrieb gebaut und nicht aus Fahrzeugen umgerüstet, und es gibt keine fremde Gruppe auf dem Boot. Wer empfindlich auf Abgase reagiert, sagt uns das vor der Buchung, damit wir Sitzplatz und Route darauf abstimmen.",
+            "Unser Boot fährt mit zwei modernen Suzuki-Außenbordmotoren mit je 300 PS. Das sind Motoren, die für den Bootsbetrieb entwickelt wurden, und kein umgebauter Fahrzeugmotor, wie er auf vielen Longtails läuft. Auch sie verbrennen Kraftstoff und erzeugen Abgase. Messwerte können wir nicht vorlegen, deshalb versprechen wir keine „saubere“ Fahrt. Das Boot ist ein privates Speedboat für maximal 5 Gäste, und es gibt keine fremde Gruppe an Bord. Wer empfindlich auf Abgase reagiert, sagt uns das vor der Buchung, damit wir Sitzplatz und Route darauf abstimmen.",
             "Der Preis gilt pro Boot für bis zu 5 Gäste. Einige Inseln bzw. Nationalparks verlangen eine Eintrittsgebühr, die nicht im Tourpreis enthalten ist und vor Ort direkt bei den Rangern bezahlt wird. Der Start ist in Ao Nang oder Krabi Town möglich.",
           ],
           en: [
-            "A speedboat also burns fuel and produces exhaust. We do not promise a \"clean\" ride and cannot present measurements. We run a private speedboat for a maximum of 5 guests with two outboard engines. The difference lies in the design: the engines are built for use on boats and are not converted from vehicles, and there is no strangers' group on board. If you react sensitively to exhaust, tell us before booking so that we can adapt the seating and route.",
+            "Our boat runs on two modern Suzuki outboard engines of 300 hp each. These are engines developed for use on boats, not a converted vehicle engine as run on many longtails. They also burn fuel and produce exhaust. We cannot present measurements, so we do not promise a \"clean\" ride. The boat is a private speedboat for a maximum of 5 guests, and there is no strangers' group on board. If you react sensitively to exhaust, tell us before booking so that we can adapt the seating and route.",
             "The price is per boat for up to 5 guests. Some islands and national parks charge an entrance fee that is not included in the tour price and is paid on site directly to the rangers. The start is possible in Ao Nang or Krabi Town.",
           ],
         },
@@ -312,8 +312,8 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       {
         q: { de: "Ist Ihr Speedboat abgasfrei?", en: "Is your speedboat emission-free?" },
         a: {
-          de: "Nein. Auch unser Speedboat verbrennt Kraftstoff. Wir versprechen keine saubere Fahrt und legen keine Messwerte vor. Die Motoren sind für den Bootsbetrieb gebaut, und das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
-          en: "No. Our speedboat also burns fuel. We do not promise a clean ride and present no measurements. The engines are built for boat use, and the boat is your group's of up to 5 guests for the day.",
+          de: "Nein. Auch unser Speedboat verbrennt Kraftstoff. Es fährt mit zwei modernen Suzuki-Außenbordmotoren mit je 300 PS, die für den Bootsbetrieb entwickelt wurden, und nicht mit einem umgebauten Fahrzeugmotor. Eine saubere Fahrt versprechen wir trotzdem nicht und legen keine Messwerte vor. Das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
+          en: "No. Our speedboat also burns fuel. It runs on two modern Suzuki outboard engines of 300 hp each, developed for use on boats, not on a converted vehicle engine. We still do not promise a clean ride and present no measurements. The boat is your group's of up to 5 guests for the day.",
         },
       },
       {
@@ -459,8 +459,8 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       {
         q: { de: "Ist ein Speedboat umweltfreundlicher als ein Longtail?", en: "Is a speedboat more environmentally friendly than a longtail?" },
         a: {
-          de: "Nicht automatisch. Auch ein Speedboat verbrennt Kraftstoff, stößt Abgase aus und macht Lärm. Wir können keinen Umweltvorteil belegen und versprechen ihn nicht. Der Unterschied liegt in der Bauart des Motors und darin, dass das Boot nur Ihrer Gruppe gehört.",
-          en: "Not automatically. A speedboat also burns fuel, emits exhaust and makes noise. We cannot prove an environmental advantage and do not promise one. The difference lies in the engine's design and in the fact that the boat belongs to your group only.",
+          de: "Nicht automatisch. Auch ein Speedboat verbrennt Kraftstoff, stößt Abgase aus und macht Lärm. Wir können keinen Umweltvorteil belegen und versprechen ihn nicht. Unser Boot fährt mit modernen Suzuki-Außenbordmotoren statt mit einem umgebauten Fahrzeugmotor und gehört nur Ihrer Gruppe.",
+          en: "Not automatically. A speedboat also burns fuel, emits exhaust and makes noise. We cannot prove an environmental advantage and do not promise one. Our boat runs on modern Suzuki outboard engines instead of a converted vehicle engine and belongs to your group only.",
         },
       },
       {
