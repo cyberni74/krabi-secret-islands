@@ -9,8 +9,8 @@ import type { GuideArticleInput } from "./types";
  * AI illustrations and are captioned as such (never presented as archive photos).
  */
 const ILLUSTRATION: { de: string; en: string } = {
-  de: "KI-generierte Illustration, keine historische Fotografie.",
-  en: "AI-generated illustration, not a historical photograph.",
+  de: "Illustration nach historischem Archivmaterial, KI-generiert – keine Originalaufnahme.",
+  en: "Illustration based on historical archive material, AI-generated – not an original photograph.",
 };
 
 export const NEW_ARTICLES_K: GuideArticleInput[] = [
