@@ -178,14 +178,14 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       },
       {
         id: "private-speedboat",
-        h2: { de: "Und unser Speedboat?", en: "And our speedboat?" },
+        h2: { de: "Unser Speedboat: moderne Suzuki-Technik, nur für Ihre Gruppe", en: "Our speedboat: modern Suzuki power, just for your group" },
         body: {
           de: [
-            "Unser Boot fährt mit zwei modernen Suzuki-Außenbordmotoren mit je 300 PS. Das sind Motoren, die für den Bootsbetrieb entwickelt wurden, und kein umgebauter Fahrzeugmotor, wie er auf vielen Longtails läuft. Auch sie verbrennen Kraftstoff und erzeugen Abgase. Messwerte können wir nicht vorlegen, deshalb versprechen wir keine „saubere“ Fahrt. Das Boot ist ein privates Speedboat für maximal 5 Gäste, und es gibt keine fremde Gruppe an Bord. Wer empfindlich auf Abgase reagiert, sagt uns das vor der Buchung, damit wir Sitzplatz und Route darauf abstimmen.",
+            "Wir fahren kein Boot mit umgebautem Fahrzeugmotor. Unser privates Speedboat läuft auf zwei modernen Suzuki-Außenbordmotoren mit je 300 PS, entwickelt für den Bootsbetrieb. Dazu kommt ein Boot, das für den Tag nur Ihrer Gruppe von maximal 5 Gästen gehört: keine fremden Touristen, kein Umsteigen, keine Wartezeit auf andere. Sie bestimmen Abfahrtszeit und Tempo, und wir stimmen Sitzplatz und Route ab, wenn Sie empfindlich auf Abgase reagieren oder mit Kindern reisen.",
             "Der Preis gilt pro Boot für bis zu 5 Gäste. Einige Inseln bzw. Nationalparks verlangen eine Eintrittsgebühr, die nicht im Tourpreis enthalten ist und vor Ort direkt bei den Rangern bezahlt wird. Der Start ist in Ao Nang oder Krabi Town möglich.",
           ],
           en: [
-            "Our boat runs on two modern Suzuki outboard engines of 300 hp each. These are engines developed for use on boats, not a converted vehicle engine as run on many longtails. They also burn fuel and produce exhaust. We cannot present measurements, so we do not promise a \"clean\" ride. The boat is a private speedboat for a maximum of 5 guests, and there is no strangers' group on board. If you react sensitively to exhaust, tell us before booking so that we can adapt the seating and route.",
+            "We do not run a boat with a converted vehicle engine. Our private speedboat runs on two modern Suzuki outboard engines of 300 hp each, developed for use on boats. On top of that, the boat is yours alone for the day, together with up to 5 guests: no strangers, no changing boats, no waiting for others. You decide departure time and pace, and we adapt seating and route if you are sensitive to exhaust or travel with children.",
             "The price is per boat for up to 5 guests. Some islands and national parks charge an entrance fee that is not included in the tour price and is paid on site directly to the rangers. The start is possible in Ao Nang or Krabi Town.",
           ],
         },
@@ -312,8 +312,8 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       {
         q: { de: "Ist Ihr Speedboat abgasfrei?", en: "Is your speedboat emission-free?" },
         a: {
-          de: "Nein. Auch unser Speedboat verbrennt Kraftstoff. Es fährt mit zwei modernen Suzuki-Außenbordmotoren mit je 300 PS, die für den Bootsbetrieb entwickelt wurden, und nicht mit einem umgebauten Fahrzeugmotor. Eine saubere Fahrt versprechen wir trotzdem nicht und legen keine Messwerte vor. Das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
-          en: "No. Our speedboat also burns fuel. It runs on two modern Suzuki outboard engines of 300 hp each, developed for use on boats, not on a converted vehicle engine. We still do not promise a clean ride and present no measurements. The boat is your group's of up to 5 guests for the day.",
+          de: "Kein Verbrennungsmotor ist abgasfrei, auch unserer nicht. Unser Boot fährt mit zwei modernen Suzuki-Außenbordmotoren mit je 300 PS, die für den Bootsbetrieb entwickelt wurden, und nicht mit einem umgebauten Fahrzeugmotor. Das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
+          en: "No combustion engine is emission-free, ours included. Our boat runs on two modern Suzuki outboard engines of 300 hp each, developed for use on boats, not on a converted vehicle engine. The boat is your group's of up to 5 guests for the day.",
         },
       },
       {
@@ -459,8 +459,8 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       {
         q: { de: "Ist ein Speedboat umweltfreundlicher als ein Longtail?", en: "Is a speedboat more environmentally friendly than a longtail?" },
         a: {
-          de: "Nicht automatisch. Auch ein Speedboat verbrennt Kraftstoff, stößt Abgase aus und macht Lärm. Wir können keinen Umweltvorteil belegen und versprechen ihn nicht. Unser Boot fährt mit modernen Suzuki-Außenbordmotoren statt mit einem umgebauten Fahrzeugmotor und gehört nur Ihrer Gruppe.",
-          en: "Not automatically. A speedboat also burns fuel, emits exhaust and makes noise. We cannot prove an environmental advantage and do not promise one. Our boat runs on modern Suzuki outboard engines instead of a converted vehicle engine and belongs to your group only.",
+          de: "Jedes Motorboot verbrennt Kraftstoff. Unser Boot fährt mit modernen Suzuki-Außenbordmotoren statt mit einem umgebauten Fahrzeugmotor, es ist ein Boot für Ihre Gruppe von bis zu 5 Gästen und fährt ohne fremde Gruppe an Bord. Einen Messwert zum Umweltvorteil können wir nicht nennen.",
+          en: "Every motorboat burns fuel. Our boat runs on modern Suzuki outboard engines instead of a converted vehicle engine, it is one boat for your group of up to 5 guests and runs with no strangers' group on board. We cannot quote a measured environmental advantage.",
         },
       },
       {
