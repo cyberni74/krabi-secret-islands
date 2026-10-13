@@ -127,7 +127,7 @@ export function businessNode(lang: Lang): Json {
     name: BRAND.name,
     url: `${SITE_URL}${LANDING_PATH}`,
     logo: `${SITE_URL}${LOGO_URL}`,
-    image: `${SITE_URL}/images/krabi-boat-tour-krabi-secret-islands-privates-speedboat.jpg`,
+    image: `${SITE_URL}/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.jpg`,
     email: BRAND.email,
     telephone: `+${BRAND.whatsapp}`,
     // TODO(owner): add streetAddress / postalCode (and `geo`) of the pier or office once confirmed.

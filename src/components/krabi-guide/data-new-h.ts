@@ -109,7 +109,7 @@ export const NEW_ARTICLES_H: GuideArticleInput[] = [
           en: "The island groups at a glance: 4 Islands, Hong, Phi Phi",
         },
         figure: {
-          src: "/images/krabi-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
+          src: "/images/ao-nang-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
           width: 1254,
           height: 1254,
           alt: {

@@ -29,7 +29,7 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
       {
         h2: { de: "Die Krabi Inseln auf einen Blick", en: "The Krabi islands at a glance" },
         figure: {
-          src: "/images/krabi-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
+          src: "/images/ao-nang-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
           width: 1254,
           height: 1254,
           alt: {

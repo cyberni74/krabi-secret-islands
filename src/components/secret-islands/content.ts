@@ -26,7 +26,7 @@ export const LOGO_URL = "/brand/krabi-secret-islands-logo-800w.png";
 
 /** Higgsfield illustration: overcrowded longtail boat (used in the Longtail-vs-Speedboat story). Move to /public/images/ for production. */
 export const LONGTAIL_CROWD_IMG = {
-  src: seoImage("krabi-boat-tour-longtail-boot-krabi-ueberfuellt.webp"),
+  src: seoImage("ao-nang-boat-tour-longtail-boot-krabi-ueberfuellt.webp"),
   alt: {
     de: "Überfülltes Longtail-Boot in Krabi: genervtes Paar auf harten Holzbänken zwischen fremden Touristen und quengelnden Kindern",
     en: "Overcrowded longtail boat in Krabi: annoyed couple on hard wooden benches between strangers and whining children",
@@ -35,8 +35,8 @@ export const LONGTAIL_CROWD_IMG = {
 
 /** Higgsfield: our speedboat alone in a turquoise lagoon, couple relaxing with champagne. Move to /public/images/ for production. */
 export const ROMANCE_IMGS = [
-  seoImage("krabi-boat-tour-privates-speedboat-krabi-paar-champagner-heck.webp"),
-  seoImage("krabi-boat-tour-privates-speedboat-krabi-paar-champagner-bucht.webp"),
+  seoImage("ao-nang-boat-tour-privates-speedboat-krabi-paar-champagner-heck.webp"),
+  seoImage("ao-nang-boat-tour-privates-speedboat-krabi-paar-champagner-bucht.webp"),
 ].map((src) => ({
   src,
   alt: {
@@ -50,36 +50,36 @@ export const ROMANCE_IMGS = [
 export const IMG = {
   // Our real speedboat (owner photo, /public/images). Never use stock photos showing longtail boats.
   // Hero: private speedboat among limestone islands (Higgsfield GPT Image 2.5, 2K; variant chosen by the owner).
-  hero: "/images/krabi-boat-tour-krabi-secret-islands-privates-speedboat.webp",
+  hero: "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp",
   // Aerial of Koh Hong (owner-supplied photo, /public/images) – former hero, now the aerial-shots / pillar image.
-  hongAerial: "/images/krabi-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune.webp",
-  boat: "/images/krabi-boat-tour-krabi-secret-islands-privates-speedboat.webp",
-  ebbeFlut: "/images/krabi-boat-tour-gezeiten-ebbe-flut-vergleich-bucht-krabi.webp",
-  krabiTown: "/images/krabi-boat-tour-krabi-town-uferpromenade-sonnenuntergang.webp",
-  karstAerial: "/images/krabi-boat-tour-karstinseln-luftaufnahme-speedboat-andamanensee-krabi.webp",
-  railayBeach: "/images/krabi-boat-tour-railay-strand-kalksteinfelsen-boote-krabi.webp",
-  turquoiseBay: "/images/krabi-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
-  tupChicken: "/images/krabi-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
-  beachBoats: "/images/krabi-boat-tour-weisser-strand-kalksteinfelsen-boote-krabi.webp",
-  emeraldLagoon: "/images/krabi-boat-tour-smaragdgruene-lagune-kalksteinwaende-krabi.webp",
-  poda: seoImage("krabi-boat-tour-koh-poda-krabi-strand-kalksteinfelsen.webp"),
-  tup: seoImage("krabi-boat-tour-tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
-  hong: seoImage("krabi-boat-tour-hong-island-krabi-smaragdgruene-lagune.webp"),
+  hongAerial: "/images/ao-nang-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune.webp",
+  boat: "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp",
+  ebbeFlut: "/images/ao-nang-boat-tour-gezeiten-ebbe-flut-vergleich-bucht-krabi.webp",
+  krabiTown: "/images/ao-nang-boat-tour-krabi-town-uferpromenade-sonnenuntergang.webp",
+  karstAerial: "/images/ao-nang-boat-tour-karstinseln-luftaufnahme-speedboat-andamanensee-krabi.webp",
+  railayBeach: "/images/ao-nang-boat-tour-railay-strand-kalksteinfelsen-boote-krabi.webp",
+  turquoiseBay: "/images/ao-nang-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
+  tupChicken: "/images/ao-nang-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
+  beachBoats: "/images/ao-nang-boat-tour-weisser-strand-kalksteinfelsen-boote-krabi.webp",
+  emeraldLagoon: "/images/ao-nang-boat-tour-smaragdgruene-lagune-kalksteinwaende-krabi.webp",
+  poda: seoImage("ao-nang-boat-tour-koh-poda-krabi-strand-kalksteinfelsen.webp"),
+  tup: seoImage("ao-nang-boat-tour-tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
+  hong: seoImage("ao-nang-boat-tour-hong-island-krabi-smaragdgruene-lagune.webp"),
   roi: seoImage("krabi-boat-tour-koh-roi-versteckte-lagune-phang-nga.webp"),
   kudu: seoImage("krabi-boat-tour-koh-kudu-hoehle-phang-nga-bucht.webp"),
   maya: seoImage("krabi-boat-tour-maya-bay-phi-phi-sonnenaufgang.webp"),
-  reef: seoImage("krabi-boat-tour-schnorcheln-krabi-korallenriff-schildkroete.webp"),
-  snorkelCouple: seoImage("krabi-boat-tour-paar-schnorcheln-korallenriff-privates-speedboat-krabi.webp"),
-  plankton: seoImage("krabi-boat-tour-leuchtendes-plankton-schnorcheln-nacht-krabi.webp"),
-  fishReef: seoImage("krabi-boat-tour-riff-angeln-krabi-zackenbarsch-heck.webp"),
-  deepSea: seoImage("krabi-boat-tour-hochseeangeln-trolling-andamanensee-krabi.webp"),
-  squid: seoImage("krabi-boat-tour-nacht-tintenfischangeln-speedboat-krabi.webp"),
-  bbq: seoImage("krabi-boat-tour-catch-and-cook-strand-bbq-krabi.webp"),
-  dinner: seoImage("krabi-boat-tour-candlelight-dinner-heck-speedboat-krabi.webp"),
+  reef: seoImage("ao-nang-boat-tour-schnorcheln-krabi-korallenriff-schildkroete.webp"),
+  snorkelCouple: seoImage("ao-nang-boat-tour-paar-schnorcheln-korallenriff-privates-speedboat-krabi.webp"),
+  plankton: seoImage("ao-nang-boat-tour-leuchtendes-plankton-schnorcheln-nacht-krabi.webp"),
+  fishReef: seoImage("ao-nang-boat-tour-riff-angeln-krabi-zackenbarsch-heck.webp"),
+  deepSea: seoImage("ao-nang-boat-tour-hochseeangeln-trolling-andamanensee-krabi.webp"),
+  squid: seoImage("ao-nang-boat-tour-nacht-tintenfischangeln-speedboat-krabi.webp"),
+  bbq: seoImage("ao-nang-boat-tour-catch-and-cook-strand-bbq-krabi.webp"),
+  dinner: seoImage("ao-nang-boat-tour-candlelight-dinner-heck-speedboat-krabi.webp"),
   jamesBond: seoImage("krabi-boat-tour-james-bond-island-phang-nga-bucht.webp"),
-  railay: seoImage("krabi-boat-tour-railay-beach-krabi-goldene-stunde.webp"),
-  droneAerial: seoImage("krabi-boat-tour-speedboat-krabi-drohnenaufnahme-karstinseln.webp"),
-  family: seoImage("krabi-boat-tour-familie-kinder-schnorcheln-sandbank-krabi.webp"),
+  railay: seoImage("ao-nang-boat-tour-railay-beach-krabi-goldene-stunde.webp"),
+  droneAerial: seoImage("ao-nang-boat-tour-speedboat-krabi-drohnenaufnahme-karstinseln.webp"),
+  family: seoImage("ao-nang-boat-tour-familie-kinder-schnorcheln-sandbank-krabi.webp"),
   // Generic aliases used across guide articles and gallery.
   sandbar: "",
   lagoon: "",

@@ -53,7 +53,7 @@ export const NEW_ARTICLES_I: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/krabi-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
+          src: "/images/ao-nang-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
           width: 1672,
           height: 941,
           alt: {

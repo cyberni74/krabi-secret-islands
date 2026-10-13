@@ -60,7 +60,7 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
     ],
     related: ["family-sandbars", "sunset-dinner", "railay-escape"],
     figure: {
-      src: "/images/krabi-boat-tour-karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
+      src: "/images/ao-nang-boat-tour-karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
       width: 1536,
       height: 1024,
       alt: {
