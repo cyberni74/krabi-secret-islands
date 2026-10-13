@@ -165,10 +165,10 @@ export function relatedArticles(a: GuideArticle): GuideArticle[] {
 export const GUIDE_IMAGES_READY = new Set<string>([
   // "krabi-boat-tour-leuchtendes-plankton-krabi-nacht-wasser.webp",
   // Own AI-generated place scenes for the film-locations article (served via /bilder/, see secret-islands/image-map.ts).
-  "krabi-boat-tour-khao-phing-kan-strand-phang-nga-bucht-drehort.webp",
-  "krabi-boat-tour-maya-bay-phi-phi-leh-luftaufnahme-kalksteinwaende.webp",
-  "krabi-boat-tour-koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp",
-  "krabi-boat-tour-pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp",
+  "book-krabi-boat-khao-phing-kan-strand-phang-nga-bucht-drehort.webp",
+  "book-krabi-boat-maya-bay-phi-phi-leh-luftaufnahme-kalksteinwaende.webp",
+  "book-krabi-boat-koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp",
+  "book-krabi-boat-pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp",
 ]);
 
 /** Gallery photos of an article whose files exist. */

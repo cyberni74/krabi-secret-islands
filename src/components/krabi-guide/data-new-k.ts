@@ -66,7 +66,7 @@ export const NEW_ARTICLES_K: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/krabi-boat-tour-karstinseln-luftaufnahme-boote-andamanensee.webp",
+          src: "/images/book-krabi-boat-karstinseln-luftaufnahme-boote-andamanensee.webp",
           width: 1290,
           height: 857,
           alt: {
@@ -97,7 +97,7 @@ export const NEW_ARTICLES_K: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/krabi-boat-tour-historisches-fischerdorf-kalksteinfelsen-illustration.webp",
+          src: "/images/book-krabi-boat-historisches-fischerdorf-kalksteinfelsen-illustration.webp",
           width: 1290,
           height: 853,
           alt: {
@@ -139,7 +139,7 @@ export const NEW_ARTICLES_K: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/krabi-boat-tour-strandleben-1970er-kalksteinfelsen-illustration.webp",
+          src: "/images/book-krabi-boat-strandleben-1970er-kalksteinfelsen-illustration.webp",
           width: 1152,
           height: 768,
           alt: {
@@ -212,7 +212,7 @@ export const NEW_ARTICLES_K: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/krabi-boat-tour-frau-traditionelles-holzboot-karstinseln.webp",
+          src: "/images/book-krabi-boat-frau-traditionelles-holzboot-karstinseln.webp",
           width: 1152,
           height: 768,
           alt: {

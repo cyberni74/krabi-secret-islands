@@ -436,31 +436,31 @@ export const MOVIE_ARTICLES: GuideArticleInput[] = [
       "krabi-tides-guide",
     ],
     tourIds: ["phang-nga-uncharted", "phi-phi-early-bird"],
-    image: "/bilder/krabi-boat-tour-phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp",
+    image: "/bilder/book-krabi-boat-phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp",
     images: [
       {
-        src: "/bilder/krabi-boat-tour-khao-phing-kan-strand-phang-nga-bucht-drehort.webp",
+        src: "/bilder/book-krabi-boat-khao-phing-kan-strand-phang-nga-bucht-drehort.webp",
         alt: {
           de: "Strandbucht Khao Phing Kan in der Phang Nga Bucht mit Felswand und der Felsnadel Koh Tapu im Hintergrund in der goldenen Stunde",
           en: "Khao Phing Kan beach cove in Phang Nga Bay with a rock face and the Koh Tapu needle in the background at golden hour",
         },
       },
       {
-        src: "/bilder/krabi-boat-tour-maya-bay-phi-phi-leh-luftaufnahme-kalksteinwaende.webp",
+        src: "/bilder/book-krabi-boat-maya-bay-phi-phi-leh-luftaufnahme-kalksteinwaende.webp",
         alt: {
           de: "Luftaufnahme der menschenleeren Maya Bay auf Koh Phi Phi Leh mit türkisem Wasser und Kalksteinwänden",
           en: "Aerial view of an empty Maya Bay on Koh Phi Phi Leh with turquoise water and limestone walls",
         },
       },
       {
-        src: "/bilder/krabi-boat-tour-koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp",
+        src: "/bilder/book-krabi-boat-koh-panyee-schwimmendes-dorf-phang-nga-bucht.webp",
         alt: {
           de: "Stelzendorf Koh Panyee vor einem Felsen in der Phang Nga Bucht",
           en: "The stilt village of Koh Panyee in front of a rock in Phang Nga Bay",
         },
       },
       {
-        src: "/bilder/krabi-boat-tour-pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp",
+        src: "/bilder/book-krabi-boat-pileh-lagune-phi-phi-leh-smaragdgruenes-wasser.webp",
         alt: {
           de: "Luftaufnahme der Pileh-Lagune auf Phi Phi Leh mit smaragdgrünem Wasser zwischen Kalksteinfelsen",
           en: "Aerial view of Pileh Lagoon on Phi Phi Leh with emerald-green water between limestone cliffs",
