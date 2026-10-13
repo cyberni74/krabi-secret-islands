@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import { useId, useRef, useState, type FormEvent, type KeyboardEvent, type PointerEvent } from "react";
 import { cn } from "@/lib/utils";
 import { submitGuestReview, type PublicReviews } from "@/lib/server/guest-reviews";
-import { SectionTitle, btn } from "./fx";
+import { btn } from "./fx";
 import { useTx } from "./store";
 
 /** Number with one decimal in the visitor's language (4,5 / 4.5). */
@@ -70,9 +70,9 @@ function StarInput({ value, onChange, label }: { value: number; onChange: (v: nu
         onClick={(e) => onChange(at(e as unknown as PointerEvent))}
         className="inline-flex min-h-11 cursor-pointer touch-manipulation items-center rounded-xl px-1 outline-none focus-visible:ring-2 focus-visible:ring-si-cyan"
       >
-        <StarDisplay value={shown} className="size-9 sm:size-10" />
+        <StarDisplay value={shown} className="size-7" />
       </div>
-      <span className="min-w-14 text-lg font-extrabold text-white" aria-live="polite">
+      <span className="min-w-12 text-base font-extrabold text-white" aria-live="polite">
         {value ? `${fmt(value, lang)} / 5` : "– / 5"}
       </span>
     </div>
@@ -123,10 +123,10 @@ function ReviewForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="si-glass mx-auto max-w-xl space-y-5 rounded-3xl p-6 sm:p-8" noValidate>
-      <h3 className="text-xl font-extrabold">{t({ de: "Ihre Bewertung", en: "Your review" })}</h3>
+    <form onSubmit={onSubmit} className="si-glass mx-auto max-w-md space-y-3.5 rounded-2xl p-4 sm:p-5" noValidate>
+      <h3 className="text-base font-extrabold">{t({ de: "Ihre Bewertung", en: "Your review" })}</h3>
       <div>
-        <label htmlFor={nameId} className="text-sm font-bold text-slate-200">
+        <label htmlFor={nameId} className="text-xs font-bold text-slate-300">
           {t({ de: "Name", en: "Name" })}
         </label>
         <input
@@ -135,17 +135,17 @@ function ReviewForm() {
           onChange={(e) => setName(e.target.value)}
           maxLength={60}
           autoComplete="given-name"
-          className="mt-1.5 min-h-12 w-full rounded-2xl bg-white/5 px-4 text-base text-white outline-none ring-1 ring-white/10 focus:ring-si-cyan"
+          className="mt-1 min-h-11 w-full rounded-xl bg-white/5 px-3 text-base text-white outline-none ring-1 ring-white/10 focus:ring-si-cyan"
         />
       </div>
       <div>
-        <span className="text-sm font-bold text-slate-200">{t({ de: "Sterne", en: "Stars" })}</span>
+        <span className="text-xs font-bold text-slate-300">{t({ de: "Sterne", en: "Stars" })}</span>
         <div className="mt-1">
           <StarInput value={rating} onChange={setRating} label={t({ de: "Bewertung in Sternen", en: "Rating in stars" })} />
         </div>
       </div>
       <div>
-        <label htmlFor={textId} className="text-sm font-bold text-slate-200">
+        <label htmlFor={textId} className="text-xs font-bold text-slate-300">
           {t({ de: "Ihre Erfahrung (optional)", en: "Your experience (optional)" })}
         </label>
         <textarea
@@ -153,8 +153,8 @@ function ReviewForm() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           maxLength={800}
-          rows={4}
-          className="mt-1.5 w-full rounded-2xl bg-white/5 px-4 py-3 text-base text-white outline-none ring-1 ring-white/10 focus:ring-si-cyan"
+          rows={3}
+          className="mt-1 w-full rounded-xl bg-white/5 px-3 py-2 text-base text-white outline-none ring-1 ring-white/10 focus:ring-si-cyan"
         />
       </div>
       {/* Honeypot: hidden from people, filled by bots. */}
@@ -169,10 +169,10 @@ function ReviewForm() {
           {msg[error] ?? msg["store-failed"]}
         </p>
       ) : null}
-      <button type="submit" disabled={send.isPending} className={cn(btn.primary, "w-full")}>
+      <button type="submit" disabled={send.isPending} className={cn(btn.primary, "min-h-11 w-full text-sm")}>
         {send.isPending ? t({ de: "Sende …", en: "Sending …" }) : t({ de: "Bewertung abschicken", en: "Submit review" })}
       </button>
-      <p className="text-xs text-slate-400">{t({ de: "Ohne Anmeldung. Wir speichern nur Name, Sterne und Text.", en: "No sign-up. We only store name, stars and text." })}</p>
+      <p className="text-[11px] leading-snug text-slate-400">{t({ de: "Ohne Anmeldung. Wir speichern nur Name, Sterne und Text.", en: "No sign-up. We only store name, stars and text." })}</p>
     </form>
   );
 }
@@ -181,14 +181,15 @@ function ReviewForm() {
 export function GuestReviews({ data }: { data: PublicReviews }) {
   const { t, lang } = useTx();
   return (
-    <section id="reviews" className="relative scroll-mt-16 py-16 sm:py-24">
+    <section id="reviews" className="relative scroll-mt-16 py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <SectionTitle eyebrow={t({ de: "Gästestimmen", en: "Guest reviews" })} title={t({ de: "Was unsere Gäste sagen", en: "What our guests say" })} />
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-200">{t({ de: "Gästestimmen", en: "Guest reviews" })}</p>
+        <h2 className="mt-2 text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">{t({ de: "Was unsere Gäste sagen", en: "What our guests say" })}</h2>
         {data.count > 0 ? (
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <span className="si-text-gradient text-6xl font-black leading-none">{fmt(data.average, lang)}</span>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <span className="si-text-gradient text-4xl font-black leading-none">{fmt(data.average, lang)}</span>
             <div>
-              <StarDisplay value={data.average} className="size-6" />
+              <StarDisplay value={data.average} className="size-5" />
               <p className="mt-1 text-sm font-semibold text-slate-300">
                 {t({ de: "Bewertungen:", en: "Reviews:" })} {data.count}
               </p>
@@ -211,9 +212,9 @@ export function GuestReviews({ data }: { data: PublicReviews }) {
             ))}
           </ul>
         ) : (
-          <p className="mt-6 text-slate-300">{t({ de: "Seien Sie der Erste und bewerten Sie uns.", en: "Be the first to review us." })}</p>
+          <p className="mt-1 text-sm text-slate-300">{t({ de: "Seien Sie der Erste und bewerten Sie uns.", en: "Be the first to review us." })}</p>
         )}
-        <div className="mt-10">
+        <div className="mt-6">
           <ReviewForm />
         </div>
       </div>
