@@ -29,7 +29,7 @@ export const ISLAND_ARTICLES_A: GuideArticleInput[] = [
       {
         h2: { de: "Lage und Anreise nach Koh Poda", en: "Location and getting to Koh Poda" },
         figure: {
-          src: "/images/koh-poda-felsen-ao-nang-krabi.webp",
+          src: "/images/krabi-boat-tour-koh-poda-felsen-ao-nang-krabi.webp",
           width: 2400,
           height: 1600,
           alt: {

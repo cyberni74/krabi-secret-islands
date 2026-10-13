@@ -48,7 +48,7 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
           en: "Status at a glance: open or closed?",
         },
         figure: {
-          src: "/images/maya-bay-phi-phi-leh-panorama-strand-krabi.webp",
+          src: "/images/krabi-boat-tour-maya-bay-phi-phi-leh-panorama-strand-krabi.webp",
           width: 700,
           height: 355,
           alt: {

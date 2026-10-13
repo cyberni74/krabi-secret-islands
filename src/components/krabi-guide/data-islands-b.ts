@@ -302,7 +302,7 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
       {
         h2: { de: "Phi Phi Don und Phi Phi Leh", en: "Phi Phi Don and Phi Phi Leh" },
         figure: {
-          src: "/images/phi-phi-maya-bay-luftaufnahme-speedboote-krabi.webp",
+          src: "/images/krabi-boat-tour-phi-phi-maya-bay-luftaufnahme-speedboote-krabi.webp",
           width: 2400,
           height: 1799,
           alt: {

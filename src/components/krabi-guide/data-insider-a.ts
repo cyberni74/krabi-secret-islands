@@ -459,19 +459,19 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     image: IMG.plankton,
     images: [
       {
-        src: GUIDE_IMG("sonnenuntergang-privates-speedboat-krabi-kalkfelsen"),
+        src: GUIDE_IMG("krabi-boat-tour-sonnenuntergang-privates-speedboat-krabi-kalkfelsen"),
         alt: { de: "Sonnenuntergang vom privaten Speedboat vor den Kalkfelsen bei Krabi", en: "Sunset from the private speedboat in front of Krabi’s limestone cliffs" },
       },
       {
-        src: GUIDE_IMG("privates-speedboat-ao-nang-bucht-abend"),
+        src: GUIDE_IMG("krabi-boat-tour-privates-speedboat-ao-nang-bucht-abend"),
         alt: { de: "Privates Speedboat in einer dunklen Bucht bei Ao Nang am Abend", en: "Private speedboat in a dark bay near Ao Nang in the evening" },
       },
       {
-        src: GUIDE_IMG("leuchtendes-plankton-krabi-nacht-wasser"),
+        src: GUIDE_IMG("krabi-boat-tour-leuchtendes-plankton-krabi-nacht-wasser"),
         alt: { de: "Leuchtendes Plankton im Wasser bei Krabi in der Nacht", en: "Bioluminescent plankton glowing in the water near Krabi at night" },
       },
       {
-        src: GUIDE_IMG("schwimmen-leuchtendes-plankton-speedboat-krabi"),
+        src: GUIDE_IMG("krabi-boat-tour-schwimmen-leuchtendes-plankton-speedboat-krabi"),
         alt: { de: "Gäste schwimmen nachts vom Speedboat im leuchtenden Plankton", en: "Guests swimming from the speedboat among glowing plankton at night" },
       },
     ],

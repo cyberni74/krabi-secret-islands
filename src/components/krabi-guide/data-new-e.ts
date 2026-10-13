@@ -109,7 +109,7 @@ export const NEW_ARTICLES_E: GuideArticleInput[] = [
           en: "The 4 island tour Krabi map – explained",
         },
         figure: {
-          src: "/images/karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
+          src: "/images/krabi-boat-tour-karte-4-islands-krabi-poda-chicken-tup-phra-nang.webp",
           width: 1536,
           height: 1024,
           alt: {

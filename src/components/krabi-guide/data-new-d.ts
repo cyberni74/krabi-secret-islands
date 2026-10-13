@@ -360,7 +360,7 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           en: "Short answer: two islands, two purposes",
         },
         figure: {
-          src: "/images/phi-phi-inseln-luftaufnahme-bucht-speedboot-krabi.webp",
+          src: "/images/krabi-boat-tour-phi-phi-inseln-luftaufnahme-bucht-speedboot-krabi.webp",
           width: 2400,
           height: 1799,
           alt: {
@@ -404,7 +404,7 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           en: "Phi Phi Don: Ton Sai, beaches and views on the inhabited island",
         },
         figure: {
-          src: "/images/phi-phi-don-ton-sai-bucht-aussichtspunkt-krabi.webp",
+          src: "/images/krabi-boat-tour-phi-phi-don-ton-sai-bucht-aussichtspunkt-krabi.webp",
           width: 1200,
           height: 800,
           alt: {
@@ -445,7 +445,7 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           en: "Phi Phi Leh: Maya Bay, Pileh Lagoon and Viking Cave on the uninhabited island",
         },
         figure: {
-          src: "/images/maya-bay-phi-phi-leh-strand-besucher-krabi.webp",
+          src: "/images/krabi-boat-tour-maya-bay-phi-phi-leh-strand-besucher-krabi.webp",
           width: 669,
           height: 356,
           alt: {

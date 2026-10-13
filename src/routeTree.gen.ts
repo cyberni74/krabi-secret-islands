@@ -15,6 +15,7 @@ import { Route as InfoRouteImport } from './routes/info'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BilderFileRouteImport } from './routes/bilder.$file'
+import { Route as ImagesFileRouteImport } from './routes/images.$file'
 import { Route as KrabiGuideIndexRouteImport } from './routes/krabi-guide.index'
 import { Route as KrabiGuideSlugRouteImport } from './routes/krabi-guide.$slug'
 import { Route as SecretIslandsSplatRouteImport } from './routes/secret-islands.$'
@@ -51,6 +52,11 @@ const BilderFileRoute = BilderFileRouteImport.update({
   path: '/bilder/$file',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImagesFileRoute = ImagesFileRouteImport.update({
+  id: '/images/$file',
+  path: '/images/$file',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KrabiGuideIndexRoute = KrabiGuideIndexRouteImport.update({
   id: '/krabi-guide/',
   path: '/krabi-guide/',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
+  '/images/$file': typeof ImagesFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
   '/touren/$slug': typeof TourenSlugRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
+  '/images/$file': typeof ImagesFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
   '/touren/$slug': typeof TourenSlugRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/bilder/$file': typeof BilderFileRoute
+  '/images/$file': typeof ImagesFileRoute
   '/krabi-guide/$slug': typeof KrabiGuideSlugRoute
   '/secret-islands/$': typeof SecretIslandsSplatRoute
   '/touren/$slug': typeof TourenSlugRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
+    | '/images/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
     | '/touren/$slug'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
+    | '/images/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
     | '/touren/$slug'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/bilder/$file'
+    | '/images/$file'
     | '/krabi-guide/$slug'
     | '/secret-islands/$'
     | '/touren/$slug'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BilderFileRoute: typeof BilderFileRoute
+  ImagesFileRoute: typeof ImagesFileRoute
   KrabiGuideSlugRoute: typeof KrabiGuideSlugRoute
   SecretIslandsSplatRoute: typeof SecretIslandsSplatRoute
   TourenSlugRoute: typeof TourenSlugRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BilderFileRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/images/$file': {
+      id: '/images/$file'
+      path: '/images/$file'
+      fullPath: '/images/$file'
+      preLoaderRoute: typeof ImagesFileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/krabi-guide/': {
       id: '/krabi-guide/'
       path: '/krabi-guide'
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BilderFileRoute: BilderFileRoute,
+  ImagesFileRoute: ImagesFileRoute,
   KrabiGuideSlugRoute: KrabiGuideSlugRoute,
   SecretIslandsSplatRoute: SecretIslandsSplatRoute,
   TourenSlugRoute: TourenSlugRoute,

@@ -68,7 +68,7 @@ export const NEW_ARTICLES_J: GuideArticleInput[] = [
           ],
         },
         figure: {
-          src: "/images/railay-strand-kalksteinfelsen-boote-krabi.webp",
+          src: "/images/krabi-boat-tour-railay-strand-kalksteinfelsen-boote-krabi.webp",
           width: 1672,
           height: 941,
           alt: {
@@ -279,7 +279,7 @@ export const NEW_ARTICLES_J: GuideArticleInput[] = [
           en: "If you really want peace, choose an island off the standard route. Examples are Koh Roi and Koh Kudu in the guide to hidden lagoons.",
         },
         figure: {
-          src: "/images/tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
+          src: "/images/krabi-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
           width: 1672,
           height: 941,
           alt: {
