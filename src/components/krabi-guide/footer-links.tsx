@@ -99,9 +99,13 @@ const TEASER_SLUGS = [
   "best-snorkeling-spots-krabi",
   "krabi-boat-tours-rainy-season",
   "krabi-with-kids",
+  "longtail-boats-exhaust-health-risks",
+  "krabi-history-coast-from-trading-world-to-boat-tours",
+  "best-beaches-krabi-ao-nang-railay-islands",
+  "krabi-island-hopping-tour-solo-ein-tag",
 ];
 
-/** Visible landing-page block with 8 key guide articles as real links (server HTML). */
+/** Visible landing-page block with 12 key guide articles as real links (server HTML). */
 export function GuideTeaser() {
   const { lang } = useTx();
   const nav = useGuideNav();
