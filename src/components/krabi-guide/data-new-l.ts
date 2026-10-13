@@ -181,11 +181,11 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
         h2: { de: "Unser Speedboat: moderne Suzuki-Technik, nur für Ihre Gruppe", en: "Our speedboat: modern Suzuki power, just for your group" },
         body: {
           de: [
-            "Wir fahren kein Boot mit umgebautem Fahrzeugmotor. Unser privates Speedboat läuft auf zwei modernen Suzuki-Außenbordmotoren vom Typ DF300APX (je 300 PS, 4,0-Liter-V6-Viertakter), entwickelt für den Bootsbetrieb. Nach Herstellerangaben regelt die Lean-Burn-Technik dieser Motoren das Luft-Kraftstoff-Gemisch über eine Lambdasonde im Abgas, um Verbrauch und Emissionen zu senken. Dazu kommt ein Boot, das für den Tag nur Ihrer Gruppe von maximal 5 Gästen gehört: keine fremden Touristen, kein Umsteigen, keine Wartezeit auf andere. Sie bestimmen Abfahrtszeit und Tempo, und wir stimmen Sitzplatz und Route ab, wenn Sie empfindlich auf Abgase reagieren oder mit Kindern reisen.",
+            "Wir fahren kein Boot mit umgebautem Fahrzeugmotor. Unser privates Speedboat läuft auf zwei modernen Suzuki-Außenbordmotoren (je 300 PS, 4,0-Liter-V6-Viertakter), entwickelt für den Bootsbetrieb. Nach Herstellerangaben regelt die Lean-Burn-Technik dieser Motoren das Luft-Kraftstoff-Gemisch über eine Lambdasonde im Abgas, um Verbrauch und Emissionen zu senken. Dazu kommt ein Boot, das für den Tag nur Ihrer Gruppe von maximal 5 Gästen gehört: keine fremden Touristen, kein Umsteigen, keine Wartezeit auf andere. Sie bestimmen Abfahrtszeit und Tempo, und wir stimmen Sitzplatz und Route ab, wenn Sie empfindlich auf Abgase reagieren oder mit Kindern reisen.",
             "Der Preis gilt pro Boot für bis zu 5 Gäste. Einige Inseln bzw. Nationalparks verlangen eine Eintrittsgebühr, die nicht im Tourpreis enthalten ist und vor Ort direkt bei den Rangern bezahlt wird. Der Start ist in Ao Nang oder Krabi Town möglich.",
           ],
           en: [
-            "We do not run a boat with a converted vehicle engine. Our private speedboat runs on two modern Suzuki DF300APX outboard engines (300 hp each, 4.0-litre V6 four-strokes), developed for use on boats. According to the manufacturer, the Lean Burn technology of these engines adjusts the air-fuel mixture via an oxygen sensor in the exhaust to reduce consumption and emissions. On top of that, the boat is yours alone for the day, together with up to 5 guests: no strangers, no changing boats, no waiting for others. You decide departure time and pace, and we adapt seating and route if you are sensitive to exhaust or travel with children.",
+            "We do not run a boat with a converted vehicle engine. Our private speedboat runs on two modern Suzuki outboard engines (300 hp each, 4.0-litre V6 four-strokes), developed for use on boats. According to the manufacturer, the Lean Burn technology of these engines adjusts the air-fuel mixture via an oxygen sensor in the exhaust to reduce consumption and emissions. On top of that, the boat is yours alone for the day, together with up to 5 guests: no strangers, no changing boats, no waiting for others. You decide departure time and pace, and we adapt seating and route if you are sensitive to exhaust or travel with children.",
             "The price is per boat for up to 5 guests. Some islands and national parks charge an entrance fee that is not included in the tour price and is paid on site directly to the rangers. The start is possible in Ao Nang or Krabi Town.",
           ],
         },
@@ -252,7 +252,7 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
             "WHO Europa: Health effects of black carbon, 2012 (who.int/europe/publications/i/item/9789289002653)",
             "Ultrafine particles: unique physicochemical properties relevant to health and disease (pmc.ncbi.nlm.nih.gov/articles/PMC7156720)",
             "Climate and Clean Air Coalition / AIT: Emissionsinventar der Binnenschifffahrt in Bangkok (ccacoalition.org, Projekt „Developing an emissions inventory for inland water transport in Bangkok“)",
-            "Suzuki Marine: DF300AP / DF300APX, Produktseite (globalsuzuki.com/marine/lineup/df300ap)",
+            "Suzuki Marine: Außenborder-Produktseite (globalsuzuki.com/marine/lineup/df300ap)",
             "Khaosod English, 6. Februar 2024: Krabi rushes to handle 120 tourist boats a day to Pileh Bay (khaosodenglish.com)",
             "Phuket News: Tour boats blamed for widespread reef damage (thephuketnews.com, Koh Kradan)",
             "Arab News / AFP, 2018: Once-pristine Thai bay from „The Beach“ to close to boats (arabnews.pk/node/1246341)",
@@ -265,7 +265,7 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
             "WHO Europe: Health effects of black carbon, 2012 (who.int/europe/publications/i/item/9789289002653)",
             "Ultrafine particles: unique physicochemical properties relevant to health and disease (pmc.ncbi.nlm.nih.gov/articles/PMC7156720)",
             "Climate and Clean Air Coalition / AIT: emissions inventory for inland water transport in Bangkok (ccacoalition.org, project \"Developing an emissions inventory for inland water transport in Bangkok\")",
-            "Suzuki Marine: DF300AP / DF300APX, product page (globalsuzuki.com/marine/lineup/df300ap)",
+            "Suzuki Marine: outboard product page (globalsuzuki.com/marine/lineup/df300ap)",
             "Khaosod English, 6 February 2024: Krabi rushes to handle 120 tourist boats a day to Pileh Bay (khaosodenglish.com)",
             "Phuket News: Tour boats blamed for widespread reef damage (thephuketnews.com, Koh Kradan)",
             "Arab News / AFP, 2018: Once-pristine Thai bay from \"The Beach\" to close to boats (arabnews.pk/node/1246341)",
@@ -314,8 +314,8 @@ export const NEW_ARTICLES_L: GuideArticleInput[] = [
       {
         q: { de: "Ist Ihr Speedboat abgasfrei?", en: "Is your speedboat emission-free?" },
         a: {
-          de: "Kein Verbrennungsmotor ist abgasfrei, auch unserer nicht. Unser Boot fährt mit zwei modernen Suzuki-Außenbordmotoren vom Typ DF300APX (je 300 PS, 4,0-Liter-V6-Viertakter), die für den Bootsbetrieb entwickelt wurden, und nicht mit einem umgebauten Fahrzeugmotor. Das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
-          en: "No combustion engine is emission-free, ours included. Our boat runs on two modern Suzuki DF300APX outboard engines (300 hp each, 4.0-litre V6 four-strokes), developed for use on boats, not on a converted vehicle engine. The boat is your group's of up to 5 guests for the day.",
+          de: "Kein Verbrennungsmotor ist abgasfrei, auch unserer nicht. Unser Boot fährt mit zwei modernen Suzuki-Außenbordmotoren (je 300 PS, 4,0-Liter-V6-Viertakter), die für den Bootsbetrieb entwickelt wurden, und nicht mit einem umgebauten Fahrzeugmotor. Das Boot gehört für den Tag Ihrer Gruppe von bis zu 5 Gästen.",
+          en: "No combustion engine is emission-free, ours included. Our boat runs on two modern Suzuki outboard engines (300 hp each, 4.0-litre V6 four-strokes), developed for use on boats, not on a converted vehicle engine. The boat is your group's of up to 5 guests for the day.",
         },
       },
       {
