@@ -30,9 +30,13 @@ function BookingInbox() {
   const qc = useQueryClient();
   const auth = useQuery({ queryKey: ["admin-state"], queryFn: () => getAdminState(), retry: false });
   const [filter, setFilter] = useState<BookingStatus | "all">("all");
+  const [tab, setTab] = useState<"requests" | "reviews">("requests");
   const isAdmin = auth.data?.admin === true;
   const q = useQuery({ queryKey: ["booking-requests"], queryFn: () => listBookingRequests(), retry: false, refetchInterval: 60_000, enabled: isAdmin });
   const rows = (q.data ?? []).filter((r) => filter === "all" || r.status === filter);
+  const rev = useQuery({ queryKey: ["guest-reviews-admin"], queryFn: () => adminListGuestReviews(), retry: false, enabled: isAdmin });
+  const pendingReviews = (rev.data ?? []).filter((r) => r.status === "pending").length;
+  const newRequests = (q.data ?? []).filter((r) => r.status === "new").length;
   const logout = useMutation({
     mutationFn: () => adminLogout(),
     onSuccess: () => {
@@ -48,7 +52,7 @@ function BookingInbox() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Krabi Secret Islands</p>
-            <h1 className="text-3xl font-extrabold">Buchungsanfragen</h1>
+            <h1 className="text-3xl font-extrabold">{tab === "reviews" ? "Bewertungen" : "Buchungsanfragen"}</h1>
           </div>
           {isAdmin ? (
             <div className="flex gap-2">
@@ -68,6 +72,27 @@ function BookingInbox() {
           <LoginCard configured={auth.data?.configured ?? false} />
         ) : (
           <>
+            <div role="tablist" className="mt-6 grid max-w-md grid-cols-2 gap-1 rounded-2xl bg-white/5 p-1">
+              {[
+                { id: "requests" as const, label: "Buchungsanfragen", n: newRequests },
+                { id: "reviews" as const, label: "Bewertungen", n: pendingReviews },
+              ].map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={tab === t.id}
+                  onClick={() => setTab(t.id)}
+                  className={cn("min-h-11 rounded-xl px-3 text-sm font-bold", tab === t.id ? "bg-white text-si-navy" : "text-slate-200")}
+                >
+                  {t.label}
+                  {t.n ? <span className="ml-2 rounded-full bg-si-cyan px-2 py-0.5 text-xs text-si-navy">{t.n}</span> : null}
+                </button>
+              ))}
+            </div>
+            {tab === "reviews" ? <ReviewModeration /> : null}
+            {tab === "requests" ? (
+              <>
             <div className="hide-scroll -mx-4 mt-6 flex gap-2 overflow-x-auto px-4">
               {[{ id: "all" as const, label: "Alle" }, ...STATUS].map((s) => {
                 const n = s.id === "all" ? (q.data?.length ?? 0) : (q.data ?? []).filter((r) => r.status === s.id).length;
@@ -93,7 +118,8 @@ function BookingInbox() {
                 <RequestCard key={r.id} row={r} />
               ))}
             </ul>
-            <ReviewModeration />
+              </>
+            ) : null}
           </>
         )}
       </div>
@@ -239,10 +265,7 @@ function ReviewModeration() {
   const pending = rows.filter((r) => r.status === "pending").length;
   const LABEL = { pending: "Zu prüfen", approved: "Veröffentlicht", rejected: "Abgelehnt" } as const;
   return (
-    <section className="mt-12">
-      <h2 className="text-2xl font-extrabold">
-        Bewertungen {pending ? <span className="ml-2 rounded-full bg-si-cyan px-3 py-0.5 align-middle text-sm text-si-navy">{pending} neu</span> : null}
-      </h2>
+    <section className="mt-6">
       {q.isLoading ? <p className="mt-4 text-slate-300">Lade …</p> : null}
       {!q.isLoading && rows.length === 0 ? <p className="mt-4 text-slate-300">Noch keine Bewertungen.</p> : null}
       <ul className="mt-4 space-y-3">
