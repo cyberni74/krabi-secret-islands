@@ -262,10 +262,25 @@ function ReviewModeration() {
     onSuccess: () => void qc.invalidateQueries({ queryKey: ["guest-reviews-admin"] }),
   });
   const rows = q.data ?? [];
-  const pending = rows.filter((r) => r.status === "pending").length;
+  const pendingIds = rows.filter((r) => r.status === "pending").map((r) => r.id);
+  const pending = pendingIds.length;
+  const approveAll = useMutation({
+    mutationFn: () => Promise.all(pendingIds.map((id) => adminSetReviewStatus({ data: { id, status: "approved" } }))),
+    onSuccess: () => void qc.invalidateQueries({ queryKey: ["guest-reviews-admin"] }),
+  });
   const LABEL = { pending: "Zu prüfen", approved: "Veröffentlicht", rejected: "Abgelehnt" } as const;
   return (
     <section className="mt-6">
+      {pending ? (
+        <button
+          type="button"
+          disabled={approveAll.isPending}
+          onClick={() => window.confirm(`Alle ${pending} wartenden Bewertungen veröffentlichen?`) && approveAll.mutate()}
+          className="mt-4 min-h-11 rounded-xl bg-emerald-500 px-5 text-sm font-bold text-white disabled:opacity-60"
+        >
+          {approveAll.isPending ? "Veröffentliche …" : `Alle veröffentlichen (${pending})`}
+        </button>
+      ) : null}
       {q.isLoading ? <p className="mt-4 text-slate-300">Lade …</p> : null}
       {!q.isLoading && rows.length === 0 ? <p className="mt-4 text-slate-300">Noch keine Bewertungen.</p> : null}
       <ul className="mt-4 space-y-3">
