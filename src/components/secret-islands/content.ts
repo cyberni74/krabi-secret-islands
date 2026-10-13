@@ -61,6 +61,7 @@ export const IMG = {
   turquoiseBay: "/images/ao-nang-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
   tupChicken: "/images/ao-nang-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
   beachBoats: "/images/ao-nang-boat-tour-weisser-strand-kalksteinfelsen-boote-krabi.webp",
+  karstAerialBoats: "/images/krabi-boat-tour-karstinseln-luftaufnahme-boote-andamanensee.webp",
   emeraldLagoon: "/images/ao-nang-boat-tour-smaragdgruene-lagune-kalksteinwaende-krabi.webp",
   poda: seoImage("ao-nang-boat-tour-koh-poda-krabi-strand-kalksteinfelsen.webp"),
   tup: seoImage("ao-nang-boat-tour-tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
@@ -126,6 +127,10 @@ export const IMAGE_ALT: Record<string, L> = {
   [IMG.railayBeach]: {
     de: "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser",
     en: "Beach at Railay and Phra Nang with tall limestone cliffs, white sand and turquoise water",
+  },
+  [IMG.karstAerialBoats]: {
+    de: "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi",
+    en: "Aerial view of karst islands, sandy beaches and boats on turquoise water in the Andaman Sea near Krabi",
   },
   [IMG.turquoiseBay]: {
     de: "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi",

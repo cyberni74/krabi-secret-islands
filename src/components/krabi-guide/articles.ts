@@ -18,6 +18,7 @@ import { NEW_ARTICLES_G } from "./data-new-g";
 import { NEW_ARTICLES_H } from "./data-new-h";
 import { NEW_ARTICLES_I } from "./data-new-i";
 import { NEW_ARTICLES_J } from "./data-new-j";
+import { NEW_ARTICLES_K } from "./data-new-k";
 import { NEW_ARTICLES_E } from "./data-new-e";
 import { NEW_ARTICLES_D } from "./data-new-d";
 import { NEW_ARTICLES_C } from "./data-new-c";
@@ -59,6 +60,7 @@ export const KEYWORD_MAP: {
   { slug: "krabi-island-hopping-tour-solo-ein-tag", primary: { de: "Krabi Island Hopping Tour", en: "Krabi island hopping tour" }, secondary: ["Krabi Inselhopping", "Krabi 4 Islands Tour", "Krabi allein reisen", "Krabi island hopping alone"], intent: ["info", "comm"], note: "New (Oct 2026) – one-day guide with FAQ + HowTo." },
   { slug: "best-beaches-krabi-ao-nang-railay-islands", primary: { de: "beste Strände Krabi", en: "best beaches in Krabi" }, secondary: ["schönste Strände Krabi", "Krabi Strände Ao Nang", "Railay Strand", "Phra Nang Beach"], intent: ["info"], note: "New (Oct 2026) – informational beach overview." },
   { slug: "ao-nang-without-mass-tourism", primary: { de: "Ao Nang ohne Massentourismus", en: "Ao Nang without crowds" }, secondary: ["Ao Nang ruhig", "Ao Nang Geheimtipps", "Ao Nang quiet", "Ao Nang away from crowds"], intent: ["info", "comm"], note: "New (Oct 2026) – informational, crowd-avoidance angle." },
+  { slug: "krabi-history-coast-from-trading-world-to-boat-tours", primary: { de: "Krabi Geschichte", en: "Krabi history" }, secondary: ["Krabi Khlong Thom", "Khao Khanap Nam", "Krabi Küste Geschichte", "Krabi boat tour history"], intent: ["info"], note: "New (Oct 2026) – history / culture pillar from owner draft." },
   { slug: "krabi-islands-insider-guide", primary: { de: "Krabi Inseln", en: "Krabi islands" }, secondary: ["Inseln bei Krabi", "best islands Krabi", "Krabi Geheimtipps", "Ao Nang Inseln", "Schnorcheln Krabi"], intent: ["info", "comm"], note: "Pillar/hub – links to every island page." },
   { slug: "best-time-to-visit-krabi", primary: { de: "Krabi beste Reisezeit", en: "best time to visit Krabi" }, secondary: ["Krabi Regenzeit", "Krabi Monsun", "Krabi Wetter", "Krabi weather by month", "Maya Bay closure"], intent: ["info"], note: "Pillar – seasonal planning; feeds tour bookings by month." },
   { slug: "krabi-island-hopping-planner", primary: { de: "Krabi Insel-Hopping", en: "Krabi island hopping" }, secondary: ["Krabi private boat tour", "Speedboat Krabi", "Longtail Boot Krabi", "Ao Nang Bootstour"], intent: ["comm", "trans"], note: "Pillar – closest to booking intent (boat choice)." },
@@ -142,6 +144,7 @@ export const ARTICLES: GuideArticle[] = [
   ...NEW_ARTICLES_H,
   ...NEW_ARTICLES_I,
   ...NEW_ARTICLES_J,
+  ...NEW_ARTICLES_K,
 ].map(finalize);
 
 const BY_SLUG = new Map(ARTICLES.map((a) => [a.slug, a]));

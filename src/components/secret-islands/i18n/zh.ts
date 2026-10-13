@@ -658,6 +658,7 @@ const dict: Record<string, string> = {
   "Was unsere Gäste sagen": "客人怎么说",
   "Bewertungen:": "评价：",
   "Seien Sie der Erste und bewerten Sie uns.": "成为第一个评价我们的人。",
+  "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "甲米安达曼海上喀斯特岛屿、沙滩与碧绿海面上船只的航拍",
 };
 
 export default dict;

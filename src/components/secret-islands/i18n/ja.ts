@@ -658,6 +658,7 @@ const dict: Record<string, string> = {
   "Was unsere Gäste sagen": "お客様の声",
   "Bewertungen:": "レビュー：",
   "Seien Sie der Erste und bewerten Sie uns.": "最初のレビューをお寄せください。",
+  "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "クラビのアンダマン海に浮かぶカルスト島、砂浜、ターコイズの海上の船の空撮",
 };
 
 export default dict;
