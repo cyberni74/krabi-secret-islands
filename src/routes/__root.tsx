@@ -16,6 +16,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#0a192f" },
+      { title: "Krabi Secret Islands" },
     ],
     links: [
       { rel: "preload", href: fontLatin, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
