@@ -61,6 +61,7 @@ export const IMG = {
   turquoiseBay: "/images/ao-nang-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
   tupChicken: "/images/ao-nang-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
   beachBoats: "/images/ao-nang-boat-tour-weisser-strand-kalksteinfelsen-boote-krabi.webp",
+  longtailExhaust: "/images/book-krabi-boat-longtail-boote-dieselabgase-rauchfahne-kanal.webp",
   karstAerialBoats: "/images/book-krabi-boat-karstinseln-luftaufnahme-boote-andamanensee.webp",
   emeraldLagoon: "/images/ao-nang-boat-tour-smaragdgruene-lagune-kalksteinwaende-krabi.webp",
   poda: seoImage("ao-nang-boat-tour-koh-poda-krabi-strand-kalksteinfelsen.webp"),
@@ -127,6 +128,10 @@ export const IMAGE_ALT: Record<string, L> = {
   [IMG.railayBeach]: {
     de: "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser",
     en: "Beach at Railay and Phra Nang with tall limestone cliffs, white sand and turquoise water",
+  },
+  [IMG.longtailExhaust]: {
+    de: "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt",
+    en: "Two longtail boats with the engine at the stern accelerating on a canal, with a dark plume of smoke and spray behind them",
   },
   [IMG.karstAerialBoats]: {
     de: "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi",

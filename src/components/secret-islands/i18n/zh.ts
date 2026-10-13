@@ -659,6 +659,7 @@ const dict: Record<string, string> = {
   "Bewertungen:": "评价：",
   "Seien Sie der Erste und bewerten Sie uns.": "成为第一个评价我们的人。",
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "甲米安达曼海上喀斯特岛屿、沙滩与碧绿海面上船只的航拍",
+  "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "两艘尾部装有发动机的长尾船在运河上加速，身后是黑色烟雾和水花",
 };
 
 export default dict;

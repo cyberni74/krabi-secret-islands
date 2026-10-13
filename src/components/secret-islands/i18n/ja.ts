@@ -659,6 +659,7 @@ const dict: Record<string, string> = {
   "Bewertungen:": "レビュー：",
   "Seien Sie der Erste und bewerten Sie uns.": "最初のレビューをお寄せください。",
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "クラビのアンダマン海に浮かぶカルスト島、砂浜、ターコイズの海上の船の空撮",
+  "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "船尾にエンジンを載せた2隻のロングテールボートが運河で加速し、後ろに黒い煙と水しぶきが上がる様子",
 };
 
 export default dict;
