@@ -90,6 +90,7 @@ export const NEW_ARTICLES_F: GuideArticleInput[] = [
     },
     sections: [
       {
+        live: "sunset-today",
         id: "sunset-time-by-month",
         h2: {
           de: "Sonnenuntergang Krabi pro Monat: Tabelle für Ao Nang",

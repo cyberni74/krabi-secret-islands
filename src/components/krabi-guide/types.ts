@@ -18,6 +18,8 @@ export type GuideSection = {
   figure?: GuideFigure;
   /** Optional numbered how-to steps (rendered as an ordered list; emitted as HowTo JSON-LD, named after the H2). */
   steps?: GuideStep[];
+  /** Client-side widget rendered under the section text (e.g. today's sunset time). */
+  live?: "sunset-today";
 };
 
 export type GuideStep = { name: Bi; text: Bi };

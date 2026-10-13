@@ -6,6 +6,7 @@ import { Assemble, AssembleItem, GlassCard, SectionTitle, btn } from "../secret-
 import { useSI, useTx } from "../secret-islands/store";
 import { altFor } from "../secret-islands/content";
 import type { GuideArticle } from "./types";
+import { SunToday } from "./sun-today";
 import { CATEGORY_LABEL, type GuideCard } from "./guide-meta";
 
 /** Loader payload of /krabi-guide/$slug (see src/lib/server/guide-data.ts). */
@@ -187,6 +188,7 @@ function ArticleView({ article, related, galleryFiles }: { article: GuideArticle
                   </table>
                 </div>
               ) : null}
+              {s.live === "sunset-today" ? <SunToday /> : null}
               {s.steps ? (
                 <ol className="mt-5 space-y-3">
                   {s.steps.map((st, j) => (
