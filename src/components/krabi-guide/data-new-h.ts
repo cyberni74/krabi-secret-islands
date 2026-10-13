@@ -108,6 +108,16 @@ export const NEW_ARTICLES_H: GuideArticleInput[] = [
           de: "Die Inselgruppen im Überblick: 4 Islands, Hong, Phi Phi",
           en: "The island groups at a glance: 4 Islands, Hong, Phi Phi",
         },
+        figure: {
+          src: "/images/karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
+          width: 1254,
+          height: 1254,
+          alt: {
+            de: "Illustrierte Karte der Küste von Krabi mit Ao Nang, Railay, Hong Island, Phi Phi und Phang-Nga-Bucht",
+            en: "Illustrated map of the Krabi coast with Ao Nang, Railay, Hong Island, Phi Phi and Phang Nga Bay",
+          },
+          caption: { de: "Illustrierte Übersichtskarte, nicht maßstabsgetreu. Fahrzeiten nennen die Tourseiten.", en: "Illustrated overview map, not to scale. Travel times are given on the tour pages." },
+        },
         body: {
           de: [
             "Rund um Krabi gibt es mehr Inseln, als ein Urlaub abdeckt. Für den Überblick hilft es, in drei Gruppen zu denken, die ab Ao Nang jeweils einen eigenen Charakter und eine eigene Fahrzeit haben. Die Minutenangaben stammen aus unseren Tourdaten und gelten als Richtwert bei ruhiger See.",

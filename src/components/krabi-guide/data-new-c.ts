@@ -47,6 +47,15 @@ export const NEW_ARTICLES_C: GuideArticleInput[] = [
           de: "Status auf einen Blick: offen oder geschlossen?",
           en: "Status at a glance: open or closed?",
         },
+        figure: {
+          src: "/images/maya-bay-phi-phi-leh-panorama-strand-krabi.webp",
+          width: 700,
+          height: 355,
+          alt: {
+            de: "Maya Bay auf Phi Phi Leh: weißer Sandstrand, türkises Wasser und hohe Kalksteinfelsen",
+            en: "Maya Bay on Phi Phi Leh: white sand beach, turquoise water and tall limestone cliffs",
+          },
+        },
         body: {
           de: [
             "Die kurze Faustregel: Außerhalb der jährlichen Erholungspause ist Maya Bay in der Regel für Besucher geöffnet, innerhalb dieser Pause nicht. Nach den zuletzt veröffentlichten Terminen fällt die Pause auf die Monate August und September, die Wiedereröffnung ist am 1. Oktober.",

@@ -28,6 +28,16 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
     sections: [
       {
         h2: { de: "Die Krabi Inseln auf einen Blick", en: "The Krabi islands at a glance" },
+        figure: {
+          src: "/images/karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
+          width: 1254,
+          height: 1254,
+          alt: {
+            de: "Illustrierte Karte der Küste von Krabi mit Ao Nang, Krabi Town, Railay, Ao Nang Bay, Hong Island, Koh Yao, Phi Phi und der Andamanensee",
+            en: "Illustrated map of the Krabi coast with Ao Nang, Krabi Town, Railay, Ao Nang Bay, Hong Island, Koh Yao, Phi Phi and the Andaman Sea",
+          },
+          caption: { de: "Illustrierte Übersichtskarte der Region, nicht maßstabsgetreu. Entfernungen und Lage der Inseln sind vereinfacht dargestellt.", en: "Illustrated overview map of the region, not to scale. Distances and island positions are simplified." },
+        },
         body: {
           de: [
             "Vor der Küste der Provinz Krabi liegen weit über hundert Inseln und Felsen. Für Tagesausflüge ab Ao Nang sind vor allem vier Gebiete relevant: die Poda-Gruppe direkt vor der Küste mit Koh Poda, Chicken Island und der Tup-Sandbank, das Hong-Archipel im Nordwesten mit seiner berühmten Lagune, die Phi-Phi-Inseln im Süden und die Phang Nga Bucht im Norden mit Koh Roi, Koh Kudu und der James-Bond-Insel.",

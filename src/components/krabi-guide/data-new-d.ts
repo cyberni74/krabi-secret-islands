@@ -403,6 +403,15 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
           de: "Phi Phi Don: Ton Sai, Strände und Aussicht auf der bewohnten Insel",
           en: "Phi Phi Don: Ton Sai, beaches and views on the inhabited island",
         },
+        figure: {
+          src: "/images/phi-phi-don-ton-sai-bucht-aussichtspunkt-krabi.webp",
+          width: 1200,
+          height: 800,
+          alt: {
+            de: "Blick vom Aussichtspunkt auf Phi Phi Don mit Ton Sai Bay, Loh Dalum Bay und grünen Kalksteinbergen",
+            en: "View from the viewpoint over Phi Phi Don with Ton Sai Bay, Loh Dalum Bay and green limestone hills",
+          },
+        },
         body: {
           de: [
             "Phi Phi Don ist die Hauptinsel der Gruppe und der einzige Ort, an dem Sie übernachten können. Ihr Zentrum ist die Ton Sai Bay mit dem Hafen, an dem Fähren und Boote ankommen. Dahinter liegt ein schmaler Landstreifen, der die Insel in zwei Hälften teilt und an dessen anderer Seite sich die Bucht Loh Dalum öffnet. Zwischen diesen beiden Buchten befinden sich Läden, Restaurants, Bars und Unterkünfte. Der Ort ist belebt und touristisch; die Insel ist klein und weitgehend zu Fuß erkundbar.",
@@ -434,6 +443,15 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
         h2: {
           de: "Phi Phi Leh: Maya Bay, Pileh-Lagune und Viking Cave auf der unbewohnten Insel",
           en: "Phi Phi Leh: Maya Bay, Pileh Lagoon and Viking Cave on the uninhabited island",
+        },
+        figure: {
+          src: "/images/maya-bay-phi-phi-leh-strand-besucher-krabi.webp",
+          width: 669,
+          height: 356,
+          alt: {
+            de: "Maya Bay auf Phi Phi Leh mit Besuchern am weißen Strand vor hohen Kalksteinfelsen",
+            en: "Maya Bay on Phi Phi Leh with visitors on the white beach in front of tall limestone cliffs",
+          },
         },
         body: {
           de: [
