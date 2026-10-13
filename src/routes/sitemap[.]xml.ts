@@ -26,7 +26,7 @@ function imageTags(images: readonly string[]) {
 const tourImages = (ids?: readonly string[]) => TOURS.filter((t) => !ids || ids.includes(t.id)).map((t) => t.image);
 
 /** Images visible on the landing page (hero, tour cards, aerial shots, gallery). */
-const LANDING_IMAGES = [IMG.hero, ...tourImages(), ...AERIAL_SHOTS.map((s) => s.src), ...GALLERY.map((g) => g.src)];
+const LANDING_IMAGES = [...new Set([IMG.hero, ...tourImages(), ...AERIAL_SHOTS.map((s) => s.src), ...GALLERY.map((g) => g.src)])];
 /** Hub: the article card images. */
 const HUB_IMAGES = ARTICLES.map((a) => a.image);
 /** Article: hero, uploaded gallery photos, tour cards. */

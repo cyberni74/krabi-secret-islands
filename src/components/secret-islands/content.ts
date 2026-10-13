@@ -50,7 +50,7 @@ export const ROMANCE_IMGS = [
 export const IMG = {
   // Our real speedboat (owner photo, /public/images). Never use stock photos showing longtail boats.
   // Hero: private speedboat among limestone islands (Higgsfield GPT Image 2.5, 2K; variant chosen by the owner).
-  hero: seoImage("krabi-private-speedboat-hero.webp"),
+  hero: "/images/krabi-secret-islands-privates-speedboat.webp",
   // Aerial of Koh Hong (owner-supplied photo, /public/images) – former hero, now the aerial-shots / pillar image.
   hongAerial: "/images/koh-hong-krabi-luftaufnahme-strand-lagune.webp",
   boat: "/images/krabi-secret-islands-privates-speedboat.webp",
@@ -146,10 +146,6 @@ export const IMAGE_ALT: Record<string, L> = {
   "/bilder/phang-nga-bucht-karstfelsen-morgennebel-speedboat.webp": {
     de: "Speedboot vor Karstfelsen der Phang-Nga-Bucht im Morgennebel",
     en: "Speedboat in front of limestone karst cliffs in Phang Nga Bay in morning mist",
-  },
-  [IMG.hero]: {
-    de: "Privates Speedboat zwischen Kalksteinfelsen in Krabi",
-    en: "Private speedboat among limestone islands in Krabi",
   },
   [IMG.hongAerial]: {
     de: "Luftaufnahme von Koh Hong bei Krabi: türkises Wasser, weißer Sandstrand und Kalksteinfelsen",

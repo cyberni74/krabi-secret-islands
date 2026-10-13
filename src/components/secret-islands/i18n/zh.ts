@@ -630,7 +630,6 @@ const dict: Record<string, string> = {
   "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.": "甲米私人船游，奥南和甲米镇出发：跳岛游览四岛、洪岛、皮皮岛，日落、荧光浮游生物与钓鱼之旅。最多 5 位宾客，按船计价。",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "该日期因季节性封闭无法预订此行程。",
   "Saisonsperre": "季节性封闭",
-  "Privates Speedboat zwischen Kalksteinfelsen in Krabi": "甲米石灰岩岛屿间的私人快艇",
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "团队游的很大一部分时间都花在等待上：等接驳车、等其他游客、等船、等下一个行程。缓慢的航行吞掉了剩下的时间。与我们同行没有接驳车——别人花在车上和路上的时间，您可以留在景点里。",
   "Privat-Charter – nur Ihre Gruppe an Bord, Start in Ao Nang oder Krabi Town, Treffpunkt und Zeit stimmen wir mit Ihnen ab.": "私人包船——船上只有您的团体，从奥南或甲米镇出发，集合地点和时间由我们与您商定。",
   "Hilft bei der Absprache des Treffpunkts": "有助于商定集合地点",
