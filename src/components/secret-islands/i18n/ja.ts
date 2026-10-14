@@ -627,7 +627,6 @@ const dict: Record<string, string> = {
   "Schatten & Sessel – Platz zum Ausruhen": "日陰と椅子――ゆっくり休めるスペース",
   "Schnellzugriff": "クイックアクセス",
   "Bootstour Krabi privat ab Ao Nang | Krabi Secret Islands": "クラビ貸切ボートツアー・島めぐり | Krabi Secret Islands",
-  "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.": "アオナン・クラビタウン発のクラビ貸切ボートツアー：4アイランド、ホン島、ピピ島の島めぐり、サンセット、夜光プランクトン、釣り。最大5名、ボート1隻あたりの料金。",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "この日は季節閉鎖のため、このツアーは予約できません。",
   "Saisonsperre": "季節閉鎖",
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "グループツアーの一日は、多くが待ち時間で占められます。送迎バス、他のお客様、ボート、次のプログラムを待ち、のんびりした移動が残りの時間を奪います。私たちには送迎バスはありません。他の人がバスや移動に費やす時間を、あなたはスポットで過ごせます。",
@@ -660,6 +659,7 @@ const dict: Record<string, string> = {
   "Seien Sie der Erste und bewerten Sie uns.": "最初のレビューをお寄せください。",
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "クラビのアンダマン海に浮かぶカルスト島、砂浜、ターコイズの海上の船の空撮",
   "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "船尾にエンジンを載せた2隻のロングテールボートが運河で加速し、後ろに黒い煙と水しぶきが上がる様子",
+  "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.": "クラビのプライベートボートツアー、1隻 11,500 THB から（最大5名）。アオナンまたはクラビタウンから出発するスピードボートで4 Islands、Hong Island、Phi Phi へ。今すぐ日程をリクエスト。",
 };
 
 export default dict;

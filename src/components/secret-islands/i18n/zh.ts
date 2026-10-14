@@ -627,7 +627,6 @@ const dict: Record<string, string> = {
   "Schatten & Sessel – Platz zum Ausruhen": "阴凉与座椅——尽享休憩空间",
   "Schnellzugriff": "快捷入口",
   "Bootstour Krabi privat ab Ao Nang | Krabi Secret Islands": "甲米私人船游与跳岛游 | Krabi Secret Islands",
-  "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.": "甲米私人船游，奥南和甲米镇出发：跳岛游览四岛、洪岛、皮皮岛，日落、荧光浮游生物与钓鱼之旅。最多 5 位宾客，按船计价。",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "该日期因季节性封闭无法预订此行程。",
   "Saisonsperre": "季节性封闭",
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "团队游的很大一部分时间都花在等待上：等接驳车、等其他游客、等船、等下一个行程。缓慢的航行吞掉了剩下的时间。与我们同行没有接驳车——别人花在车上和路上的时间，您可以留在景点里。",
@@ -660,6 +659,7 @@ const dict: Record<string, string> = {
   "Seien Sie der Erste und bewerten Sie uns.": "成为第一个评价我们的人。",
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "甲米安达曼海上喀斯特岛屿、沙滩与碧绿海面上船只的航拍",
   "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "两艘尾部装有发动机的长尾船在运河上加速，身后是黑色烟雾和水花",
+  "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.": "甲米私人包船游，每船起价 11,500 泰铢（最多 5 人）。从奥南或甲米镇出发的快艇，前往四岛、Hong Island 和 Phi Phi。立即预约日期。",
 };
 
 export default dict;

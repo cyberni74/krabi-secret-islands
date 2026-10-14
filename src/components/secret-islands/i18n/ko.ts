@@ -627,7 +627,6 @@ const dict: Record<string, string> = {
   "Schatten & Sessel – Platz zum Ausruhen": "그늘과 의자 – 편히 쉴 공간",
   "Schnellzugriff": "빠른 메뉴",
   "Bootstour Krabi privat ab Ao Nang | Krabi Secret Islands": "끄라비 프라이빗 보트 투어·호핑 | Krabi Secret Islands",
-  "Bootstour Krabi privat ab Ao Nang und Krabi Town: Inselhopping zu 4 Islands, Hong Island, Phi Phi, Sunset, Plankton, Angeln. Max. 5 Gäste, Preis pro Boot.": "아오낭·끄라비 타운 출발 끄라비 프라이빗 보트 투어: 4섬, 홍 아일랜드, 피피섬 호핑, 선셋, 야광 플랑크톤, 낚시. 최대 5명, 보트당 요금.",
   "Diese Tour ist an diesem Datum wegen Saisonsperre nicht buchbar.": "계절 폐쇄로 이 날짜에는 이 투어를 예약할 수 없습니다.",
   "Saisonsperre": "계절 폐쇄",
   "Ein Gruppentag besteht zu einem großen Teil aus Warten: auf den Sammelbus, auf andere Gäste, auf das Boot, auf den nächsten Programmpunkt. Langsame Überfahrten fressen den Rest. Bei uns gibt es keinen Sammelbus – und die Zeit, die andere im Bus und auf dem Wasser verbringen, verbringen Sie an den Spots.": "단체 투어의 상당 부분은 기다림입니다. 셔틀버스, 다른 손님, 보트, 다음 일정을 기다리고, 느린 이동이 나머지 시간을 잡아먹습니다. 저희는 셔틀버스가 없습니다. 다른 사람들이 버스와 이동에 쓰는 시간을 여러분은 명소에서 보냅니다.",
@@ -660,6 +659,7 @@ const dict: Record<string, string> = {
   "Seien Sie der Erste und bewerten Sie uns.": "첫 번째 리뷰를 남겨 주세요.",
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "끄라비 안다만해의 카르스트 섬, 모래 해변, 청록빛 바다 위 배들의 항공 사진",
   "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "선미에 엔진이 달린 롱테일 보트 두 척이 운하에서 가속하며 뒤로 검은 연기와 물보라가 이는 모습",
+  "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.": "끄라비 프라이빗 보트 투어, 보트당 11,500 THB부터 (최대 5명). 아오낭 또는 끄라비 타운에서 출발하는 스피드보트로 4 Islands, Hong Island, Phi Phi 방문. 지금 날짜를 요청하세요.",
 };
 
 export default dict;
