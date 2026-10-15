@@ -7,7 +7,7 @@ import { get, list, put, del } from "@vercel/blob";
 import { getRequest } from "@tanstack/react-start/server";
 
 const PREFIX = "guest-reviews/";
-const MAX_PER_IP_PER_DAY = 200;
+const MAX_PER_IP_PER_DAY = 3;
 
 export type ReviewStatus = "pending" | "approved" | "rejected";
 export type GuestReview = {
