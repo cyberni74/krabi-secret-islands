@@ -197,17 +197,16 @@ export function GuestReviews({ data }: { data: PublicReviews }) {
           </div>
         ) : null}
         {data.items.length ? (
-          <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
             {data.items.map((r) => (
-              <li key={r.id} className="si-glass rounded-3xl p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <StarDisplay value={r.rating} className="size-5" />
-                  <span className="text-sm font-bold text-slate-300">{fmt(r.rating, lang)} / 5</span>
+              <li key={r.id} className="si-glass flex min-w-0 flex-col rounded-xl p-2.5 sm:rounded-2xl sm:p-4">
+                <div className="flex flex-wrap items-center justify-between gap-x-2">
+                  <StarDisplay value={r.rating} className="size-3 sm:size-4" />
+                  <span className="text-[10px] font-bold text-slate-300 sm:text-xs">{fmt(r.rating, lang)}</span>
                 </div>
-                {r.text ? <p className="mt-3 text-[15px] leading-relaxed text-slate-200">{r.text}</p> : null}
-                <p className="mt-3 text-sm font-bold text-white">
+                {r.text ? <p className="mt-1.5 line-clamp-4 text-[11px] leading-snug text-slate-200 sm:mt-2 sm:text-sm sm:leading-relaxed">{r.text}</p> : null}
+                <p className="mt-auto truncate pt-1.5 text-[11px] font-bold text-white sm:pt-2 sm:text-xs">
                   {r.name}
-                  {r.date ? <span className="font-normal text-slate-400"> · {r.date}</span> : null}
                 </p>
               </li>
             ))}
