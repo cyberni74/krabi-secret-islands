@@ -206,7 +206,7 @@ const HOME_CRUMB: L = { de: "Startseite", en: "Home" };
 const GUEST_REVIEW_MARKUP = true;
 function guestReviewMarkup(
   node: Json,
-  reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string }[] },
+  reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string | null }[] },
 ): Json {
   if (!GUEST_REVIEW_MARKUP || !reviews || reviews.count < 1) return node;
   return {
@@ -221,7 +221,7 @@ function guestReviewMarkup(
     review: reviews.items.map((r) => ({
       "@type": "Review",
       author: { "@type": "Person", name: r.name },
-      datePublished: r.date,
+      ...(r.date ? { datePublished: r.date } : {}),
       ...(r.text ? { reviewBody: r.text } : {}),
       reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
     })),
@@ -229,7 +229,7 @@ function guestReviewMarkup(
 }
 
 /** /secret-islands: business + page + tours + ONE FAQPage (regular FAQ + Longtail-vs-Speedboat FAQ, both visible). */
-export function landingJsonLd(lang: Lang, reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string }[] }): Json {
+export function landingJsonLd(lang: Lang, reviews?: { count: number; average: number; items: { name: string; rating: number; text: string; date: string | null }[] }): Json {
   const url = pageUrl(LANDING_PATH, lang);
   const tr = (l: L) => translate(l, lang);
   return {

@@ -206,7 +206,8 @@ export function GuestReviews({ data }: { data: PublicReviews }) {
                 </div>
                 {r.text ? <p className="mt-3 text-[15px] leading-relaxed text-slate-200">{r.text}</p> : null}
                 <p className="mt-3 text-sm font-bold text-white">
-                  {r.name} <span className="font-normal text-slate-400">· {r.date}</span>
+                  {r.name}
+                  {r.date ? <span className="font-normal text-slate-400"> · {r.date}</span> : null}
                 </p>
               </li>
             ))}

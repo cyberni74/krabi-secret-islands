@@ -12,7 +12,8 @@ const MAX_PER_IP_PER_DAY = 200;
 export type ReviewStatus = "pending" | "approved" | "rejected";
 export type GuestReview = {
   id: string;
-  created_at: string;
+  /** null for imported reviews without a known date */
+  created_at: string | null;
   name: string;
   /** 0.5 … 5 in steps of 0.5 */
   rating: number;
@@ -65,13 +66,13 @@ export async function approvedReviews(): Promise<GuestReview[]> {
   if (cache && Date.now() - cache.at < CACHE_MS) return cache.rows;
   const rows = (await all())
     .filter((r) => r.status === "approved")
-    .sort((a, b) => b.created_at.localeCompare(a.created_at));
+    .sort((a, b) => (b.created_at ?? "").localeCompare(a.created_at ?? ""));
   cache = { at: Date.now(), rows };
   return rows;
 }
 
 export async function allReviews(): Promise<GuestReview[]> {
-  return (await all()).sort((a, b) => b.created_at.localeCompare(a.created_at));
+  return (await all()).sort((a, b) => (b.created_at ?? "").localeCompare(a.created_at ?? ""));
 }
 
 const hits: Map<string, number[]> = ((globalThis as { __ksiRevHits?: Map<string, number[]> }).__ksiRevHits ??= new Map());

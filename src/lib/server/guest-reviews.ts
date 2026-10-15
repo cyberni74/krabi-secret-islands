@@ -8,7 +8,7 @@ const ratingSchema = z
   .max(5)
   .refine((n) => Math.round(n * 2) === n * 2, "half steps only");
 
-export type PublicReview = { id: string; name: string; rating: number; text: string; date: string };
+export type PublicReview = { id: string; name: string; rating: number; text: string; date: string | null };
 export type PublicReviews = { count: number; average: number; items: PublicReview[] };
 
 /** Public: approved reviews + summary (average rounded to 1 decimal). */
@@ -21,7 +21,7 @@ export const getPublicReviews = createServerFn({ method: "GET" }).handler(async 
     return {
       count,
       average,
-      items: rows.slice(0, 20).map((r) => ({ id: r.id, name: r.name, rating: r.rating, text: r.text, date: r.created_at.slice(0, 10) })),
+      items: rows.slice(0, 20).map((r) => ({ id: r.id, name: r.name, rating: r.rating, text: r.text, date: r.created_at ? r.created_at.slice(0, 10) : null })),
     };
   } catch (err) {
     console.error("[reviews] read failed", err);
