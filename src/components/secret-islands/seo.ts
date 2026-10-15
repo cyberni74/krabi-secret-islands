@@ -39,12 +39,12 @@ export function htmlLang(lang: Lang) {
   return HTML_LANG[lang];
 }
 
-/** canonical (self-referencing) + hreflang for every available language + x-default (German default URL). */
+/** canonical (self-referencing) + hreflang for every available language + x-default (English version when available: the best fallback for visitors whose language has no own version). */
 export function langLinks(path: string, lang: Lang, available: readonly Lang[]) {
   return [
     { rel: "canonical", href: pageUrl(path, lang) },
     ...available.map((l) => ({ rel: "alternate", hrefLang: HTML_LANG[l], href: pageUrl(path, l) })),
-    { rel: "alternate", hrefLang: "x-default", href: pageUrl(path, "de") },
+    { rel: "alternate", hrefLang: "x-default", href: pageUrl(path, available.includes("en") ? "en" : "de") },
   ];
 }
 

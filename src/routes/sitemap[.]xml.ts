@@ -35,7 +35,7 @@ const articleImages = (a: GuideArticle) => [a.image, ...readyGuideImages(a).map(
 function entries(path: string, langs: readonly Lang[], lastmod: string, images: readonly string[] = []) {
   const alternates = [
     ...langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${htmlLang(l)}" href="${esc(pageUrl(path, l))}"/>`),
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(pageUrl(path, "de"))}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(pageUrl(path, langs.includes("en") ? "en" : "de"))}"/>`,
   ].join("\n");
   const imgs = images.length ? `\n${imageTags(images)}` : "";
   return langs.map(
