@@ -293,7 +293,7 @@ function ReviewModeration() {
                 <span className="text-slate-300">{r.name}</span>
               </div>
               <span className="text-xs text-slate-400">
-                {new Date(r.created_at).toLocaleString("de-DE", { dateStyle: "medium", timeStyle: "short" })} · {r.lang.toUpperCase()} · {LABEL[r.status]}
+                {r.created_at ? `${new Date(r.created_at).toLocaleString("de-DE", { dateStyle: "medium", timeStyle: "short" })} · ` : "ohne Datum · "}{r.lang.toUpperCase()} · {LABEL[r.status]}
               </span>
             </div>
             {r.text ? <p className="mt-3 rounded-2xl bg-white/5 p-3 text-sm text-slate-200">{r.text}</p> : null}
