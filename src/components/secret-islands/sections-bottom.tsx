@@ -702,8 +702,8 @@ export function Footer() {
               >
                 {legal === "imprint"
                   ? t({
-                      de: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81180 Thailand · ${BRAND.email}`,
-                      en: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81180 Thailand · ${BRAND.email}`,
+                      de: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81000 Thailand · ${BRAND.email}`,
+                      en: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81000 Thailand · ${BRAND.email}`,
                     })
                   : t({
                       de: "Wenn Sie eine Buchungsanfrage senden, speichern wir Ihre Angaben (Name, Kontaktdaten, Tourwünsche) in unserer Datenbank und erhalten sie per E-Mail, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b DSGVO). Zum Schutz vor Spam speichern wir Ihre IP-Adresse nur als nicht rückrechenbaren Hash. Über WhatsApp geht die Nachricht nur, wenn Sie sie selbst absenden. Wir löschen Anfragen, sobald sie nicht mehr benötigt werden; Auskunft oder Löschung jederzeit per E-Mail. Ihre Spracheinstellung bleibt lokal in Ihrem Browser.",
