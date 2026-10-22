@@ -21,7 +21,7 @@ import { AERIAL_SHOTS, BRAND, COMPARISON, IMG, LANGS, UI, altFor, type Compariso
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, Marquee, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { useSwitchLang } from "./lang";
 import { keepLang } from "./lang-context";
-import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
+import { scrollToId, useSI, useTx } from "./store";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 const NAV = [
@@ -38,7 +38,7 @@ const BOOK = { de: "Tour buchen", en: "Book a tour" };
 /* ───────────────────────── Header ───────────────────────── */
 
 export function Header() {
-  const { t, lang } = useTx();
+  const { t } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const [scrolled, setScrolled] = useState(false);
   // Shared by the landing page and the Insider Guide: off the landing page, section links navigate back to it.
@@ -51,7 +51,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const waText = waRequestText(lang);
 
   return (
     <header
@@ -126,15 +125,14 @@ export function Header() {
             <BookOpen className="size-5" />
           </Link>
           <LangMenu />
-          <a
-            href={waLink(waText)}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
+          <button
+            type="button"
+            onClick={() => openBooking()}
+            aria-label={t({ de: "Anfrage per WhatsApp", en: "Request via WhatsApp" })}
             className="grid size-11 place-items-center rounded-full bg-si-wa text-white shadow-[0_8px_24px_-6px_rgb(37_211_102/0.7)] transition hover:scale-105"
           >
             <WhatsAppIcon className="size-5" />
-          </a>
+          </button>
           <Magnetic className="hidden sm:inline-block">
             <button
               type="button"
@@ -234,10 +232,9 @@ const DOCK_WA = { de: "WhatsApp", en: "WhatsApp" };
 
 /** Floating quick-access menu at the bottom: tours, insider guide, booking, FAQ, WhatsApp. */
 export function BottomBar() {
-  const { t, lang } = useTx();
+  const { t } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const onLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
-  const waText = waRequestText(lang);
   const itemCls =
     "flex h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-2xl px-0.5 text-[9.5px] font-bold leading-none text-slate-200 transition hover:bg-white/10 hover:text-white active:scale-95 min-[360px]:text-[10.5px] md:w-16 md:flex-none md:text-[11px]";
   const section = (id: string, label: { de: string; en: string }, icon: ReactNode) => (
@@ -279,10 +276,10 @@ export function BottomBar() {
           <span className="whitespace-nowrap leading-tight">{t(BOOK)}</span>
         </button>
         {section("faq", UI.navFaq, <HelpCircle className="size-5 text-cyan-300" />)}
-        <a href={waLink(waText)} target="_blank" rel="noopener noreferrer" className={itemCls}>
+        <button type="button" onClick={() => openBooking()} className={itemCls}>
           <WhatsAppIcon className="size-5 text-si-wa" />
           <span>{t(DOCK_WA)}</span>
-        </a>
+        </button>
       </nav>
     </div>
   );

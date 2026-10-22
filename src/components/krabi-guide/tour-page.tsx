@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import { BRAND, TOURS, altFor, type L, type Tour } from "../secret-islands/content";
 import { GlassCard, SectionTitle, btn } from "../secret-islands/fx";
 import { keepLang } from "../secret-islands/lang-context";
-import { formatTHB, useSI, waLink, waRequestText } from "../secret-islands/store";
+import { formatTHB, useSI } from "../secret-islands/store";
 import { BOAT_FACTS, MAX_GUESTS, formatHours, formatTime, getTourPage, stopName, tourFaq, tourStarts } from "../secret-islands/tour-pages";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
-import { SmartImage, WhatsAppIcon } from "../secret-islands/ui";
+import { SmartImage } from "../secret-islands/ui";
 import type { GuideCard } from "./guide-meta";
 import { useGuideLang, type GuideLang } from "./guide-helpers";
 import { ArticleCard, GuideShell } from "./guide-ui";
@@ -124,7 +124,6 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
   const related = page.related.map((id) => TOURS.find((t) => t.id === id)).filter((t): t is Tour => !!t);
   const title = bi(tour.title, lang);
   const paragraphs = bi(page.intro, lang).split("\n\n");
-  const waText = waRequestText(lang, lang === "de" ? tour.title.de : tour.title.en);
 
   const priceBox = (
     <GlassCard glow className="p-5 sm:p-6">
@@ -164,10 +163,6 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
           <Sparkles className="size-4" />
           {lang === "de" ? "Tour anfragen" : "Request this tour"}
         </button>
-        <a href={waLink(waText)} target="_blank" rel="noopener noreferrer" className={cn(btn.whatsapp, "w-full")}>
-          <WhatsAppIcon className="size-5" />
-          {lang === "de" ? "Per WhatsApp fragen" : "Ask on WhatsApp"}
-        </a>
       </div>
     </GlassCard>
   );
@@ -312,10 +307,6 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
                 <Sparkles className="size-4" />
                 {lang === "de" ? "Tour anfragen" : "Request this tour"}
               </button>
-              <a href={waLink(waText)} target="_blank" rel="noopener noreferrer" className={btn.whatsapp}>
-                <WhatsAppIcon className="size-5" />
-                {lang === "de" ? "Per WhatsApp fragen" : "Ask on WhatsApp"}
-              </a>
             </div>
           </GlassCard>
         </div>
@@ -430,15 +421,6 @@ function HubView() {
             <Wand2 className="size-4" />
             {lang === "de" ? "Eigene Tour bauen" : "Build your own tour"}
           </button>
-          <a
-            href={waLink(waRequestText(lang))}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={btn.whatsapp}
-          >
-            <WhatsAppIcon className="size-5" />
-            {lang === "de" ? "Per WhatsApp fragen" : "Ask on WhatsApp"}
-          </a>
         </div>
 
         {groups.map((g) => (

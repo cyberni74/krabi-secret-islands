@@ -569,14 +569,6 @@ export function FinalCta() {
                   <Wand2 className="size-5" /> {t({ de: "Eigene Tour bauen", en: "Build your own tour" })}
                 </button>
               </Magnetic>
-              <a
-                href={waLink(waRequestText(lang))}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(btn.whatsapp, "min-h-14 py-2 leading-tight sm:whitespace-nowrap")}
-              >
-                <WhatsAppIcon className="size-5" /> {t(UI.ctaWhatsapp)}
-              </a>
             </div>
 
             <Assemble className="relative mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5" stagger={0.1}>

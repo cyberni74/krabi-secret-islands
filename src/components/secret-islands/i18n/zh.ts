@@ -660,6 +660,7 @@ const dict: Record<string, string> = {
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "甲米安达曼海上喀斯特岛屿、沙滩与碧绿海面上船只的航拍",
   "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "两艘尾部装有发动机的长尾船在运河上加速，身后是黑色烟雾和水花",
   "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.": "甲米私人包船游，每船起价 11,500 泰铢（最多 5 人）。从奥南或甲米镇出发的快艇，前往四岛、Hong Island 和 Phi Phi。立即预约日期。",
+  "Anfrage per WhatsApp": "通过 WhatsApp 询价",
 };
 
 export default dict;

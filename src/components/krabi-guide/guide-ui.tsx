@@ -15,7 +15,7 @@ import { BrandLogo, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "./footer-links";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
-import { formatTHB, useSI, useTx, waLink, waRequestText } from "../secret-islands/store";
+import { formatTHB, useSI, useTx } from "../secret-islands/store";
 import { useGuideLang } from "./guide-helpers";
 import { CATEGORY_LABEL, type Bi, type GuideCard } from "./guide-meta";
 
@@ -233,13 +233,13 @@ export function TourCard({ tour }: { tour: Tour }) {
 
 /* ───────── WhatsApp CTA ───────── */
 export function WhatsAppCta({ topic: _topic }: { topic?: Bi }) {
-  const { t, lang } = useTx();
-  const text = waRequestText(lang);
+  const { t } = useTx();
+  const openBooking = useSI((s) => s.openBooking);
   return (
-    <a href={waLink(text)} target="_blank" rel="noopener noreferrer" className={btn.whatsapp}>
+    <button type="button" onClick={() => openBooking()} className={btn.whatsapp}>
       <WhatsAppIcon className="size-5" />
-      {t({ de: "Frage per WhatsApp", en: "Ask on WhatsApp" })}
-    </a>
+      {t({ de: "Anfrage per WhatsApp", en: "Request via WhatsApp" })}
+    </button>
   );
 }
 

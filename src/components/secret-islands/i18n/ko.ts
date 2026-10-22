@@ -660,6 +660,7 @@ const dict: Record<string, string> = {
   "Luftaufnahme von Karstinseln, Sandstränden und Booten auf türkisem Wasser in der Andamanensee bei Krabi": "끄라비 안다만해의 카르스트 섬, 모래 해변, 청록빛 바다 위 배들의 항공 사진",
   "Zwei Longtail-Boote mit Motor am Heck beschleunigen auf einem Kanal, dahinter eine dunkle Rauchfahne und Gischt": "선미에 엔진이 달린 롱테일 보트 두 척이 운하에서 가속하며 뒤로 검은 연기와 물보라가 이는 모습",
   "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.": "끄라비 프라이빗 보트 투어, 보트당 11,500 THB부터 (최대 5명). 아오낭 또는 끄라비 타운에서 출발하는 스피드보트로 4 Islands, Hong Island, Phi Phi 방문. 지금 날짜를 요청하세요.",
+  "Anfrage per WhatsApp": "WhatsApp으로 문의하기",
 };
 
 export default dict;
