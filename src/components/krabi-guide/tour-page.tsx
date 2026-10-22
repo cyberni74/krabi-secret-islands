@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { BRAND, TOURS, altFor, type L, type Tour } from "../secret-islands/content";
 import { GlassCard, SectionTitle, btn } from "../secret-islands/fx";
 import { keepLang } from "../secret-islands/lang-context";
-import { formatTHB, useSI, waLink } from "../secret-islands/store";
+import { formatTHB, useSI, waLink, waRequestText } from "../secret-islands/store";
 import { BOAT_FACTS, MAX_GUESTS, formatHours, formatTime, getTourPage, stopName, tourFaq, tourStarts } from "../secret-islands/tour-pages";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { SmartImage, WhatsAppIcon } from "../secret-islands/ui";
@@ -124,10 +124,7 @@ function TourView({ slug, articles }: { slug: string; articles: GuideCard[] }) {
   const related = page.related.map((id) => TOURS.find((t) => t.id === id)).filter((t): t is Tour => !!t);
   const title = bi(tour.title, lang);
   const paragraphs = bi(page.intro, lang).split("\n\n");
-  const waText =
-    lang === "de"
-      ? `Hallo! Ich interessiere mich für die Tour „${tour.title.de}“ (${priceTextDe(tour.price)} pro Boot). Wunschdatum: … / Personen: …`
-      : `Hi! I'm interested in the tour “${tour.title.en}” (from ${priceTextEn(tour.price)} per boat). Preferred date: … / Guests: …`;
+  const waText = waRequestText(lang, lang === "de" ? tour.title.de : tour.title.en);
 
   const priceBox = (
     <GlassCard glow className="p-5 sm:p-6">
@@ -434,11 +431,7 @@ function HubView() {
             {lang === "de" ? "Eigene Tour bauen" : "Build your own tour"}
           </button>
           <a
-            href={waLink(
-              lang === "de"
-                ? "Hallo Krabi Secret Islands! Ich interessiere mich für eine private Speedboat-Tour."
-                : "Hi Krabi Secret Islands! I'm interested in a private speedboat tour.",
-            )}
+            href={waLink(waRequestText(lang))}
             target="_blank"
             rel="noopener noreferrer"
             className={btn.whatsapp}

@@ -27,7 +27,7 @@ import { keepLang } from "./lang-context";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "../krabi-guide/footer-links";
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
-import { scrollToId, useSI, useTx, waLink } from "./store";
+import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 /* ───────────────────────── Guide (blog / SEO) ───────────────────────── */
@@ -526,7 +526,7 @@ export function Faq() {
 /* ───────────────────────── Final CTA ───────────────────────── */
 
 export function FinalCta() {
-  const { t, tOp } = useTx();
+  const { t, tOp, lang } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const trust = [
     { icon: BadgeCheck, label: t({ de: "TAT-Lizenz", en: "TAT licence" }), tone: "text-si-gold" },
@@ -570,7 +570,7 @@ export function FinalCta() {
                 </button>
               </Magnetic>
               <a
-                href={waLink(tOp({ de: "Hallo! Ich möchte eine private Inseltour anfragen.", en: "Hi! I'd like to request a private island tour." }))}
+                href={waLink(waRequestText(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(btn.whatsapp, "min-h-14 py-2 leading-tight sm:whitespace-nowrap")}
@@ -599,7 +599,7 @@ export function FinalCta() {
 /* ───────────────────────── Footer ───────────────────────── */
 
 export function Footer() {
-  const { t, tOp } = useTx();
+  const { t, tOp, lang } = useTx();
   const openTour = useSI((s) => s.openTour);
   const [legal, setLegal] = useState<"imprint" | "privacy" | null>(null);
   const footerTours = [...TOURS.filter((x) => x.kind === "island").slice(0, 4), ...TOURS.filter((x) => x.kind === "fishing").slice(0, 1)];
@@ -655,7 +655,7 @@ export function Footer() {
           <ul className="text-sm">
             <li>
               <a
-                href={waLink(tOp({ de: "Hallo Krabi Secret Islands!", en: "Hi Krabi Secret Islands!" }))}
+                href={waLink(waRequestText(lang))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-h-11 items-center gap-2 hover:text-white"

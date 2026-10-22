@@ -21,7 +21,7 @@ import { AERIAL_SHOTS, BRAND, COMPARISON, IMG, LANGS, UI, altFor, type Compariso
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, Marquee, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { useSwitchLang } from "./lang";
 import { keepLang } from "./lang-context";
-import { scrollToId, useSI, useTx, waLink } from "./store";
+import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 const NAV = [
@@ -38,7 +38,7 @@ const BOOK = { de: "Tour buchen", en: "Book a tour" };
 /* ───────────────────────── Header ───────────────────────── */
 
 export function Header() {
-  const { t, tOp } = useTx();
+  const { t, lang } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const [scrolled, setScrolled] = useState(false);
   // Shared by the landing page and the Insider Guide: off the landing page, section links navigate back to it.
@@ -51,10 +51,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const waText = tOp({
-    de: "Hallo Krabi Secret Islands! Ich interessiere mich für eine private Speedboat-Tour.",
-    en: "Hi Krabi Secret Islands! I'm interested in a private speedboat tour.",
-  });
+  const waText = waRequestText(lang);
 
   return (
     <header
@@ -237,13 +234,10 @@ const DOCK_WA = { de: "WhatsApp", en: "WhatsApp" };
 
 /** Floating quick-access menu at the bottom: tours, insider guide, booking, FAQ, WhatsApp. */
 export function BottomBar() {
-  const { t, tOp } = useTx();
+  const { t, lang } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const onLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
-  const waText = tOp({
-    de: "Hallo! Ich möchte eine private Speedboat-Tour anfragen. Wunschdatum: … / Personen: …",
-    en: "Hi! I'd like to request a private speedboat tour. Preferred date: … / Guests: …",
-  });
+  const waText = waRequestText(lang);
   const itemCls =
     "flex h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-2xl px-0.5 text-[9.5px] font-bold leading-none text-slate-200 transition hover:bg-white/10 hover:text-white active:scale-95 min-[360px]:text-[10.5px] md:w-16 md:flex-none md:text-[11px]";
   const section = (id: string, label: { de: string; en: string }, icon: ReactNode) => (

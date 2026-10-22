@@ -142,6 +142,34 @@ export function useTx() {
   };
 }
 
+/**
+ * Pre-filled WhatsApp text for direct contact buttons: a short form (tour, date, guests, start point, name) so that
+ * even a message that does not come through the booking wizard carries the details of a request.
+ * `lang` "de" → German, everything else → English (the operator-facing language).
+ */
+export function waRequestText(lang: string, tour?: string) {
+  if (lang === "de") {
+    return [
+      "Hallo Krabi Secret Islands! Ich möchte eine private Bootstour anfragen.",
+      "",
+      `Tour: ${tour ?? "…"}`,
+      "Wunschdatum: …",
+      "Personen (max. 5) / davon Kinder: …",
+      "Startort (Ao Nang oder Krabi Town): …",
+      "Name: …",
+    ].join("\n");
+  }
+  return [
+    "Hi Krabi Secret Islands! I'd like to request a private boat tour.",
+    "",
+    `Tour: ${tour ?? "…"}`,
+    "Preferred date: …",
+    "Guests (max. 5) / of which children: …",
+    "Start point (Ao Nang or Krabi Town): …",
+    "Name: …",
+  ].join("\n");
+}
+
 export function waLink(text: string) {
   return `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(text)}`;
 }

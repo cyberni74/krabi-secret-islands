@@ -15,7 +15,7 @@ import { BrandLogo, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "./footer-links";
 import { TOUR_SLUGS } from "../secret-islands/tour-slugs";
 import { LangBoundary, LangSuggestBanner, useHtmlLang, useUrlLang } from "../secret-islands/lang";
-import { formatTHB, useSI, useTx, waLink } from "../secret-islands/store";
+import { formatTHB, useSI, useTx, waLink, waRequestText } from "../secret-islands/store";
 import { useGuideLang } from "./guide-helpers";
 import { CATEGORY_LABEL, type Bi, type GuideCard } from "./guide-meta";
 
@@ -232,17 +232,9 @@ export function TourCard({ tour }: { tour: Tour }) {
 }
 
 /* ───────── WhatsApp CTA ───────── */
-export function WhatsAppCta({ topic }: { topic?: Bi }) {
-  const { t, tOp } = useTx();
-  const text = topic
-    ? tOp({
-        de: `Hallo! Ich habe im Insider Guide „${topic.de}“ gelesen und interessiere mich für eine private Speedboat-Tour. Wunschdatum: … / Personen: …`,
-        en: `Hi! I read “${topic.en}” in your Insider Guide and I'm interested in a private speedboat tour. Preferred date: … / Guests: …`,
-      })
-    : tOp({
-        de: "Hallo! Ich habe Ihren Krabi Insider Guide gelesen und möchte eine private Speedboat-Tour anfragen.",
-        en: "Hi! I read your Krabi Insider Guide and would like to request a private speedboat tour.",
-      });
+export function WhatsAppCta({ topic: _topic }: { topic?: Bi }) {
+  const { t, lang } = useTx();
+  const text = waRequestText(lang);
   return (
     <a href={waLink(text)} target="_blank" rel="noopener noreferrer" className={btn.whatsapp}>
       <WhatsAppIcon className="size-5" />
