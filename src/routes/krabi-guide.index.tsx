@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuideHub } from "@/components/krabi-guide/guide-hub";
-import { validateLangSearch } from "@/components/secret-islands/lang-context";
+import { validateDetailLangSearch } from "@/components/secret-islands/lang-context";
 import { HUB_META } from "@/components/krabi-guide/guide-meta";
 import { getGuideCards, getGuideHubJsonLd } from "@/lib/server/guide-data";
 import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, GUIDE_PATH, ROBOTS_LARGE_IMAGES, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 export const Route = createFileRoute("/krabi-guide/")({
   // Guide texts exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
-  validateSearch: validateLangSearch,
+  validateSearch: validateDetailLangSearch,
   loaderDeps: ({ search }) => ({ lang: search.lang && search.lang !== "de" ? ("en" as const) : ("de" as const) }),
   // Cards + JSON-LD come from server functions: the article data module never reaches the client bundle.
   loader: async ({ deps }) => {

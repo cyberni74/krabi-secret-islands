@@ -10,6 +10,7 @@
 import { BRAND, FAQ, LANGS, LOGO_URL, SEO_META, TOURS, UI, type L, type Lang } from "./content";
 import { LONGTAIL_FAQ, longtailAnswerText } from "./longtail-faq";
 import { translate } from "./store";
+import { TOUR_SLUGS, TOURS_PATH } from "./tour-slugs";
 
 export const SITE_URL = "https://krabi-secret-islands.com";
 export const LANDING_PATH = "/";
@@ -64,10 +65,15 @@ export const DEFAULT_OG_IMAGE = {
  * Open Graph image for a page image: the generated scene photos (/bilder/…, all 3:2 landscape) are served at 1200 px width
  * through Vercel Image Optimization (1200×800); everything else (portrait / unknown size) falls back to the branded 1200×630 default.
  */
-function ogImageFor(src: string | undefined): { src: string; width: number; height: number } {
+function ogImageFor(src: string | undefined): { src: string; width?: number; height?: number } {
   if (src && src.startsWith("/bilder/")) {
     const url = import.meta.env.PROD ? `/_vercel/image?url=${encodeURIComponent(src)}&w=1200&q=75` : src;
     return { src: url, width: 1200, height: 800 };
+  }
+  // Own photos / maps in /public/images keep their real aspect ratio (no fixed size is declared), served at 1200 px width.
+  if (src && src.startsWith("/images/")) {
+    const url = import.meta.env.PROD ? `/_vercel/image?url=${encodeURIComponent(src)}&w=1200&q=75` : src;
+    return { src: url };
   }
   return { src: DEFAULT_OG_IMAGE.src, width: DEFAULT_OG_IMAGE.width, height: DEFAULT_OG_IMAGE.height };
 }
@@ -100,8 +106,12 @@ export function socialMeta(o: {
     ...(img
       ? [
           { property: "og:image", content: absUrl(img.src) },
-          { property: "og:image:width", content: String(img.width) },
-          { property: "og:image:height", content: String(img.height) },
+          ...(img.width && img.height
+            ? [
+                { property: "og:image:width", content: String(img.width) },
+                { property: "og:image:height", content: String(img.height) },
+              ]
+            : []),
           { property: "og:image:alt", content: alt },
         ]
       : []),
@@ -167,7 +177,8 @@ function toursNode(lang: Lang, url: string): Json {
           "@type": "Offer",
           price: tour.price,
           priceCurrency: "THB",
-          url: `${url}#touren`,
+          // The tour detail page (German/English only); zh/ko/ja visitors are sent to the English page.
+          url: pageUrl(`${TOURS_PATH}/${TOUR_SLUGS[tour.id]}`, lang === "de" ? "de" : "en"),
           description: translate(UI.perBoat, lang),
         },
       },

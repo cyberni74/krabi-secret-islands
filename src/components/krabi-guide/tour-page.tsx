@@ -30,10 +30,8 @@ function TourBreadcrumb({ tourName }: { tourName?: string }) {
             {lang === "de" ? "Startseite" : "Home"}
           </Link>
         </li>
-        <li aria-hidden>
-          <ChevronRight className="size-3.5 text-slate-500" />
-        </li>
-        <li>
+        <li className="inline-flex items-center gap-1">
+          <ChevronRight aria-hidden className="size-3.5 text-slate-500" />
           {tourName ? (
             <Link to="/touren" search={keepLang} className="inline-flex min-h-8 items-center rounded hover:text-white">
               {lang === "de" ? "Touren" : "Tours"}
@@ -45,16 +43,12 @@ function TourBreadcrumb({ tourName }: { tourName?: string }) {
           )}
         </li>
         {tourName ? (
-          <>
-            <li aria-hidden>
-              <ChevronRight className="size-3.5 text-slate-500" />
-            </li>
-            <li className="min-w-0">
-              <span aria-current="page" className="text-cyan-200">
-                {tourName}
-              </span>
-            </li>
-          </>
+          <li className="inline-flex min-w-0 items-center gap-1">
+            <ChevronRight aria-hidden className="size-3.5 text-slate-500" />
+            <span aria-current="page" className="text-cyan-200">
+              {tourName}
+            </span>
+          </li>
         ) : null}
       </ol>
     </nav>

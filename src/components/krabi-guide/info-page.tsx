@@ -64,10 +64,8 @@ function InfoView() {
                 {lang === "de" ? "Startseite" : "Home"}
               </Link>
             </li>
-            <li aria-hidden>
-              <ChevronRight className="size-3.5 text-slate-500" />
-            </li>
-            <li aria-current="page" className="text-cyan-200">
+            <li aria-current="page" className="inline-flex items-center gap-1 text-cyan-200">
+              <ChevronRight aria-hidden className="size-3.5 text-slate-500" />
               {lang === "de" ? "Gäste-Info" : "Guest info"}
             </li>
           </ol>

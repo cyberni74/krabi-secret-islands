@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 import { AERIAL_SHOTS, BRAND, COMPARISON, IMG, LANGS, UI, altFor, type ComparisonId } from "./content";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, Marquee, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { useSwitchLang } from "./lang";
-import { keepLang } from "./lang-context";
+import { keepLang, keepLangDetail } from "./lang-context";
 import { scrollToId, useSI, useTx } from "./store";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
@@ -90,9 +90,22 @@ export function Header() {
                 <span className="relative">{t(n.label)}</span>
               </>
             );
+            if (n.id === "touren" || n.id === "angeln")
+              return (
+                <Link
+                  key={n.id}
+                  to="/touren"
+                  search={keepLangDetail}
+                  hash={n.id === "angeln" ? "angeltouren" : undefined}
+                  className={cls}
+                  activeProps={{ className: "text-white" }}
+                >
+                  {inner}
+                </Link>
+              );
             if (n.id === "guide")
               return (
-                <Link key={n.id} to="/krabi-guide" search={keepLang} className={cls} activeProps={{ className: "text-white" }}>
+                <Link key={n.id} to="/krabi-guide" search={keepLangDetail} className={cls} activeProps={{ className: "text-white" }}>
                   {inner}
                 </Link>
               );
@@ -118,7 +131,7 @@ export function Header() {
         <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2">
           <Link
             to="/krabi-guide"
-            search={keepLang}
+            search={keepLangDetail}
             aria-label="Insider Guide"
             className="si-glass grid size-11 place-items-center rounded-full text-cyan-200 transition hover:text-white lg:hidden"
           >
@@ -155,6 +168,9 @@ function LangMenu() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const current = LANGS.find((l) => l.id === lang) ?? LANGS[0];
+  // Only the start page is translated into zh/ko/ja; tours, guides and info exist in German + English only.
+  const onLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
+  const offered = onLanding ? LANGS : LANGS.filter((l) => l.id === "de" || l.id === "en");
 
   useEffect(() => {
     if (!open) return;
@@ -195,7 +211,7 @@ function LangMenu() {
             transition={{ duration: 0.18 }}
             className="si-glass-strong absolute right-0 top-14 w-48 origin-top-right overflow-hidden rounded-2xl p-1.5"
           >
-            {LANGS.map((l) => (
+            {offered.map((l) => (
               <li key={l.id}>
                 <button
                   type="button"
@@ -262,8 +278,11 @@ export function BottomBar() {
         aria-label={t({ de: "Schnellzugriff", en: "Quick access" })}
         className="si-glass-strong pointer-events-auto flex w-full max-w-[26rem] items-center gap-0.5 rounded-[1.6rem] p-1.5 md:w-auto md:max-w-full shadow-[0_18px_50px_-18px_rgb(0_0_0/0.9)]"
       >
-        {section("touren", DOCK_TOURS, <Sailboat className="size-5 text-cyan-300" />)}
-        <Link to="/krabi-guide" search={keepLang} className={itemCls}>
+        <Link to="/touren" search={keepLangDetail} className={itemCls}>
+          <Sailboat className="size-5 text-cyan-300" />
+          <span>{t(DOCK_TOURS)}</span>
+        </Link>
+        <Link to="/krabi-guide" search={keepLangDetail} className={itemCls}>
           <BookOpen className="size-5 text-cyan-300" />
           <span>{t(DOCK_GUIDE)}</span>
         </Link>
@@ -482,15 +501,21 @@ const COMPARE_ICON: Record<ComparisonId, typeof ShieldCheck> = {
 export function Comparison() {
   const { t } = useTx();
   const [active, setActive] = useState<ComparisonId>("ksi");
-  const [dir, setDir] = useState(1);
   const idx = Math.max(0, COMPARISON.findIndex((c) => c.id === active));
-  const current = COMPARISON[idx];
+  // Swipe only on small screens (enabled after mount; on desktop the three cards are static).
+  const [swipe, setSwipe] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const sync = () => setSwipe(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
   const ours = COMPARISON.find((c) => c.good) ?? COMPARISON[0];
   const others = COMPARISON.filter((c) => !c.good);
 
   const go = (next: number) => {
     const n = (next + COMPARISON.length) % COMPARISON.length;
-    setDir(n > idx ? 1 : -1);
     setActive(COMPARISON[n].id);
   };
   const onDragEnd = (_: unknown, info: PanInfo) => {
@@ -503,82 +528,61 @@ export function Comparison() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionTitle eyebrow={t(UI.compareEyebrow)} title={t(UI.compareTitle)} sub={t(UI.compareSub)} center />
 
-        {/* Mobile: segmented tabs + swipeable card */}
-        <ScrollScene className="md:hidden" from="tilt" intensity={0.6}>
-          <div role="tablist" className="si-glass relative mb-5 grid grid-cols-3 gap-1 rounded-2xl p-1">
-            {COMPARISON.map((c, i) => (
-              <button
-                key={c.id}
-                role="tab"
-                type="button"
-                aria-selected={active === c.id}
-                onClick={() => go(i)}
-                className={cn(
-                  "relative min-h-12 rounded-xl px-1 text-xs font-bold leading-tight transition-colors",
-                  active === c.id ? (c.good ? "text-si-navy" : "text-white") : "text-slate-400",
-                )}
-              >
-                {active === c.id ? (
-                  <motion.span
-                    layoutId="cmp-pill"
-                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
-                    className={cn(
-                      "absolute inset-0 rounded-xl",
-                      c.good ? "bg-gradient-to-r from-si-cyan to-cyan-300" : "bg-white/15",
-                    )}
-                  />
-                ) : null}
-                <span className="relative">{t(c.short)}</span>
-              </button>
-            ))}
-          </div>
-          <div className="relative overflow-hidden px-0.5 py-1">
-            <AnimatePresence mode="wait" custom={dir} initial={false}>
-              <motion.div
-                key={current.id}
-                custom={dir}
-                variants={{
-                  enter: (d: number) => ({ opacity: 0, x: 60 * d, rotateY: -12 * d }),
-                  center: { opacity: 1, x: 0, rotateY: 0 },
-                  exit: (d: number) => ({ opacity: 0, x: -60 * d, rotateY: 12 * d }),
-                }}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.25}
-                onDragEnd={onDragEnd}
-                className="touch-pan-y"
-              >
-                <CompareCard item={current} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          <p className="mt-3 text-center text-xs text-slate-400">
-            {t({ de: "← Wischen zum Vergleichen →", en: "← Swipe to compare →" })}
-          </p>
-        </ScrollScene>
-
-        {/* Desktop: dimmed rival | glowing us | dimmed rival */}
-        <Assemble className="relative hidden items-stretch gap-6 md:grid md:grid-cols-[1fr_1.15fr_1fr]" stagger={0.15}>
-          <AssembleItem variant="left" className="opacity-70 transition hover:opacity-100">
-            <CompareCard item={others[0]} />
-          </AssembleItem>
-          <AssembleItem variant="scale" className="relative z-10 md:-my-4">
-            <CompareCard item={ours} />
-            <span className="si-glass-strong absolute -left-[2.35rem] top-1/2 z-20 grid size-12 -translate-y-1/2 place-items-center rounded-full text-sm font-black text-si-gold">
-              VS
-            </span>
-            <span className="si-glass-strong absolute -right-[2.35rem] top-1/2 z-20 grid size-12 -translate-y-1/2 place-items-center rounded-full text-sm font-black text-si-gold">
-              VS
-            </span>
-          </AssembleItem>
-          <AssembleItem variant="right" className="opacity-70 transition hover:opacity-100">
-            <CompareCard item={others[1] ?? others[0]} />
-          </AssembleItem>
-        </Assemble>
+        {/* Mobile: segmented tabs (one card at a time, swipeable) – desktop: all three cards. One shared DOM, so no card exists twice. */}
+        <div role="tablist" className="si-glass relative mb-5 grid grid-cols-3 gap-1 rounded-2xl p-1 md:hidden">
+          {COMPARISON.map((c, i) => (
+            <button
+              key={c.id}
+              role="tab"
+              type="button"
+              aria-selected={active === c.id}
+              onClick={() => go(i)}
+              className={cn(
+                "relative min-h-12 rounded-xl px-1 text-xs font-bold leading-tight transition-colors",
+                active === c.id ? (c.good ? "text-si-navy" : "text-white") : "text-slate-400",
+              )}
+            >
+              {active === c.id ? (
+                <motion.span
+                  layoutId="cmp-pill"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  className={cn("absolute inset-0 rounded-xl", c.good ? "bg-gradient-to-r from-si-cyan to-cyan-300" : "bg-white/15")}
+                />
+              ) : null}
+              <span className="relative">{t(c.short)}</span>
+            </button>
+          ))}
+        </div>
+        <motion.div drag={swipe ? "x" : false} dragConstraints={{ left: 0, right: 0 }} dragElastic={0.25} onDragEnd={onDragEnd} className="touch-pan-y md:touch-auto">
+          <Assemble className="relative items-stretch gap-6 md:grid md:grid-cols-[1fr_1.15fr_1fr]" stagger={0.15}>
+            {COMPARISON.map((c) => {
+              const isOurs = c.id === ours.id;
+              const pos = isOurs ? "md:order-2" : c.id === others[0].id ? "md:order-1" : "md:order-3";
+              return (
+                <AssembleItem
+                  key={c.id}
+                  variant={isOurs ? "scale" : c.id === others[0].id ? "left" : "right"}
+                  className={cn(active === c.id ? "block" : "hidden md:block", pos, isOurs ? "relative z-10 md:-my-4" : "md:opacity-70 md:transition md:hover:opacity-100")}
+                >
+                  <CompareCard item={c} />
+                  {isOurs ? (
+                    <>
+                      <span className="si-glass-strong absolute -left-[2.35rem] top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full text-sm font-black text-si-gold md:grid">
+                        VS
+                      </span>
+                      <span className="si-glass-strong absolute -right-[2.35rem] top-1/2 z-20 hidden size-12 -translate-y-1/2 place-items-center rounded-full text-sm font-black text-si-gold md:grid">
+                        VS
+                      </span>
+                    </>
+                  ) : null}
+                </AssembleItem>
+              );
+            })}
+          </Assemble>
+        </motion.div>
+        <p className="mt-3 text-center text-xs text-slate-400 md:hidden">
+          {t({ de: "← Wischen zum Vergleichen →", en: "← Swipe to compare →" })}
+        </p>
       </div>
     </section>
   );

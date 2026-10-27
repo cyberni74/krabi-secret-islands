@@ -3,13 +3,13 @@ import { GuideArticlePage } from "@/components/krabi-guide/guide-article";
 import { GuideShell } from "@/components/krabi-guide/guide-ui";
 import { altFor } from "@/components/secret-islands/content";
 import { btn } from "@/components/secret-islands/fx";
-import { validateLangSearch } from "@/components/secret-islands/lang-context";
+import { validateDetailLangSearch } from "@/components/secret-islands/lang-context";
 import { getGuideArticle } from "@/lib/server/guide-data";
 import { BRAND_HEAD_LINKS, GUIDE_PATH, ROBOTS_LARGE_IMAGES, absUrl, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 export const Route = createFileRoute("/krabi-guide/$slug")({
   // Guide texts exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
-  validateSearch: validateLangSearch,
+  validateSearch: validateDetailLangSearch,
   loaderDeps: ({ search }) => ({ lang: search.lang && search.lang !== "de" ? ("en" as const) : ("de" as const) }),
   // The article (text, FAQ, related cards, JSON-LD) comes from a server function: it is rendered into the SSR HTML and ships as
   // loader data of THIS article only – the article data module itself is never part of a client chunk.
