@@ -26,6 +26,20 @@ export function validateLangSearch(search: Record<string, unknown>): { lang?: La
   return { lang: lang && lang !== "de" ? lang : undefined };
 }
 
+/**
+ * Search schema for pages that exist only in German + English (tours, Insider Guide, info). zh/ko/ja have no translated
+ * version of these pages, so `?lang=zh|ko|ja` is folded into `?lang=en`: same content, English canonical, no extra language URL.
+ */
+export function validateDetailLangSearch(search: Record<string, unknown>): { lang?: Lang } {
+  const lang = parseLang(search.lang);
+  return { lang: lang && lang !== "de" ? "en" : undefined };
+}
+
+/** Like `keepLang`, for links that lead to a German/English-only page (zh/ko/ja visitors are sent to the English page). */
+export function keepLangDetail(prev: Record<string, unknown>): { lang?: Lang } {
+  return validateDetailLangSearch(prev);
+}
+
 /** `<Link search={keepLang}>` – carries the current `?lang=` over to internal links (crawlable language versions). */
 export function keepLang(prev: Record<string, unknown>): { lang?: Lang } {
   return validateLangSearch(prev);

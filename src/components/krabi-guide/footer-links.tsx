@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { TOURS } from "../secret-islands/content";
-import { keepLang } from "../secret-islands/lang-context";
+import { keepLangDetail } from "../secret-islands/lang-context";
 import { useTx } from "../secret-islands/store";
 import { TOUR_SLUGS, TOURS_PATH } from "../secret-islands/tour-slugs";
 import { GUIDE_PATH } from "../secret-islands/seo";
@@ -24,7 +24,7 @@ export function FooterTourLinks({ className }: { className?: string }) {
             <Link
               to="/touren/$slug"
               params={{ slug: TOUR_SLUGS[tour.id] }}
-              search={keepLang}
+              search={keepLangDetail}
               className="inline-flex min-h-9 items-center py-1 leading-snug text-slate-300 transition hover:text-white"
             >
               {tour.kind === "fishing" ? "🎣 " : ""}
@@ -33,7 +33,7 @@ export function FooterTourLinks({ className }: { className?: string }) {
           </li>
         ))}
         <li className="break-inside-avoid">
-          <Link to={TOURS_PATH} search={keepLang} className="inline-flex min-h-9 items-center py-1 font-bold text-cyan-200 hover:text-white">
+          <Link to={TOURS_PATH} search={keepLangDetail} className="inline-flex min-h-9 items-center py-1 font-bold text-cyan-200 hover:text-white">
             {all} →
           </Link>
         </li>
@@ -72,7 +72,7 @@ export function FooterGuideLinks({ className, showHeading = true }: { className?
                     <Link
                       to="/krabi-guide/$slug"
                       params={{ slug: a.slug }}
-                      search={keepLang}
+                      search={keepLangDetail}
                       className="inline-flex min-h-9 items-center py-1 leading-snug text-slate-300 transition hover:text-white"
                     >
                       {de ? a.short.de : a.short.en}
@@ -83,7 +83,7 @@ export function FooterGuideLinks({ className, showHeading = true }: { className?
           </div>
         ))}
       </div>
-      <Link to={GUIDE_PATH} search={keepLang} className="mt-4 inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
+      <Link to={GUIDE_PATH} search={keepLangDetail} className="mt-4 inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
         {de ? "Alle Artikel im Insider Guide" : "All articles in the Insider Guide"} →
       </Link>
     </nav>
@@ -123,7 +123,7 @@ export function GuideTeaser() {
             <Link
               to="/krabi-guide/$slug"
               params={{ slug: a.slug }}
-              search={keepLang}
+              search={keepLangDetail}
               className="flex h-full min-h-16 items-center rounded-2xl border border-white/10 bg-white/[0.04] p-4 font-semibold leading-snug text-slate-100 transition hover:border-white/25 hover:bg-white/[0.07]"
             >
               {de ? a.short.de : a.short.en}
@@ -131,7 +131,7 @@ export function GuideTeaser() {
           </li>
         ))}
       </ul>
-      <Link to={GUIDE_PATH} search={keepLang} className="mt-5 inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
+      <Link to={GUIDE_PATH} search={keepLangDetail} className="mt-5 inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
         {de ? "Alle Artikel im Insider Guide" : "All articles in the Insider Guide"} →
       </Link>
     </section>
@@ -143,7 +143,7 @@ export function FooterInfoLink({ className }: { className?: string }) {
   const { lang } = useTx();
   return (
     <p className={className}>
-      <Link to="/info" search={keepLang} className="inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
+      <Link to="/info" search={keepLangDetail} className="inline-flex min-h-11 items-center font-bold text-cyan-200 hover:text-white">
         {lang === "de" ? "Gäste-Info: Treffpunkt, Preise, privat vs. Gruppe" : "Guest info: meeting point, what's included, private vs group"} →
       </Link>
     </p>

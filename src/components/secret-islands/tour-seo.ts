@@ -100,7 +100,6 @@ export function tourJsonLd(tour: Tour, page: TourPageContent, lang: TourLang): J
           url,
           price: tour.price,
           priceCurrency: "THB",
-          availability: "https://schema.org/InStock",
           priceSpecification: { "@type": "PriceSpecification", price: tour.price, priceCurrency: "THB", description: perBoat },
           seller: { "@id": BUSINESS_ID },
         },

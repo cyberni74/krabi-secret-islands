@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { keepLang } from "./lang-context";
+import { keepLang, keepLangDetail } from "./lang-context";
 import { DURATIONS } from "./booking-data";
 import {
   GALLERY,
@@ -303,7 +303,7 @@ function TourPageLink({ tourId, className }: { tourId: string; className?: strin
     <Link
       to="/touren/$slug"
       params={{ slug: TOUR_SLUGS[tourId] }}
-      search={keepLang}
+      search={keepLangDetail}
       className={cn("flex items-center justify-center gap-1.5 rounded-xl font-semibold text-cyan-300 transition hover:text-white", className)}
     >
       {t(TOUR_PAGE_LINK)}

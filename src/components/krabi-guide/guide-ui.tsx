@@ -114,10 +114,8 @@ export function Breadcrumb({ article }: { article?: Pick<GuideCard, "short"> }) 
             {t({ de: "Startseite", en: "Home" })}
           </Link>
         </li>
-        <li aria-hidden>
-          <ChevronRight className="size-3.5 text-slate-500" />
-        </li>
-        <li>
+        <li className="inline-flex items-center gap-1">
+          <ChevronRight aria-hidden className="size-3.5 text-slate-500" />
           {article ? (
             <Link to="/krabi-guide" search={keepLang} className="rounded hover:text-white">
               Insider Guide
@@ -129,16 +127,12 @@ export function Breadcrumb({ article }: { article?: Pick<GuideCard, "short"> }) 
           )}
         </li>
         {article ? (
-          <>
-            <li aria-hidden>
-              <ChevronRight className="size-3.5 text-slate-500" />
-            </li>
-            <li className="min-w-0">
-              <span aria-current="page" className="text-cyan-200">
-                {article.short[lang]}
-              </span>
-            </li>
-          </>
+          <li className="inline-flex min-w-0 items-center gap-1">
+            <ChevronRight aria-hidden className="size-3.5 text-slate-500" />
+            <span aria-current="page" className="text-cyan-200">
+              {article.short[lang]}
+            </span>
+          </li>
         ) : null}
       </ol>
     </nav>

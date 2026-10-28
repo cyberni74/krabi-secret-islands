@@ -2,14 +2,14 @@ import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { GuideShell } from "@/components/krabi-guide/guide-ui";
 import { TourLandingPage } from "@/components/krabi-guide/tour-page";
 import { btn } from "@/components/secret-islands/fx";
-import { validateLangSearch } from "@/components/secret-islands/lang-context";
+import { validateDetailLangSearch } from "@/components/secret-islands/lang-context";
 import { getTourArticleCards } from "@/lib/server/guide-data";
 import { getTourPage } from "@/components/secret-islands/tour-pages";
 import { tourHead, tourPageLang } from "@/components/secret-islands/tour-seo";
 
 export const Route = createFileRoute("/touren/$slug")({
   // Tour pages exist in German + English: `?lang=en` is the English URL; zh/ko/ja show the English text and canonicalise to it.
-  validateSearch: validateLangSearch,
+  validateSearch: validateDetailLangSearch,
   // Unknown slug → 404 (not a crash). The tour copy is bundled; only the ≤4 matching guide cards come from the server.
   loader: async ({ params }) => {
     const found = getTourPage(params.slug);
