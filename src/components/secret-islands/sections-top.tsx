@@ -90,6 +90,19 @@ export function Header() {
                 <span className="relative">{t(n.label)}</span>
               </>
             );
+            if (n.id === "touren" || n.id === "angeln")
+              return (
+                <Link
+                  key={n.id}
+                  to="/touren"
+                  search={keepLang}
+                  hash={n.id === "angeln" ? "angeltouren" : undefined}
+                  className={cls}
+                  activeProps={{ className: "text-white" }}
+                >
+                  {inner}
+                </Link>
+              );
             if (n.id === "guide")
               return (
                 <Link key={n.id} to="/krabi-guide" search={keepLang} className={cls} activeProps={{ className: "text-white" }}>
@@ -262,7 +275,10 @@ export function BottomBar() {
         aria-label={t({ de: "Schnellzugriff", en: "Quick access" })}
         className="si-glass-strong pointer-events-auto flex w-full max-w-[26rem] items-center gap-0.5 rounded-[1.6rem] p-1.5 md:w-auto md:max-w-full shadow-[0_18px_50px_-18px_rgb(0_0_0/0.9)]"
       >
-        {section("touren", DOCK_TOURS, <Sailboat className="size-5 text-cyan-300" />)}
+        <Link to="/touren" search={keepLang} className={itemCls}>
+          <Sailboat className="size-5 text-cyan-300" />
+          <span>{t(DOCK_TOURS)}</span>
+        </Link>
         <Link to="/krabi-guide" search={keepLang} className={itemCls}>
           <BookOpen className="size-5 text-cyan-300" />
           <span>{t(DOCK_GUIDE)}</span>
