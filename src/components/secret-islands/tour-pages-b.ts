@@ -6,7 +6,7 @@ import type { TourPageContent } from "./tour-pages";
  */
 export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   "railay-escape": {
-    title: { de: "Railay & Phra Nang Bootstour privat: Halbtagestour", en: "Private Railay & Phra Nang Tour from Ao Nang by Speedboat" },
+    title: { de: "Railay & Phra Nang Speedboot privat: Halbtagestour", en: "Private Railay & Phra Nang Tour from Ao Nang by Speedboat" },
     description: {
       de: "Railay und Phra Nang privat per Speedboat ab Ao Nang: 4 Stunden mit Höhle, Kletterfelsen und Badestopp an Koh Poda. Flexible Startzeit, max. 5 Gäste.",
       en: "Railay and Phra Nang privately by speedboat from Ao Nang: 4 hours with the cave, climbing cliffs and a swim stop at Koh Poda. Flexible start, max. 5 guests.",
@@ -54,7 +54,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "sunset-dinner": {
-    title: { de: "Sunset Dinner Krabi: Romantische Bootstour privat", en: "Private Sunset Dinner Tour from Ao Nang by Speedboat" },
+    title: { de: "Sunset Dinner Krabi: Romantik-Speedboot privat", en: "Private Sunset Dinner Tour from Ao Nang by Speedboat" },
     description: {
       de: "Sunset Dinner an Bord in Krabi: Champagner zum Sonnenuntergang, 3-Gänge-Dinner vor Phra Nang. Private Bootstour für Paare ab Ao Nang, 4 Stunden ab 15:30 Uhr.",
       en: "Sunset dinner on board in Krabi: champagne at sunset and a 3-course dinner off Phra Nang. Private boat tour for couples from Ao Nang, 4 hours from 3:30 pm.",
@@ -102,7 +102,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
   },
 
   "family-sandbars": {
-    title: { de: "Familien-Bootstour Krabi privat: Sandbänke & Inseln", en: "Private Family Boat Tour from Ao Nang by Speedboat" },
+    title: { de: "Familien-Speedboot Krabi privat: Sandbänke & Inseln", en: "Private Family Boat Tour from Ao Nang by Speedboat" },
     description: {
       de: "Familien-Bootstour in Krabi privat ab Ao Nang: Tup-Sandbank, Chicken Island und Koh Poda mit kurzen Fahrten, flachen Buchten und Schatten. Max. 5 Gäste.",
       en: "Private family boat tour in Krabi from Ao Nang: Tup sandbar, Chicken Island and Koh Poda with short rides, shallow bays and shade. Max. 5 guests, 6 hours.",
