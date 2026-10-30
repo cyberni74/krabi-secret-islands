@@ -140,12 +140,12 @@ export function toursHubJsonLd(lang: TourLang, page: { title: string; descriptio
 
 export const TOURS_HUB_META = {
   title: {
-    de: "Krabi Bootstour privat & Krabi Ausflüge ab Ao Nang",
-    en: "Private Boat Tours Krabi from Ao Nang: 15 Tours",
+    de: "Privates Speedboot Krabi & Bootstour ab Ao Nang: 15 Touren",
+    en: "Private Speedboat Krabi & Boat Tours from Ao Nang: 15 Tours",
   },
   description: {
-    de: "Krabi Bootstour privat und Inselhopping ab Ao Nang: 4 Inseln Tour, Hong Island, Phi Phi, James Bond Island, Sunset, Plankton, Angeln. Pro Boot, max. 5 Gäste.",
-    en: "Private Krabi boat tours and island tours from Ao Nang: 4 Islands, Hong Island, Phi Phi, James Bond Island, sunset, plankton, fishing. Per boat, max. 5 guests.",
+    de: "Privates Speedboot Krabi und Bootstour ab Ao Nang: 4 Inseln Tour, Hong Island, Phi Phi, James Bond Island, Sunset, Plankton, Angeln. Pro Boot, max. 5 Gäste.",
+    en: "Private speedboat Krabi and boat tours from Ao Nang: 4 Islands, Hong Island, Phi Phi, James Bond Island, sunset, plankton, fishing. Per boat, max. 5 guests.",
   },
 };
 
