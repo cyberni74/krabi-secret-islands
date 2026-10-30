@@ -1066,8 +1066,8 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { de: "Ab wann kann ich buchen und wie bezahle ich?", en: "When can I book and how do I pay?" },
     a: {
-      de: "Anfragen sind jederzeit möglich. Nach Bestätigung genügt eine Anzahlung von 30 % per Karte oder Überweisung, der Rest wird am Tourtag bar oder per Karte bezahlt.",
-      en: "You can request any time. After confirmation, a 30% deposit by card or bank transfer secures the date; the rest is paid on tour day in cash or by card.",
+      de: "Anfragen sind jederzeit möglich. Nach Bestätigung genügt eine Anzahlung von 30 % per Karte oder Überweisung, der Rest wird am Tourtag bar oder per Karte bezahlt. Stornierung: Bis 7 Tage vor der Tour erstatten wir die Anzahlung oder buchen kostenlos auf einen anderen Termin um. Weniger als 7 Tage vorher ist die Anzahlung nicht erstattbar. Bei Sturmwarnung verschieben wir kostenlos oder erstatten 100 %.",
+      en: "You can request any time. After confirmation, a 30% deposit by card or bank transfer secures the date; the rest is paid on tour day in cash or by card. Cancellation: up to 7 days before the tour we refund your deposit or rebook you free of charge to another date. Less than 7 days before the tour, the deposit is not refundable. With a storm warning we reschedule free of charge or refund 100%.",
     },
   },
   {
@@ -1085,11 +1085,11 @@ export const FAQ: { q: L; a: L }[] = [
  */
 export const SEO_META = {
   title: {
-    de: "Bootstour Krabi privat ab Ao Nang | Krabi Secret Islands",
-    en: "Krabi Boat Tours & Island Hopping | Krabi Secret Islands",
+    de: "Privates Speedboot Krabi | Krabi Secret Islands",
+    en: "Private Speedboat Krabi | Krabi Secret Islands",
   },
   description: {
-    de: "Private Bootstour Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Speedboot ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.",
-    en: "Private Krabi boat tour from 11,500 THB per boat (max. 5 guests). Speedboat from Ao Nang or Krabi Town to 4 Islands, Hong Island and Phi Phi. Book your date.",
+    de: "Privates Speedboot Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Bootstour ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.",
+    en: "Private speedboat Krabi from 11,500 THB per boat (max. 5 guests). Boat tour from Ao Nang or Krabi Town to 4 Islands, Hong Island and Phi Phi. Book your date.",
   },
 };
