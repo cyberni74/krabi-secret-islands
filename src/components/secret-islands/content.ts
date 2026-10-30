@@ -1085,8 +1085,8 @@ export const FAQ: { q: L; a: L }[] = [
  */
 export const SEO_META = {
   title: {
-    de: "Privates Speedboot Krabi | Krabi Secret Islands",
-    en: "Private Speedboat Krabi | Krabi Secret Islands",
+    de: "Privates Speedboot Krabi | Secret Islands",
+    en: "Private Speedboat Krabi | Secret Islands",
   },
   description: {
     de: "Privates Speedboot Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Bootstour ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.",
