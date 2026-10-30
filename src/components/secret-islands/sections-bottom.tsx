@@ -28,6 +28,7 @@ import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "../krabi-guid
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
+import { SITE_URL } from "./seo";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 /* ───────────────────────── Guide (blog / SEO) ───────────────────────── */
@@ -612,6 +613,24 @@ export function Footer() {
             <span className="flex items-center gap-1.5 rounded-full bg-si-cyan/10 px-3 py-1.5 text-xs font-bold text-cyan-200 ring-1 ring-si-cyan/30">
               <ShieldCheck className="size-4" /> {t(UI.marine)}
             </span>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2 text-xs font-bold">
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(SITE_URL)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-3 py-2 ring-1 ring-white/15 transition hover:text-white"
+            >
+              WhatsApp
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-3 py-2 ring-1 ring-white/15 transition hover:text-white"
+            >
+              Facebook
+            </a>
           </div>
         </AssembleItem>
 

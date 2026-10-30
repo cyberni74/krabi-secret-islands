@@ -488,7 +488,7 @@ function FishingCard({ tour }: { tour: Tour }) {
         ) : null}
       </div>
       <div className="flex min-w-0 flex-1 flex-col p-4">
-        <h3 className="font-extrabold leading-snug text-white">{t(tour.title)}</h3>
+        <p className="font-extrabold leading-snug text-white">{t(tour.title)}</p>
         <p className="mt-1 flex items-center gap-1 text-xs text-slate-400">
           <Clock className="size-3.5 shrink-0 text-cyan-300" /> {t(tour.duration)}
         </p>

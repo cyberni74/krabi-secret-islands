@@ -271,8 +271,8 @@ export const UI = {
   heroTitleA: { de: "Krabi Secret Islands –", en: "Krabi Secret Islands –" },
   heroTitleB: { de: "Ihr privates Speedboat-Abenteuer", en: "your private speedboat adventure" },
   heroSub: {
-    de: "Kein Massentourismus. Keine lauten Longtail-Boote. Nur Sie, kristallklares Wasser und unberührte Inselparadiese – zum Schnorcheln, Schwimmen und Entspannen.",
-    en: "No mass tourism. No noisy longtail boats. Just you, crystal-clear water and untouched island paradises – to snorkel, swim and unwind.",
+    de: "Kein Massentourismus. Keine lauten Longtail-Boote. Nur Sie, kristallklares Wasser und unberührte Inselparadiese – ein privates Speedboat-Abenteuer zum Schnorcheln, Schwimmen und Entspannen.",
+    en: "No mass tourism. No noisy longtail boats. Just you, crystal-clear water and untouched island paradises – a private speedboat adventure to snorkel, swim and unwind.",
   },
   heroPrimary: { de: "Jetzt Verfügbarkeit prüfen", en: "Check availability" },
   heroSecondary: { de: "Luftaufnahmen ansehen", en: "View aerial shots" },
