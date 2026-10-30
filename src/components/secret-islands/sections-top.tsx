@@ -132,10 +132,10 @@ export function Header() {
           <Link
             to="/krabi-guide"
             search={keepLangDetail}
-            aria-label="Insider Guide"
             className="si-glass grid size-11 place-items-center rounded-full text-cyan-200 transition hover:text-white lg:hidden"
           >
             <BookOpen className="size-5" />
+            <span className="sr-only">Insider Guide</span>
           </Link>
           <LangMenu />
           <button

@@ -307,6 +307,7 @@ function TourPageLink({ tourId, className }: { tourId: string; className?: strin
       className={cn("flex items-center justify-center gap-1.5 rounded-xl font-semibold text-cyan-300 transition hover:text-white", className)}
     >
       {t(TOUR_PAGE_LINK)}
+      <span className="sr-only"> – {t(TOURS.find((tr) => tr.id === tourId)?.title ?? TOUR_PAGE_LINK)}</span>
       <ArrowRight className="size-3.5" />
     </Link>
   );
