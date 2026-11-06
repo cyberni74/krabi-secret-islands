@@ -93,6 +93,12 @@ function BookingInbox() {
             {tab === "reviews" ? <ReviewModeration /> : null}
             {tab === "requests" ? (
               <>
+            <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+              <Stat label="Neu" value={String(newRequests)} accent />
+              <Stat label="Aktiv (neu, kontaktiert, bestätigt)" value={String((q.data ?? []).filter((r) => r.status === "new" || r.status === "contacted" || r.status === "confirmed").length)} />
+              <Stat label="Umsatz bestätigt" value={`฿${(q.data ?? []).filter((r) => r.status === "confirmed").reduce((sum, r) => sum + r.total_thb, 0).toLocaleString("de-DE")}`} />
+              <Stat label="Bewertungen offen" value={String(pendingReviews)} />
+            </div>
             <div className="hide-scroll -mx-4 mt-6 flex gap-2 overflow-x-auto px-4">
               {[{ id: "all" as const, label: "Alle" }, ...STATUS].map((s) => {
                 const n = s.id === "all" ? (q.data?.length ?? 0) : (q.data ?? []).filter((r) => r.status === s.id).length;
@@ -123,6 +129,15 @@ function BookingInbox() {
           </>
         )}
       </div>
+    </div>
+  );
+}
+
+function Stat({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+  return (
+    <div className="si-glass rounded-2xl p-4">
+      <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">{label}</p>
+      <p className={cn("mt-1 text-2xl font-extrabold", accent ? "text-cyan-300" : "text-white")}>{value}</p>
     </div>
   );
 }
