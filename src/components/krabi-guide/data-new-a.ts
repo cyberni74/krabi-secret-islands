@@ -148,7 +148,7 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
           de: [
             "Railay Escape: ab 11.500 THB, 4 Std., flexible Startzeit",
             "Family Sandbars: ab 15.500 THB, 6 Std., ab 09:00",
-            "Sunset Dinner: ab 16.500 THB, 4 Std., ab 15:30 (3-Gänge-Dinner an Bord)",
+            "Sunset Dinner: ab 16.500 THB, 4 Std., ab 15:30 (Dinner an Bord)",
             "4-Islands VIP & Sunset Special: ab 18.500 THB, 6 Std., ab 13:00",
             "Hong Lagoons: ab 21.500 THB, 7 Std., ab 08:00",
             "James Bond Bay: ab 24.000 THB, 8 Std., ab 08:00",
@@ -159,7 +159,7 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
           en: [
             "Railay Escape: from 11,500 THB, 4 hrs, flexible start",
             "Family Sandbars: from 15,500 THB, 6 hrs, from 9 am",
-            "Sunset Dinner: from 16,500 THB, 4 hrs, from 3:30 pm (3-course dinner on board)",
+            "Sunset Dinner: from 16,500 THB, 4 hrs, from 3:30 pm (dinner on board)",
             "4-Islands VIP & Sunset Special: from 18,500 THB, 6 hrs, from 1 pm",
             "Hong Lagoons: from 21,500 THB, 7 hrs, from 8 am",
             "James Bond Bay: from 24,000 THB, 8 hrs, from 8 am",

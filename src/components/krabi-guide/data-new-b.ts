@@ -82,12 +82,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         },
         list: {
           de: [
-            "Sunset Romance & Dinner an Bord (sunset-dinner): 16.500 THB pro Boot, 4 Std. ab 15:30, Stopps Koh Poda und Phra Nang Bay; inklusive Flasche Champagner und 3-Gänge-Dinner",
+            "Sunset Romance & Dinner an Bord (sunset-dinner): 16.500 THB pro Boot, 4 Std. ab 15:30, Stopps Koh Poda und Phra Nang Bay; inklusive Flasche Champagner und Dinner an Bord",
             "Sunset & Night Glow Kombi (sunset-glow-combo): 19.500 THB pro Boot, 6 Std. ab 15:30; Baden an Koh Poda, Sonnenuntergang mit Prosecco vor Phra Nang, danach Schwimmen im leuchtenden Plankton",
             "Night Glow – Leuchtendes Plankton per Speedboat (plankton-night): 14.500 THB pro Boot, 4 Std. ab 18:00; abgelegene dunkle Bucht, Motor und Lichter aus, am eindrucksvollsten rund um Neumond",
           ],
           en: [
-            "Sunset Romance & Dinner on Board (sunset-dinner): 16,500 THB per boat, 4 hrs from 3:30 pm, stops at Koh Poda and Phra Nang Bay; includes a bottle of champagne and a 3-course dinner",
+            "Sunset Romance & Dinner on Board (sunset-dinner): 16,500 THB per boat, 4 hrs from 3:30 pm, stops at Koh Poda and Phra Nang Bay; includes a bottle of champagne and a dinner on board",
             "Sunset & Night Glow Combo (sunset-glow-combo): 19,500 THB per boat, 6 hrs from 3:30 pm; swim at Koh Poda, sunset with prosecco off Phra Nang, then a swim in glowing plankton",
             "Night Glow – Bioluminescent Plankton by Speedboat (plankton-night): 14,500 THB per boat, 4 hrs from 6 pm; secluded dark bay, engine and lights off, most intense around new moon",
           ],
@@ -198,14 +198,14 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Bei Sunset Romance & Dinner an Bord sind eine Flasche Champagner und ein 3-Gänge-Dinner Teil der Tour. Serviert wird im Heck-Cockpit; wir ankern vor Phra Nang, während die Sonne untergeht. Die Tour ist vier Stunden lang und startet um 15:30 Uhr.",
+            "Bei Sunset Romance & Dinner an Bord sind eine Flasche Champagner und ein Dinner an Bord Teil der Tour. Serviert wird im Heck-Cockpit; wir ankern vor Phra Nang, während die Sonne untergeht. Die Tour ist vier Stunden lang und startet um 15:30 Uhr.",
             "Wenn Sie mehr wünschen, gibt es Zusatzoptionen, die Sie bei der Buchung auswählen: 2 Flaschen gekühlter Sekt mit Gläsern für Paare für 2.200 THB pro Boot, Premium-Champagner (Moët & Chandon Impérial, 0,75 l) für 6.500 THB pro Boot und Romantik-Deko mit Blumen für 2.500 THB pro Boot. Das Catering-Paket mit zwei frisch zubereiteten Mahlzeiten und Getränken liegt bei 500 THB pro Person.",
-            "Wenn Sie Allergien haben, bestimmte Speisen nicht essen oder den Anlass vorab melden wollen, schreiben Sie uns das bitte bei der Buchung. Dann können wir Wünsche einplanen, statt sie an Bord zu klären. Die Kombi-Tour enthält Prosecco zum Sonnenuntergang und Getränke, die Plankton-Tour Handtücher, Snacks und Getränke; das 3-Gänge-Dinner gehört nur zur Dinner-Tour.",
+            "Wenn Sie Allergien haben, bestimmte Speisen nicht essen oder den Anlass vorab melden wollen, schreiben Sie uns das bitte bei der Buchung. Dann können wir Wünsche einplanen, statt sie an Bord zu klären. Die Kombi-Tour enthält Prosecco zum Sonnenuntergang und Getränke, die Plankton-Tour Handtücher, Snacks und Getränke; das Dinner an Bord gehört nur zur Dinner-Tour.",
           ],
           en: [
-            "On Sunset Romance & Dinner on Board a bottle of champagne and a 3-course dinner are part of the tour. Dinner is served in the rear cockpit; we anchor off Phra Nang while the sun goes down. The tour lasts four hours and starts at 3:30 pm.",
+            "On Sunset Romance & Dinner on Board a bottle of champagne and a dinner on board are part of the tour. Dinner is served in the rear cockpit; we anchor off Phra Nang while the sun goes down. The tour lasts four hours and starts at 3:30 pm.",
             "If you want more, there are extras you select when booking: 2 bottles of chilled sparkling wine with glasses for couples for 2,200 THB per boat, premium champagne (Moët & Chandon Impérial, 0.75 l) for 6,500 THB per boat and romance decor with flowers for 2,500 THB per boat. The catering package with two freshly prepared meals and drinks is 500 THB per person.",
-            "If you have allergies, do not eat certain foods or want to announce the occasion in advance, please tell us when booking. Then we can plan wishes in instead of sorting them out on board. The combo tour includes prosecco at sunset and drinks, the plankton tour towels, snacks and drinks; the 3-course dinner is only part of the dinner tour.",
+            "If you have allergies, do not eat certain foods or want to announce the occasion in advance, please tell us when booking. Then we can plan wishes in instead of sorting them out on board. The combo tour includes prosecco at sunset and drinks, the plankton tour towels, snacks and drinks; the dinner on board is only part of the dinner tour.",
           ],
         },
         tip: {
@@ -307,8 +307,8 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
           en: "Is there dinner on board at sunset?",
         },
         a: {
-          de: "Ja, bei der Tour Sunset Romance & Dinner an Bord: Flasche Champagner und 3-Gänge-Dinner im Heck-Cockpit, Start um 15:30 Uhr. Zusätzlich lässt sich Catering für 500 THB pro Person buchen. Allergien und Wünsche geben Sie bitte vorab an.",
-          en: "Yes, on the Sunset Romance & Dinner on Board tour: a bottle of champagne and a 3-course dinner in the rear cockpit, starting at 3:30 pm. You can also add catering for 500 THB per person. Please let us know allergies and wishes in advance.",
+          de: "Ja, bei der Tour Sunset Romance & Dinner an Bord: Flasche Champagner und Dinner an Bord im Heck-Cockpit, Start um 15:30 Uhr. Zusätzlich lässt sich Catering für 500 THB pro Person buchen. Allergien und Wünsche geben Sie bitte vorab an.",
+          en: "Yes, on the Sunset Romance & Dinner on Board tour: a bottle of champagne and a dinner on board in the rear cockpit, starting at 3:30 pm. You can also add catering for 500 THB per person. Please let us know allergies and wishes in advance.",
         },
       },
     ],
@@ -432,12 +432,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         list: {
           de: [
             "4-Islands VIP & Sunset Special (4islands-sunset): 18.500 THB pro Boot, 6 Std. ab 13:00; Koh Poda, Chicken Island, Tup Sandbank, Phra Nang Cave; Sunset-Prosecco an Bord",
-            "Sunset Romance & Dinner an Bord (sunset-dinner): 16.500 THB pro Boot, 4 Std. ab 15:30; Koh Poda, Phra Nang Bay; Flasche Champagner und 3-Gänge-Dinner",
+            "Sunset Romance & Dinner an Bord (sunset-dinner): 16.500 THB pro Boot, 4 Std. ab 15:30; Koh Poda, Phra Nang Bay; Flasche Champagner und Dinner an Bord",
             "Sunset & Night Glow Kombi (sunset-glow-combo): 19.500 THB pro Boot, 6 Std. ab 15:30; Koh Poda, Phra Nang Bay, dunkle Bucht mit Plankton; Sunset-Prosecco",
           ],
           en: [
             "4-Islands VIP & Sunset Special (4islands-sunset): 18,500 THB per boat, 6 hrs from 1 pm; Koh Poda, Chicken Island, Tup Sandbar, Phra Nang Cave; sunset prosecco on board",
-            "Sunset Romance & Dinner on Board (sunset-dinner): 16,500 THB per boat, 4 hrs from 3:30 pm; Koh Poda, Phra Nang Bay; bottle of champagne and 3-course dinner",
+            "Sunset Romance & Dinner on Board (sunset-dinner): 16,500 THB per boat, 4 hrs from 3:30 pm; Koh Poda, Phra Nang Bay; bottle of champagne and dinner on board",
             "Sunset & Night Glow Combo (sunset-glow-combo): 19,500 THB per boat, 6 hrs from 3:30 pm; Koh Poda, Phra Nang Bay, dark bay with plankton; sunset prosecco",
           ],
         },
@@ -471,12 +471,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Wer den Abend nicht nur mit dem Sonnenuntergang beenden möchte, hat zwei Möglichkeiten. Erstens das Dinner an Bord: Bei Sunset Romance & Dinner an Bord ankern wir vor Phra Nang, Sie haben eine Flasche Champagner und ein 3-Gänge-Dinner im Heck-Cockpit. Das ist die ruhigste Variante, gut für Paare, Jahrestage oder einfach für alle, die gern lange sitzen.",
+            "Wer den Abend nicht nur mit dem Sonnenuntergang beenden möchte, hat zwei Möglichkeiten. Erstens das Dinner an Bord: Bei Sunset Romance & Dinner an Bord ankern wir vor Phra Nang, Sie haben eine Flasche Champagner und ein Dinner an Bord im Heck-Cockpit. Das ist die ruhigste Variante, gut für Paare, Jahrestage oder einfach für alle, die gern lange sitzen.",
             "Zweitens Plankton danach: Bei der Kombi fahren wir nach dem Sonnenuntergang in eine dunkle Bucht ohne Lichtverschmutzung. Wir schalten Motor und Lichter aus, und wer ins warme Wasser gleitet, sieht bei Bewegung blaues Leuchten. Der Effekt ist am stärksten rund um Neumond, wie stark er an einem Abend ist, hängt von Wassertemperatur, Strömung und Jahreszeit ab und lässt sich nicht garantieren. Mehr dazu im Plankton-Guide.",
             "Ein Dinner und Plankton lassen sich in einer Tour nicht beliebig verbinden: Die Dinner-Tour hat vier Stunden, die Kombi sechs. Wenn Sie beides wollen, sprechen Sie uns an – dann klären wir, was zeitlich und logistisch passt.",
           ],
           en: [
-            "If you do not want to end the evening with just the sunset, you have two options. First, dinner on board: on Sunset Romance & Dinner on Board we anchor off Phra Nang, and you have a bottle of champagne and a 3-course dinner in the rear cockpit. This is the calmest variant, good for couples, anniversaries or anyone who likes to sit for a long time.",
+            "If you do not want to end the evening with just the sunset, you have two options. First, dinner on board: on Sunset Romance & Dinner on Board we anchor off Phra Nang, and you have a bottle of champagne and a dinner on board in the rear cockpit. This is the calmest variant, good for couples, anniversaries or anyone who likes to sit for a long time.",
             "Second, plankton afterwards: on the combo we go to a dark bay without light pollution after sunset. We switch off engine and lights, and anyone who slips into the warm water sees a blue glow with every movement. The effect is strongest around new moon; how strong it is on a given evening depends on water temperature, currents and season and cannot be guaranteed. More in the plankton guide.",
             "Dinner and plankton cannot be combined in one tour at will: the dinner tour is four hours, the combo six. If you want both, talk to us – then we will clarify what fits in terms of time and logistics.",
           ],
@@ -544,12 +544,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Eine Sunset-Tour ist kein langer Ausflug, aber ein paar Dinge machen den Abend angenehmer. Dazu gehören eine leichte Jacke oder ein Tuch, weil der Fahrtwind abends kühler wirken kann, Badekleidung, falls Sie am späten Nachmittag baden, ein Handtuch für die Rückfahrt und Sonnenschutz für die erste Hälfte des Nachmittags. Schnorchelausrüstung stellen wir kostenlos zur Verfügung, bitte bei der Buchung ankreuzen.",
-            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und Obst dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das 3-Gänge-Dinner mit. Wer mehr essen möchte, bucht das Catering mit zwei frisch zubereiteten Mahlzeiten für 500 THB pro Person dazu.",
+            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und Obst dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das Dinner an Bord mit. Wer mehr essen möchte, bucht das Catering mit zwei frisch zubereiteten Mahlzeiten für 500 THB pro Person dazu.",
             "Und: Kommen Sie entspannt an. Der Plan ist einfach – raus aufs Wasser, ankern, schauen. Mehr braucht ein guter Sonnenuntergang nicht.",
           ],
           en: [
             "A sunset tour is not a long outing, but a few things make the evening more pleasant. They include a light jacket or wrap because the wind of the ride can feel cooler in the evening, swimwear if you swim in the late afternoon, a towel for the ride back and sun protection for the first half of the afternoon. We provide snorkel gear free of charge; please tick it when booking.",
-            "The 4-Islands Sunset tour and the combo include water, soft drinks and fruit plus prosecco at sunset; the dinner tour brings champagne and the 3-course dinner. If you want more food, book the catering with two freshly prepared meals for 500 THB per person.",
+            "The 4-Islands Sunset tour and the combo include water, soft drinks and fruit plus prosecco at sunset; the dinner tour brings champagne and the dinner on board. If you want more food, book the catering with two freshly prepared meals for 500 THB per person.",
             "And arrive relaxed. The plan is simple – out on the water, anchor, watch. A good sunset needs nothing more.",
           ],
         },

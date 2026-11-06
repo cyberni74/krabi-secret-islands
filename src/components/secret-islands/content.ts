@@ -691,10 +691,10 @@ export const TOURS: Tour[] = [
     badge: { de: "Für Paare", en: "For couples" },
     stops: ["Koh Poda", "Phra Nang Bay"],
     description: {
-      de: "Die romantischste Art, Krabi zu erleben: Ankern vor Phra Nang, Champagner zum Sonnenuntergang und ein 3-Gänge-Dinner unter Sternen. Perfekt für Anträge und Jahrestage.",
-      en: "The most romantic way to experience Krabi: anchor off Phra Nang, champagne at sunset and a 3-course dinner under the stars. Perfect for proposals and anniversaries.",
+      de: "Die romantischste Art, Krabi zu erleben: Ankern vor Phra Nang, Champagner zum Sonnenuntergang und ein Dinner an Bord unter Sternen. Perfekt für Anträge und Jahrestage.",
+      en: "The most romantic way to experience Krabi: anchor off Phra Nang, champagne at sunset and a dinner on board under the stars. Perfect for proposals and anniversaries.",
     },
-    includes: [INC_BOAT, INC_RELAX, { de: "Flasche Champagner", en: "Bottle of champagne" }, { de: "3-Gänge-Dinner", en: "3-course dinner" }],
+    includes: [INC_BOAT, INC_RELAX, { de: "Flasche Champagner", en: "Bottle of champagne" }, { de: "Dinner an Bord", en: "dinner on board" }],
   },
   {
     id: "family-sandbars",
