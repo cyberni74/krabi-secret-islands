@@ -6,7 +6,7 @@
  *   BOOKING_NOTIFY_EMAIL  – where new requests are sent (comma-separated allowed)
  *   BOOKING_FROM_EMAIL    – verified sender, e.g. "Krabi Secret Islands <anfragen@krabi-secret-islands.com>"
  */
-import { createHash, randomUUID } from "node:crypto";
+import { createHash, randomBytes, randomUUID } from "node:crypto";
 import { get, list, put } from "@vercel/blob";
 import { getRequest } from "@tanstack/react-start/server";
 import { buildMessage, currentTour, durationOf, priceBreakdown, routeNames, type Draft } from "@/components/secret-islands/booking-model";
@@ -213,4 +213,79 @@ export async function mutateBookingRow(id: string, change: (row: BookingRow) => 
   if (!row) return false;
   await saveRow(change(row), true);
   return true;
+}
+
+/** Random booking reference in the same format the wizard uses: KSI-YYMMDD-XXXX. */
+function newRef() {
+  const d = new Date();
+  const ymd = `${String(d.getUTCFullYear()).slice(2)}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}`;
+  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  const bytes = randomBytes(4);
+  const tail = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
+  return `KSI-${ymd}-${tail}`;
+}
+
+function baseRow(partial: Pick<BookingRow, "ref" | "channel" | "lang" | "tour_title" | "message" | "name"> & Partial<BookingRow>): BookingRow {
+  return {
+    id: randomUUID(),
+    status: "new",
+    created_at: new Date().toISOString(),
+    tour_date: null,
+    slot: null,
+    guests: 0,
+    kids: 0,
+    total_thb: 0,
+    email: null,
+    phone: null,
+    hotel: null,
+    occasion: null,
+    wishes: null,
+    admin_note: null,
+    ...partial,
+  };
+}
+
+/** Public: a WhatsApp question from a site button (no form data). Stored before the chat opens. */
+export async function storeWhatsAppInquiry(input: { text: string; lang: Lang; source: string }) {
+  const ipHash = clientIpHash();
+  if (ipHash && rateLimited(ipHash)) return { ok: false as const, error: "rate-limited" };
+  const row = baseRow({
+    ref: newRef(),
+    channel: "wa",
+    lang: input.lang,
+    tour_title: "WhatsApp-Frage (Button)",
+    name: "Website-Besucher",
+    message: `Quelle: ${input.source}\n\n${input.text}`,
+  });
+  await saveRow(row, false);
+  return { ok: true as const, ref: row.ref };
+}
+
+/** Admin: a booking or question that arrived outside the site (e.g. WhatsApp on the operator's phone). */
+export async function storeManualRequest(input: {
+  name: string;
+  phone: string | null;
+  email: string | null;
+  lang: Lang;
+  tour_title: string;
+  tour_date: string | null;
+  guests: number;
+  total_thb: number;
+  message: string;
+}) {
+  const row = baseRow({
+    ref: newRef(),
+    channel: "wa",
+    lang: input.lang,
+    tour_title: input.tour_title,
+    name: input.name,
+    phone: input.phone,
+    email: input.email,
+    tour_date: input.tour_date,
+    guests: input.guests,
+    total_thb: input.total_thb,
+    message: `Manuell erfasst\n\n${input.message}`,
+  });
+  await saveRow(row, false);
+  return { ok: true as const, ref: row.ref };
 }

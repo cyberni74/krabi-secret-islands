@@ -72,3 +72,48 @@ export const updateBookingRequest = createServerFn({ method: "POST" })
     await updateBookingRow(data.id, data.status, data.note);
     return { ok: true };
   });
+
+/** Public: records a WhatsApp question sent from a site button, before WhatsApp opens. */
+export const recordWhatsAppInquiry = createServerFn({ method: "POST" })
+  .validator((input: unknown) =>
+    z
+      .object({
+        text: z.string().trim().min(1).max(1000),
+        lang: z.enum(["de", "en", "zh", "ko", "ja"]),
+        source: z.string().trim().min(1).max(80),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data }) => {
+    const { storeWhatsAppInquiry } = await import("./booking-requests.server");
+    try {
+      return await storeWhatsAppInquiry(data);
+    } catch (err) {
+      console.error("[booking] whatsapp store failed", err);
+      return { ok: false as const, error: "store-failed" };
+    }
+  });
+
+/** Admin only: enter a request that came in outside the site, e.g. on WhatsApp. */
+export const createManualRequest = createServerFn({ method: "POST" })
+  .validator((input: unknown) =>
+    z
+      .object({
+        name: z.string().trim().min(2).max(120),
+        phone: z.string().trim().max(60).nullable(),
+        email: z.string().trim().max(200).nullable(),
+        lang: z.enum(["de", "en", "zh", "ko", "ja"]),
+        tour_title: z.string().trim().min(1).max(200),
+        tour_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+        guests: z.number().int().min(0).max(50),
+        total_thb: z.number().int().min(0).max(10_000_000),
+        message: z.string().max(4000),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data }) => {
+    const { requireAdminSession } = await import("./admin-session.server");
+    requireAdminSession();
+    const { storeManualRequest } = await import("./booking-requests.server");
+    return storeManualRequest(data);
+  });
