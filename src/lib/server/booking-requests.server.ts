@@ -13,6 +13,7 @@ import { buildMessage, currentTour, durationOf, priceBreakdown, routeNames, type
 import { translate } from "@/components/secret-islands/store";
 import type { Lang } from "@/components/secret-islands/content";
 import type { BookingSubmission } from "./booking-requests";
+import type { CostItem, Payment } from "./finance";
 
 const MAX_PER_IP_PER_HOUR = 8;
 const PREFIX = "booking-requests/";
@@ -38,6 +39,9 @@ export type BookingRow = {
   wishes: string | null;
   message: string;
   admin_note: string | null;
+  /** Added by the finance backend; missing on older rows. */
+  payments?: Payment[] | null;
+  costs?: CostItem[] | null;
 };
 
 // ---- storage: Vercel Blob (private) with an in-memory fallback for local dev -------------------------------
@@ -72,7 +76,7 @@ async function readRow(pathname: string): Promise<BookingRow | null> {
   return JSON.parse(await new Response(res.stream).text()) as BookingRow;
 }
 
-async function allRows(): Promise<BookingRow[]> {
+export async function allRows(): Promise<BookingRow[]> {
   if (!useBlob()) return [...mem.values()];
   const rows: BookingRow[] = [];
   let cursor: string | undefined;
@@ -201,4 +205,12 @@ export async function updateBookingRow(id: string, status: string, note: string 
   const row = (await allRows()).find((r) => r.id === id);
   if (!row) return;
   await saveRow({ ...row, status, admin_note: note }, true);
+}
+
+/** Read-modify-write one row (finance writes). Returns false when the row does not exist. */
+export async function mutateBookingRow(id: string, change: (row: BookingRow) => BookingRow): Promise<boolean> {
+  const row = (await allRows()).find((r) => r.id === id);
+  if (!row) return false;
+  await saveRow(change(row), true);
+  return true;
 }
