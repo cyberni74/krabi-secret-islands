@@ -135,3 +135,20 @@ export const previewBookingCosts = createServerFn({ method: "GET" })
     const tpl = (await loadCostTemplates()).find((t) => t.tour_title === data.tour_title);
     return tpl ? calculateCosts(tpl, data.guests) : [];
   });
+
+/** Admin only: copy the cost template of the booking's tour onto the booking (replaces its cost items). */
+export const applyCostTemplateToBooking = createServerFn({ method: "POST" })
+  .validator((input: unknown) => z.object({ id: z.string().max(64) }).parse(input))
+  .handler(async ({ data }) => {
+    await admin();
+    const { listBookingRows } = await import("./booking-requests.server");
+    const { loadCostTemplates, setCostsOnRow } = await import("./booking-finance.server");
+    const { calculateCosts } = await import("./finance");
+    const row = (await listBookingRows()).find((r) => r.id === data.id);
+    if (!row) return { ok: false as const, error: "not-found" as const };
+    const tpl = (await loadCostTemplates()).find((t) => t.tour_title === row.tour_title);
+    if (!tpl) return { ok: false as const, error: "no-template" as const };
+    const costs = calculateCosts(tpl, row.guests);
+    await setCostsOnRow(row.id, costs);
+    return { ok: true as const, count: costs.length };
+  });

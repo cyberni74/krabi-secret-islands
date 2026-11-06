@@ -10,12 +10,17 @@ import { adminLogin, adminLogout, getAdminState } from "@/lib/server/admin";
 import { adminListGuestReviews, adminSetReviewStatus } from "@/lib/server/guest-reviews";
 import { StarDisplay } from "@/components/secret-islands/guest-reviews";
 import { CostCalculator } from "@/components/admin/cost-calculator";
+import { BookingFinancePanel } from "@/components/admin/booking-finance-panel";
+import { FinanceOverview } from "@/components/admin/finance-overview";
+import { ManualRequestForm } from "@/components/admin/manual-request-form";
 
 /** Admin inbox for booking requests from the Secret Islands booking wizard (admins only, not indexed). */
 export const Route = createFileRoute("/anfragen")({
   head: () => ({ meta: [{ title: "Anfragen – Krabi Secret Islands" }, { name: "robots", content: "noindex, nofollow" }] }),
   component: BookingInbox,
 });
+
+const TAB_TITLE = { requests: "Buchungsanfragen", reviews: "Bewertungen", calc: "Kalkulation", finance: "Finanzen", manual: "Neu erfassen" } as const;
 
 const STATUS: { id: BookingStatus; label: string; cls: string }[] = [
   { id: "new", label: "Neu", cls: "bg-si-cyan text-si-navy" },
@@ -31,7 +36,7 @@ function BookingInbox() {
   const qc = useQueryClient();
   const auth = useQuery({ queryKey: ["admin-state"], queryFn: () => getAdminState(), retry: false });
   const [filter, setFilter] = useState<BookingStatus | "all">("all");
-  const [tab, setTab] = useState<"requests" | "reviews" | "calc">("requests");
+  const [tab, setTab] = useState<"requests" | "reviews" | "calc" | "finance" | "manual">("requests");
   const isAdmin = auth.data?.admin === true;
   const q = useQuery({ queryKey: ["booking-requests"], queryFn: () => listBookingRequests(), retry: false, refetchInterval: 60_000, enabled: isAdmin });
   const rows = (q.data ?? []).filter((r) => filter === "all" || r.status === filter);
@@ -53,7 +58,7 @@ function BookingInbox() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Krabi Secret Islands</p>
-            <h1 className="text-3xl font-extrabold">{tab === "reviews" ? "Bewertungen" : tab === "calc" ? "Kalkulation" : "Buchungsanfragen"}</h1>
+            <h1 className="text-3xl font-extrabold">{TAB_TITLE[tab]}</h1>
           </div>
           {isAdmin ? (
             <div className="flex gap-2">
@@ -73,11 +78,13 @@ function BookingInbox() {
           <LoginCard configured={auth.data?.configured ?? false} />
         ) : (
           <>
-            <div role="tablist" className="mt-6 grid max-w-2xl grid-cols-3 gap-1 rounded-2xl bg-white/5 p-1">
+            <div role="tablist" className="mt-6 flex max-w-3xl flex-wrap gap-1 rounded-2xl bg-white/5 p-1">
               {[
                 { id: "requests" as const, label: "Buchungsanfragen", n: newRequests },
                 { id: "reviews" as const, label: "Bewertungen", n: pendingReviews },
                 { id: "calc" as const, label: "Kalkulation", n: 0 },
+                { id: "finance" as const, label: "Finanzen", n: 0 },
+                { id: "manual" as const, label: "Neu erfassen", n: 0 },
               ].map((t) => (
                 <button
                   key={t.id}
@@ -94,6 +101,8 @@ function BookingInbox() {
             </div>
             {tab === "reviews" ? <ReviewModeration /> : null}
             {tab === "calc" ? <div className="mt-6"><CostCalculator /></div> : null}
+            {tab === "finance" ? <div className="mt-6"><FinanceOverview /></div> : null}
+            {tab === "manual" ? <div className="mt-6"><ManualRequestForm /></div> : null}
             {tab === "requests" ? (
               <>
             <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -246,6 +255,7 @@ function RequestCard({ row: r }: { row: Row }) {
         {open ? "Details ausblenden" : "Komplette Anfrage anzeigen"}
       </button>
       {open ? <pre className="mt-2 whitespace-pre-wrap rounded-2xl bg-black/30 p-3 text-xs text-slate-300">{r.message}</pre> : null}
+      <BookingFinancePanel row={r} />
 
       <div className="mt-4 grid gap-2 sm:grid-cols-[1fr_auto]">
         <textarea
