@@ -160,3 +160,69 @@ function csvCell(v: string | number): string {
   const s = String(v);
   return /[;"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
+
+/** Raw inputs for the own-cost calculation. All money in whole THB, times per tour unless marked per guest. */
+export type OwnCostInput = {
+  guests: number;
+  hours: number;
+  fuel_price_thb_per_l: number;
+  fuel_l_per_hour: number;
+  crew: { label: string; daily_wage_thb: number }[];
+  food_thb_per_guest: number;
+  park_fees_thb_per_guest: number;
+  drone_pilot_thb: number;
+  maintenance_thb_per_hour: number;
+  insurance_thb_per_tour: number;
+  revenue_thb: number;
+  commission_pct: number;
+};
+
+/** Calculates our own costs and the profit from raw inputs. Commission is taken from revenue. */
+export function ownCosts(input: OwnCostInput) {
+  const round = (n: number) => Math.round(n);
+  const fuel = round(input.fuel_price_thb_per_l * input.fuel_l_per_hour * input.hours);
+  const crew = round(input.crew.reduce((s, c) => s + c.daily_wage_thb, 0));
+  const food = round(input.food_thb_per_guest * input.guests);
+  const park = round(input.park_fees_thb_per_guest * input.guests);
+  const drone = round(input.drone_pilot_thb);
+  const maintenance = round(input.maintenance_thb_per_hour * input.hours);
+  const insurance = round(input.insurance_thb_per_tour);
+  const commission = round((input.revenue_thb * input.commission_pct) / 100);
+  const all: CostItem[] = [
+    { id: "calc-fuel", category: "fuel", label: "Treibstoff", amount_thb: fuel },
+    ...input.crew.map((c, i) => ({ id: `calc-crew-${i}`, category: "crew" as const, label: c.label || "Crew", amount_thb: round(c.daily_wage_thb) })),
+    { id: "calc-food", category: "food", label: "Verpflegung", amount_thb: food },
+    { id: "calc-park", category: "park_fees", label: "Parkgebühren", amount_thb: park },
+    { id: "calc-drone", category: "drone", label: "Drohnenpilot", amount_thb: drone },
+    { id: "calc-maint", category: "equipment", label: "Wartung & Verschleiß", amount_thb: maintenance },
+    { id: "calc-ins", category: "insurance", label: "Versicherung", amount_thb: insurance },
+    { id: "calc-comm", category: "commission", label: "Provision", amount_thb: commission },
+  ];
+  const lines = all.filter((l) => l.amount_thb > 0);
+  const total = sum(lines);
+  const profit = input.revenue_thb - total;
+  return {
+    lines,
+    total,
+    revenue: input.revenue_thb,
+    profit,
+    marginPct: input.revenue_thb > 0 ? Math.round((profit / input.revenue_thb) * 1000) / 10 : null,
+    profitPerGuest: input.guests > 0 ? Math.round(profit / input.guests) : null,
+  };
+}
+
+/** Turns calculated lines into a cost template: boat items once, food and park fees per guest. Commission is left out (it depends on the price). */
+export function ownCostsToTemplate(tourTitle: string, lines: CostItem[], guests: number): CostTemplate {
+  const perGuest = new Set(["calc-food", "calc-park"]);
+  return {
+    tour_title: tourTitle,
+    items: lines
+      .filter((l) => l.category !== "commission")
+      .map((l) => ({
+        category: l.category,
+        label: l.label,
+        amount_thb: perGuest.has(l.id) ? Math.round(l.amount_thb / Math.max(1, guests)) : l.amount_thb,
+        per: perGuest.has(l.id) ? ("guest" as const) : ("boat" as const),
+      })),
+  };
+}

@@ -9,6 +9,7 @@ import { listBookingRequests, updateBookingRequest, type BookingStatus } from "@
 import { adminLogin, adminLogout, getAdminState } from "@/lib/server/admin";
 import { adminListGuestReviews, adminSetReviewStatus } from "@/lib/server/guest-reviews";
 import { StarDisplay } from "@/components/secret-islands/guest-reviews";
+import { CostCalculator } from "@/components/admin/cost-calculator";
 
 /** Admin inbox for booking requests from the Secret Islands booking wizard (admins only, not indexed). */
 export const Route = createFileRoute("/anfragen")({
@@ -30,7 +31,7 @@ function BookingInbox() {
   const qc = useQueryClient();
   const auth = useQuery({ queryKey: ["admin-state"], queryFn: () => getAdminState(), retry: false });
   const [filter, setFilter] = useState<BookingStatus | "all">("all");
-  const [tab, setTab] = useState<"requests" | "reviews">("requests");
+  const [tab, setTab] = useState<"requests" | "reviews" | "calc">("requests");
   const isAdmin = auth.data?.admin === true;
   const q = useQuery({ queryKey: ["booking-requests"], queryFn: () => listBookingRequests(), retry: false, refetchInterval: 60_000, enabled: isAdmin });
   const rows = (q.data ?? []).filter((r) => filter === "all" || r.status === filter);
@@ -52,7 +53,7 @@ function BookingInbox() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Krabi Secret Islands</p>
-            <h1 className="text-3xl font-extrabold">{tab === "reviews" ? "Bewertungen" : "Buchungsanfragen"}</h1>
+            <h1 className="text-3xl font-extrabold">{tab === "reviews" ? "Bewertungen" : tab === "calc" ? "Kalkulation" : "Buchungsanfragen"}</h1>
           </div>
           {isAdmin ? (
             <div className="flex gap-2">
@@ -72,10 +73,11 @@ function BookingInbox() {
           <LoginCard configured={auth.data?.configured ?? false} />
         ) : (
           <>
-            <div role="tablist" className="mt-6 grid max-w-md grid-cols-2 gap-1 rounded-2xl bg-white/5 p-1">
+            <div role="tablist" className="mt-6 grid max-w-2xl grid-cols-3 gap-1 rounded-2xl bg-white/5 p-1">
               {[
                 { id: "requests" as const, label: "Buchungsanfragen", n: newRequests },
                 { id: "reviews" as const, label: "Bewertungen", n: pendingReviews },
+                { id: "calc" as const, label: "Kalkulation", n: 0 },
               ].map((t) => (
                 <button
                   key={t.id}
@@ -91,6 +93,7 @@ function BookingInbox() {
               ))}
             </div>
             {tab === "reviews" ? <ReviewModeration /> : null}
+            {tab === "calc" ? <div className="mt-6"><CostCalculator /></div> : null}
             {tab === "requests" ? (
               <>
             <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
