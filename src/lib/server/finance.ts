@@ -40,6 +40,8 @@ export type CostTemplateItem = {
 export type CostTemplate = {
   tour_title: string;
   items: CostTemplateItem[];
+  /** Raw calculator inputs, so they can be edited again later. */
+  inputs?: OwnCostInput | null;
 };
 
 /** The fields of a booking row that finance needs. */

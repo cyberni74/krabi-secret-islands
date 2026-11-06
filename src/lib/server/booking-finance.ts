@@ -13,6 +13,21 @@ const costItem = z.object({
   amount_thb: money,
 });
 
+const ownInput = z.object({
+  guests: z.number().int().min(1).max(5),
+  hours: z.number().min(0).max(24),
+  fuel_price_thb_per_l: money,
+  fuel_l_per_hour: z.number().min(0).max(500),
+  crew: z.array(z.object({ label: z.string().max(60), daily_wage_thb: money })).max(10),
+  food_thb_per_guest: money,
+  park_fees_thb_per_guest: money,
+  drone_pilot_thb: money,
+  maintenance_thb_per_hour: money,
+  insurance_thb_per_tour: money,
+  revenue_thb: money,
+  commission_pct: z.number().min(0).max(100),
+});
+
 const templateItem = z.object({
   category: z.enum(COST_CATEGORIES),
   label: z.string().trim().min(1).max(120),
@@ -97,7 +112,9 @@ export const setCostTemplates = createServerFn({ method: "POST" })
   .validator((input: unknown) =>
     z
       .object({
-        templates: z.array(z.object({ tour_title: z.string().trim().min(1).max(160), items: z.array(templateItem).max(50) })).max(100),
+        templates: z
+          .array(z.object({ tour_title: z.string().trim().min(1).max(160), items: z.array(templateItem).max(50), inputs: ownInput.nullable().optional() }))
+          .max(100),
       })
       .parse(input),
   )

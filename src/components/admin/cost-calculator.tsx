@@ -29,6 +29,12 @@ export function CostCalculator() {
   const [input, setInput] = useState<OwnCostInput>(EMPTY);
   const tpl = useQuery({ queryKey: ["cost-templates"], queryFn: () => getCostTemplates(), retry: false });
   const result = ownCosts(input);
+  const savedFor = (name: string) => (tpl.data ?? []).find((t) => t.tour_title === name.trim());
+  const loadTour = (name: string) => {
+    setTour(name);
+    const inputs = savedFor(name)?.inputs;
+    if (inputs) setInput({ ...EMPTY, ...inputs });
+  };
 
   const num = (key: keyof OwnCostInput) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setInput((s) => ({ ...s, [key]: Math.max(0, Number(e.target.value) || 0) }));
@@ -38,7 +44,8 @@ export function CostCalculator() {
   const save = useMutation({
     mutationFn: () => {
       const others = (tpl.data ?? []).filter((t) => t.tour_title !== tour.trim());
-      const next = [...others, ownCostsToTemplate(tour.trim(), result.lines, input.guests)];
+      const items = ownCostsToTemplate(tour.trim(), result.lines, input.guests);
+      const next = [...others, { ...items, inputs: input }];
       return setCostTemplates({ data: { templates: next } });
     },
     onSuccess: () => void qc.invalidateQueries({ queryKey: ["cost-templates"] }),
@@ -67,7 +74,7 @@ export function CostCalculator() {
           <input
             list="cost-tours"
             value={tour}
-            onChange={(e) => setTour(e.target.value)}
+            onChange={(e) => loadTour(e.target.value)}
             className="min-h-11 rounded-2xl bg-white/5 px-3 text-sm font-normal text-white outline-none ring-1 ring-white/10 focus:ring-si-cyan"
           />
           <datalist id="cost-tours">
@@ -148,11 +155,25 @@ export function CostCalculator() {
           onClick={() => save.mutate()}
           className={cn(btn.primary, "mt-6 w-full")}
         >
-          {save.isPending ? "Speichere …" : "Als Kostenvorlage für diese Tour speichern"}
+          {save.isPending ? "Speichere …" : "Eingaben und Kosten speichern"}
         </button>
         {save.isSuccess ? <p className="mt-2 text-sm text-emerald-300">Vorlage gespeichert.</p> : null}
         {save.isError ? <p className="mt-2 text-sm text-rose-300">Speichern fehlgeschlagen.</p> : null}
-        <p className="mt-3 text-xs text-slate-400">Die Provision fließt nicht in die Vorlage ein, sie hängt vom Preis ab.</p>
+        <p className="mt-3 text-xs text-slate-400">
+          Gespeichert werden die Eingaben und die daraus berechneten Kosten. Die Provision fließt nicht in die Kostenpositionen ein, sie hängt vom Preis ab.
+        </p>
+        {(tpl.data ?? []).length > 0 ? (
+          <div className="mt-6">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">Gespeicherte Touren</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {(tpl.data ?? []).map((t) => (
+                <button key={t.tour_title} type="button" onClick={() => loadTour(t.tour_title)} className={cn(btn.glass, "min-h-11 px-3 text-sm")}>
+                  {t.tour_title}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
