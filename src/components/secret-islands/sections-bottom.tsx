@@ -29,6 +29,7 @@ import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep }
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
 import { SITE_URL } from "./seo";
+import { trackWhatsAppInquiry } from "./wa-track";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
 /* ───────────────────────── Guide (blog / SEO) ───────────────────────── */
@@ -163,7 +164,7 @@ function ReviewCard({ review: r, index, hidden }: { review: (typeof REVIEWS)[num
 /* ───────────────────────── Longtail vs. speedboat (storytelling FAQ) ───────────────────────── */
 
 export function LongtailFaq() {
-  const { t, tOp } = useTx();
+  const { t, tOp, lang } = useTx();
   const openBooking = useSI((s) => s.openBooking);
   const [open, setOpen] = useState<string | null>(LONGTAIL_FAQ[0]?.id ?? null);
   const intro = LONGTAIL_INTRO;
@@ -238,6 +239,7 @@ export function LongtailFaq() {
               </button>
               <a
                 href={waLink(tOp({ de: "Hallo! Ich habe eine Frage zum Speedboat vs. Longtail.", en: "Hi! I have a question about speedboat vs. longtail." }))}
+                onClick={() => trackWhatsAppInquiry(tOp({ de: "Hallo! Ich habe eine Frage zum Speedboat vs. Longtail.", en: "Hi! I have a question about speedboat vs. longtail." }), lang, "Longtail-FAQ")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(btn.whatsapp, "h-14")}
@@ -432,7 +434,7 @@ function LongtailItem({
 /* ───────────────────────── FAQ ───────────────────────── */
 
 export function Faq() {
-  const { t, tOp } = useTx();
+  const { t, tOp, lang } = useTx();
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="relative scroll-mt-16 py-20 sm:py-28">
@@ -507,6 +509,7 @@ export function Faq() {
               </p>
               <a
                 href={waLink(tOp({ de: "Hallo! Ich habe eine Frage zu Ihren Touren.", en: "Hi! I have a question about your tours." }))}
+                onClick={() => trackWhatsAppInquiry(tOp({ de: "Hallo! Ich habe eine Frage zu Ihren Touren.", en: "Hi! I have a question about your tours." }), lang, "FAQ")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(btn.whatsapp, "mt-5 w-full")}
@@ -667,6 +670,7 @@ export function Footer() {
             <li>
               <a
                 href={waLink(waRequestText(lang))}
+                onClick={() => trackWhatsAppInquiry(waRequestText(lang), lang, "Kontakt (Footer)")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-h-11 items-center gap-2 hover:text-white"
