@@ -433,8 +433,8 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       en: "What about food and drinks on board?",
     },
     story: {
-      de: "Auf Gruppentouren gibt es oft ein Buffet zur festen Zeit, an dem sich alle gleichzeitig anstellen. Bei uns stehen Wasser, Softdrinks und Obst gekühlt an Bord bereit. Und mit einem Klick bei der Buchung kommt unsere Verpflegung dazu: zwei frisch zubereitete Mahlzeiten plus Getränke für ฿500 pro Person – gegessen wird, wann und wo Sie Hunger haben.",
-      en: "Group tours often have a buffet at a fixed time where everyone queues at once. With us, water, soft drinks and fruit wait chilled on board. And with one click when booking you can add our catering: two freshly prepared meals plus drinks for ฿500 per person – eaten whenever and wherever you're hungry.",
+      de: "Auf Gruppentouren gibt es oft ein Buffet zur festen Zeit, an dem sich alle gleichzeitig anstellen. Bei uns stehen Wasser, Softdrinks und Obst gekühlt an Bord bereit. Und mit einem Klick bei der Buchung kommt unsere Verpflegung dazu: zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) plus Getränke für ฿500 pro Person – gegessen wird, wann und wo Sie Hunger haben.",
+      en: "Group tours often have a buffet at a fixed time where everyone queues at once. With us, water, soft drinks and fruit wait chilled on board. And with one click when booking you can add our catering: two meals of typical Thai dishes (not cooked on board) plus drinks for ฿500 per person – eaten whenever and wherever you're hungry.",
     },
     rows: [
       {

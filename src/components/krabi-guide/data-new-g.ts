@@ -232,11 +232,11 @@ export const NEW_ARTICLES_G: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Ein ganzer Tag auf dem Wasser braucht eine Mittagspause. Verpflegung buchen Sie als Extra dazu, zum Beispiel die Thai-Lunchbox (450 THB pro Person) oder das Verpflegungspaket mit zwei frisch zubereiteten Mahlzeiten und Getränken (500 THB pro Person). Ein ruhiger Strand wie Koh Pakbia oder Koh Lao Lading eignet sich gut als Ort für die Pause.",
+            "Ein ganzer Tag auf dem Wasser braucht eine Mittagspause. Verpflegung buchen Sie als Extra dazu, zum Beispiel die Thai-Lunchbox (450 THB pro Person) oder das Verpflegungspaket mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) und Getränken (500 THB pro Person). Ein ruhiger Strand wie Koh Pakbia oder Koh Lao Lading eignet sich gut als Ort für die Pause.",
             "Einige Inseln bzw. Nationalparks verlangen eine Eintrittsgebühr; sie ist nicht im Tourpreis enthalten und wird vor Ort bei den Rangern bezahlt. Den Hintergrund erklärt unser Artikel zu den Nationalpark-Gebühren in Krabi.",
           ],
           en: [
-            "A whole day on the water needs a lunch break. You add food as an extra, for example the Thai lunch box (450 THB per person) or the catering package with two freshly prepared meals and drinks (500 THB per person). A quiet beach such as Koh Pakbia or Koh Lao Lading works well as a spot for the break.",
+            "A whole day on the water needs a lunch break. You add food as an extra, for example the Thai lunch box (450 THB per person) or the catering package with two meals of typical Thai dishes (not cooked on board) and drinks (500 THB per person). A quiet beach such as Koh Pakbia or Koh Lao Lading works well as a spot for the break.",
             "Some islands or national parks charge an entrance fee; it is not included in the tour price and is paid on site to the rangers. Our article on national park fees in Krabi explains the background.",
           ],
         },
@@ -463,11 +463,11 @@ export const NEW_ARTICLES_G: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Die Mittagspause am Strand von Bamboo Island ist fester Teil der Tour, ein Mittagessen ist im Tourpreis aber nicht enthalten. Wasser, Softdrinks und Obst sind an Bord. Für ein richtiges Essen buchen Sie Verpflegung als Extra dazu, zum Beispiel die Thai-Lunchbox mit Pad Thai oder grünem Curry (450 THB pro Person) oder das Verpflegungspaket mit zwei frisch zubereiteten Mahlzeiten und Getränken (500 THB pro Person), das über den langen Tag gut passt.",
+            "Die Mittagspause am Strand von Bamboo Island ist fester Teil der Tour, ein Mittagessen ist im Tourpreis aber nicht enthalten. Wasser, Softdrinks und Obst sind an Bord. Für ein richtiges Essen buchen Sie Verpflegung als Extra dazu, zum Beispiel die Thai-Lunchbox mit Pad Thai oder grünem Curry (450 THB pro Person) oder das Verpflegungspaket mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) und Getränken (500 THB pro Person), das über den langen Tag gut passt.",
             "Bitte nennen Sie uns Unverträglichkeiten oder vegetarische Wünsche bei der Anfrage. Für Kinder gibt es ein eigenes Kindermenü als Extra.",
           ],
           en: [
-            "The lunch break on Bamboo Island’s beach is a fixed part of the tour, but lunch is not included in the tour price. Water, soft drinks and fruit are on board. For a proper meal you add food as an extra, for example the Thai lunch box with pad thai or green curry (450 THB per person) or the catering package with two freshly prepared meals and drinks (500 THB per person), which suits the long day well.",
+            "The lunch break on Bamboo Island’s beach is a fixed part of the tour, but lunch is not included in the tour price. Water, soft drinks and fruit are on board. For a proper meal you add food as an extra, for example the Thai lunch box with pad thai or green curry (450 THB per person) or the catering package with two meals of typical Thai dishes (not cooked on board) and drinks (500 THB per person), which suits the long day well.",
             "Please tell us about food intolerances or vegetarian wishes when you enquire. For children there is a separate kids’ menu as an extra.",
           ],
         },

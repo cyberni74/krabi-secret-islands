@@ -199,12 +199,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Bei Sunset Romance & Dinner an Bord sind eine Flasche Champagner und ein Dinner an Bord Teil der Tour. Serviert wird im Heck-Cockpit; wir ankern vor Phra Nang, während die Sonne untergeht. Die Tour ist vier Stunden lang und startet um 15:30 Uhr.",
-            "Wenn Sie mehr wünschen, gibt es Zusatzoptionen, die Sie bei der Buchung auswählen: 2 Flaschen gekühlter Sekt mit Gläsern für Paare für 2.200 THB pro Boot, Premium-Champagner (Moët & Chandon Impérial, 0,75 l) für 6.500 THB pro Boot und Romantik-Deko mit Blumen für 2.500 THB pro Boot. Das Catering-Paket mit zwei frisch zubereiteten Mahlzeiten und Getränken liegt bei 500 THB pro Person.",
+            "Wenn Sie mehr wünschen, gibt es Zusatzoptionen, die Sie bei der Buchung auswählen: 2 Flaschen gekühlter Sekt mit Gläsern für Paare für 2.200 THB pro Boot, Premium-Champagner (Moët & Chandon Impérial, 0,75 l) für 6.500 THB pro Boot und Romantik-Deko mit Blumen für 2.500 THB pro Boot. Das Catering-Paket mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) und Getränken liegt bei 500 THB pro Person.",
             "Wenn Sie Allergien haben, bestimmte Speisen nicht essen oder den Anlass vorab melden wollen, schreiben Sie uns das bitte bei der Buchung. Dann können wir Wünsche einplanen, statt sie an Bord zu klären. Die Kombi-Tour enthält Prosecco zum Sonnenuntergang und Getränke, die Plankton-Tour Handtücher, Snacks und Getränke; das Dinner an Bord gehört nur zur Dinner-Tour.",
           ],
           en: [
             "On Sunset Romance & Dinner on Board a bottle of champagne and a dinner on board are part of the tour. Dinner is served in the rear cockpit; we anchor off Phra Nang while the sun goes down. The tour lasts four hours and starts at 3:30 pm.",
-            "If you want more, there are extras you select when booking: 2 bottles of chilled sparkling wine with glasses for couples for 2,200 THB per boat, premium champagne (Moët & Chandon Impérial, 0.75 l) for 6,500 THB per boat and romance decor with flowers for 2,500 THB per boat. The catering package with two freshly prepared meals and drinks is 500 THB per person.",
+            "If you want more, there are extras you select when booking: 2 bottles of chilled sparkling wine with glasses for couples for 2,200 THB per boat, premium champagne (Moët & Chandon Impérial, 0.75 l) for 6,500 THB per boat and romance decor with flowers for 2,500 THB per boat. The catering package with two meals of typical Thai dishes (not cooked on board) and drinks is 500 THB per person.",
             "If you have allergies, do not eat certain foods or want to announce the occasion in advance, please tell us when booking. Then we can plan wishes in instead of sorting them out on board. The combo tour includes prosecco at sunset and drinks, the plankton tour towels, snacks and drinks; the dinner on board is only part of the dinner tour.",
           ],
         },
@@ -544,12 +544,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Eine Sunset-Tour ist kein langer Ausflug, aber ein paar Dinge machen den Abend angenehmer. Dazu gehören eine leichte Jacke oder ein Tuch, weil der Fahrtwind abends kühler wirken kann, Badekleidung, falls Sie am späten Nachmittag baden, ein Handtuch für die Rückfahrt und Sonnenschutz für die erste Hälfte des Nachmittags. Schnorchelausrüstung stellen wir kostenlos zur Verfügung, bitte bei der Buchung ankreuzen.",
-            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und Obst dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das Dinner an Bord mit. Wer mehr essen möchte, bucht das Catering mit zwei frisch zubereiteten Mahlzeiten für 500 THB pro Person dazu.",
+            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und Obst dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das Dinner an Bord mit. Wer mehr essen möchte, bucht das Catering mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) für 500 THB pro Person dazu.",
             "Und: Kommen Sie entspannt an. Der Plan ist einfach – raus aufs Wasser, ankern, schauen. Mehr braucht ein guter Sonnenuntergang nicht.",
           ],
           en: [
             "A sunset tour is not a long outing, but a few things make the evening more pleasant. They include a light jacket or wrap because the wind of the ride can feel cooler in the evening, swimwear if you swim in the late afternoon, a towel for the ride back and sun protection for the first half of the afternoon. We provide snorkel gear free of charge; please tick it when booking.",
-            "The 4-Islands Sunset tour and the combo include water, soft drinks and fruit plus prosecco at sunset; the dinner tour brings champagne and the dinner on board. If you want more food, book the catering with two freshly prepared meals for 500 THB per person.",
+            "The 4-Islands Sunset tour and the combo include water, soft drinks and fruit plus prosecco at sunset; the dinner tour brings champagne and the dinner on board. If you want more food, book the catering with two meals of typical Thai dishes (not cooked on board) for 500 THB per person.",
             "And arrive relaxed. The plan is simple – out on the water, anchor, watch. A good sunset needs nothing more.",
           ],
         },
