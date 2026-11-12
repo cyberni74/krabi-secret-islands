@@ -473,7 +473,7 @@ function SummaryPanel({ draft }: { draft: Draft }) {
       </ul>
       <ParkFeeNotice draft={draft} className="mt-4" />
       <p className="mt-4 text-[11px] leading-relaxed text-slate-500">
-        {t({ de: "Preis pro Boot für bis zu 5 Gäste. Wasser, Softdrinks & Obst inklusive.", en: "Price per boat for up to 5 guests. Water, soft drinks & fruit included." })}
+        {t({ de: "Preis pro Boot für bis zu 5 Gäste. Wasser, Softdrinks & eine Auswahl vorbereiteter Früchte inklusive.", en: "Price per boat for up to 5 guests. Water, soft drinks & fruit included." })}
       </p>
     </div>
   );

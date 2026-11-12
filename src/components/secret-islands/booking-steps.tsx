@@ -763,7 +763,7 @@ export function GuestsStep({ draft, patch }: StepProps) {
         <CateringHero draft={draft} patch={patch} />
         <div className="mt-3 flex items-start gap-3 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-3 text-sm text-emerald-100">
           <span aria-hidden className="text-lg">💧</span>
-          <p>{t({ de: "Immer inklusive: Wasser, Softdrinks & frisches Obst.", en: "Always included: water, soft drinks & fresh fruit." })}</p>
+          <p>{t({ de: "Immer inklusive: Wasser, Softdrinks & eine Auswahl vorbereiteter Früchte.", en: "Always included: water, soft drinks & a selection of prepared fruit." })}</p>
         </div>
         <p className="mb-2.5 mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-amber-300">
           <Sparkles className="size-3.5" />

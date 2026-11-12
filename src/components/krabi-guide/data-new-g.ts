@@ -408,12 +408,12 @@ export const NEW_ARTICLES_G: GuideArticleInput[] = [
           de: [
             "Unsere private Tour „Phi Phi Early Bird – vor allen anderen“ verbindet genau diese Ziele. Wir fahren um 07:00 Uhr ab Ao Nang los, sodass wir Maya Bay erreichen, bevor die Fähren ankommen. Danach schwimmen Sie in der türkisfarbenen Pileh-Lagune, fahren an der Viking Cave vorbei und machen Mittagspause am weißen Strand von Bamboo Island. Die Tour dauert 8 Stunden.",
             "Die Reihenfolge hat einen Grund: Maya Bay ist der Ort, an dem die Uhrzeit am meisten zählt, deshalb kommt sie zuerst. Bamboo Island als Strandstopp passt gut ans Ende, wenn Sie nach Lagune und Felsen einfach im Wasser liegen und essen möchten. Die Tabelle zeigt, was Sie an jedem Stopp tun können.",
-            "Der Preis liegt bei ab 28.500 THB pro Boot für bis zu 5 Gäste, nicht pro Person. Im Preis enthalten sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, kostenloses Schnorchel-Equipment (bei der Buchung auswählen), Wasser, Softdrinks und Obst. Sie fahren in einem weißen Hardtop-Kabinenboot, das Schatten spendet.",
+            "Der Preis liegt bei ab 28.500 THB pro Boot für bis zu 5 Gäste, nicht pro Person. Im Preis enthalten sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, kostenloses Schnorchel-Equipment (bei der Buchung auswählen), Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte. Sie fahren in einem weißen Hardtop-Kabinenboot, das Schatten spendet.",
           ],
           en: [
             "Our private tour “Phi Phi Early Bird – before everyone else” combines exactly these destinations. We leave Ao Nang at 7 am, so we reach Maya Bay before the ferries arrive. After that you swim in turquoise Pileh Lagoon, pass Viking Cave and take a lunch break on Bamboo Island’s white beach. The tour takes 8 hours.",
             "The order has a reason: Maya Bay is the place where timing matters most, so it comes first. Bamboo Island as a beach stop fits well at the end, when after the lagoon and the cliffs you simply want to lie in the water and eat. The table shows what you can do at each stop.",
-            "The price is from 28,500 THB per boat for up to 5 guests, not per person. According to the inclusion list the price covers the private speedboat with captain, time to snorkel, swim and relax, free snorkel gear (select when booking), water, soft drinks and fruit. You travel in a white hardtop cabin boat that gives shade.",
+            "The price is from 28,500 THB per boat for up to 5 guests, not per person. According to the inclusion list the price covers the private speedboat with captain, time to snorkel, swim and relax, free snorkel gear (select when booking), water, soft drinks and a selection of prepared fruit. You travel in a white hardtop cabin boat that gives shade.",
           ],
         },
         table: {
@@ -463,11 +463,11 @@ export const NEW_ARTICLES_G: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Die Mittagspause am Strand von Bamboo Island ist fester Teil der Tour, ein Mittagessen ist im Tourpreis aber nicht enthalten. Wasser, Softdrinks und Obst sind an Bord. Für ein richtiges Essen buchen Sie Verpflegung als Extra dazu, zum Beispiel die Thai-Lunchbox mit Pad Thai oder grünem Curry (450 THB pro Person) oder das Verpflegungspaket mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) und Getränken (500 THB pro Person), das über den langen Tag gut passt.",
+            "Die Mittagspause am Strand von Bamboo Island ist fester Teil der Tour, ein Mittagessen ist im Tourpreis aber nicht enthalten. Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte sind an Bord. Für ein richtiges Essen buchen Sie Verpflegung als Extra dazu, zum Beispiel die Thai-Lunchbox mit Pad Thai oder grünem Curry (450 THB pro Person) oder das Verpflegungspaket mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) und Getränken (500 THB pro Person), das über den langen Tag gut passt.",
             "Bitte nennen Sie uns Unverträglichkeiten oder vegetarische Wünsche bei der Anfrage. Für Kinder gibt es ein eigenes Kindermenü als Extra.",
           ],
           en: [
-            "The lunch break on Bamboo Island’s beach is a fixed part of the tour, but lunch is not included in the tour price. Water, soft drinks and fruit are on board. For a proper meal you add food as an extra, for example the Thai lunch box with pad thai or green curry (450 THB per person) or the catering package with two meals of typical Thai dishes (not cooked on board) and drinks (500 THB per person), which suits the long day well.",
+            "The lunch break on Bamboo Island’s beach is a fixed part of the tour, but lunch is not included in the tour price. Water, soft drinks and a selection of prepared fruit are on board. For a proper meal you add food as an extra, for example the Thai lunch box with pad thai or green curry (450 THB per person) or the catering package with two meals of typical Thai dishes (not cooked on board) and drinks (500 THB per person), which suits the long day well.",
             "Please tell us about food intolerances or vegetarian wishes when you enquire. For children there is a separate kids’ menu as an extra.",
           ],
         },
@@ -560,8 +560,8 @@ export const NEW_ARTICLES_G: GuideArticleInput[] = [
           en: "Is lunch on Bamboo Island included in the price?",
         },
         a: {
-          de: "Nein. Wasser, Softdrinks und Obst sind inklusive. Ein Mittagessen buchen Sie als Extra dazu, etwa die Thai-Lunchbox (450 THB pro Person) oder das Verpflegungspaket (500 THB pro Person).",
-          en: "No. Water, soft drinks and fruit are included. You add lunch as an extra, for example the Thai lunch box (450 THB per person) or the catering package (500 THB per person).",
+          de: "Nein. Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte sind inklusive. Ein Mittagessen buchen Sie als Extra dazu, etwa die Thai-Lunchbox (450 THB pro Person) oder das Verpflegungspaket (500 THB pro Person).",
+          en: "No. Water, soft drinks and a selection of prepared fruit are included. You add lunch as an extra, for example the Thai lunch box (450 THB per person) or the catering package (500 THB per person).",
         },
       },
       {

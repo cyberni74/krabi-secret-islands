@@ -95,26 +95,26 @@ export const INFO_SECTIONS: InfoSection[] = [
     h2: { de: "Was ist im Preis einer privaten Bootstour enthalten?", en: "What is included in the price of a private boat tour?" },
     body: {
       de: [
-        "Unsere Preise gelten pro Boot für bis zu fünf Gäste, nicht pro Person. Das bedeutet: Je mehr Gäste mitfahren, desto günstiger wird die Tour pro Kopf. Im Tourpreis enthalten sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, Wasser, Softdrinks und Obst. Die genaue Liste steht auf der Seite jeder Tour.",
+        "Unsere Preise gelten pro Boot für bis zu fünf Gäste, nicht pro Person. Das bedeutet: Je mehr Gäste mitfahren, desto günstiger wird die Tour pro Kopf. Im Tourpreis enthalten sind laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte. Die genaue Liste steht auf der Seite jeder Tour.",
         "Schnorchel-Equipment stellen wir kostenlos zur Verfügung, es muss bei der Buchung angekreuzt werden. Zusätzliche Wünsche wie Catering an Bord, weitere Getränke oder Drohnenaufnahmen können Sie bei der Buchung ergänzen. Bei Sunset- und Romantik-Touren sind Prosecco oder Champagner und bei Angeltouren Ruten, Köder und Guide enthalten, auch das steht in der jeweiligen Leistungsliste.",
         "Nationalpark-Eintritt: Einige Inseln bzw. Nationalparks verlangen eine Eintrittsgebühr. Diese ist nicht im Tourpreis enthalten und wird vor Ort direkt am Eingang bei den Rangern bezahlt. Bitte halten Sie dafür Bargeld in Baht bereit.",
       ],
       en: [
-        "Our prices apply per boat for up to five guests, not per person. The more guests join, the cheaper the tour becomes per head. According to the inclusions, the tour price covers the private speedboat with captain, time to snorkel, swim and relax, water, soft drinks and fruit. The exact list is on the page of each tour.",
+        "Our prices apply per boat for up to five guests, not per person. The more guests join, the cheaper the tour becomes per head. According to the inclusions, the tour price covers the private speedboat with captain, time to snorkel, swim and relax, water, soft drinks and a selection of prepared fruit. The exact list is on the page of each tour.",
         "We provide snorkel gear free of charge; please tick it when booking. Extra wishes such as catering on board, more drinks or drone shots can be added when you book. On sunset and romance tours prosecco or champagne is included, on fishing trips rods, bait and guide; this too is in the inclusions of each tour.",
         "National park entrance: some islands and national parks charge an entrance fee. This is not included in the tour price and is paid on site directly to the rangers at the entrance. Please have cash in baht ready.",
       ],
     },
     list: {
       de: [
-        "Enthalten: privates Speedboat mit Kapitän, Wasser, Softdrinks & Obst, Zeit zum Schnorcheln, Schwimmen & Entspannen",
+        "Enthalten: privates Speedboat mit Kapitän, Wasser, Softdrinks & eine Auswahl vorbereiteter Früchte, Zeit zum Schnorcheln, Schwimmen & Entspannen",
         "Kostenlos, bei der Buchung ankreuzen: Schnorchel-Equipment",
         "Je nach Tour: Prosecco/Champagner, Dinner, Angelausrüstung, Thai-Lunch an Bord",
         "Nicht im Tourpreis: Eintrittsgebühr einzelner Inseln bzw. Nationalparks, vor Ort bei den Rangern",
         "Optional zubuchbar: Catering, weitere Getränke, Drohnenaufnahmen",
       ],
       en: [
-        "Included: private speedboat with captain, water, soft drinks & fruit, time to snorkel, swim & relax",
+        "Included: private speedboat with captain, water, soft drinks & a selection of prepared fruit, time to snorkel, swim & relax",
         "Free, tick when booking: snorkel gear",
         "Depending on the tour: prosecco/champagne, dinner, fishing gear, Thai lunch on board",
         "Not in the tour price: entrance fee of some islands or national parks, paid on site to the rangers",
@@ -129,8 +129,8 @@ export const INFO_SECTIONS: InfoSection[] = [
       {
         q: { de: "Was ist im Preis einer privaten Bootstour in Krabi enthalten?", en: "What is included in the price of a private boat tour in Krabi?" },
         a: {
-          de: "Laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, Wasser, Softdrinks und Obst. Schnorchel-Equipment ist kostenlos und wird bei der Buchung angekreuzt. Je nach Tour kommen Prosecco, Dinner oder Angelausrüstung dazu.",
-          en: "According to the inclusions: the private speedboat with captain, time to snorkel, swim and relax, water, soft drinks and fruit. Snorkel gear is free and ticked when booking. Depending on the tour, prosecco, dinner or fishing gear are added.",
+          de: "Laut Leistungsliste das private Speedboat mit Kapitän, Zeit zum Schnorcheln, Schwimmen und Entspannen, Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte. Schnorchel-Equipment ist kostenlos und wird bei der Buchung angekreuzt. Je nach Tour kommen Prosecco, Dinner oder Angelausrüstung dazu.",
+          en: "According to the inclusions: the private speedboat with captain, time to snorkel, swim and relax, water, soft drinks and a selection of prepared fruit. Snorkel gear is free and ticked when booking. Depending on the tour, prosecco, dinner or fishing gear are added.",
         },
       },
       {

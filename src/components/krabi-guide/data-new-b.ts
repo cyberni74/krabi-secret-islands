@@ -544,12 +544,12 @@ export const NEW_ARTICLES_B: GuideArticleInput[] = [
         body: {
           de: [
             "Eine Sunset-Tour ist kein langer Ausflug, aber ein paar Dinge machen den Abend angenehmer. Dazu gehören eine leichte Jacke oder ein Tuch, weil der Fahrtwind abends kühler wirken kann, Badekleidung, falls Sie am späten Nachmittag baden, ein Handtuch für die Rückfahrt und Sonnenschutz für die erste Hälfte des Nachmittags. Schnorchelausrüstung stellen wir kostenlos zur Verfügung, bitte bei der Buchung ankreuzen.",
-            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und Obst dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das Dinner an Bord mit. Wer mehr essen möchte, bucht das Catering mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) für 500 THB pro Person dazu.",
+            "Bei der 4-Islands-Sunset-Tour und der Kombi sind Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte dabei, dazu Prosecco zum Sonnenuntergang; die Dinner-Tour bringt Champagner und das Dinner an Bord mit. Wer mehr essen möchte, bucht das Catering mit zwei Mahlzeiten mit typisch thailändischen Speisen (nicht an Bord gekocht) für 500 THB pro Person dazu.",
             "Und: Kommen Sie entspannt an. Der Plan ist einfach – raus aufs Wasser, ankern, schauen. Mehr braucht ein guter Sonnenuntergang nicht.",
           ],
           en: [
             "A sunset tour is not a long outing, but a few things make the evening more pleasant. They include a light jacket or wrap because the wind of the ride can feel cooler in the evening, swimwear if you swim in the late afternoon, a towel for the ride back and sun protection for the first half of the afternoon. We provide snorkel gear free of charge; please tick it when booking.",
-            "The 4-Islands Sunset tour and the combo include water, soft drinks and fruit plus prosecco at sunset; the dinner tour brings champagne and the dinner on board. If you want more food, book the catering with two meals of typical Thai dishes (not cooked on board) for 500 THB per person.",
+            "The 4-Islands Sunset tour and the combo include water, soft drinks and a selection of prepared fruit plus prosecco at sunset; the dinner tour brings champagne and the dinner on board. If you want more food, book the catering with two meals of typical Thai dishes (not cooked on board) for 500 THB per person.",
             "And arrive relaxed. The plan is simple – out on the water, anchor, watch. A good sunset needs nothing more.",
           ],
         },

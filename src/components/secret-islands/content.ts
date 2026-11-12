@@ -455,7 +455,7 @@ export type Tour = {
 };
 
 const INC_BOAT: L = { de: "Privates Speedboat & Kapitän", en: "Private speedboat & captain" };
-const INC_DRINKS: L = { de: "Wasser, Softdrinks & Obst", en: "Water, soft drinks & fruit" };
+const INC_DRINKS: L = { de: "Wasser, Softdrinks & eine Auswahl vorbereiteter Früchte", en: "Water, soft drinks & fruit" };
 const INC_SNORKEL: L = { de: "Schnorchel-Equipment gratis (bei Buchung auswählen)", en: "Snorkel gear free (select when booking)" };
 const INC_RELAX: L = { de: "Zeit zum Schnorcheln, Schwimmen & Entspannen", en: "Time to snorkel, swim & relax" };
 const INC_SWIM_FISH: L = { de: "Badestopp zum Schwimmen & Abkühlen", en: "Swim stop to cool off" };

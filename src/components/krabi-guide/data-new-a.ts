@@ -136,11 +136,11 @@ export const NEW_ARTICLES_A: GuideArticleInput[] = [
         },
         body: {
           de: [
-            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän sowie Zeit zum Schnorcheln, Schwimmen und Entspannen. Bei den meisten Inseltouren kommen Wasser, Softdrinks und Obst hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
+            "Alle Preise gelten pro Boot für bis zu 5 Gäste. Zu den Standardleistungen unserer Touren gehören laut Leistungsliste das private Speedboat mit Kapitän sowie Zeit zum Schnorcheln, Schwimmen und Entspannen. Bei den meisten Inseltouren kommen Wasser, Softdrinks und eine Auswahl vorbereiteter Früchte hinzu; Schnorchelausrüstung ist kostenlos und wird bei der Buchung angekreuzt. Ob und in welcher Höhe an Ihrem Ziel eine Eintrittsgebühr anfällt, erfahren Sie bei der Buchung.",
             "Eine Auswahl, jeweils ab-Preis pro Boot und Dauer laut Tourenliste:",
           ],
           en: [
-            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain and time to snorkel, swim and relax. Most island tours add water, soft drinks and fruit; snorkel gear is free and ticked when booking. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
+            "All prices apply per boat for up to 5 guests. According to the inclusion list, the standard services of our tours are the private speedboat with captain and time to snorkel, swim and relax. Most island tours add water, soft drinks and a selection of prepared fruit; snorkel gear is free and ticked when booking. Whether and how much of an entrance fee applies at your destination, you will learn when booking.",
             "A selection, each from-price per boat and duration as listed:",
           ],
         },

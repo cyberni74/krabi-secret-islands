@@ -320,7 +320,7 @@ function BuilderTeaser() {
   const steps = [
     { icon: Clock, title: { de: "Dauer wählen", en: "Pick a duration" }, sub: { de: "Halbtags bis Expedition", en: "Half day to expedition" } },
     { icon: MapPin, title: { de: "Inseln kombinieren", en: "Combine islands" }, sub: { de: "Bis zu 7 Stopps", en: "Up to 7 stops" } },
-    { icon: UtensilsCrossed, title: { de: "Essen & Drinks", en: "Food & drinks" }, sub: { de: "Thai-Lunch, Obst, Bar", en: "Thai lunch, fruit, bar" } },
+    { icon: UtensilsCrossed, title: { de: "Essen & Drinks", en: "Food & drinks" }, sub: { de: "Thai-Lunch, Früchte, Bar", en: "Thai lunch, fruit, bar" } },
   ];
   return (
     <ScrollScene from="tilt" intensity={0.7} className="mt-14">
