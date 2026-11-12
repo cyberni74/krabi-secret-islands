@@ -447,7 +447,7 @@ export const LONGTAIL_FAQ: LongtailFaqItem[] = [
       },
       {
         them: { de: "Kaum Auswahl", en: "Little choice" },
-        us: { de: "1-Klick-Verpflegung für ฿500 p. P. – bis Seafood-BBQ", en: "1-click catering for ฿500 p.p. – up to seafood BBQ" },
+        us: { de: "1-Klick-Verpflegung für ฿500 p. P. – typisch thailändische Speisen", en: "1-click catering for ฿500 p.p. – typical Thai dishes" },
       },
     ],
   },

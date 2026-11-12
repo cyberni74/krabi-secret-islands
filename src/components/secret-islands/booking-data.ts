@@ -97,7 +97,6 @@ export const FOOD: AddOn[] = [
   { id: "lunchbox", emoji: "🍱", label: { de: "Thai-Lunchbox", en: "Thai lunch box" }, desc: { de: "Pad Thai oder grünes Curry, frisch vom Restaurant", en: "Pad thai or green curry, fresh from the restaurant" }, price: 450, per: "person" },
   { id: "veggie", emoji: "🥗", label: { de: "Vegane Buddha-Bowl", en: "Vegan Buddha bowl" }, desc: { de: "Tofu, Mango-Salsa, Reis, Erdnuss-Dressing", en: "Tofu, mango salsa, rice, peanut dressing" }, price: 650, per: "person" },
   { id: "picnic", emoji: "🧺", label: { de: "Gourmet-Strandpicknick", en: "Gourmet beach picnic" }, desc: { de: "Thai-Fusion, Garnelen-Salat, Dessert – am privaten Strand angerichtet", en: "Thai fusion, prawn salad, dessert – set up on a private beach" }, price: 1200, per: "person", tag: { de: "Beliebt", en: "Popular" } },
-  { id: "bbq", emoji: "🦐", label: { de: "Seafood-BBQ am Strand", en: "Seafood BBQ on the beach" }, desc: { de: "Tiger-Garnelen, Fisch, Tintenfisch vom Grill, Beilagen & Dips", en: "Tiger prawns, fish, squid off the grill, sides & dips" }, price: 1900, per: "person", tag: { de: "Highlight", en: "Highlight" } },
   { id: "kids", emoji: "🧒", label: { de: "Kindermenü", en: "Kids' menu" }, desc: { de: "Chicken-Nuggets, Pommes, Obst & Saft", en: "Chicken nuggets, fries, fruit & juice" }, price: 300, per: "child" },
 ];
 
