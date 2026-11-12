@@ -1,4 +1,4 @@
-import { Link, createFileRoute, notFound } from "@tanstack/react-router";
+import { Link, createFileRoute, notFound, redirect } from "@tanstack/react-router";
 import { GuideShell } from "@/components/krabi-guide/guide-ui";
 import { TourLandingPage } from "@/components/krabi-guide/tour-page";
 import { btn } from "@/components/secret-islands/fx";
@@ -12,6 +12,8 @@ export const Route = createFileRoute("/touren/$slug")({
   validateSearch: validateDetailLangSearch,
   // Unknown slug → 404 (not a crash). The tour copy is bundled; only the ≤4 matching guide cards come from the server.
   loader: async ({ params }) => {
+    // Removed tour: the old address goes to the tour overview (permanent).
+    if (params.slug === "catch-and-cook-sunset-bbq") throw redirect({ to: "/touren", statusCode: 301 });
     const found = getTourPage(params.slug);
     if (!found) throw notFound();
     const articles = await getTourArticleCards({ data: { tourId: found.tour.id } });

@@ -785,30 +785,6 @@ export const TOURS: Tour[] = [
     },
     includes: [INC_BOAT, INC_RODS, INC_COOK, INC_DRINKS],
   },
-  {
-    id: "fishing-catch-cook",
-    kind: "fishing",
-    title: { de: "Catch & Cook Sunset BBQ", en: "Catch & Cook Sunset BBQ" },
-    short: {
-      de: "Angeln am Nachmittag, BBQ am einsamen Strand zum Sonnenuntergang.",
-      en: "Fishing in the afternoon, BBQ on a lonely beach at sunset.",
-    },
-    categories: ["fishing", "sunset"],
-    image: IMG.bbq,
-    price: 19500,
-    hours: 6,
-    duration: { de: "6 Std. · ab 13:00", en: "6 hrs · from 1 pm" },
-    slots: ["midday"],
-    departures: { midday: "13:00" },
-    includesMeal: true,
-    badge: { de: "Erlebnis", en: "Experience" },
-    stops: ["Koh Dam Riff", "Privater Strand"],
-    description: {
-      de: "Sie angeln, wir kochen: Am Abend grillt unsere Crew Ihren Fang mit Thai-Kräutern am Strand, dazu Reis, Salate und Dips – während die Sonne hinter den Inseln versinkt.",
-      en: "You fish, we cook: in the evening our crew grills your catch with Thai herbs on the beach, with rice, salads and dips – as the sun sinks behind the islands.",
-    },
-    includes: [INC_BOAT, INC_SWIM_FISH, INC_RODS, INC_COOK, { de: "Strand-BBQ mit Beilagen", en: "Beach BBQ with sides" }],
-  },
 ];
 
 export type GalleryCat = "drone" | "secret" | "underwater";

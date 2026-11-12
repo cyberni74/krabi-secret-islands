@@ -485,16 +485,16 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
     primaryKeyword: "Krabi fishing trip",
     keywords: ["Krabi fishing trip", "Angeln Krabi", "Krabi Angeltour", "deep sea fishing Krabi", "squid fishing Krabi", "catch and cook Krabi", "Angeln Krabi Tour privat", "Nachtangeln Tintenfisch Krabi", "fishing charter Krabi", "Krabi trolling"],
     title: {
-      de: "Angeln in Krabi: Fischarten, Saison, Catch & Cook",
+      de: "Angeln in Krabi: Fischarten, Saison, Regeln",
       en: "Krabi Fishing Trip Guide: Species, Season, Cook",
     },
     metaDescription: {
-      de: "Angeln in Krabi: Riff-, Trolling- und Tintenfischangeln, typische Fischarten, beste Saison, Regeln in Nationalparks und Catch & Cook – alles für Ihre Angeltour.",
-      en: "Krabi fishing trip guide: reef, trolling and squid fishing, typical species, the best season, national park rules and catch & cook – all for your day out.",
+      de: "Angeln in Krabi: Riff-, Trolling- und Tintenfischangeln, typische Fischarten, beste Saison, Regeln in Nationalparks – alles für Ihre Angeltour.",
+      en: "Krabi fishing trip guide: reef, trolling and squid fishing, typical species, the best season, national park rules – all for your day out.",
     },
     h1: {
-      de: "Angeln in Krabi – Fischarten, Saison und Catch & Cook",
-      en: "Fishing in Krabi – species, seasons and catch & cook",
+      de: "Angeln in Krabi – Fischarten, Saison und Regeln",
+      en: "Fishing in Krabi – species, seasons and rules",
     },
     intro: {
       de: "Krabi ist vor allem für Inseln und Strände bekannt – dabei ist die Andamanensee auch ein spannendes Angelrevier. Ob entspanntes Riffangeln mit der Familie, Trolling auf Raubfische oder Tintenfischangeln unter Lampen bei Nacht: Ein Krabi Fishing Trip bietet für Einsteiger wie Erfahrene etwas. Hier erfahren Sie, welche Fische Sie erwarten können, wann die beste Zeit ist und welche Regeln gelten.",
@@ -567,23 +567,6 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
           ],
         },
       },
-      {
-        h2: { de: "Catch & Cook: vom Haken auf den Grill", en: "Catch & cook: from hook to grill" },
-        body: {
-          de: [
-            "Der schönste Abschluss eines Angeltages ist ein frisch gegrillter Fang. Bei einer Catch-&-Cook-Tour wird der Fisch an Bord oder an einem ruhigen Strand zubereitet – thailändisch gewürzt mit Knoblauch, Chili und Limette, dazu Reis und Gemüse. Frischer geht es nicht.",
-            "Zum Sonnenuntergang an einem Strand zu essen, was man ein paar Stunden zuvor selbst gefangen hat, gehört zu den Erlebnissen, an die sich besonders Kinder lange erinnern.",
-          ],
-          en: [
-            "The best way to end a fishing day is with a freshly grilled catch. On a catch & cook trip, the fish is prepared on board or on a quiet beach – Thai-style with garlic, chilli and lime, served with rice and vegetables. It doesn’t get fresher.",
-            "Eating at sunset on a beach what you caught yourself a few hours earlier is one of those experiences children in particular remember for a long time.",
-          ],
-        },
-        tip: {
-          de: "Sagen Sie vorher Bescheid, wenn jemand Allergien hat oder keinen scharfen Geschmack mag – die Crew passt die Zubereitung gern an.",
-          en: "Let the crew know in advance about allergies or if someone doesn’t like spicy food – they are happy to adapt the cooking.",
-        },
-      },
     ],
     faq: [
       {
@@ -603,8 +586,8 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
       {
         q: { de: "Was passiert mit dem Fang?", en: "What happens to the catch?" },
         a: {
-          de: "Speisefische können bei einer Catch-&-Cook-Tour direkt zubereitet werden. Untermaßige Fische und nicht benötigte Arten werden zurückgesetzt.",
-          en: "Edible fish can be cooked right away on a catch & cook trip. Undersized fish and species not needed are released.",
+          de: "Untermaßige Fische und nicht benötigte Arten werden zurückgesetzt.",
+          en: "Undersized fish and species not needed are released.",
         },
       },
       {
@@ -616,7 +599,7 @@ export const INSIDER_ARTICLES_A: GuideArticleInput[] = [
       },
     ],
     related: ["krabi-with-kids", "best-time-to-visit-krabi", "boat-day-packing-list-etiquette", "krabi-bioluminescent-plankton-night-boat-tour"],
-    tourIds: ["fishing-reef-half", "fishing-deep-sea", "fishing-night-squid", "fishing-catch-cook"],
+    tourIds: ["fishing-reef-half", "fishing-deep-sea", "fishing-night-squid"],
     image: IMG.fishReef,
   },
 ];

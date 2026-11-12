@@ -23,7 +23,6 @@ export const TOUR_SLUGS: Record<string, string> = {
   "fishing-reef-half": "riff-angeln-krabi",
   "fishing-deep-sea": "hochseeangeln-krabi",
   "fishing-night-squid": "nacht-tintenfisch-angeln",
-  "fishing-catch-cook": "catch-and-cook-sunset-bbq",
 };
 
 const ID_BY_SLUG = new Map(Object.entries(TOUR_SLUGS).map(([id, slug]) => [slug, id]));

@@ -194,7 +194,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
         },
       },
     ],
-    related: ["fishing-night-squid", "fishing-catch-cook", "family-sandbars"],
+    related: ["fishing-night-squid", "family-sandbars"],
   },
 
   "fishing-deep-sea": {
@@ -242,7 +242,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
         },
       },
     ],
-    related: ["fishing-reef-half", "fishing-catch-cook", "fishing-night-squid"],
+    related: ["fishing-reef-half", "fishing-night-squid"],
   },
 
   "fishing-night-squid": {
@@ -290,54 +290,7 @@ export const TOUR_PAGES_B: Record<string, TourPageContent> = {
         },
       },
     ],
-    related: ["fishing-catch-cook", "fishing-reef-half", "plankton-night"],
+    related: ["fishing-reef-half", "plankton-night"],
   },
 
-  "fishing-catch-cook": {
-    title: { de: "Catch & Cook Krabi: Angeln und Sunset BBQ privat", en: "Private Catch & Cook Sunset BBQ Tour from Ao Nang by Speedboat" },
-    description: {
-      de: "Catch & Cook in Krabi: nachmittags angeln, abends Strand-BBQ zum Sonnenuntergang. Private Tour ab Ao Nang, 6 Stunden ab 13:00 Uhr, max. 5 Gäste.",
-      en: "Catch & Cook in Krabi: fish in the afternoon, beach BBQ at sunset. Private tour from Ao Nang, 6 hours from 1 pm, max. 5 guests, price per boat.",
-    },
-    h1: { de: "Catch & Cook Sunset BBQ: Angeln am Nachmittag, Grillen am Strand", en: "Catch & Cook Sunset BBQ: Fishing in the Afternoon, Grilling on the Beach" },
-    intro: {
-      de: "Sie angeln, wir kochen: Diese Tour verbindet einen Angelnachmittag mit einem Abendessen am Strand. Wir starten um 13:00 Uhr ab Ao Nang und fischen am Koh-Dam-Riff; ein Badestopp zum Schwimmen und Abkühlen gehört dazu. Am Abend fahren wir zu einem privaten Strand, wo unsere Crew Ihren Fang mit Thai-Kräutern grillt, dazu Reis, Salate und Dips, während die Sonne hinter den Inseln versinkt. Speisefische können bei einer Catch-&-Cook-Tour direkt zubereitet werden, untermaßige Fische und nicht benötigte Arten werden zurückgesetzt.\n\nSie brauchen keine Angelerfahrung, denn Angelruten, Köder und Guide stellt die Crew. Einen Fang kann niemand garantieren, deshalb ist das Strand-BBQ mit Beilagen ein fester Bestandteil der Tour. Im Preis enthalten ist außerdem der Badestopp. Das Boot ist ein weißes Hardtop-Kabinenboot mit zwei Motoren à 300 PS, Sitzbank, bequemen Bootssesseln und Heck-Cockpit; das Hardtop spendet Schatten, und es sind höchstens fünf Gäste an Bord. Der Preis gilt pro Boot, nicht pro Person, die Tour dauert sechs Stunden. Der Sonnenuntergang liegt grob zwischen 18 und 19 Uhr, den Rest des Abends verbringen Sie am Strand.",
-      en: "You fish, we cook: this tour combines a fishing afternoon with dinner on the beach. We leave Ao Nang at 1 pm and fish at the Koh Dam reef; a swim stop to cool off is part of the tour. In the evening we go to a private beach, where our crew grills your catch with Thai herbs, with rice, salads and dips, as the sun sinks behind the islands. Edible fish can be prepared right away on a catch-and-cook tour, and undersized fish and species you do not need are released.\n\nYou need no fishing experience, because the crew provides rods, bait and guide. Nobody can guarantee a catch, which is why the beach BBQ with sides is a fixed part of the tour. Also included is the swim stop. The boat is a white hardtop cabin boat with twin 300 hp engines, a bench seat, comfortable boat chairs and a rear cockpit; the hardtop gives shade, and a maximum of five guests are on board. The price is per boat, not per person, and the tour takes six hours. Sunset falls roughly between 6 and 7 pm, and you spend the rest of the evening on the beach.",
-    },
-    audience: {
-      de: "Für Paare, Familien und Freundesgruppen, die gern selbst angeln und danach am Strand essen. Die Tour ist ein Erlebnis-Nachmittag mit Sonnenuntergang, nicht nur eine Angelfahrt.",
-      en: "For couples, families and groups of friends who like to fish themselves and eat on the beach afterwards. The tour is an experience afternoon with a sunset, not just a fishing trip.",
-    },
-    faq: [
-      {
-        q: { de: "Was passiert mit dem Fang?", en: "What happens to the catch?" },
-        a: {
-          de: "Speisefische werden bei dieser Catch-&-Cook-Tour direkt am Strand für Sie gegrillt. Untermaßige Fische und nicht benötigte Arten werden zurückgesetzt.",
-          en: "On this catch-and-cook tour, edible fish are grilled for you right on the beach. Undersized fish and species you do not need are released.",
-        },
-      },
-      {
-        q: { de: "Was gehört zum Strand-BBQ?", en: "What does the beach BBQ include?" },
-        a: {
-          de: "Die Crew grillt Ihren Fang mit Thai-Kräutern, dazu gibt es Reis, Salate und Dips. Das Strand-BBQ mit Beilagen ist im Preis enthalten.",
-          en: "The crew grills your catch with Thai herbs, with rice, salads and dips. The beach BBQ with sides is included in the price.",
-        },
-      },
-      {
-        q: { de: "Brauche ich Angelerfahrung?", en: "Do I need fishing experience?" },
-        a: {
-          de: "Nein. Ausrüstung und Anleitung stellt die Crew. Ruten, Köder und Guide gehören zur Tour.",
-          en: "No. The crew provides gear and instruction. Rods, bait and guide are part of the tour.",
-        },
-      },
-      {
-        q: { de: "Wann startet die Tour und wie lange dauert sie?", en: "When does the tour start and how long does it take?" },
-        a: {
-          de: "Die Tour startet um 13:00 Uhr und dauert sechs Stunden. Am Abend grillen wir am Strand, während die Sonne untergeht.",
-          en: "The tour starts at 1 pm and takes six hours. In the evening we grill on the beach as the sun goes down.",
-        },
-      },
-    ],
-    related: ["fishing-night-squid", "fishing-reef-half", "sunset-dinner"],
-  },
 };

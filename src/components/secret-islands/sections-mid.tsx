@@ -395,7 +395,6 @@ export function FishingSection() {
     { de: "Riff-Angeln", en: "Reef fishing" },
     { de: "Deep Sea Trolling", en: "Deep sea trolling" },
     { de: "Nacht-Tintenfisch", en: "Night squid fishing" },
-    { de: "Catch & Cook BBQ", en: "Catch & cook BBQ" },
   ];
 
   return (
@@ -419,8 +418,8 @@ export function FishingSection() {
             eyebrow={t({ de: "🎣 Angeltouren", en: "🎣 Fishing trips" })}
             title={t({ de: "Ihr Fang. Ihr Boot. Ihre Andamanensee.", en: "Your catch. Your boat. Your Andaman Sea." })}
             sub={t({
-              de: "Vom Riff-Angeln für Einsteiger über Deep Sea Trolling bis zum Nacht-Tintenfischangeln – und am Abend grillen wir Ihren Fang beim Catch & Cook BBQ.",
-              en: "From beginner reef fishing to deep sea trolling and night squid fishing – and in the evening we grill your catch at the catch & cook BBQ.",
+              de: "Vom Riff-Angeln für Einsteiger über Deep Sea Trolling bis zum Nacht-Tintenfischangeln.",
+              en: "From beginner reef fishing to deep sea trolling and night squid fishing, with your own boat and crew.",
             })}
             className="mb-6"
           />
