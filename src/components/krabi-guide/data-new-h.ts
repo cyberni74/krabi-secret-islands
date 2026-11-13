@@ -110,8 +110,8 @@ export const NEW_ARTICLES_H: GuideArticleInput[] = [
         },
         figure: {
           src: "/images/ao-nang-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
-          width: 1254,
-          height: 1254,
+          width: 800,
+          height: 800,
           alt: {
             de: "Illustrierte Karte der Küste von Krabi mit Ao Nang, Railay, Hong Island, Phi Phi und Phang-Nga-Bucht",
             en: "Illustrated map of the Krabi coast with Ao Nang, Railay, Hong Island, Phi Phi and Phang Nga Bay",

@@ -12,7 +12,7 @@ const SRCSET_WIDTHS = [480, 768, 1080, 1440, 1920];
 /** Local images under /public/images with a pre-rendered 900 px variant (`name-900.webp`). */
 const LOCAL_VARIANTS: Record<string, string> = {
   "/images/private-speedboat-krabi.webp":
-    "/images/private-speedboat-krabi-900.webp 900w, /images/private-speedboat-krabi.webp 1672w",
+    "/images/private-speedboat-krabi-900.webp 900w, /images/private-speedboat-krabi.webp 1600w",
   "/images/koh-hong-island-private-tour.webp":
     "/images/koh-hong-island-private-tour-720.webp 720w, /images/koh-hong-island-private-tour.webp 1080w",
 };

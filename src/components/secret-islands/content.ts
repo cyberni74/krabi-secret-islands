@@ -18,7 +18,9 @@ export const BRAND = {
   // WhatsApp number (international format, digits only).
   whatsapp: "66922562293",
   whatsappDisplay: "+66 92 256 2293",
-  location: { de: "Ao Nang / Krabi, Thailand", en: "Ao Nang / Krabi, Thailand" },
+  instagram: "https://www.instagram.com/krabi_secret_islands/",
+  facebook: "https://www.facebook.com/krabisecretislands",
+  location: { de: "Pak Nam, Mueang Krabi, Krabi 81000, Thailand", en: "Pak Nam, Mueang Krabi, Krabi 81000, Thailand" },
 };
 
 /** Owner-supplied lockup (transparent PNG). Square app icon derived from the round scene: /icons/icon-512.png. */
@@ -347,6 +349,7 @@ export const UI = {
   },
   imprint: { de: "Impressum", en: "Imprint" },
   privacy: { de: "Datenschutz", en: "Privacy policy" },
+  hoursLine: { de: "Anfragen jederzeit · Antwort meist in 30 Minuten", en: "Requests any time · reply usually within 30 minutes" },
   // TODO(owner): add the real TAT licence number, e.g. "TAT-Lizenz Nr. …".
   tat: { de: "TAT-lizenzierter Veranstalter", en: "TAT-licensed operator" },
   marine: { de: "Marine Department geprüft", en: "Marine Department certified" },
@@ -1061,11 +1064,11 @@ export const FAQ: { q: L; a: L }[] = [
  */
 export const SEO_META = {
   title: {
-    de: "Privates Speedboot Krabi | Secret Islands",
-    en: "Private Speedboat Krabi | Secret Islands",
+    de: "Privates Speedboot Krabi | Private Bootstour ab Ao Nang",
+    en: "Private Speedboat in Krabi, Ao Nang | Krabi Secret Islands",
   },
   description: {
-    de: "Privates Speedboot Krabi ab 11.500 THB pro Boot (max. 5 Gäste). Bootstour ab Ao Nang oder Krabi Town zu 4 Islands, Hong Island und Phi Phi. Termin anfragen.",
-    en: "Private speedboat Krabi from 11,500 THB per boat (max. 5 guests). Boat tour from Ao Nang or Krabi Town to 4 Islands, Hong Island and Phi Phi. Book your date.",
+    de: "Private Bootstour Krabi mit privatem Speedboot ab Ao Nang. Hong Island, Phi Phi und James Bond Island, max. 5 Gäste, Preis pro Boot. Jetzt Termin anfragen.",
+    en: "Private boat tour Krabi by private speedboat from Ao Nang. Hong Island, Phi Phi and James Bond Island, max. 5 guests, price per boat. Check your date.",
   },
 };

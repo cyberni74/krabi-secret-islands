@@ -3,13 +3,14 @@
  * image with fallback chain, article + tour cards.
  */
 import { Link } from "@tanstack/react-router";
-import { keepLang } from "../secret-islands/lang-context";
+import { keepLang, keepLangDetail } from "../secret-islands/lang-context";
 import { ArrowRight, ChevronRight, Clock, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { BookingModal } from "../secret-islands/booking";
 import { BottomBar, Header } from "../secret-islands/sections-top";
-import { BRAND, altFor, type Lang, type Tour } from "../secret-islands/content";
+import { BRAND, UI, altFor, type Lang, type Tour } from "../secret-islands/content";
+import { SocialProfiles } from "../secret-islands/social-links";
 import { AuroraBackground, GlassCard, ScrollProgress, btn } from "../secret-islands/fx";
 import { BrandLogo, WhatsAppIcon, unsplashSrcSet } from "../secret-islands/ui";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "./footer-links";
@@ -260,6 +261,7 @@ function GuideFooter() {
               </Link>
               <WhatsAppCta />
             </div>
+            <SocialProfiles className="mt-4" />
           </div>
           <FooterGuideLinks showHeading={false} />
         </div>
@@ -269,11 +271,20 @@ function GuideFooter() {
           <p>
             © 2026 {BRAND.name} · {t(BRAND.location)}
           </p>
-          <p>
+          <p className="flex flex-wrap gap-x-2">
             <Link to="/krabi-guide" search={keepLang} className="hover:text-white">
               Krabi Insider Guide
-            </Link>{" "}
-            · <a href={`mailto:${BRAND.email}`} className="hover:text-white">{BRAND.email}</a>
+            </Link>
+            <span aria-hidden>·</span>
+            <Link to="/impressum" search={keepLangDetail} className="hover:text-white">
+              {t(UI.imprint)}
+            </Link>
+            <span aria-hidden>·</span>
+            <Link to="/datenschutz" search={keepLangDetail} className="hover:text-white">
+              {t(UI.privacy)}
+            </Link>
+            <span aria-hidden>·</span>
+            <a href={`mailto:${BRAND.email}`} className="hover:text-white">{BRAND.email}</a>
           </p>
         </div>
       </div>

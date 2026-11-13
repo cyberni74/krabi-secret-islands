@@ -4,7 +4,8 @@
  * prices only from TOURS (price per boat, max. 5 guests).
  */
 import { INFO_META, infoFaq } from "../krabi-guide/info-content";
-import { BRAND, TOURS, altFor, type Tour } from "./content";
+import { TOURS, altFor, type Tour } from "./content";
+import { documentDescription, documentTitle } from "./meta-fit";
 import { BRAND_HEAD_LINKS, BUSINESS_ID, LANDING_PATH, ROBOTS_LARGE_IMAGES, absUrl, businessNode, langLinks, pageUrl, socialMeta } from "./seo";
 import {
   MAX_GUESTS,
@@ -31,10 +32,9 @@ export function tourPageLang(search: { lang?: string }): TourLang {
   return search.lang && search.lang !== "de" ? "en" : "de";
 }
 
-/** `<title>` ≤ 60 characters; the brand is appended only if it still fits. */
+/** Document title in the 55–60 character band when the source is close; never past 60. */
 export function seoTitle(base: string): string {
-  const withBrand = `${base} | ${BRAND.name}`;
-  return withBrand.length <= 60 ? withBrand : base;
+  return documentTitle(base);
 }
 
 const crumbs = (lang: TourLang, tour?: { name: string; url: string }) => [
@@ -140,12 +140,12 @@ export function toursHubJsonLd(lang: TourLang, page: { title: string; descriptio
 
 export const TOURS_HUB_META = {
   title: {
-    de: "Privates Speedboot Krabi & Bootstour ab Ao Nang: 15 Touren",
-    en: "Private Speedboat Krabi & Boat Tours from Ao Nang: 15 Tours",
+    de: "Privates Speedboot Krabi Bootstouren | Krabi Secret Islands",
+    en: "Private Speedboat Krabi Boat Tours | Krabi Secret Islands",
   },
   description: {
-    de: "Privates Speedboot Krabi und Bootstour ab Ao Nang: 4 Inseln Tour, Hong Island, Phi Phi, James Bond Island, Sunset, Plankton, Angeln. Pro Boot, max. 5 Gäste.",
-    en: "Private speedboat Krabi and boat tours from Ao Nang: 4 Islands, Hong Island, Phi Phi, James Bond Island, sunset, plankton, fishing. Per boat, max. 5 guests.",
+    de: "Privates Speedboot Krabi, Bootstouren ab Ao Nang: 4 Inseln, Hong Island, Phi Phi, James Bond Island, Sunset und Angeln. Pro Boot, max. 5 Gäste. Anfragen.",
+    en: "Private speedboat Krabi, boat tours from Ao Nang: 4 Islands, Hong Island, Phi Phi, James Bond Island, sunset and fishing. Per boat, max. 5 guests. Ask us.",
   },
 };
 
@@ -161,7 +161,7 @@ export function tourHead(slug: string, lang: TourLang) {
   const { tour, page } = found;
   const path = tourPath(tour.id);
   const title = seoTitle(page.title[lang]);
-  const description = page.description[lang];
+  const description = documentDescription(page.description[lang]);
   const alt = altFor(tour.image)[lang];
   return {
     meta: [
@@ -181,7 +181,7 @@ export function tourHead(slug: string, lang: TourLang) {
 /** `head()` result for /touren. */
 export function toursHubHead(lang: TourLang) {
   const title = seoTitle(TOURS_HUB_META.title[lang]);
-  const description = TOURS_HUB_META.description[lang];
+  const description = documentDescription(TOURS_HUB_META.description[lang]);
   const image = TOURS[0].image;
   return {
     meta: [
@@ -228,7 +228,7 @@ export function infoJsonLd(lang: TourLang): Json {
 
 export function infoHead(lang: TourLang) {
   const title = seoTitle(INFO_META.title[lang]);
-  const description = INFO_META.description[lang];
+  const description = documentDescription(INFO_META.description[lang]);
   const image = TOURS[0].image;
   return {
     meta: [
@@ -242,5 +242,59 @@ export function infoHead(lang: TourLang) {
       { "script:ld+json": infoJsonLd(lang) },
     ],
     links: [...langLinks(INFO_PATH, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
+  };
+}
+
+const LEGAL_PATH = { imprint: "/impressum", privacy: "/datenschutz" } as const;
+const LEGAL_COPY = {
+  imprint: {
+    title: { de: "Impressum Krabi Secret Islands Co | Pak Nam, Krabi 81000", en: "Imprint of Krabi Secret Islands Co | Pak Nam, Krabi 81000" },
+    description: {
+      de: "Impressum von Krabi Secret Islands Co.: Pak Nam, Mueang Krabi, Krabi 81000, Thailand, E-Mail und WhatsApp. Private Bootstouren ab Ao Nang und Krabi Town.",
+      en: "Imprint of Krabi Secret Islands Co.: Pak Nam, Mueang Krabi, Krabi 81000, Thailand, email and WhatsApp. Private boat tours from Ao Nang and Krabi Town.",
+    },
+  },
+  privacy: {
+    title: { de: "Datenschutz von Krabi Secret Islands | Daten der Buchung", en: "Privacy Policy of Krabi Secret Islands | Your Booking Data" },
+    description: {
+      de: "Datenschutz von Krabi Secret Islands: Buchungsanfragen speichern Name und Tourwunsch. Auskunft oder Löschung per E-Mail, Aufbewahrung nur solange nötig.",
+      en: "Privacy policy of Krabi Secret Islands: what a booking request stores, how long we keep it, and how to ask by email for access or deletion of your details.",
+    },
+  },
+} as const;
+
+/** `<head>` for /impressum and /datenschutz (German unprefixed, English under /en). */
+export function legalHead(kind: keyof typeof LEGAL_COPY, lang: TourLang) {
+  const path = LEGAL_PATH[kind];
+  const title = seoTitle(LEGAL_COPY[kind].title[lang]);
+  const description = documentDescription(LEGAL_COPY[kind].description[lang]);
+  const url = pageUrl(path, lang);
+  const name = LEGAL_COPY[kind].title[lang];
+  return {
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { name: "theme-color", content: "#0a192f" },
+      ROBOTS_LARGE_IMAGES,
+      ...socialMeta({ title, description, url, type: "website", lang }),
+      {
+        "script:ld+json": {
+          "@context": "https://schema.org",
+          "@graph": [
+            businessNode(lang),
+            { "@type": "WebPage", "@id": url, url, name, description, inLanguage: lang, isPartOf: { "@id": BUSINESS_ID } },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${url}#breadcrumb`,
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: HOME[lang], item: pageUrl(LANDING_PATH, lang) },
+                { "@type": "ListItem", position: 2, name, item: url },
+              ],
+            },
+          ],
+        },
+      },
+    ],
+    links: [...langLinks(path, lang, ["de", "en"]), ...BRAND_HEAD_LINKS],
   };
 }

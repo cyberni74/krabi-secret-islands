@@ -3,6 +3,7 @@ import { GuideHub } from "@/components/krabi-guide/guide-hub";
 import { validateDetailLangSearch } from "@/components/secret-islands/lang-context";
 import { HUB_META } from "@/components/krabi-guide/guide-meta";
 import { getGuideCards, getGuideHubJsonLd } from "@/lib/server/guide-data";
+import { documentDescription, documentTitle } from "@/components/secret-islands/meta-fit";
 import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, GUIDE_PATH, ROBOTS_LARGE_IMAGES, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 
 export const Route = createFileRoute("/krabi-guide/")({
@@ -16,8 +17,8 @@ export const Route = createFileRoute("/krabi-guide/")({
   },
   head: ({ match, loaderData }) => {
     const lang = match.search.lang && match.search.lang !== "de" ? "en" : "de";
-    const title = HUB_META.title[lang];
-    const description = HUB_META.description[lang];
+    const title = documentTitle(HUB_META.title[lang]);
+    const description = documentDescription(HUB_META.description[lang]);
     const url = pageUrl(GUIDE_PATH, lang);
     return {
       meta: [

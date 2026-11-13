@@ -49,6 +49,8 @@ function buildSitemap() {
     ...entries(GUIDE_PATH, ["de", "en"], dates.hub, HUB_IMAGES),
     ...entries(TOURS_PATH, ["de", "en"], dates.tours, tourImages()),
     ...entries(INFO_PATH, ["de", "en"], dates.info),
+    ...entries("/impressum", ["de", "en"], dates.info),
+    ...entries("/datenschutz", ["de", "en"], dates.info),
     ...TOURS.flatMap((t) => entries(tourPath(t.id), ["de", "en"], dates.tours, [t.image, ...(TOUR_PAGES[t.id]?.figure ? [TOUR_PAGES[t.id].figure!.src] : [])])),
     ...ARTICLES.flatMap((a) => entries(`${GUIDE_PATH}/${a.slug}`, ["de", "en"], (dates.slugs as Record<string, string>)[a.slug] ?? a.updated, articleImages(a))),
   ];

@@ -30,8 +30,8 @@ export const PILLAR_ARTICLES: GuideArticleInput[] = [
         h2: { de: "Die Krabi Inseln auf einen Blick", en: "The Krabi islands at a glance" },
         figure: {
           src: "/images/ao-nang-boat-tour-karte-krabi-ao-nang-bucht-inseln-uebersicht.webp",
-          width: 1254,
-          height: 1254,
+          width: 800,
+          height: 800,
           alt: {
             de: "Illustrierte Karte der Küste von Krabi mit Ao Nang, Krabi Town, Railay, Ao Nang Bay, Hong Island, Koh Yao, Phi Phi und der Andamanensee",
             en: "Illustrated map of the Krabi coast with Ao Nang, Krabi Town, Railay, Ao Nang Bay, Hong Island, Koh Yao, Phi Phi and the Andaman Sea",

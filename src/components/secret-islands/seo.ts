@@ -8,6 +8,7 @@
  * - Business facts come from BRAND only. Missing facts are left out (not invented) and flagged with TODO below.
  */
 import { BRAND, FAQ, LANGS, LOGO_URL, SEO_META, TOURS, UI, type L, type Lang } from "./content";
+import { localizedPath } from "./locale";
 import { LONGTAIL_FAQ, longtailAnswerText } from "./longtail-faq";
 import { translate } from "./store";
 import { TOUR_SLUGS, TOURS_PATH } from "./tour-slugs";
@@ -28,9 +29,9 @@ export function absUrl(src: string) {
  */
 export const ROBOTS_LARGE_IMAGES = { name: "robots", content: "max-image-preview:large" } as const;
 
-/** Absolute, language-addressable URL. German is the default (no parameter). */
+/** Absolute, language-addressable URL. German is the default and keeps the unprefixed path. */
 export function pageUrl(path: string, lang: Lang = "de") {
-  return lang === "de" ? `${SITE_URL}${path}` : `${SITE_URL}${path}?lang=${lang}`;
+  return `${SITE_URL}${localizedPath(path, lang)}`;
 }
 
 const HTML_LANG: Record<Lang, string> = Object.fromEntries(LANGS.map((l) => [l.id, l.html])) as Record<Lang, string>;
@@ -140,8 +141,31 @@ export function businessNode(lang: Lang): Json {
     image: `${SITE_URL}/images/private-speedboat-krabi.jpg`,
     email: BRAND.email,
     telephone: `+${BRAND.whatsapp}`,
-    // TODO(owner): add streetAddress / postalCode (and `geo`) of the pier or office once confirmed.
-    address: { "@type": "PostalAddress", addressLocality: "Ao Nang", addressRegion: "Krabi", addressCountry: "TH" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Pak Nam",
+      addressLocality: "Mueang Krabi District",
+      addressRegion: "Krabi",
+      postalCode: "81000",
+      addressCountry: "TH",
+    },
+    // Centre of Krabi town, which sits in tambon Pak Nam (81000). Not Hat Pak Nam near Ao Nang.
+    geo: { "@type": "GeoCoordinates", latitude: 8.0592, longitude: 98.9186 },
+    // Matches the visible line: booking requests are accepted any time, usually answered within 30 minutes.
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: `+${BRAND.whatsapp}`,
+      contactType: "reservations",
+      availableLanguage: ["German", "English"],
+      url: `https://wa.me/${BRAND.whatsapp}`,
+    },
+    sameAs: [BRAND.instagram, BRAND.facebook],
     areaServed: [
       { "@type": "AdministrativeArea", name: "Krabi" },
       { "@type": "Place", name: "Ao Nang" },
@@ -150,7 +174,7 @@ export function businessNode(lang: Lang): Json {
     ],
     priceRange: `฿${Math.min(...prices).toLocaleString("en-US")}–฿${Math.max(...prices).toLocaleString("en-US")}`,
     description: translate(SEO_META.description, lang),
-    // TODO(owner): add `sameAs` (Instagram, Facebook, TripAdvisor, Google Business Profile) once the profiles exist.
+    // TODO(owner): add the TAT licence number when it is known. Do not invent one.
   };
 }
 

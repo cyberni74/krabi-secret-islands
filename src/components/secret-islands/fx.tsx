@@ -330,9 +330,14 @@ export function GlassCard({
 export function CountUp({ to, decimals = 0, suffix = "", className }: { to: number; decimals?: number; suffix?: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const finalText = `${to.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}${suffix}`;
   useEffect(() => {
     if (!inView || !ref.current) return;
     const el = ref.current;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = finalText;
+      return;
+    }
     const controls = animate(0, to, {
       duration: 1.6,
       ease: EASE,
@@ -341,11 +346,10 @@ export function CountUp({ to, decimals = 0, suffix = "", className }: { to: numb
       },
     });
     return () => controls.stop();
-  }, [inView, to, decimals, suffix]);
+  }, [inView, to, decimals, suffix, finalText]);
   return (
     <span ref={ref} className={className}>
-      {(0).toFixed(decimals)}
-      {suffix}
+      {finalText}
     </span>
   );
 }

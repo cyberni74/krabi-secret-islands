@@ -303,8 +303,8 @@ export const ISLAND_ARTICLES_B: GuideArticleInput[] = [
         h2: { de: "Phi Phi Don und Phi Phi Leh", en: "Phi Phi Don and Phi Phi Leh" },
         figure: {
           src: "/images/ao-nang-boat-tour-phi-phi-maya-bay-luftaufnahme-speedboote-krabi.webp",
-          width: 2400,
-          height: 1799,
+          width: 1920,
+          height: 1439,
           alt: {
             de: "Maya Bay auf Phi Phi Leh aus der Luft: Speedboote auf türkisem Wasser zwischen hohen Kalksteinfelsen",
             en: "Maya Bay on Phi Phi Leh from above: speedboats on turquoise water between tall limestone cliffs",

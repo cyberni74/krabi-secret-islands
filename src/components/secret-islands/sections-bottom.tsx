@@ -6,6 +6,7 @@ import {
   CalendarClock,
   Check,
   Mail,
+  Clock,
   MapPin,
   MessageCircleQuestion,
   Plus,
@@ -23,12 +24,12 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BRAND, FAQ, LONGTAIL_CROWD_IMG, REVIEWS, ROMANCE_IMGS, TOURS, UI, altFor } from "./content";
-import { keepLang } from "./lang-context";
+import { keepLang, keepLangDetail } from "./lang-context";
 import { FooterGuideLinks, FooterInfoLink, FooterTourLinks } from "../krabi-guide/footer-links";
 import { LONGTAIL_FAQ, LONGTAIL_INTRO, type LongtailFaqItem, type LongtailStep } from "./longtail-faq";
 import { Assemble, AssembleItem, CountUp, GlassCard, Magnetic, ScrollScene, SectionTitle, SplitReveal, btn } from "./fx";
 import { scrollToId, useSI, useTx, waLink, waRequestText } from "./store";
-import { SITE_URL } from "./seo";
+import { SocialProfiles } from "./social-links";
 import { trackWhatsAppInquiry } from "./wa-track";
 import { BrandLogo, SmartImage, WhatsAppIcon } from "./ui";
 
@@ -597,7 +598,6 @@ export function FinalCta() {
 export function Footer() {
   const { t, tOp, lang } = useTx();
   const openTour = useSI((s) => s.openTour);
-  const [legal, setLegal] = useState<"imprint" | "privacy" | null>(null);
   const footerTours = [...TOURS.filter((x) => x.kind === "island").slice(0, 4), ...TOURS.filter((x) => x.kind === "fishing").slice(0, 1)];
 
   return (
@@ -617,24 +617,7 @@ export function Footer() {
               <ShieldCheck className="size-4" /> {t(UI.marine)}
             </span>
           </div>
-          <div className="mt-4 flex flex-wrap gap-2 text-xs font-bold">
-            <a
-              href={`https://wa.me/?text=${encodeURIComponent(SITE_URL)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full px-3 py-2 ring-1 ring-white/15 transition hover:text-white"
-            >
-              WhatsApp
-            </a>
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full px-3 py-2 ring-1 ring-white/15 transition hover:text-white"
-            >
-              Facebook
-            </a>
-          </div>
+          <SocialProfiles className="mt-4" />
         </AssembleItem>
 
         <AssembleItem>
@@ -686,47 +669,26 @@ export function Footer() {
             <li className="flex min-h-11 items-center gap-2">
               <MapPin className="size-4 text-si-gold" /> {t(BRAND.location)}
             </li>
+            <li className="flex min-h-11 items-center gap-2">
+              <Clock className="size-4 text-si-cyan" /> {t(UI.hoursLine)}
+            </li>
           </ul>
         </AssembleItem>
 
         <AssembleItem>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-white">Legal</p>
           <ul className="text-sm">
-            {(["imprint", "privacy"] as const).map((k) => (
-              <li key={k}>
-                <button
-                  type="button"
-                  aria-expanded={legal === k}
-                  onClick={() => setLegal(legal === k ? null : k)}
-                  className={cn("flex min-h-11 items-center gap-1.5 transition hover:text-white", legal === k && "text-white")}
-                >
-                  {t(k === "imprint" ? UI.imprint : UI.privacy)}
-                  <Plus className={cn("size-3.5 transition", legal === k && "rotate-45")} />
-                </button>
-              </li>
-            ))}
+            <li>
+              <Link to="/impressum" search={keepLangDetail} className="flex min-h-11 items-center hover:text-white">
+                {t(UI.imprint)}
+              </Link>
+            </li>
+            <li>
+              <Link to="/datenschutz" search={keepLangDetail} className="flex min-h-11 items-center hover:text-white">
+                {t(UI.privacy)}
+              </Link>
+            </li>
           </ul>
-          <AnimatePresence initial={false}>
-            {legal ? (
-              <motion.p
-                key={legal}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="si-glass mt-2 overflow-hidden rounded-xl p-3 text-xs leading-relaxed"
-              >
-                {legal === "imprint"
-                  ? t({
-                      de: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81000 Thailand · ${BRAND.email}`,
-                      en: `Krabi Secret Islands Co., Ltd. · Ao Nang, Mueang Krabi, 81000 Thailand · ${BRAND.email}`,
-                    })
-                  : t({
-                      de: "Wenn Sie eine Buchungsanfrage senden, speichern wir Ihre Angaben (Name, Kontaktdaten, Tourwünsche) in unserer Datenbank und erhalten sie per E-Mail, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b DSGVO). Zum Schutz vor Spam speichern wir Ihre IP-Adresse nur als nicht rückrechenbaren Hash. Über WhatsApp geht die Nachricht nur, wenn Sie sie selbst absenden. Wir löschen Anfragen, sobald sie nicht mehr benötigt werden; Auskunft oder Löschung jederzeit per E-Mail. Ihre Spracheinstellung bleibt lokal in Ihrem Browser.",
-                      en: "When you send a booking request, we store your details (name, contact details, tour wishes) in our database and receive them by e-mail in order to process your request (Art. 6(1)(b) GDPR). To prevent spam we only keep a non-reversible hash of your IP address. A WhatsApp message is only sent if you send it yourself. We delete requests once they are no longer needed; ask us any time by e-mail for access or deletion. Your language preference stays locally in your browser.",
-                    })}
-              </motion.p>
-            ) : null}
-          </AnimatePresence>
         </AssembleItem>
       </Assemble>
       <FooterTourLinks className="mx-auto mt-12 max-w-6xl px-4" />

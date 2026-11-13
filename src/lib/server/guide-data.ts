@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { HUB_META, type GuideCard, type GuideNavItem, type JsonLd } from "@/components/krabi-guide/guide-meta";
+import { documentDescription, documentTitle } from "@/components/secret-islands/meta-fit";
 
 /**
  * Guide article data – server only. The data module is imported INSIDE the handlers, so it is never part of any client
@@ -52,8 +53,8 @@ export const getGuideArticle = createServerFn({ method: "GET" })
       related: relatedArticles(a).map(toCard),
       gallery,
       head: {
-        title: a.title[data.lang],
-        description: a.metaDescription[data.lang],
+        title: documentTitle(a.title[data.lang]),
+        description: documentDescription(a.metaDescription[data.lang]),
         image: a.image,
         updated: a.updated,
         jsonLd: guideArticleJsonLd(data.lang, { ...a, gallery }, CATEGORY_LABEL[a.category][data.lang]) as unknown as JsonLd,

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LANGS, SEO_META } from "@/components/secret-islands/content";
 import { validateLangSearch } from "@/components/secret-islands/lang-context";
 import { SecretIslandsPage } from "@/components/secret-islands/page";
+import { documentDescription, documentTitle } from "@/components/secret-islands/meta-fit";
 import { BRAND_HEAD_LINKS, DEFAULT_OG_IMAGE, LANDING_PATH, ROBOTS_LARGE_IMAGES, landingJsonLd, langLinks, pageUrl, socialMeta } from "@/components/secret-islands/seo";
 import { translate } from "@/components/secret-islands/store";
 import { getPublicReviews } from "@/lib/server/guest-reviews";
@@ -15,8 +16,11 @@ export const Route = createFileRoute("/")({
   loader: () => getPublicReviews(),
   head: ({ match, loaderData }) => {
     const lang = match.search.lang ?? "de";
-    const title = translate(SEO_META.title, lang);
-    const description = translate(SEO_META.description, lang);
+    const rawTitle = translate(SEO_META.title, lang);
+    const rawDescription = translate(SEO_META.description, lang);
+    // de/en are written to 55–60 / 150–155. zh/ko/ja keep a native title length (a Latin suffix would overflow the SERP).
+    const title = lang === "de" || lang === "en" ? documentTitle(rawTitle) : rawTitle;
+    const description = documentDescription(rawDescription);
     const url = pageUrl(LANDING_PATH, lang);
     return {
       meta: [

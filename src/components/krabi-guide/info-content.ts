@@ -19,12 +19,12 @@ export type InfoSection = {
 
 export const INFO_META = {
   title: {
-    de: "Krabi Bootstour Infos: Treffpunkt, Preise, privat vs. Gruppe",
-    en: "Krabi Private Boat Tour Info: Meeting Point, What's Included, Private vs Group",
+    de: "Private Bootstour Krabi | Treffpunkt, Preise und Ablauf",
+    en: "Private Boat Tour in Krabi | Meeting Point, Prices, Boat",
   },
   description: {
-    de: "Treffpunkt Ao Nang und Krabi Town, was im Preis einer privaten Bootstour enthalten ist, privat oder Gruppentour und eine Tagesroute 4 Islands + Sunset – alle Infos vor der Buchung.",
-    en: "Meeting point Ao Nang and Krabi Town, what a private boat tour price includes, private vs group tour and a one-day route 4 Islands + sunset – everything to know before you book.",
+    de: "Private Bootstour Krabi: Treffpunkt Ao Nang oder Krabi Town, was der Preis pro Boot enthält, privat oder Gruppe, und ein Tag mit 4 Islands und Sunset.",
+    en: "Private boat tour Krabi: meeting point in Ao Nang or Krabi Town, what the per-boat price includes, private versus a group, and a 4 Islands sunset day.",
   },
   h1: {
     de: "Krabi Bootstour: Infos vor der Buchung",

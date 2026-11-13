@@ -54,8 +54,8 @@ export const NEW_ARTICLES_I: GuideArticleInput[] = [
         },
         figure: {
           src: "/images/ao-nang-boat-tour-tup-sandbank-chicken-island-krabi-luftblick.webp",
-          width: 1672,
-          height: 941,
+          width: 1400,
+          height: 788,
           alt: {
             de: "Tup-Sandbank mit Chicken Island im Hintergrund: weißer Sandstreifen durch türkises Wasser bei Krabi",
             en: "Tup sandbar with Chicken Island in the background: white sand strip through turquoise water near Krabi",

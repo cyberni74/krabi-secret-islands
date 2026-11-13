@@ -7,7 +7,7 @@ import type { TourPageContent } from "./tour-pages";
  */
 export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   "4islands-sunset": {
-    title: { de: "4 Islands Tour Krabi privat ab Ao Nang: Sunset ab 13 Uhr", en: "Private 4 Islands Tour from Ao Nang by Speedboat" },
+    title: { de: "Private Bootstour Krabi: 4 Islands | Krabi Secret Islands", en: "Private Boat Tour Krabi: 4 Islands | Krabi Secret Islands" },
     description: {
       de: "4 Inseln Tour Krabi privat ab Ao Nang: Koh Poda, Chicken Island, Tup-Sandbank und Phra Nang zum Sunset. Eigenes Speedboot, max. 5 Gäste, mit Prosecco.",
       en: "Krabi 4 islands tour by speedboat, private from Ao Nang: Koh Poda, Chicken Island, Tup sandbar and Phra Nang at sunset. Max. 5 guests, free snorkel gear.",
@@ -75,9 +75,9 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "plankton-night": {
-    title: { de: "Leuchtendes Plankton Krabi: Night-Glow-Tour privat", en: "Private Glowing Plankton Tour from Ao Nang by Speedboat" },
+    title: { de: "Privates Speedboot Krabi Night Glow | Krabi Secret Islands", en: "Private Speedboat Krabi Night Glow | Krabi Secret Islands" },
     description: {
-      de: "Leuchtendes Plankton in Krabi per privatem Speedboot ab Ao Nang: abends in eine dunkle Bucht, Schwimmstopp im glitzernden Meer. Für max. 5 Gäste, 4 Stunden.",
+      de: "Leuchtendes Plankton in Krabi per privatem Speedboot ab Ao Nang: abends in eine dunkle Bucht, Schwimmstopp im glitzernden Meer. Max. 5 Gäste, 4 Stunden.",
       en: "Glowing plankton in Krabi by private speedboat from Ao Nang: an evening trip to a dark bay and a swim stop in the sparkling sea. Max. 5 guests, 4 hours.",
     },
     h1: { de: "Leuchtendes Plankton in Krabi: Night Glow per Speedboat", en: "Bioluminescent Plankton in Krabi: Night Glow by Speedboat" },
@@ -123,10 +123,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "sunset-glow-combo": {
-    title: { de: "Sunset & leuchtendes Plankton Krabi: Kombi-Tour privat", en: "Private Sunset & Plankton Tour from Ao Nang by Speedboat" },
+    title: { de: "Privates Speedboot Krabi Sunset-Kombi | Krabi Secret Islands", en: "Private Speedboat Krabi Sunset Trip | Krabi Secret Islands" },
     description: {
-      de: "Sonnenuntergang vor Phra Nang und danach Schwimmen im leuchtenden Plankton: private Kombi-Tour ab Ao Nang, 6 Stunden ab 15:30 Uhr, max. 5 Gäste, mit Prosecco.",
-      en: "Sunset off Phra Nang followed by a swim in glowing plankton: private combo tour from Ao Nang, 6 hours from 3:30 pm, max. 5 guests, prosecco included.",
+      de: "Sonnenuntergang vor Phra Nang und danach Schwimmen im leuchtenden Plankton: private Kombi-Tour ab Ao Nang, 6 Stunden ab 15:30 Uhr, max. 5 Gäste, pro Boot.",
+      en: "Sunset off Phra Nang followed by a swim in glowing plankton: private combo tour from Ao Nang, 6 hours from 3:30 pm, max. 5 guests, prosecco included too.",
     },
     h1: { de: "Sunset & Night Glow Kombi: Sonnenuntergang und leuchtendes Plankton", en: "Sunset & Night Glow Combo: Sunset and Glowing Plankton" },
     intro: {
@@ -171,10 +171,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "hong-lagoons": {
-    title: { de: "Hong Island Tour Krabi privat ab Ao Nang: Lagunen", en: "Private Hong Island Tour from Ao Nang by Speedboat" },
+    title: { de: "Hong Island Privat-Tour ab Ao Nang | Krabi Secret Islands", en: "Hong Island Private Tour, Ao Nang | Krabi Secret Islands" },
     description: {
-      de: "Hong Island Tour Krabi privat: Tagesausflug ab Ao Nang zur Hong-Lagune, Koh Lao Lading und Koh Pakbia. Eigenes Speedboot, max. 5 Gäste, 7 Std.",
-      en: "Private Hong Islands day trip from Ao Nang by speedboat: Hong Lagoon, Koh Lao Lading and Koh Pakbia. Max. 5 guests, 7 hrs, snorkel gear.",
+      de: "Hong Island Tour Krabi privat: Tagesausflug ab Ao Nang zur Hong-Lagune, Koh Lao Lading und Koh Pakbia. Eigenes Speedboot, max. 5 Gäste, 7 Std. Pro Boot.",
+      en: "Private Hong Islands day trip from Ao Nang by speedboat: Hong Lagoon, Koh Lao Lading and Koh Pakbia. Max. 5 guests, 7 hrs, snorkel gear. Price per boat.",
     },
     h1: { de: "Hong Island privat: Secret Lagoons und Hidden Bays", en: "Private Hong Island Tour: Secret Lagoons & Hidden Bays" },
     intro: {
@@ -240,9 +240,9 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "phang-nga-uncharted": {
-    title: { de: "Koh Roi & Phang Nga Bucht privat: Geheime Inseln", en: "Private Koh Roi & Phang Nga Tour from Ao Nang by Speedboat" },
+    title: { de: "Private Bootstour Krabi: Phang Nga | Krabi Secret Islands", en: "Private Boat Tour Krabi: Phang Nga | Krabi Secret Islands" },
     description: {
-      de: "Koh Roi, Koh Kudu und Koh Nok privat ab Ao Nang: versteckte Lagune und einsame Strände der Phang Nga Bucht. Eigenes Speedboot für max. 5 Gäste, 8,5 Stunden.",
+      de: "Koh Roi, Koh Kudu und Koh Nok privat ab Ao Nang: versteckte Lagune und einsame Strände der Phang Nga Bucht. Eigenes Speedboot für max. 5 Gäste, 8,5 Std.",
       en: "Koh Roi, Koh Kudu and Koh Nok privately from Ao Nang: a hidden lagoon and lonely beaches in Phang Nga Bay. Your own speedboat for max. 5 guests, 8.5 hours.",
     },
     h1: { de: "Koh Roi, Koh Kudu & Koh Nok: Uncharted Phang Nga privat", en: "Koh Roi, Koh Kudu & Koh Nok: Uncharted Phang Nga Private Tour" },
@@ -288,7 +288,7 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "phi-phi-early-bird": {
-    title: { de: "Phi Phi Tour ab Krabi privat: Maya Bay & Bamboo Island", en: "Private Phi Phi Islands Tour from Ao Nang by Speedboat" },
+    title: { de: "Phi Phi Privat-Tour ab Krabi Boot | Krabi Secret Islands", en: "Phi Phi Private Tour from Krabi, 7am | Krabi Secret Islands" },
     description: {
       de: "Bootstour Phi Phi ab Krabi um 07:00 Uhr: Maya Bay, Pileh-Lagune, Viking Cave und Bamboo Island vor den Fähren. Privates Speedboot, max. 5 Gäste, 8 Std.",
       en: "Phi Phi day trip from Krabi by speedboat at 7 am: Maya Bay, Pileh Lagoon, Viking Cave and Bamboo Island before the ferries. Max. 5 guests, snorkel gear.",
@@ -350,10 +350,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "koh-rok-safari": {
-    title: { de: "Koh Rok & Koh Haa Schnorcheln: Private Speedboat-Tour", en: "Private Koh Rok & Koh Haa Tour from Ao Nang by Speedboat" },
+    title: { de: "Privates Speedboot Krabi: Koh Rok | Krabi Secret Islands", en: "Private Speedboat Krabi to Koh Rok | Krabi Secret Islands" },
     description: {
-      de: "Koh Rok und Koh Haa schnorcheln, privat ab Ao Nang: klare Riffe, Thai-Lunch an Bord. Eigenes Speedboat, max. 5 Gäste, 9 Stunden.",
-      en: "Snorkel Koh Rok and Koh Haa privately from Ao Nang: clear reefs, Thai lunch on board. Own speedboat, max. 5 guests, 9 hours.",
+      de: "Koh Rok und Koh Haa schnorcheln, privat ab Ao Nang: klare Riffe, Thai-Lunch an Bord. Eigenes Speedboat, max. 5 Gäste, 9 Stunden. Der Preis gilt pro Boot.",
+      en: "Snorkel Koh Rok and Koh Haa privately from Ao Nang: clear reefs, Thai lunch on board. Own speedboat, max. 5 guests, 9 hours. Snorkel gear included free.",
     },
     h1: { de: "Koh Rok & Koh Haa Schnorchel-Safari: die klarsten Riffe der Andamanensee", en: "Koh Rok & Koh Haa Snorkel Safari: the Clearest Reefs of the Andaman Sea" },
     intro: {
@@ -398,10 +398,10 @@ export const TOUR_PAGES_A: Record<string, TourPageContent> = {
   },
 
   "james-bond-bay": {
-    title: { de: "James Bond Island privat ab Krabi: Phang Nga Bay Tour", en: "Private James Bond Island Tour from Ao Nang by Speedboat" },
+    title: { de: "James Bond Island Tour ab Krabi See | Krabi Secret Islands", en: "James Bond Island Tour from Krabi | Krabi Secret Islands" },
     description: {
-      de: "James Bond Island privat ab Ao Nang: Mangroven, Koh Panyee und Khao Phing Kan ohne Touristenschlange. Eigenes Speedboot, max. 5 Gäste, 8 Stunden.",
-      en: "Private James Bond Island tour from Ao Nang: mangroves, Koh Panyee and Khao Phing Kan, no tourist queue. Own speedboat, max. 5 guests, 8 hrs.",
+      de: "James Bond Island privat ab Ao Nang: Mangroven, Koh Panyee und Khao Phing Kan ohne Touristenschlange. Eigenes Speedboot, max. 5 Gäste, 8 Stunden. Pro Boot.",
+      en: "Private James Bond Island tour from Ao Nang: mangroves, Koh Panyee and Khao Phing Kan, no tourist queue. Own speedboat, max. 5 guests, 8 hrs. Per boat.",
     },
     h1: { de: "James Bond Island & Phang Nga Bay privat ab Krabi", en: "James Bond Island & Phang Nga Bay: Private Tour from Krabi" },
     intro: {

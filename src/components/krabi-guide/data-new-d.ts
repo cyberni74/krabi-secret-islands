@@ -361,8 +361,8 @@ export const NEW_ARTICLES_D: GuideArticleInput[] = [
         },
         figure: {
           src: "/images/ao-nang-boat-tour-phi-phi-inseln-luftaufnahme-bucht-speedboot-krabi.webp",
-          width: 2400,
-          height: 1799,
+          width: 1000,
+          height: 750,
           alt: {
             de: "Luftaufnahme der Phi-Phi-Inseln bei Krabi: bewaldete Kalksteinfelsen, türkise Bucht und ein Speedboot mit Kielwasser",
             en: "Aerial view of the Phi Phi islands near Krabi: forested limestone cliffs, a turquoise bay and a speedboat leaving a wake",

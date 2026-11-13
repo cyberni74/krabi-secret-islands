@@ -69,8 +69,8 @@ export const NEW_ARTICLES_J: GuideArticleInput[] = [
         },
         figure: {
           src: "/images/ao-nang-boat-tour-railay-strand-kalksteinfelsen-boote-krabi.webp",
-          width: 1672,
-          height: 941,
+          width: 1600,
+          height: 900,
           alt: {
             de: "Strand bei Railay und Phra Nang mit hohen Kalksteinfelsen, weißem Sand und türkisem Wasser",
             en: "Beach at Railay and Phra Nang with tall limestone cliffs, white sand and turquoise water",
@@ -280,8 +280,8 @@ export const NEW_ARTICLES_J: GuideArticleInput[] = [
         },
         figure: {
           src: "/images/ao-nang-boat-tour-tuerkise-bucht-luftaufnahme-kalksteinfelsen-krabi.webp",
-          width: 1672,
-          height: 941,
+          width: 1280,
+          height: 720,
           alt: {
             de: "Luftaufnahme einer türkisen Bucht mit weißem Strand zwischen Kalksteinfelsen bei Krabi",
             en: "Aerial view of a turquoise bay with a white beach between limestone cliffs near Krabi",

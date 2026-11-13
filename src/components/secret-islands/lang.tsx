@@ -2,10 +2,11 @@ import { useRouter, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { LANGS, type Lang } from "./content";
 import { LangOverrideContext, parseLang } from "./lang-context";
+import { localizedPath } from "./locale";
 import { suggestLang, useLang, useSI } from "./store";
 
 /**
- * Makes the page render in the URL language (`?lang=`; no parameter = German) on the server and during hydration,
+ * Makes the page render in the URL language (`/en/…`; no prefix = German) on the server and during hydration,
  * then hands over to the client store. The page language NEVER depends on the browser language: one URL = one language
  * (stable for Google and faster). A dismissible banner (<LangSuggestBanner>) offers the matching language version.
  */
@@ -49,7 +50,7 @@ export function LangSuggestBanner({ available }: { available: Lang[] }) {
   }, [current, available.join(",")]);
 
   if (!suggested) return null;
-  const href = suggested === "de" ? pathname : `${pathname}?lang=${suggested}`;
+  const href = localizedPath(pathname, suggested);
   const txt = SUGGEST_TEXT[suggested];
   return (
     <div className="pointer-events-none fixed inset-x-0 top-[5.4rem] z-40 flex justify-center px-3" role="region" aria-label={txt.label}>
@@ -78,7 +79,7 @@ export function LangSuggestBanner({ available }: { available: Lang[] }) {
   );
 }
 
-/** Language from the current URL (`?lang=`), undefined for the German default URL. */
+/** Language from the current URL (`?lang=` internally, `/en` in the browser), undefined for German. */
 export function useUrlLang(): Lang | undefined {
   return useRouterState({ select: (s) => parseLang((s.location.search as Record<string, unknown>).lang) });
 }
