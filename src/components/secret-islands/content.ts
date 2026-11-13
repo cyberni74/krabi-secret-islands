@@ -26,22 +26,22 @@ export const LOGO_URL = "/brand/krabi-secret-islands-logo-800w.png";
 
 /** Higgsfield illustration: overcrowded longtail boat (used in the Longtail-vs-Speedboat story). Move to /public/images/ for production. */
 export const LONGTAIL_CROWD_IMG = {
-  src: seoImage("ao-nang-boat-tour-longtail-boot-krabi-ueberfuellt.webp"),
+  src: seoImage("crowded-longtail-boat-krabi.webp"),
   alt: {
     de: "Überfülltes Longtail-Boot in Krabi: genervtes Paar auf harten Holzbänken zwischen fremden Touristen und quengelnden Kindern",
-    en: "Overcrowded longtail boat in Krabi: annoyed couple on hard wooden benches between strangers and whining children",
+    en: "Crowded longtail boat in Krabi packed with tourists – the opposite of a private speedboat tour from Ao Nang",
   },
 };
 
 /** Higgsfield: our speedboat alone in a turquoise lagoon, couple relaxing with champagne. Move to /public/images/ for production. */
 export const ROMANCE_IMGS = [
-  seoImage("ao-nang-boat-tour-privates-speedboat-krabi-paar-champagner-heck.webp"),
+  seoImage("private-speedboat-tour-krabi.webp"),
   seoImage("ao-nang-boat-tour-privates-speedboat-krabi-paar-champagner-bucht.webp"),
 ].map((src) => ({
   src,
   alt: {
     de: "Privates Speedboat in türkiser Lagune bei Krabi: Paar stößt auf dem Heck mit Champagner an",
-    en: "Private speedboat in a turquoise lagoon near Krabi: couple toasting with champagne on the stern deck",
+    en: "Private speedboat tour in Krabi: a couple toasting with champagne on the stern in a turquoise lagoon",
   },
 }));
 
@@ -50,10 +50,10 @@ export const ROMANCE_IMGS = [
 export const IMG = {
   // Our real speedboat (owner photo, /public/images). Never use stock photos showing longtail boats.
   // Hero: private speedboat among limestone islands (Higgsfield GPT Image 2.5, 2K; variant chosen by the owner).
-  hero: "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp",
+  hero: "/images/private-speedboat-krabi.webp",
   // Aerial of Koh Hong (owner-supplied photo, /public/images) – former hero, now the aerial-shots / pillar image.
-  hongAerial: "/images/ao-nang-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune.webp",
-  boat: "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp",
+  hongAerial: "/images/koh-hong-island-private-tour.webp",
+  boat: "/images/private-speedboat-krabi.webp",
   ebbeFlut: "/images/ao-nang-boat-tour-gezeiten-ebbe-flut-vergleich-bucht-krabi.webp",
   krabiTown: "/images/ao-nang-boat-tour-krabi-town-uferpromenade-sonnenuntergang.webp",
   karstAerial: "/images/ao-nang-boat-tour-karstinseln-luftaufnahme-speedboat-andamanensee-krabi.webp",
@@ -64,24 +64,24 @@ export const IMG = {
   longtailExhaust: "/images/book-krabi-boat-longtail-boote-dieselabgase-rauchfahne-kanal.webp",
   karstAerialBoats: "/images/book-krabi-boat-karstinseln-luftaufnahme-boote-andamanensee.webp",
   emeraldLagoon: "/images/ao-nang-boat-tour-smaragdgruene-lagune-kalksteinwaende-krabi.webp",
-  poda: seoImage("ao-nang-boat-tour-koh-poda-krabi-strand-kalksteinfelsen.webp"),
-  tup: seoImage("ao-nang-boat-tour-tup-sandbank-krabi-ebbe-drohnenaufnahme.webp"),
-  hong: seoImage("ao-nang-boat-tour-hong-island-krabi-smaragdgruene-lagune.webp"),
-  roi: seoImage("book-krabi-boat-koh-roi-versteckte-lagune-phang-nga.webp"),
-  kudu: seoImage("book-krabi-boat-koh-kudu-hoehle-phang-nga-bucht.webp"),
-  maya: seoImage("book-krabi-boat-maya-bay-phi-phi-sonnenaufgang.webp"),
-  reef: seoImage("ao-nang-boat-tour-schnorcheln-krabi-korallenriff-schildkroete.webp"),
-  snorkelCouple: seoImage("ao-nang-boat-tour-paar-schnorcheln-korallenriff-privates-speedboat-krabi.webp"),
-  plankton: seoImage("ao-nang-boat-tour-leuchtendes-plankton-schnorcheln-nacht-krabi.webp"),
-  fishReef: seoImage("ao-nang-boat-tour-riff-angeln-krabi-zackenbarsch-heck.webp"),
-  deepSea: seoImage("ao-nang-boat-tour-hochseeangeln-trolling-andamanensee-krabi.webp"),
-  squid: seoImage("ao-nang-boat-tour-nacht-tintenfischangeln-speedboat-krabi.webp"),
+  poda: seoImage("koh-poda-private-boat-krabi.webp"),
+  tup: seoImage("tup-island-sandbar-private-tour.webp"),
+  hong: seoImage("koh-hong-lagoon-private-boat.webp"),
+  roi: seoImage("koh-roi-lagoon-private-boat.webp"),
+  kudu: seoImage("koh-kudu-private-boat-tour.webp"),
+  maya: seoImage("maya-bay-private-boat-phi-phi.webp"),
+  reef: seoImage("snorkeling-turtle-private-boat-krabi.webp"),
+  snorkelCouple: seoImage("private-speedboat-snorkeling-krabi.webp"),
+  plankton: seoImage("bioluminescent-plankton-private-boat-krabi.webp"),
+  fishReef: seoImage("reef-fishing-private-boat-krabi.webp"),
+  deepSea: seoImage("private-fishing-boat-krabi.webp"),
+  squid: seoImage("night-fishing-private-speedboat-krabi.webp"),
   bbq: seoImage("ao-nang-boat-tour-catch-and-cook-strand-bbq-krabi.webp"),
-  dinner: seoImage("ao-nang-boat-tour-candlelight-dinner-heck-speedboat-krabi.webp"),
-  jamesBond: seoImage("book-krabi-boat-james-bond-island-phang-nga-bucht.webp"),
-  railay: seoImage("ao-nang-boat-tour-railay-beach-krabi-goldene-stunde.webp"),
-  droneAerial: seoImage("ao-nang-boat-tour-speedboat-krabi-drohnenaufnahme-karstinseln.webp"),
-  family: seoImage("ao-nang-boat-tour-familie-kinder-schnorcheln-sandbank-krabi.webp"),
+  dinner: seoImage("private-speedboat-dinner-krabi.webp"),
+  jamesBond: seoImage("james-bond-island-private-speedboat.webp"),
+  railay: seoImage("railay-beach-private-boat-krabi.webp"),
+  droneAerial: seoImage("private-speedboat-charter-krabi.webp"),
+  family: seoImage("private-boat-family-tour-krabi.webp"),
   // Generic aliases used across guide articles and gallery.
   sandbar: "",
   lagoon: "",
@@ -159,59 +159,59 @@ export const IMAGE_ALT: Record<string, L> = {
   },
   [IMG.hongAerial]: {
     de: "Luftaufnahme von Koh Hong bei Krabi: türkises Wasser, weißer Sandstrand und Kalksteinfelsen",
-    en: "Aerial view of Koh Hong near Krabi: turquoise water, white sand beach and limestone cliffs",
+    en: "Koh Hong island private tour from Ao Nang: aerial view of the beach, lagoon and limestone cliffs",
   },
   [IMG.boat]: {
     de: "Privates Speedboat von Krabi Secret Islands mit Kajüte und zwei Außenbordmotoren in Fahrt vor Kalksteinfelsen bei Krabi",
-    en: "Krabi Secret Islands private speedboat with cabin and twin outboard engines cruising past limestone cliffs near Krabi",
+    en: "Private speedboat in Krabi: a cabin boat with twin outboards cruising past limestone cliffs near Ao Nang",
   },
   [IMG.poda]: {
     de: "Weißer Sandstrand von Koh Poda bei Krabi mit Kalksteinfelsen und türkisem Wasser",
-    en: "White sand beach on Koh Poda near Krabi with limestone rocks and turquoise water",
+    en: "Koh Poda private boat tour from Ao Nang: white sand beach and limestone rocks in turquoise water",
   },
   [IMG.tup]: {
     de: "Tup-Sandbank bei Ebbe von oben: weißer Sandweg durch türkises Wasser zwischen den Inseln bei Krabi",
-    en: "Tup sandbar at low tide from above: white sand path through turquoise water between islands near Krabi",
+    en: "Tup Island sandbar private tour from Ao Nang: the white sandbar at low tide between Krabi's islands",
   },
   [IMG.hong]: {
     de: "Smaragdgrüne Lagune von Hong Island bei Krabi, umgeben von steilen Kalksteinwänden",
-    en: "Emerald lagoon of Hong Island near Krabi, surrounded by steep limestone walls",
+    en: "Koh Hong lagoon private boat tour from Ao Nang: emerald water enclosed by limestone cliffs",
   },
   [IMG.roi]: {
     de: "Versteckte Lagune von Koh Roi in der Phang-Nga-Bucht, umschlossen von Kalksteinfelsen",
-    en: "Hidden lagoon of Koh Roi in Phang Nga Bay, enclosed by limestone cliffs",
+    en: "Koh Roi lagoon private boat tour from Ao Nang: a hidden lagoon enclosed by limestone cliffs in Phang Nga Bay",
   },
   [IMG.kudu]: {
     de: "Zum Himmel offene Höhle auf Koh Kudu in der Phang-Nga-Bucht mit grünem Wasser",
-    en: "Sky-open cave chamber on Koh Kudu in Phang Nga Bay with green water",
+    en: "Koh Kudu private boat tour in Phang Nga Bay: an open-roof cave with green water, reached from Ao Nang",
   },
   [IMG.maya]: {
     de: "Maya Bay auf Koh Phi Phi Leh bei Sonnenaufgang, menschenleerer Strand zwischen hohen Kalksteinfelsen",
-    en: "Maya Bay on Koh Phi Phi Leh at sunrise, empty beach between towering limestone cliffs",
+    en: "Maya Bay private boat tour to Phi Phi at sunrise: an empty beach between limestone cliffs",
   },
   [IMG.reef]: {
     de: "Schnorcheln über einem Korallenriff bei Krabi: Meeresschildkröte zwischen bunten Rifffischen",
-    en: "Snorkeling over a coral reef near Krabi: sea turtle among colourful reef fish",
+    en: "Snorkeling with a sea turtle on a private boat tour in Krabi, over a coral reef near Ao Nang",
   },
   [IMG.snorkelCouple]: {
     de: "Paar schnorchelt im klaren Wasser neben dem privaten Speedboat bei Krabi",
-    en: "Couple snorkeling in clear water next to the private speedboat near Krabi",
+    en: "Private speedboat snorkeling in Krabi: a couple over a coral reef beside the boat near Ao Nang",
   },
   [IMG.plankton]: {
     de: "Leuchtendes Plankton bei Nacht: blaue Biolumineszenz im Wasser neben dem privaten Speedboat in Krabi",
-    en: "Bioluminescent plankton at night: blue glow in the water next to the private speedboat in Krabi",
+    en: "Bioluminescent plankton snorkeling at night from a private boat in Krabi, glowing blue beside the hull",
   },
   [IMG.fishReef]: {
     de: "Frisch gefangener Zackenbarsch beim Riffangeln vom privaten Boot bei Krabi",
-    en: "Freshly caught grouper on a reef fishing trip from a private boat near Krabi",
+    en: "Reef fishing from a private boat in Krabi: a freshly caught grouper on the stern",
   },
   [IMG.deepSea]: {
     de: "Hochseeangeln vor Krabi: Trolling-Ruten am Heck des Speedboats auf der Andamanensee",
-    en: "Deep sea fishing off Krabi: trolling rods at the stern of the speedboat on the Andaman Sea",
+    en: "Private fishing boat in Krabi: trolling rods at the stern of a speedboat on the Andaman Sea",
   },
   [IMG.squid]: {
     de: "Nachtangeln auf Tintenfisch mit Lampen am Boot vor Krabi",
-    en: "Night squid fishing with lamps on the boat off Krabi",
+    en: "Night fishing on a private speedboat in Krabi: squid fishing under lamps off Ao Nang",
   },
   [IMG.bbq]: {
     de: "Catch & Cook: fangfrischer Fisch auf dem Grill beim Strand-BBQ im Sonnenuntergang bei Krabi",
@@ -219,23 +219,23 @@ export const IMAGE_ALT: Record<string, L> = {
   },
   [IMG.dinner]: {
     de: "Candlelight-Dinner an Bord des privaten Speedboats im Sonnenuntergang vor Krabi",
-    en: "Candlelight dinner on board the private speedboat at sunset off Krabi",
+    en: "Candlelight dinner on a private speedboat tour in Krabi, served on the stern at sunset off Ao Nang",
   },
   [IMG.family]: {
     de: "Familie mit Kindern beim Schnorcheln an einer Sandbank bei Krabi",
-    en: "Family with children snorkeling at a sandbar near Krabi",
+    en: "Family boat tour in Krabi: parents and children snorkeling at a sandbar on a private boat from Ao Nang",
   },
   [IMG.jamesBond]: {
     de: "James Bond Island (Koh Tapu): Kalksteinnadel im Wasser der Phang-Nga-Bucht",
-    en: "James Bond Island (Koh Tapu): limestone pinnacle rising from Phang Nga Bay",
+    en: "James Bond Island private speedboat tour from Ao Nang: the limestone pinnacle in Phang Nga Bay",
   },
   [IMG.railay]: {
     de: "Railay Beach bei Krabi in der goldenen Stunde, gerahmt von Kalksteinfelsen",
-    en: "Railay Beach near Krabi at golden hour, framed by limestone cliffs",
+    en: "Railay Beach private boat tour from Ao Nang: golden-hour sand and limestone cliffs in Krabi",
   },
   [IMG.droneAerial]: {
     de: "Drohnenaufnahme: Speedboat in türkisem Wasser zwischen Kalksteininseln bei Krabi",
-    en: "Drone shot: speedboat in turquoise water between limestone islands near Krabi",
+    en: "Private speedboat charter in Krabi: drone view of the boat among limestone islands off Ao Nang",
   },
   [LONGTAIL_CROWD_IMG.src]: LONGTAIL_CROWD_IMG.alt,
   [ROMANCE_IMGS[0].src]: ROMANCE_IMGS[0].alt,

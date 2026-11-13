@@ -58,7 +58,7 @@ export const DEFAULT_OG_IMAGE = {
   src: "/images/og-krabi-secret-islands.jpg",
   width: 1200,
   height: 630,
-  alt: { de: "Krabi Secret Islands Logo: Karstinseln und Strand – private Speedboot-Touren ab Ao Nang und Krabi Town", en: "Krabi Secret Islands logo: limestone islands and beach – private speedboat tours from Ao Nang and Krabi Town" },
+  alt: { de: "Krabi Secret Islands Logo – private Bootstouren Krabi", en: "Krabi Secret Islands logo – private boat tours Krabi" },
 } as const;
 
 /**
@@ -137,7 +137,7 @@ export function businessNode(lang: Lang): Json {
     name: BRAND.name,
     url: `${SITE_URL}${LANDING_PATH}`,
     logo: `${SITE_URL}${LOGO_URL}`,
-    image: `${SITE_URL}/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.jpg`,
+    image: `${SITE_URL}/images/private-speedboat-krabi.jpg`,
     email: BRAND.email,
     telephone: `+${BRAND.whatsapp}`,
     // TODO(owner): add streetAddress / postalCode (and `geo`) of the pier or office once confirmed.

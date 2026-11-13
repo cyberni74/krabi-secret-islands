@@ -11,10 +11,10 @@ const SRCSET_WIDTHS = [480, 768, 1080, 1440, 1920];
  */
 /** Local images under /public/images with a pre-rendered 900 px variant (`name-900.webp`). */
 const LOCAL_VARIANTS: Record<string, string> = {
-  "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp":
-    "/images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat-900.webp 900w, /images/ao-nang-boat-tour-krabi-secret-islands-privates-speedboat.webp 1672w",
-  "/images/ao-nang-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune.webp":
-    "/images/ao-nang-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune-720.webp 720w, /images/ao-nang-boat-tour-koh-hong-krabi-luftaufnahme-strand-lagune.webp 1080w",
+  "/images/private-speedboat-krabi.webp":
+    "/images/private-speedboat-krabi-900.webp 900w, /images/private-speedboat-krabi.webp 1672w",
+  "/images/koh-hong-island-private-tour.webp":
+    "/images/koh-hong-island-private-tour-720.webp 720w, /images/koh-hong-island-private-tour.webp 1080w",
 };
 
 /** Widths served by Vercel Image Optimization (must match `images.sizes` in vite.config.ts). */
@@ -111,7 +111,7 @@ const BRAND_LOGO_PNG = "/brand/krabi-secret-islands-logo-400w.png 400w, /brand/k
 
 export function BrandLogo({
   className,
-  alt = "Krabi Secret Islands Logo",
+  alt = "Krabi Secret Islands logo – private boat tours Krabi",
   sizes = "144px",
 }: {
   className?: string;
